@@ -26,6 +26,9 @@ Wireless propagation and an interview-oriented MIMO reference covering channel m
 ### [Hydrogen Maser](hydrogen-maser/)
 Atomic hydrogen hyperfine transition, stimulated microwave emission, magnetic state selection, storage bulb, microwave cavity, cavity pulling, wall shifts, Allan deviation, active/passive masers, VLBI, and NASA Deep Space Network applications.
 
+### [Optically Pumped Atomic Magnetometer](atomic-magnetometer/)
+Quantum spin polarization, Larmor precession, RF magnetic-dipole excitation, optical readout, Bloch dynamics, scalar/vector magnetometry, SERF operation, gradiometry, sensitivity-bandwidth tradeoffs, and connections to Rydberg RF sensing.
+
 ### [Gravity Probe B — Ultra-Precise Gyroscopes & Simulation](gravity-probe-b/)
 The four ultra-precise floating quartz gyroscopes, electrostatic suspension, superconducting niobium coating, London moment, SQUID readout, drag-free control, and simulations of rotor imperfections, suspension torques, microthrusters, spacecraft dynamics, and end-to-end measurement errors.
 
