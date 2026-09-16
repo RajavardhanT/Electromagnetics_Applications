@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+<style>
+text{font-family:Arial,sans-serif;fill:#14213d}.t{font-size:38px;font-weight:700}.h{font-size:24px;font-weight:700}.b{font-size:18px}.s{font-size:15px}.box{fill:#f7fbff;stroke:#2f6fb5;stroke-width:2;rx:14}.line{stroke:#333;stroke-width:3;fill:none;marker-end:url(#a)}.soft{fill:#eef6ff;stroke:#7aa7d8;stroke-width:2;rx:12}.green{fill:#eefaf2;stroke:#53a46a;stroke-width:2;rx:12}.orange{fill:#fff6e9;stroke:#d9902f;stroke-width:2;rx:12}
+</style>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#333"/></marker></defs>
+<rect width="1400" height="820" fill="white"/>
+<text x="700" y="54" text-anchor="middle" class="t">Chandler wobble measurement using VLBI</text>
+<text x="700" y="86" text-anchor="middle" class="b">Two distant radio telescopes observe the same quasar and measure differential arrival time</text>
+<ellipse cx="700" cy="135" rx="85" ry="34" fill="#f1f1f1" stroke="#444"/><text x="700" y="142" text-anchor="middle" class="h">Quasar</text>
+<path d="M620 150 L260 220" class="line"/><path d="M780 150 L1140 220" class="line"/>
+<text x="180" y="205" class="h">Station A</text><text x="1100" y="205" class="h">Station B</text>
+<rect x="70" y="245" width="1260" height="270" class="box"/>
+<g>
+<rect x="100" y="290" width="150" height="90" class="soft"/><text x="175" y="322" text-anchor="middle" class="h">Feed + LNA</text><text x="175" y="349" text-anchor="middle" class="s">cryogenic, broadband</text>
+<rect x="290" y="290" width="160" height="90" class="green"/><text x="370" y="322" text-anchor="middle" class="h">Calibration</text><text x="370" y="349" text-anchor="middle" class="s">noise + phase cal</text>
+<rect x="490" y="290" width="170" height="90" class="orange"/><text x="575" y="322" text-anchor="middle" class="h">RF / IF</text><text x="575" y="349" text-anchor="middle" class="s">band selection / conversion</text>
+<rect x="700" y="290" width="170" height="90" class="soft"/><text x="785" y="322" text-anchor="middle" class="h">ADC + DBE</text><text x="785" y="349" text-anchor="middle" class="s">sampling + channelization</text>
+<rect x="910" y="290" width="150" height="90" class="green"/><text x="985" y="322" text-anchor="middle" class="h">Recorder</text><text x="985" y="349" text-anchor="middle" class="s">high-rate data</text>
+<rect x="1100" y="290" width="190" height="90" class="orange"/><text x="1195" y="322" text-anchor="middle" class="h">H-maser</text><text x="1195" y="349" text-anchor="middle" class="s">time / frequency reference</text>
+<path d="M250 335 H290" class="line"/><path d="M450 335 H490" class="line"/><path d="M660 335 H700" class="line"/><path d="M870 335 H910" class="line"/>
+</g>
+<text x="120" y="425" class="b">The same chain exists at each station. Recorded streams are brought together at a correlator.</text>
+<rect x="180" y="445" width="300" height="48" class="soft"/><text x="330" y="476" text-anchor="middle" class="h">Station A data stream</text>
+<rect x="920" y="445" width="300" height="48" class="soft"/><text x="1070" y="476" text-anchor="middle" class="h">Station B data stream</text>
+<path d="M330 493 L570 575" class="line"/><path d="M1070 493 L830 575" class="line"/>
+<rect x="535" y="555" width="330" height="92" class="green"/><text x="700" y="590" text-anchor="middle" class="h">Software correlator</text><text x="700" y="620" text-anchor="middle" class="b">cross-correlation → group delay τg</text>
+<path d="M700 647 V690" class="line"/>
+<rect x="430" y="690" width="540" height="82" class="orange"/><text x="700" y="722" text-anchor="middle" class="h">Geodetic estimation</text><text x="700" y="749" text-anchor="middle" class="b">EOP → polar motion (xp, yp) → Chandler component ≈ 433 days</text>
+</svg>
