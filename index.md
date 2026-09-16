@@ -7,7 +7,7 @@ title: Applications of Electromagnetics
 
 ### From Maxwell's Equations to Modern Engineering and Quantum Technologies
 
-Electromagnetic theory underlies technologies ranging from electric machines and antennas to wireless communications, radar, photonics, medical imaging, and quantum sensing.
+Electromagnetic theory underlies technologies ranging from electric machines and antennas to wireless communications, radar, photonics, medical imaging, geodesy, and quantum sensing.
 
 This collection connects fundamental electromagnetic physics with practical engineering systems.
 
@@ -53,6 +53,9 @@ Cellular systems, Wi-Fi, Bluetooth, MIMO, satellite communications, millimeter-w
 
 ### [Radar & Remote Sensing](radar/)
 Radar equations, Doppler radar, FMCW radar, automotive radar, synthetic-aperture radar, and remote sensing.
+
+### [Earth & Space Applications](earth-space/chandler-wobble-vlbi.md)
+Geodetic radio interferometry, Earth orientation, and space-based electromagnetic measurements. Start with **measuring the Chandler wobble using VLBI**.
 
 ### [Optics & Photonics](optics-photonics/)
 Reflection, refraction, interference, optical fibers, lasers, photonic crystals, and integrated photonics.
