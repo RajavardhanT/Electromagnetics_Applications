@@ -25,6 +25,24 @@ where $c$ is the speed of light.
 
 The received broadband radio signals are time-tagged using highly stable frequency standards and cross-correlated. Measuring the delay between stations constrains the orientation of the terrestrial baseline relative to the celestial reference frame.
 
+### VLBI receiver-to-geodesy architecture
+
+![Chandler wobble measurement using VLBI receiver architecture](../assets/chandler-vlbi-receiver.svg)
+
+*Receiver-level view of the measurement chain: broadband quasar signals are amplified, calibrated, frequency-converted/digitized, recorded at geographically separated stations, and cross-correlated to estimate group delay. The resulting delays enter a global geodetic solution for Earth Orientation Parameters and polar motion.*
+
+## Modern VGOS broadband receiver
+
+The **VLBI Global Observing System (VGOS)** replaces the legacy fixed S/X-band approach with a broadband architecture designed for improved delay precision, rapid source switching, stable calibration, and high observing throughput.
+
+A typical VGOS signal chain uses a **cryogenic dual-linear-polarization feed covering approximately 2–14 GHz**, followed by broadband low-noise amplifiers. Noise and phase-calibration signals are injected near the front end so that instrumental gain and delay can be monitored through the downstream electronics. The broadband RF is commonly transported from the antenna to the control room over optical fiber, where four observing bands are selected and translated to intermediate frequency for digitization and digital channelization.
+
+![Modern VGOS broadband receiver architecture](../assets/vgos-broadband-receiver.svg)
+
+*Conceptual VGOS receiver architecture. Four approximately 1-GHz observing bands can be distributed across the much larger 2–14 GHz span. The large effective spanned bandwidth improves group-delay precision, while dual polarization, high-rate digitization, calibration injection, and hydrogen-maser timing support precision geodetic VLBI.*
+
+The IVS VGOS concept specifies four RF bands that can be placed flexibly within the 2–14 GHz range. In the reference implementation, each selected band is translated to an IF in the 0–3 GHz range, sampled at 10 bits, and processed in an FPGA-based digital backend for channelization, bit truncation, power monitoring, and calibration detection. A hydrogen maser supplies the frequency and timing reference for the calibration system, converters, and digital backend.
+
 ## From radio waves to Earth's wobble
 
 VLBI therefore creates a direct measurement chain:
@@ -55,8 +73,14 @@ The Chandler wobble is a striking example in which an electromagnetic measuremen
 
 4. International Earth Rotation and Reference Systems Service (IERS), **[International Celestial Reference System / International Celestial Reference Frame](https://www.iers.org/iers/en/dataproducts/icrs/icrs)** — the celestial reference system and its realization using VLBI observations of extragalactic compact radio sources.
 
-5. J. Nastula and R. Gross, **[Chandler wobble parameters from SLR and GRACE](https://doi.org/10.1002/2014JB011825)**, *Journal of Geophysical Research: Solid Earth*, **120**, 4474–4483 (2015). DOI: 10.1002/2014JB011825.
+5. International VLBI Service (IVS), **[VGOS Concept](https://ivscc.gsfc.nasa.gov/technology/vgos-concept.html)** — technical overview of the 2–14 GHz dual-polarization broadband VGOS receiver, RF-over-fiber transport, up/down conversion, digitization, digital backend, calibration, and hydrogen-maser reference.
 
-6. J. Höpfner, **[Chandler and annual wobbles based on space-geodetic measurements](https://doi.org/10.1016/S0264-3707(03)00056-5)**, *Journal of Geodynamics*, **36**, 369–381 (2003). DOI: 10.1016/S0264-3707(03)00056-5.
+6. A. E. Niell *et al.*, **[Demonstration of a Broadband Very Long Baseline Interferometer System for High-Precision Space Geodesy](https://doi.org/10.1029/2018RS006617)**, *Radio Science* **53** (2018) — experimental demonstration and technical description of the broadband VGOS-class geodetic VLBI system.
+
+7. M. Sekido *et al.*, **[A broadband VLBI system using transportable stations for geodesy and metrology: an alternative approach to the VGOS concept](https://doi.org/10.1007/s00190-021-01479-8)**, *Journal of Geodesy* **95**, 41 (2021) — broadband VLBI implementation using four frequency bands distributed across the 2–14 GHz range.
+
+8. J. Nastula and R. Gross, **[Chandler wobble parameters from SLR and GRACE](https://doi.org/10.1002/2014JB011825)**, *Journal of Geophysical Research: Solid Earth*, **120**, 4474–4483 (2015). DOI: 10.1002/2014JB011825.
+
+9. J. Höpfner, **[Chandler and annual wobbles based on space-geodetic measurements](https://doi.org/10.1016/S0264-3707(03)00056-5)**, *Journal of Geodynamics*, **36**, 369–381 (2003). DOI: 10.1016/S0264-3707(03)00056-5.
 
 [← Home](../)
