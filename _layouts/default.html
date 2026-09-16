@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <script>
+    window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$','$$'], ['\\[','\\]']] } };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark">EM</span><span><strong>Electromagnetics</strong><small>Daily Reference</small></span></a>
+    <nav class="topnav" aria-label="Primary">
+      <a href="{{ '/foundations/' | relative_url }}">Foundations</a>
+      <a href="{{ '/rf-microwave/' | relative_url }}">RF & Microwave</a>
+      <a href="{{ '/antennas/' | relative_url }}">Antennas</a>
+      <a href="{{ '/quantum/' | relative_url }}">Quantum</a>
+      <a href="https://github.com/RajavardhanT/Electromagnetics_Applications">GitHub</a>
+    </nav>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="sidebar-title">REFERENCE MAP</div>
+      <a href="{{ '/foundations/' | relative_url }}">01 · Foundations</a>
+      <a href="{{ '/antennas/' | relative_url }}">02 · Antennas & Radiation</a>
+      <a href="{{ '/rf-microwave/' | relative_url }}">03 · RF & Microwave</a>
+      <a href="{{ '/wireless/' | relative_url }}">04 · Wireless</a>
+      <a href="{{ '/radar/' | relative_url }}">05 · Radar & Sensing</a>
+      <a href="{{ '/optics-photonics/' | relative_url }}">06 · Optics & Photonics</a>
+      <a href="{{ '/emc/' | relative_url }}">07 · EMI / EMC</a>
+      <a href="{{ '/power-energy/' | relative_url }}">08 · Power & Energy</a>
+      <a href="{{ '/medical/' | relative_url }}">09 · Medical</a>
+      <a href="{{ '/quantum/' | relative_url }}">10 · Quantum</a>
+      <a href="{{ '/computational-em/' | relative_url }}">11 · Computational EM</a>
+      <a href="{{ '/earth-space/chandler-wobble-vlbi.html' | relative_url }}">12 · Earth & Space</a>
+      <div class="sidebar-note">Physics → equations → intuition → implementation → application</div>
+    </aside>
+
+    <main class="content">
+      {{ content }}
+      <footer class="site-footer">Applications of Electromagnetics · a living technical reference</footer>
+    </main>
+  </div>
+</body>
+</html>
