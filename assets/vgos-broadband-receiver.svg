@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+<style>
+text{font-family:Arial,sans-serif;fill:#14213d}.t{font-size:38px;font-weight:700}.h{font-size:23px;font-weight:700}.b{font-size:18px}.s{font-size:15px}.box{fill:#f7fbff;stroke:#2f6fb5;stroke-width:2;rx:14}.soft{fill:#eef6ff;stroke:#7aa7d8;stroke-width:2;rx:12}.green{fill:#eefaf2;stroke:#53a46a;stroke-width:2;rx:12}.orange{fill:#fff6e9;stroke:#d9902f;stroke-width:2;rx:12}.purple{fill:#f6efff;stroke:#875fc2;stroke-width:2;rx:12}.line{stroke:#333;stroke-width:3;fill:none;marker-end:url(#a)}
+</style>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#333"/></marker></defs>
+<rect width="1400" height="900" fill="white"/>
+<text x="700" y="54" text-anchor="middle" class="t">Modern VGOS broadband receiver</text>
+<text x="700" y="87" text-anchor="middle" class="b">Wideband geodetic VLBI front end: continuous 2–14 GHz, dual linear polarization</text>
+<rect x="50" y="130" width="1300" height="390" class="box"/>
+<rect x="80" y="190" width="150" height="115" class="soft"/><text x="155" y="224" text-anchor="middle" class="h">Wideband feed</text><text x="155" y="253" text-anchor="middle" class="s">H/V polarization</text><text x="155" y="278" text-anchor="middle" class="s">2–14 GHz</text>
+<rect x="270" y="190" width="160" height="115" class="green"/><text x="350" y="224" text-anchor="middle" class="h">Cryogenic LNA</text><text x="350" y="253" text-anchor="middle" class="s">low receiver noise</text><text x="350" y="278" text-anchor="middle" class="s">both polarizations</text>
+<rect x="470" y="190" width="170" height="115" class="orange"/><text x="555" y="224" text-anchor="middle" class="h">Noise + phase cal</text><text x="555" y="253" text-anchor="middle" class="s">tracks complex gain</text><text x="555" y="278" text-anchor="middle" class="s">and delay</text>
+<rect x="680" y="190" width="150" height="115" class="soft"/><text x="755" y="224" text-anchor="middle" class="h">RF over fiber</text><text x="755" y="253" text-anchor="middle" class="s">receiver → control room</text>
+<rect x="870" y="190" width="180" height="115" class="purple"/><text x="960" y="224" text-anchor="middle" class="h">UDC</text><text x="960" y="253" text-anchor="middle" class="s">4 selectable RF bands</text><text x="960" y="278" text-anchor="middle" class="s">translated to 0–3 GHz IF</text>
+<rect x="1090" y="190" width="180" height="115" class="green"/><text x="1180" y="224" text-anchor="middle" class="h">ADC + DBE</text><text x="1180" y="253" text-anchor="middle" class="s">10-bit sampling</text><text x="1180" y="278" text-anchor="middle" class="s">channelize / monitor</text>
+<path d="M230 247 H270" class="line"/><path d="M430 247 H470" class="line"/><path d="M640 247 H680" class="line"/><path d="M830 247 H870" class="line"/><path d="M1050 247 H1090" class="line"/>
+<rect x="300" y="360" width="260" height="95" class="soft"/><text x="430" y="395" text-anchor="middle" class="h">Hydrogen maser</text><text x="430" y="423" text-anchor="middle" class="s">master frequency / timing reference</text>
+<path d="M560 405 H960 V305" class="line"/>
+<rect x="900" y="360" width="330" height="95" class="orange"/><text x="1065" y="395" text-anchor="middle" class="h">Recorder / network</text><text x="1065" y="423" text-anchor="middle" class="s">data sent to VLBI software correlator</text>
+<path d="M1180 305 V360" class="line"/>
+<text x="90" y="495" class="b">VGOS does not rely on fixed S/X bands: four ≈1-GHz observing bands are distributed across a large 2–14 GHz span.</text>
+<text x="80" y="575" class="h">Why the large spanned bandwidth matters</text>
+<rect x="80" y="605" width="580" height="215" class="soft"/>
+<text x="110" y="645" class="b">• Group-delay precision improves as effective bandwidth increases.</text>
+<text x="110" y="685" class="b">• Wideband acquisition also improves sensitivity through larger B.</text>
+<text x="110" y="725" class="b">• Dual polarization supports robust calibration and correlation products.</text>
+<text x="110" y="765" class="b">• Fast source switching improves tropospheric delay estimation.</text>
+<text x="110" y="805" class="b">• The architecture supports millimetre-class geodetic goals.</text>
+<text x="735" y="575" class="h">Conceptual band placement</text>
+<rect x="735" y="605" width="585" height="215" class="green"/>
+<line x1="790" y1="760" x2="1260" y2="760" stroke="#333" stroke-width="2"/>
+<text x="785" y="790" class="s">2 GHz</text><text x="1235" y="790" class="s">14 GHz</text>
+<rect x="820" y="690" width="75" height="70" fill="#7ecf95"/><rect x="950" y="675" width="75" height="85" fill="#7ecf95"/><rect x="1090" y="655" width="75" height="105" fill="#7ecf95"/><rect x="1190" y="700" width="55" height="60" fill="#7ecf95"/>
+<text x="857" y="675" text-anchor="middle" class="s">Band 1</text><text x="987" y="660" text-anchor="middle" class="s">Band 2</text><text x="1127" y="640" text-anchor="middle" class="s">Band 3</text><text x="1217" y="685" text-anchor="middle" class="s">Band 4</text>
+</svg>
