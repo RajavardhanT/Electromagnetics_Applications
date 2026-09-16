@@ -23,6 +23,9 @@ Maxwell's equations, electromagnetic waves, boundary conditions, polarization, a
 ### [Wireless Communications & MIMO](wireless/)
 Wireless propagation and an interview-oriented MIMO reference covering channel matrices, rank, diversity, spatial multiplexing, beamforming, precoding, EVM, and RF impairments.
 
+### [Hydrogen Maser](hydrogen-maser/)
+Atomic hydrogen hyperfine transition, stimulated microwave emission, magnetic state selection, storage bulb, microwave cavity, cavity pulling, wall shifts, Allan deviation, active/passive masers, VLBI, and NASA Deep Space Network applications.
+
 ### [Medical Applications](medical/)
 MRI, RF coils, SAR, microwave imaging, RF and microwave ablation, hyperthermia, implants, and bioelectromagnetics.
 
