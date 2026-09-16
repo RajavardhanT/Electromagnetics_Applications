@@ -1,3 +1,8 @@
+---
+layout: default
+title: Measuring the Chandler Wobble with VLBI
+---
+
 # Measuring the Chandler Wobble with VLBI
 
 ## Overview
@@ -42,16 +47,16 @@ The Chandler wobble is a striking example in which an electromagnetic measuremen
 
 ## References
 
-1. NASA Goddard Space Flight Center, **VLBI** — overview of VLBI as a space-geodetic technique for defining an inertial reference frame and measuring Earth's orientation: https://earth.gsfc.nasa.gov/geo/instruments/vlbi
+1. NASA Goddard Space Flight Center, **[VLBI](https://earth.gsfc.nasa.gov/geo/instruments/vlbi)** — overview of VLBI as a space-geodetic technique for defining an inertial reference frame and measuring Earth's orientation.
 
-2. NASA Earthdata, **Beacons in the Sky Help Monitor Earth's Orientation in Space** — description of quasar VLBI, Earth Orientation Parameters, polar motion, and UT1: https://www.earthdata.nasa.gov/learn/sensing-our-planet/beacons-in-the-sky-help-monitor-earth-s-orientation-in-space
+2. NASA Earthdata, **[Beacons in the Sky Help Monitor Earth's Orientation in Space](https://www.earthdata.nasa.gov/learn/sensing-our-planet/beacons-in-the-sky-help-monitor-earth-s-orientation-in-space)** — description of quasar VLBI, Earth Orientation Parameters, polar motion, and UT1.
 
-3. NASA CDDIS / Earthdata, **Very Long Baseline Interferometry (VLBI) Earth Orientation Parameters (EOP) Products** — operational Earth-orientation products derived from VLBI: https://www.earthdata.nasa.gov/data/catalog/cddis-vlbi-eop-prod-1
+3. NASA CDDIS / Earthdata, **[Very Long Baseline Interferometry (VLBI) Earth Orientation Parameters (EOP) Products](https://www.earthdata.nasa.gov/data/catalog/cddis-vlbi-eop-prod-1)** — operational Earth-orientation products derived from VLBI.
 
-4. International Earth Rotation and Reference Systems Service (IERS), **International Celestial Reference System / International Celestial Reference Frame** — the celestial reference system and its realization using VLBI observations of extragalactic compact radio sources: https://www.iers.org/iers/en/dataproducts/icrs/icrs
+4. International Earth Rotation and Reference Systems Service (IERS), **[International Celestial Reference System / International Celestial Reference Frame](https://www.iers.org/iers/en/dataproducts/icrs/icrs)** — the celestial reference system and its realization using VLBI observations of extragalactic compact radio sources.
 
-5. J. Nastula and R. Gross, **Chandler wobble parameters from SLR and GRACE**, *Journal of Geophysical Research: Solid Earth*, **120**, 4474–4483 (2015). DOI: 10.1002/2014JB011825.
+5. J. Nastula and R. Gross, **[Chandler wobble parameters from SLR and GRACE](https://doi.org/10.1002/2014JB011825)**, *Journal of Geophysical Research: Solid Earth*, **120**, 4474–4483 (2015). DOI: 10.1002/2014JB011825.
 
-6. J. Höpfner, **Chandler and annual wobbles based on space-geodetic measurements**, *Journal of Geodynamics*, **36**, 369–381 (2003). DOI: 10.1016/S0264-3707(03)00056-5.
+6. J. Höpfner, **[Chandler and annual wobbles based on space-geodetic measurements](https://doi.org/10.1016/S0264-3707(03)00056-5)**, *Journal of Geodynamics*, **36**, 369–381 (2003). DOI: 10.1016/S0264-3707(03)00056-5.
 
 [← Home](../)
