@@ -1,0 +1,6 @@
+title: Applications of Electromagnetics
+description: From Maxwell's equations to antennas, wireless, radar, photonics, and quantum technologies
+theme: jekyll-theme-cayman
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
