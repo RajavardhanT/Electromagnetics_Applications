@@ -1,9 +1,11 @@
 ---
 layout: default
-title: Applications of Electromagnetics
+title: Applications of Electromagnetics — Created using ChatGPT
 ---
 
 # Applications of Electromagnetics
+
+## Created using ChatGPT
 
 ### A daily physics-to-engineering reference
 
@@ -78,4 +80,4 @@ This makes the site useful both for a quick daily lookup and for deeper review w
 
 ---
 
-*Living technical reference — expanded progressively as new applications and useful connections are added.*
+*Living technical reference — created using ChatGPT and expanded progressively as new applications and useful connections are added.*
