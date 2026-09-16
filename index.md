@@ -7,7 +7,7 @@ title: Applications of Electromagnetics
 
 ### A daily physics-to-engineering reference
 
-A working reference for the electromagnetic ideas that connect **Maxwell's equations to RF, antennas, wireless systems, radar, photonics, precision measurement, and quantum sensing**.
+A working reference for the electromagnetic ideas that connect **Maxwell's equations to RF, antennas, wireless systems, radar, photonics, precision measurement, particle physics, and quantum sensing**.
 
 > **Reference philosophy:** start from the physical picture, write down the governing equations, then connect them to a device, measurement, or real engineering system.
 
@@ -30,6 +30,9 @@ Radar equation, Doppler, FMCW, automotive radar, phased arrays, synthetic-apertu
 
 ### [Quantum Technologies](quantum/)
 Atom-field interaction, Rabi frequency, AC Stark shifts, Autler-Townes splitting, Rydberg electrometry, atomic RF receivers, and quantum magnetometry.
+
+### [Subatomic Particles](subatomic-particles/)
+Electron, proton and neutron discovery; Lorentz-force particle analysis; Rutherford scattering; particle accelerators; RF cavities; magnetic spectrometers; Cherenkov radiation; and electromagnetic particle detectors. Includes a historical book note on Steven Weinberg's *The Discovery of Subatomic Particles*.
 
 ### [Optics & Photonics](optics-photonics/)
 Reflection, refraction, interference, optical fibers, lasers, photonic crystals, integrated photonics, and nanophotonics.
@@ -71,7 +74,7 @@ A useful mental map is
 
 Each developed topic will aim to contain the same layers: **overview → physical principle → governing equations → intuition → practical implementation → worked example → simulation/code → applications → limitations → references**.
 
-This makes the site useful both for a quick daily lookup and for deeper review when moving between RF engineering, electromagnetics, optics, and quantum sensing.
+This makes the site useful both for a quick daily lookup and for deeper review when moving between RF engineering, electromagnetics, optics, particle physics, and quantum sensing.
 
 ---
 
