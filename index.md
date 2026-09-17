@@ -17,6 +17,9 @@ A compact equation sheet for fields, waves, transmission lines, antennas, RF sys
 ### [History Behind the Equations](reference/equation-history.html)
 Historical context behind the major equations and ideas in electromagnetics.
 
+### [Lorentz Force — Electrodynamics, History & Applications](lorentz-force/)
+The force law connecting electromagnetic fields to charged-particle motion, from Coulomb, Faraday, Maxwell, Heaviside and Lorentz to particle accelerators, Hall sensors, motors, plasmas, fusion, spacecraft electrodynamic tethers and quantum-sensing comparisons.
+
 ### [Foundations](foundations/)
 Maxwell's equations, electromagnetic waves, boundary conditions, polarization, and electromagnetic power flow.
 
