@@ -20,6 +20,9 @@ Historical context behind the major equations and ideas in electromagnetics.
 ### [Lorentz Force — Electrodynamics, History & Applications](lorentz-force/)
 The force law connecting electromagnetic fields to charged-particle motion, from Coulomb, Faraday, Maxwell, Heaviside and Lorentz to particle accelerators, Hall sensors, motors, plasmas, fusion, spacecraft electrodynamic tethers and quantum-sensing comparisons.
 
+### [Shockley–Ramo Current](shockley-ramo/)
+Induced current from moving charges: weighting potential and field, actual versus weighting fields, electrons and ions, magnetic-field effects, TIA readout, zero-bias signals, RF-driven motion, Monte Carlo implementation, space charge, drift-diffusion, signal polarity, and detector applications.
+
 ### [Foundations](foundations/)
 Maxwell's equations, electromagnetic waves, boundary conditions, polarization, and electromagnetic power flow.
 
