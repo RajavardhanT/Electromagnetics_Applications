@@ -41,6 +41,9 @@ MRI, RF coils, SAR, microwave imaging, RF and microwave ablation, hyperthermia, 
 ### [Subatomic Particles](subatomic-particles/)
 The electromagnetic physics behind the discovery and measurement of the electron, proton, neutron, particle acceleration, and particle detection.
 
+### [Computational Methods — CUDA, GPU Computing & Julia](computational-methods/)
+Scientific computing with GPU acceleration: CUDA execution and memory models, optimized numerical libraries, Julia, multiple dispatch, CUDA.jl, parallel algorithms, and applications to electromagnetics and quantum sensing.
+
 ### [Spacecraft & Satellite EM Simulation](computational-em/)
 Applications of computational electromagnetics to spacecraft antennas, installed patterns, coupling, EMC, satellite links, phased arrays, radar payloads, and launch-vehicle environments.
 
