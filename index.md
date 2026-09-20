@@ -23,6 +23,9 @@ The force law connecting electromagnetic fields to charged-particle motion, from
 ### [Foundations](foundations/)
 Maxwell's equations, electromagnetic waves, boundary conditions, polarization, and electromagnetic power flow.
 
+### [Active Electronically Scanned Arrays (AESA)](aesa/)
+Phased-array fundamentals, electronic beam steering, T/R modules, GaAs/GaN, grating lobes, scan loss, analog/digital/hybrid beamforming, calibration, mutual coupling, active impedance, thermal design, radar and communications applications.
+
 ### [Wireless Communications & MIMO](wireless/)
 Wireless propagation and an interview-oriented MIMO reference covering channel matrices, rank, diversity, spatial multiplexing, beamforming, precoding, EVM, and RF impairments.
 
