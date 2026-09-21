@@ -176,6 +176,8 @@ Large electrical apertures therefore produce narrow beams.
 
 ## 7. Element spacing and grating lobes
 
+<figure class="topic-figure topic-figure-small"><a href="https://commons.wikimedia.org/wiki/File:Grating_lobes.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Grating_lobes.svg?width=900" alt="Array radiation pattern illustrating grating lobes" loading="lazy"></a><figcaption>Grating lobes are unwanted additional maxima that appear when array sampling/element spacing permits multiple phase-matched radiation directions. <a href="https://commons.wikimedia.org/wiki/File:Grating_lobes.svg">Image source</a>.</figcaption></figure>
+
 A commonly used design rule is
 
 $$
