@@ -97,6 +97,8 @@ Related interference effects can produce enhanced absorption, asymmetric feature
 
 ## 6. Autler–Townes splitting
 
+<figure class="topic-figure topic-figure-small"><a href="https://www.nist.gov/image/rydberg-e-field-sensor-animation"><img src="https://www.nist.gov/sites/default/files/images/2026/01/15/quantum_sensors-e_field.gif" alt="NIST visualization of Rydberg atoms sensing an RF electric field through optical interrogation" loading="lazy"></a><figcaption>Rydberg RF electrometry uses optical interrogation to reveal RF-induced dressing and splitting of Rydberg levels. Credit: S. Kelley/NIST. <a href="https://www.nist.gov/image/rydberg-e-field-sensor-animation">Image source</a>.</figcaption></figure>
+
 A sufficiently strong resonant coupling field dresses the participating states and produces separated spectral resonances.
 
 For an isolated resonant two-level RF transition, the splitting is approximately
@@ -373,6 +375,8 @@ Although RF sensing usually focuses on transmission amplitude, the associated ph
 ---
 
 ## 26. Floquet physics
+
+<figure class="topic-figure topic-figure-small"><a href="https://commons.wikimedia.org/wiki/File:Avoided_crossing.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Avoided_crossing.svg?width=900" alt="Avoided crossing between two coupled energy levels" loading="lazy"></a><figcaption>Coupled dressed/Floquet levels can repel near degeneracy, producing avoided crossings that expose coherent hybridization and multiphoton pathways. <a href="https://commons.wikimedia.org/wiki/File:Avoided_crossing.svg">Image source</a>.</figcaption></figure>
 
 A periodically driven atom has a Hamiltonian
 
