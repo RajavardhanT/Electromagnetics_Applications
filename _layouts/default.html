@@ -14,6 +14,15 @@
   <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
   <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <style>
+    .chatgpt-badge{display:inline-flex;align-items:center;gap:.42rem;padding:.43rem .72rem;border:1px solid rgba(98,214,199,.72);border-radius:999px;background:rgba(98,214,199,.12);color:#dcfff9!important;font-weight:800;letter-spacing:.01em;white-space:nowrap;text-decoration:none!important;box-shadow:0 0 0 1px rgba(98,214,199,.05) inset}
+    .chatgpt-badge::before{content:'✦';color:#62d6c7;font-size:.95em}
+    .profile-top-link{display:inline-flex;align-items:center;padding:.43rem .72rem;border:1px solid rgba(126,182,255,.5);border-radius:999px;background:rgba(126,182,255,.1);color:#e5f1ff!important;font-weight:800;white-space:nowrap;text-decoration:none!important}
+    .profile-top-link:hover,.chatgpt-badge:hover{background:rgba(255,255,255,.13);text-decoration:none!important}
+    .brand small strong{display:inline;color:#62d6c7;font-size:inherit;letter-spacing:inherit}
+    @media(max-width:1100px){.topnav .nav-optional{display:none}}
+    @media(max-width:900px){.topbar{flex-wrap:wrap;padding-bottom:10px}.topnav{display:flex!important;width:100%;gap:8px;overflow-x:auto;padding-bottom:1px}.topnav a{font-size:.75rem}.topnav .nav-optional{display:none}.brand{min-width:0}}
+  </style>
   <script>
     window.MathJax = {
       tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$','$$'], ['\\[','\\]']] },
@@ -30,16 +39,18 @@
   <header class="topbar">
     <a class="brand" href="{{ '/' | relative_url }}" aria-label="Applications of Electromagnetics home">
       <span class="brand-mark">EM</span>
-      <span><strong>Applications of Electromagnetics</strong><small>Connected engineering reference</small></span>
+      <span><strong>Applications of Electromagnetics</strong><small><strong>Built using ChatGPT</strong> · Connected engineering reference</small></span>
     </a>
     <nav class="topnav" aria-label="Primary">
-      <a href="{{ '/knowledge-map/' | relative_url }}">Map</a>
-      <a href="{{ '/reference/' | relative_url }}">Reference</a>
-      <a href="{{ '/calculators/' | relative_url }}">Calculators</a>
-      <a href="{{ '/measurements/' | relative_url }}">Measurements</a>
-      <a href="{{ '/simulations/' | relative_url }}">Simulations</a>
-      <a href="{{ '/presentations/' | relative_url }}">Lectures</a>
-      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a class="profile-top-link" href="https://rajavardhant.github.io/">Rajavardhan Talashila · Main Profile ↗</a>
+      <a class="chatgpt-badge" href="{{ '/about/' | relative_url }}">Built using ChatGPT</a>
+      <a class="nav-optional" href="{{ '/knowledge-map/' | relative_url }}">Map</a>
+      <a class="nav-optional" href="{{ '/reference/' | relative_url }}">Reference</a>
+      <a class="nav-optional" href="{{ '/calculators/' | relative_url }}">Calculators</a>
+      <a class="nav-optional" href="{{ '/measurements/' | relative_url }}">Measurements</a>
+      <a class="nav-optional" href="{{ '/simulations/' | relative_url }}">Simulations</a>
+      <a class="nav-optional" href="{{ '/presentations/' | relative_url }}">Lectures</a>
+      <a class="nav-optional" href="{{ '/about/' | relative_url }}">About</a>
     </nav>
   </header>
 
@@ -52,6 +63,7 @@
       </div>
 
       <div class="sidebar-title">START HERE</div>
+      <a href="https://rajavardhant.github.io/"><strong>★ Rajavardhan Talashila · Main Profile ↗</strong></a>
       <a href="{{ '/knowledge-map/' | relative_url }}">Knowledge Map</a>
       <a href="{{ '/reference/' | relative_url }}">Quick Reference Hub</a>
       <a href="{{ '/worked-examples/' | relative_url }}">Worked Examples</a>
@@ -89,7 +101,7 @@
       <a href="{{ '/reference/history-timeline.html' | relative_url }}">History Timeline</a>
       <a href="https://github.com/RajavardhanT/Electromagnetics_Applications">GitHub Repository ↗</a>
 
-      <p class="sidebar-note">A living reference organized around the chain <strong>fields → waves → matter → devices → systems → applications</strong>.</p>
+      <p class="sidebar-note"><strong>Built using ChatGPT.</strong><br>A living reference organized around the chain <strong>fields → waves → matter → devices → systems → applications</strong>.</p>
     </aside>
 
     <main id="main-content" class="content">
@@ -104,8 +116,8 @@
       {{ content }}
 
       <footer class="site-footer">
-        <strong>Applications of Electromagnetics</strong><br>
-        Curated by <a href="https://rajavardhant.github.io/">Rajavardhan Talashila</a> · developed as a living technical reference with ChatGPT · <a href="https://github.com/RajavardhanT/Electromagnetics_Applications">source on GitHub</a>.<br>
+        <strong>Applications of Electromagnetics · Built using ChatGPT</strong><br>
+        Curated by <a href="https://rajavardhant.github.io/">Rajavardhan Talashila</a> · <a href="https://github.com/RajavardhanT/Electromagnetics_Applications">source on GitHub</a>.<br>
         <span>Equations are accompanied by assumptions where practical; external figures and resources are linked to their sources.</span>
       </footer>
     </main>
