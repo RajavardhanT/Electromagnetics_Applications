@@ -38,6 +38,9 @@ A structured reference to EIT, dark states, optical Bloch equations, Rabi coupli
 ### [Hydrogen Maser](hydrogen-maser/)
 Atomic hydrogen hyperfine transition, stimulated microwave emission, magnetic state selection, storage bulb, microwave cavity, cavity pulling, wall shifts, Allan deviation, active/passive masers, VLBI, and NASA Deep Space Network applications.
 
+### [Atomic Ground-State Magnetic-Field Sensing](ground-state-magnetometry/)
+Ground-state Zeeman physics, Larmor precession, Breit–Rabi energies, optical pumping, Mx/Mz and Bell–Bloom magnetometers, NMOR, SERF, CPT/EIT magnetometry, RF magnetic sensing, noise limits, vector sensing, and comparison with Rydberg sensing.
+
 ### [Optically Pumped Atomic Magnetometer](atomic-magnetometer/)
 Quantum spin polarization, Larmor precession, RF magnetic-dipole excitation, optical readout, Bloch dynamics, scalar/vector magnetometry, SERF operation, gradiometry, sensitivity-bandwidth tradeoffs, and connections to Rydberg RF sensing.
 
