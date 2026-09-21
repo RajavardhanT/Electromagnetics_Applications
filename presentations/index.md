@@ -5,7 +5,7 @@ title: Electromagnetics Presentations & Lectures
 
 # Electromagnetics Presentations & Lectures
 
-This page is a curated gateway to **high-quality presentations, lecture slides, recorded lectures, and downloadable course material** that connect electromagnetic theory to engineering and scientific applications.
+This page is a curated collection of **high-quality presentations, lecture slides, recorded lectures, and downloadable course material** connecting electromagnetic theory to engineering and scientific applications.
 
 The emphasis is on authoritative university, national-laboratory, NASA, CERN, and research-institution material rather than generic slide-sharing websites.
 
@@ -16,7 +16,7 @@ The emphasis is on authoritative university, national-laboratory, NASA, CERN, an
 ### MIT 6.013: Electromagnetics and Applications
 **[Complete lecture-note collection — MIT OpenCourseWare](https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/pages/lecture-notes/)**
 
-One of the best broad collections for this site. Topics include:
+Topics include:
 
 - Maxwell equations and boundary conditions
 - polarization, conduction, and magnetization
@@ -47,18 +47,13 @@ One of the best broad collections for this site. Topics include:
 
 **[16-lecture phased-array course](https://ocw.mit.edu/courses/res-ll-002-adaptive-antennas-and-phased-arrays-spring-2010/)**
 
-This is particularly relevant to the [AESA](../aesa/) page. The course contains two major parts:
-
-1. adaptive antennas;
-2. phased arrays.
-
-It connects array theory with practical hardware and experiments and is an excellent deeper-learning companion to the AESA section.
+The course covers adaptive antennas and phased arrays, connecting array theory with practical hardware and experiments. See also the [AESA](../aesa/) page.
 
 ### Phased radar
 
 **[MIT Physics — Phased Radar lecture](https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/resources/mit8_03scf16_hw_lec21/)**
 
-A useful physical presentation of interference and phased-array concepts.
+A physical presentation of interference and phased-array concepts.
 
 ---
 
@@ -68,21 +63,7 @@ A useful physical presentation of interference and phased-array concepts.
 
 **[10-lecture radar course](https://ocw.mit.edu/courses/res-ll-001-introduction-to-radar-systems-spring-2007/)**
 
-A particularly valuable applied-EM collection covering radar-system concepts and technologies.
-
-It provides context for:
-
-$$
-\text{antenna}
-\rightarrow
-\text{propagation}
-\rightarrow
-\text{scattering}
-\rightarrow
-\text{receiver}
-\rightarrow
-\text{signal processing}.
-$$
+Covers radar-system concepts and technologies spanning antennas, propagation, scattering, receivers and signal processing.
 
 ---
 
@@ -94,23 +75,11 @@ $$
 
 Introduces fields, electrical force, moving charges and Maxwell equations in the context of accelerator physics.
 
-### CERN Accelerator School — complete introductory accelerator material
+### CERN Accelerator School — introductory accelerator material
 
-**[CAS introductory course with downloadable presentations](https://cas.web.cern.ch/schools/chavannes-de-bogis-2017)**
+**[CAS course with downloadable presentations](https://cas.web.cern.ch/schools/chavannes-de-bogis-2017)**
 
-The collection includes presentations on:
-
-- electromagnetic theory;
-- accelerator magnets;
-- RF systems;
-- particle sources;
-- beam instrumentation;
-- power converters;
-- kickers and septa;
-- cryogenics;
-- beam dynamics.
-
-This is a strong example of electromagnetic theory becoming a complete engineered system.
+The collection includes presentations on electromagnetic theory, accelerator magnets, RF systems, particle sources, beam instrumentation, power converters, kickers and septa, cryogenics, and beam dynamics.
 
 ---
 
@@ -120,9 +89,7 @@ This is a strong example of electromagnetic theory becoming a complete engineere
 
 **[2026 presentation, PPTX/PDF and recording](https://indico.cern.ch/event/1585661/contributions/6682287/)**
 
-Covers iron-dominated electromagnets, permanent-magnet materials, accelerator-magnet design and comparison of electromagnetic and permanent-magnet technologies.
-
-This is especially relevant to the [Halbach-array discussion](../ground-state-magnetometry/#37-halbach-permanent-magnet-arrays).
+Covers iron-dominated electromagnets, permanent-magnet materials, accelerator-magnet design and comparison of electromagnetic and permanent-magnet technologies. See the [Halbach-array discussion](../ground-state-magnetometry/#37-halbach-permanent-magnet-arrays).
 
 ### CERN — Permanent Magnets
 
@@ -142,21 +109,7 @@ Includes presentations on Maxwell equations for magnets, magnetic materials, mag
 
 **[CERN Accelerator School introductory presentations](https://cas.web.cern.ch/schools/archamps-2019)**
 
-The course includes dedicated material on **RF systems**, electromagnetic theory, magnets, beam instrumentation and superconducting magnets.
-
-Accelerator RF systems are an excellent application of
-
-$$
-\boxed{
-\text{Maxwell equations}
-\rightarrow
-\text{resonant cavity}
-\rightarrow
-\text{RF power}
-\rightarrow
-\text{particle acceleration}.
-}
-$$
+The course includes material on **RF systems**, electromagnetic theory, magnets, beam instrumentation and superconducting magnets.
 
 ---
 
@@ -166,18 +119,9 @@ $$
 
 **[NASA Technical Reports Server presentation/report](https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19920000904.pdf)**
 
-Discusses spacecraft antenna selection and design, including:
+Discusses spacecraft antenna selection and design, including polarization, multiple beams, reflector feeds, frequency reuse, inter-beam isolation, antenna efficiency, beam-forming networks, and spacecraft constraints.
 
-- polarization;
-- multiple beams;
-- reflector feeds;
-- frequency reuse;
-- inter-beam isolation;
-- antenna efficiency;
-- beam-forming networks;
-- spacecraft constraints.
-
-This complements the [Computational Electromagnetics](../computational-em/) spacecraft material.
+See also [Spacecraft & Satellite EM Simulation](../computational-em/).
 
 ---
 
@@ -187,21 +131,13 @@ This complements the [Computational Electromagnetics](../computational-em/) spac
 
 **[MRI instrumentation presentation](https://eeweb.engineering.nyu.edu/~yao/EL5823/MRI_instrumentation_ch13.pdf)**
 
-Especially useful for understanding **RF coils as resonant near-field antennas**. It covers transmit/receive RF coils, Larmor-frequency tuning, RF transmitters, receivers and safety.
+Covers transmit/receive RF coils, Larmor-frequency tuning, RF transmitters, receivers and safety.
 
 ### Stanford — MRI lecture collection
 
 **[Stanford MRI lecture notes and recorded lectures](https://web.stanford.edu/class/rad229/Notes.html)**
 
-Includes:
-
-- the main $B_0$ field;
-- Bloch equations;
-- RF $B_1$ pulses;
-- rotating-frame physics;
-- magnetic-field gradients;
-- slice selection;
-- MRI signal formation.
+Includes the main $B_0$ field, Bloch equations, RF $B_1$ pulses, rotating-frame physics, magnetic-field gradients, slice selection, and MRI signal formation.
 
 ### UC San Diego — MRI instrumentation
 
@@ -215,96 +151,13 @@ Shows the static magnet, gradient coils, RF coil, spin excitation and instrument
 
 ### MIT transmission lines and waveguides
 
-The **[MIT Electromagnetics and Applications lecture collection](https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/pages/lecture-notes/)** contains dedicated presentations on:
-
-- TEM transmission lines;
-- reflection coefficient;
-- VSWR;
-- quarter-wave transformers;
-- transient waves;
-- rectangular waveguides;
-- dielectric waveguides;
-- resonators.
-
-These are directly useful for RF/microwave engineering and measurement work.
+The **[MIT Electromagnetics and Applications lecture collection](https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/pages/lecture-notes/)** contains presentations on TEM transmission lines, reflection coefficient, VSWR, quarter-wave transformers, transient waves, rectangular waveguides, dielectric waveguides and resonators.
 
 ---
 
 ## 10. Antennas and wireless links
 
-The **[MIT 6.013 Spring 2009 lecture collection](https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/pages/lecture-notes/)** includes application-oriented lectures on:
-
-- antenna gain;
-- effective aperture;
-- RF links;
-- Hertzian dipoles;
-- near and far fields;
-- receiving antennas;
-- aperture antennas;
-- diffraction;
-- optical communications.
-
-This provides a useful bridge:
-
-$$
-\boxed{
-\text{Maxwell}
-\rightarrow
-\text{radiation}
-\rightarrow
-\text{antenna}
-\rightarrow
-\text{link}
-\rightarrow
-\text{wireless system}.
-}
-$$
-
----
-
-# Recommended learning routes
-
-### RF / microwave engineer
-
-**Transmission lines → waveguides → antennas → phased arrays → radar → RF systems**
-
-### Computational electromagnetics
-
-**Maxwell equations → boundary conditions → waveguides → antennas → installed/spacecraft antennas → numerical field computation**
-
-### Quantum / atomic sensing
-
-**Fields → polarization → resonators → RF systems → magnetic fields → optical/RF atomic interaction**
-
-### Biomedical electromagnetics
-
-**Fields → magnetic resonance → RF coils → gradients → MRI instrumentation**
-
-### Space and accelerator electromagnetics
-
-**Antennas + RF cavities + permanent/electromagnets + beam/spacecraft interaction**
-
----
-
-# Why presentations are useful
-
-A textbook is best for derivations. A good technical presentation is often better for seeing the **system architecture and physical picture**.
-
-Use this page together with the main reference as
-
-$$
-\boxed{
-\text{reference page}
-+
-\text{presentation}
-+
-\text{derivation}
-+
-\text{simulation}
-=
-\text{working understanding}.
-}
-$$
+The **[MIT 6.013 Spring 2009 lecture collection](https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/pages/lecture-notes/)** includes material on antenna gain, effective aperture, RF links, Hertzian dipoles, near and far fields, receiving antennas, aperture antennas, diffraction and optical communications.
 
 ---
 

@@ -6,7 +6,7 @@ description: A clickable map connecting electromagnetic fundamentals to RF, ante
 
 # Electromagnetics Knowledge Map
 
-<div class="intuition"><span class="callout-title">Physical intuition in 30 seconds</span>Most electromagnetic technologies can be understood by repeatedly asking five questions: <strong>What fields exist? How do they propagate? How do they interact with matter? What device converts that interaction into a useful signal or force? How does the complete system use it?</strong></div>
+<div class="intuition"><span class="callout-title">Physical intuition in 30 seconds</span>Most electromagnetic technologies can be described by the same recurring questions: <strong>What fields exist? How do they propagate? How do they interact with matter? What device converts that interaction into a useful signal or force? How does the complete system use it?</strong></div>
 
 The organizing chain for this site is
 
@@ -33,7 +33,7 @@ $$
 
 ## 3. Classical-to-quantum bridge
 
-Start with the classical field and quantize the material response rather than the field itself:
+For a semiclassical atom–field description,
 
 $$
 \mathbf E(t)\rightarrow H_E=-\mathbf d\cdot\mathbf E(t),\qquad
@@ -61,29 +61,21 @@ $$
 ### Charged particle → measured current
 <div class="pathway"><a href="../lorentz-force/">$q(\mathbf E+\mathbf v\times\mathbf B)$</a><span class="arrow">→</span><span class="node">trajectory</span><span class="arrow">→</span><a href="../shockley-ramo/">$q\mathbf v\cdot\mathbf E_w$</a><span class="arrow">→</span><span class="node">TIA</span><span class="arrow">→</span><a href="../measurements/">oscilloscope / spectrum</a></div>
 
-## 5. Choose a model by electrical size
+## 5. Electrical-size regimes
 
-A powerful first question is whether the structure is electrically small:
+A useful dimensionless parameter is
 
 $$
 ka=\frac{2\pi a}{\lambda}.
 $$
 
-| Regime | First model to consider | Typical applications |
+| Regime | Common model class | Typical applications |
 |---|---|---|
 | $ka\ll1$ | electro/magneto-quasistatics | capacitors, inductors, small sensors |
 | $ka\sim1$ | full-wave Maxwell solution | antennas, resonators, scattering |
 | $ka\gg1$ | full-wave or high-frequency asymptotics | electrically large spacecraft, reflectors, radar scenes |
 
-See [Scaling Laws & Dimensionless Numbers](../reference/scaling-laws.html) for a much larger regime map.
-
-## 6. Three ways to navigate this site
-
-<div class="card-grid">
-<a class="reference-card" href="../reference/"><strong>By physics</strong><span>Equations → scales → derivations → comparisons → misconceptions.</span></a>
-<a class="reference-card" href="../measurements/"><strong>By laboratory task</strong><span>What quantity do I need, what instrument measures it, and what dominates uncertainty?</span></a>
-<a class="reference-card" href="../simulations/"><strong>By model</strong><span>Analytic → circuit → FEM/FDTD/MoM → Monte Carlo → density matrix/Floquet.</span></a>
-</div>
+See [Scaling Laws & Dimensionless Numbers](../reference/scaling-laws.html) for a larger regime map.
 
 ---
 

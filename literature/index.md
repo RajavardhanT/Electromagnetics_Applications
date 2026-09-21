@@ -1,22 +1,18 @@
 ---
 layout: default
 title: Electromagnetics Literature Guide
-description: A curated path through foundational papers, classic textbooks, modern reviews, representative experiments, institutional resources, and standards-oriented sources.
+description: A curated collection of foundational papers, classic textbooks, modern reviews, representative experiments, institutional resources, and standards-oriented sources.
 ---
 
 # Electromagnetics Literature Guide
 
-This page separates sources by **what they are good for**. A foundational paper is not always the best place to learn a topic; a textbook is not always the best source for the current state of an experimental field.
-
-## Source hierarchy used on this site
-
-<div class="literature"><span class="callout-title">Recommended order</span><strong>Learn:</strong> textbook/course → <strong>orient:</strong> review article → <strong>verify novelty/details:</strong> primary literature → <strong>build/test:</strong> standards, metrology institutes, manufacturer documentation and calibrated measurements.</div>
+This page groups sources by **domain and source type** so that foundational literature, textbooks, modern reviews, representative experiments, and institutional resources remain easy to locate.
 
 ## General electromagnetics
 
 ### Classic / advanced texts
 
-- D. J. Griffiths, *Introduction to Electrodynamics* — unusually clear physical development.
+- D. J. Griffiths, *Introduction to Electrodynamics* — clear physical development.
 - J. D. Jackson, *Classical Electrodynamics* — advanced classical theory.
 - D. K. Cheng, *Field and Wave Electromagnetics* — engineering-oriented field/wave treatment.
 - R. F. Harrington, *Time-Harmonic Electromagnetic Fields* — rigorous engineering EM.
@@ -25,11 +21,11 @@ This page separates sources by **what they are good for**. A foundational paper 
 ### Open university resources
 
 - [MIT OpenCourseWare — Electromagnetics and Applications](https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/) — fields through communication systems, antennas, sensors, motors and optics.
-- [MIT OpenCourseWare — graduate Electromagnetics](https://ocw.mit.edu/courses/6-630-electromagnetics-fall-2006/) — deeper EM with demonstrations and computational material.
+- [MIT OpenCourseWare — graduate Electromagnetics](https://ocw.mit.edu/courses/6-630-electromagnetics-fall-2006/) — advanced EM with demonstrations and computational material.
 
 ## RF and microwave
 
-- D. M. Pozar, *Microwave Engineering* — standard practical/theoretical microwave reference.
+- D. M. Pozar, *Microwave Engineering* — practical and theoretical microwave reference.
 - R. E. Collin, *Foundations for Microwave Engineering* — rigorous microwave foundations.
 - G. Gonzalez, *Microwave Transistor Amplifiers* — active RF design.
 - H. A. Wheeler and classic transmission-line/network literature for historical engineering perspective.
@@ -94,20 +90,6 @@ This page separates sources by **what they are good for**. A foundational paper 
 - [NIST — Electromagnetic Field Strength Metrology](https://www.nist.gov/programs-projects/electromagnetic-field-strength-metrology) — SI-linked field-strength calibration and EMC measurement science.
 - [NIST Electromagnetic Fields Group](https://www.nist.gov/ctl/rf-technology-division/electromagnetic-fields-group) — antenna, radiated-field and quantum-based field metrology.
 
-## How to read papers efficiently
-
-For a new paper, answer these in order:
-
-1. **What observable is actually measured?**
-2. **What is the transduction chain from physical quantity to measured voltage/counts?**
-3. **What is the baseline model?**
-4. **What result cannot that baseline model explain?**
-5. **What calibration converts the measured signal to the claimed physical quantity?**
-6. **What limits sensitivity, bandwidth and dynamic range?**
-7. **What evidence separates the proposed mechanism from alternatives?**
-
-That reading strategy is especially useful for atomic sensing, nonlinear RF systems and precision measurement.
-
 ## Presentation companion
 
-The [Presentations & Lectures](../presentations/) page complements this literature guide with visual teaching material from MIT, CERN, NASA and universities.
+The [Presentations & Lectures](../presentations/) page contains visual teaching material from MIT, CERN, NASA and universities.

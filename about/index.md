@@ -25,21 +25,21 @@ This collection is curated by **Rajavardhan Talashila**, an RF/microwave enginee
 
 ## Editorial structure
 
-Whenever practical, a mature topic page should contain:
+Whenever practical, a mature topic page contains:
 
-1. **Physical intuition in 30 seconds**
-2. **Governing equations**, with assumptions and units
-3. **Physical interpretation**
-4. **Worked numerical example**
-5. **Visualization or simulation**
-6. **How it is measured**
-7. **Engineering reality** — loss, tolerance, bandwidth, noise, calibration, finite geometry
-8. **Common misconceptions**
-9. **Applications**
-10. **Literature** — foundational source, classic text, modern review and representative experiment
-11. **Related topics**
+- **Physical intuition in 30 seconds**
+- **Governing equations**, with assumptions and units
+- **Physical interpretation**
+- **Worked numerical examples**
+- **Visualization or simulation**
+- **Measurement methods**
+- **Engineering reality** — loss, tolerance, bandwidth, noise, calibration, finite geometry
+- **Common misconceptions**
+- **Applications**
+- **Literature** — foundational source, classic text, modern review and representative experiment
+- **Related topics**
 
-Not every page needs every item, but this is the quality target.
+Not every page needs every item; the structure is adapted to the subject.
 
 ## Source policy
 
@@ -49,12 +49,4 @@ Numerical values should be interpreted with their stated assumptions. Technology
 
 ## Scope and limitations
 
-This is a learning and engineering-reference project, not a substitute for a safety standard, regulatory certification procedure, medical guidance, or a manufacturer's validated design process. Equations are often idealized deliberately so that the physical dependence is visible before complexity is added.
-
-## How to use it effectively
-
-A productive pattern is:
-
-<div class="pathway"><span class="node">read intuition</span><span class="arrow">→</span><span class="node">estimate scale</span><span class="arrow">→</span><span class="node">calculate</span><span class="arrow">→</span><span class="node">simulate</span><span class="arrow">→</span><span class="node">measure</span><span class="arrow">→</span><span class="node">compare with literature</span></div>
-
-That sequence turns a note into working knowledge.
+This is a technical and engineering-reference project, not a substitute for a safety standard, regulatory certification procedure, medical guidance, or a manufacturer's validated design process. Equations are often idealized deliberately so that the physical dependence is visible before complexity is added.

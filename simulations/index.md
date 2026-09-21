@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Simulation Library
-description: A roadmap from equations to reproducible numerical models for electromagnetics, RF systems, charged particles, and atomic/quantum sensing.
+description: Numerical models for electromagnetics, RF systems, charged particles, and atomic/quantum sensing.
 ---
 
 # Simulation Library
@@ -10,7 +10,7 @@ description: A roadmap from equations to reproducible numerical models for elect
 
 ## Downloadable Python starting points
 
-The repository now includes small, readable scripts that produce numerical output and plots:
+The repository includes small, readable scripts that produce numerical output and plots:
 
 - [Array factor and beam steering](python/array_factor.py)
 - [Free-space link budget](python/link_budget.py)
@@ -19,11 +19,11 @@ The repository now includes small, readable scripts that produce numerical outpu
 - [Ideal Halbach-cylinder field scaling](python/halbach_ideal.py)
 - [Python examples README](python/README.md)
 
-<div class="engineering"><span class="callout-title">Model hierarchy</span>These are deliberately first models. Validate the analytic limit first, then add geometry, loss, collisions, multilevel structure, uncertainty and the measured instrument transfer function only when the question requires them.</div>
+<div class="engineering"><span class="callout-title">Model hierarchy</span>These scripts are intentionally compact first models. Geometry, loss, collisions, multilevel structure, uncertainty and measured instrument transfer functions can be added when required by the physical problem.</div>
 
 ## Model-selection map
 
-| Problem | First model | When to upgrade |
+| Problem | First model | When a more complete model is needed |
 |---|---|---|
 | Plane-wave propagation | analytic phasor | layered/inhomogeneous medium |
 | Transmission line | telegrapher equations | full-wave launch/discontinuity |
@@ -47,7 +47,7 @@ beta = 2*np.pi*f/c
 E = np.exp(-1j*beta*z)
 ```
 
-Checks: phase advances linearly, $|E|$ is constant in a lossless medium, and wavelength equals $2\pi/\beta$.
+Checks include linear phase advance, constant $|E|$ in a lossless medium, and wavelength $2\pi/\beta$.
 
 ## 2. Transmission line and reflection
 
@@ -55,7 +55,7 @@ For a lossless line,
 
 $$Z_{in}=Z_0\frac{Z_L+jZ_0\tan\beta l}{Z_0+jZ_L\tan\beta l}.$$
 
-A useful simulation plots $Z_{in}(l)$ and $\Gamma(l)$ on a Smith chart while sweeping electrical length.
+Plots of $Z_{in}(l)$ and $\Gamma(l)$ on a Smith chart show the effect of electrical length directly.
 
 ## 3. Antenna array factor
 
@@ -64,25 +64,17 @@ For a linear array,
 $$AF(\theta)=\sum_{n=0}^{N-1}w_ne^{jn(kd\sin\theta+\beta_s)}.
 $$
 
-Simulate:
+Useful parameters include element count, spacing, steering phase, amplitude taper, phase/amplitude errors, grating lobes, and scan loss after multiplication by an element pattern.
 
-- element count;
-- spacing;
-- steering phase;
-- amplitude taper;
-- phase/amplitude errors;
-- grating lobes;
-- scan loss after multiplying by an element pattern.
-
-Then upgrade to a full-wave solver when mutual coupling and finite element patterns matter.
+A full-wave model becomes important when mutual coupling and finite element patterns matter.
 
 ## 4. Radar waveform
 
-An FMCW simulation should separate:
+An FMCW model contains
 
 **transmit chirp → delayed/Doppler-shifted echo → mixer → beat signal → FFT → range/velocity estimate.**
 
-Test range resolution against $c/(2B)$ and Doppler against $2v/\lambda$.
+Range resolution can be checked against $c/(2B)$ and Doppler against $2v/\lambda$.
 
 ## 5. Lorentz-force particle tracking
 
@@ -92,21 +84,17 @@ $$m\dot{\mathbf v}=q(\mathbf E+\mathbf v\times\mathbf B),\qquad
 \dot{\mathbf r}=\mathbf v.
 $$
 
-Prefer a Boris pusher for long charged-particle trajectories in magnetic fields because it preserves gyromotion better than naive Euler stepping.
+A Boris pusher is useful for long charged-particle trajectories in magnetic fields because it preserves gyromotion better than naive Euler stepping.
 
 ## 6. Monte Carlo transport + Shockley–Ramo
 
-For each particle:
+For particle $j$,
 
-1. sample creation position/time;
-2. sample initial velocity;
-3. propagate through actual $\mathbf E,\mathbf B$;
-4. apply stochastic collisions;
-5. evaluate $i_j=q_j\mathbf v_j\cdot\mathbf E_w$;
-6. sum particles;
-7. convolve/filter through measured $Z_T(\omega)$.
+$$i_j=q_j\mathbf v_j\cdot\mathbf E_w.$$
 
-This naturally separates **transport physics** from **signal induction**.
+A complete transport calculation can include sampled creation positions and velocities, actual $\mathbf E$ and $\mathbf B$ fields, stochastic collisions, wall/electrode interactions, weighting-field interpolation, particle summation, and the measured $Z_T(\omega)$ of the readout electronics.
+
+This separates **transport physics** from **signal induction**.
 
 ## 7. Optical Bloch equations
 
@@ -115,14 +103,7 @@ For a two-level atom,
 $$\dot\rho=-\frac{i}{\hbar}[H,\rho]+\mathcal L(\rho).
 $$
 
-Validate a code in this order:
-
-- zero drive → ground state;
-- weak resonant drive → Lorentzian response;
-- increasing drive → saturation/power broadening;
-- detuning symmetry where expected;
-- trace $\mathrm{Tr}\rho=1$;
-- populations remain physical.
+Useful consistency checks include the zero-drive limit, weak-drive Lorentzian response, saturation/power broadening, expected detuning symmetry, $\mathrm{Tr}\rho=1$, and physical populations.
 
 ## 8. Three-level EIT
 
@@ -131,25 +112,13 @@ For a ladder system $|g\rangle\rightarrow|e\rangle\rightarrow|r\rangle$, calcula
 $$\chi\propto\rho_{ge}/\Omega_p.
 $$
 
-Then add, one at a time:
-
-**Doppler averaging → transit time → laser linewidth → spatial Rabi variation → Zeeman structure → RF coupling.**
-
-Incremental validation prevents a large density-matrix script from becoming impossible to debug.
+Realistic models may include Doppler averaging, transit time, laser linewidth, spatial Rabi variation, Zeeman structure and RF coupling.
 
 ## 9. Floquet / Shirley model
 
 For a periodic Hamiltonian $H(t+T)=H(t)$, expand in photon replicas and diagonalize the enlarged Floquet Hamiltonian.
 
-Useful outputs:
-
-- quasienergies;
-- bare-state overlap;
-- target-state shift;
-- avoided-crossing gaps;
-- replica index $q$;
-- pathway amplitudes;
-- eigenvector continuity by overlap between neighboring field points.
+Useful outputs include quasienergies, bare-state overlap, target-state shift, avoided-crossing gaps, replica index $q$, pathway amplitudes, and eigenvector continuity by overlap between neighboring field points.
 
 ## 10. Magnetostatics and Halbach arrays
 
@@ -158,13 +127,13 @@ Solve
 $$\nabla\cdot\mathbf B=0,\qquad \mathbf B=\mu_0(\mathbf H+\mathbf M).
 $$
 
-For atomic sensing, post-process not only $|B|$ but the distribution of **Zeeman shifts across the illuminated vapor volume**.
+For atomic sensing, useful post-processing includes both $|B|$ and the distribution of **Zeeman shifts across the illuminated vapor volume**.
 
 ## 11. FEM, FDTD and MoM
 
-- **FEM:** excellent for bounded complex geometries, waveguides, cavities and dielectric structures.
+- **FEM:** bounded complex geometries, waveguides, cavities and dielectric structures.
 - **FDTD:** broadband time-domain propagation and transients.
-- **MoM:** efficient for open-region conducting surfaces, wires, radiation and scattering.
+- **MoM:** open-region conducting surfaces, wires, radiation and scattering.
 
 See [Comparison Tables](../reference/comparison-tables.html) and [Computational Methods](../computational-methods/).
 
@@ -179,7 +148,3 @@ See [Comparison Tables](../reference/comparison-tables.html) and [Computational 
 <label><input type="checkbox"> Compare an actual observable, not only hidden state variables.</label>
 <label><input type="checkbox"> Distinguish fitted parameters from independently measured inputs.</label>
 </div>
-
-## Recommended progression
-
-**analytic limit → small Python model → parameter sweep → realistic geometry/multilevel model → uncertainty/sensitivity analysis → experimental comparison.**

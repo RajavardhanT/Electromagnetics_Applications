@@ -18,18 +18,18 @@ description: A connected, practical reference from Maxwell's equations to RF eng
 
 <div class="author-box">
 <div class="author-monogram">RT</div>
-<p><strong>Curated by Rajavardhan Talashila.</strong> This reference deliberately connects classical RF/microwave engineering, electromagnetics, measurement science, atomic physics, and Rydberg/quantum sensing. <a href="about/">Purpose, author context, and source policy →</a></p>
+<p><strong>Curated by Rajavardhan Talashila.</strong> This reference connects classical RF/microwave engineering, electromagnetics, measurement science, atomic physics, and Rydberg/quantum sensing. <a href="about/">Purpose, author context, and source policy →</a></p>
 </div>
 
-## Start according to what you need
+## Reference tools
 
 <div class="card-grid">
-<a class="reference-card" href="knowledge-map/"><span class="badge">Learn</span><strong>Build the mental map</strong><span>See how fields, waves, forces, circuits, antennas, sensors and quantum interactions connect.</span></a>
-<a class="reference-card" href="reference/"><span class="badge">Recall</span><strong>Look something up quickly</strong><span>Equations, scales, comparisons, scaling laws, derivations, misconceptions and history.</span></a>
-<a class="reference-card" href="worked-examples/"><span class="badge">Calculate</span><strong>Work through numbers</strong><span>Short numerical examples spanning RF, antennas, radar, optics, magnetometry and quantum sensing.</span></a>
-<a class="reference-card" href="measurements/"><span class="badge">Measure</span><strong>Connect theory to instruments</strong><span>VNA, spectrum analyzer, VSA, oscilloscope, field probes, chambers, optical detectors and calibration.</span></a>
-<a class="reference-card" href="simulations/"><span class="badge">Model</span><strong>Simulate the physics</strong><span>Python-ready models for arrays, waves, charged particles, resonances, Stark/Zeeman and atomic sensing.</span></a>
-<a class="reference-card" href="literature/"><span class="badge">Research</span><strong>Go to authoritative sources</strong><span>Foundational papers, classic texts, modern reviews, representative experiments and lecture collections.</span></a>
+<a class="reference-card" href="knowledge-map/"><span class="badge">Map</span><strong>Knowledge Map</strong><span>Connections among fields, waves, forces, circuits, antennas, sensors and quantum interactions.</span></a>
+<a class="reference-card" href="reference/"><span class="badge">Reference</span><strong>Quick Reference</strong><span>Equations, scales, comparisons, scaling laws, derivations, misconceptions and history.</span></a>
+<a class="reference-card" href="worked-examples/"><span class="badge">Examples</span><strong>Worked Examples</strong><span>Numerical examples spanning RF, antennas, radar, optics, magnetometry and quantum sensing.</span></a>
+<a class="reference-card" href="measurements/"><span class="badge">Measurement</span><strong>Measurements & Instruments</strong><span>VNA, spectrum analyzer, VSA, oscilloscope, field probes, chambers, optical detectors and calibration.</span></a>
+<a class="reference-card" href="simulations/"><span class="badge">Simulation</span><strong>Simulation Library</strong><span>Python-ready models for arrays, waves, charged particles, resonances, Stark/Zeeman and atomic sensing.</span></a>
+<a class="reference-card" href="literature/"><span class="badge">Sources</span><strong>Literature Guide</strong><span>Foundational papers, classic texts, modern reviews, representative experiments and lecture collections.</span></a>
 </div>
 
 ## The knowledge map
@@ -92,27 +92,21 @@ description: A connected, practical reference from Maxwell's equations to RF eng
 
 <div class="card-grid">
 <a class="reference-card" href="reference/fundamental-equations.html"><strong>Equation Sheet</strong><span>The relations most often reused across EM, RF, optics and atomic sensing.</span></a>
-<a class="reference-card" href="reference/orders-of-magnitude.html"><strong>Orders of Magnitude</strong><span>Build intuition for wavelengths, powers, fields, timescales and noise.</span></a>
-<a class="reference-card" href="reference/scaling-laws.html"><strong>Scaling Laws</strong><span>Know what changes when frequency, distance, size, $n$, bandwidth or field changes.</span></a>
-<a class="reference-card" href="reference/comparison-tables.html"><strong>Comparison Tables</strong><span>Fast choices: FEM/FDTD/MoM, antennas, radar types, magnetometers, homodyne/heterodyne and more.</span></a>
+<a class="reference-card" href="reference/orders-of-magnitude.html"><strong>Orders of Magnitude</strong><span>Wavelengths, powers, fields, timescales and noise levels.</span></a>
+<a class="reference-card" href="reference/scaling-laws.html"><strong>Scaling Laws</strong><span>Dependence on frequency, distance, size, $n$, bandwidth and field.</span></a>
+<a class="reference-card" href="reference/comparison-tables.html"><strong>Comparison Tables</strong><span>FEM/FDTD/MoM, antennas, radar types, magnetometers, homodyne/heterodyne and more.</span></a>
 <a class="reference-card" href="reference/common-misconceptions.html"><strong>Common Misconceptions</strong><span>Short corrections for ideas that routinely cause errors in EM and quantum sensing.</span></a>
 <a class="reference-card" href="reference/derivations.html"><strong>Essential Derivations</strong><span>Selected derivations where the mathematics reveals useful physical structure.</span></a>
 </div>
 
-## How technical pages are built
+## Technical page structure
 
-The target structure of this reference is deliberately repetitive because repetition makes a reference predictable:
+Mature topic pages use a consistent reference format: **physical intuition, governing equations and assumptions, worked examples, visualizations or simulations, measurement methods, engineering limitations, literature, and related topics.**
 
-**30-second intuition → governing equations and assumptions → worked example → visual/simulation → how it is measured → engineering reality → literature → related topics.**
+<div class="engineering"><span class="callout-title">Engineering reality</span>Finite geometry, loss, parasitics, bandwidth, calibration, temperature, uncertainty, tolerances, nonlinearity and noise determine how closely real systems follow ideal equations.</div>
 
-<div class="engineering"><span class="callout-title">Engineering reality</span>An ideal equation is only the beginning. Throughout the site, look for finite geometry, loss, parasitics, bandwidth, calibration, temperature, uncertainty, tolerances, nonlinearity and noise — the effects that determine whether the ideal model survives in a real system.</div>
+<div class="measurement"><span class="callout-title">Measurement</span>The <a href="measurements/">Measurements & Instruments</a> section connects field theory to VNA/VSA/spectrum-analyzer/oscilloscope methods, field probes, antenna ranges, photodetection, calibration and uncertainty.</div>
 
-<div class="measurement"><span class="callout-title">Measurement first-class</span>A recurring question on this site is: <strong>“How would I actually measure this quantity?”</strong> The dedicated <a href="measurements/">Measurements & Instruments</a> section connects field theory to VNA/VSA/spectrum-analyzer/oscilloscope methods, field probes, antenna ranges, photodetection, calibration and uncertainty.</div>
+## External resources
 
-## External learning material
-
-Use the [Presentations & Lectures](presentations/) library for curated institutional material from MIT, CERN, NASA and universities. Use the [Literature Guide](literature/) when you need foundational papers, classic textbooks, modern reviews, and representative experiments rather than a summary.
-
----
-
-**A good reference should shorten the path from “I remember seeing this” to “I can calculate, measure, simulate and explain it.”** That is the design goal of this site.
+The [Presentations & Lectures](presentations/) library contains curated institutional material from MIT, CERN, NASA and universities. The [Literature Guide](literature/) collects foundational papers, classic textbooks, modern reviews and representative experiments.
