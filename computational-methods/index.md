@@ -5,6 +5,12 @@ title: Computational Methods — CUDA, GPU Computing & Julia
 
 # Computational Methods
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Architektura_CUDA.png"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Architektura_CUDA.png?width=1000" alt="CUDA execution architecture illustrating GPU parallelism — the computational model behind large scientific parameter sweeps and particle simulations." loading="lazy"></a>
+  <figcaption>CUDA execution architecture illustrating GPU parallelism — the computational model behind large scientific parameter sweeps and particle simulations. <a href="https://commons.wikimedia.org/wiki/File:Architektura_CUDA.png">Image source</a>.</figcaption>
+</figure>
+
+
 Modern electromagnetics, quantum sensing, plasma physics, optimization, inverse problems, and large numerical models are often limited not by the governing equations but by the computational cost of solving them. This page is a practical reference to scientific computing methods, with special emphasis on **GPU acceleration with NVIDIA CUDA** and the **Julia programming language**.
 
 ## 1. The scientific-computing stack
