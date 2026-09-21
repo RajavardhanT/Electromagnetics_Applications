@@ -5,6 +5,12 @@ title: Measuring the Chandler Wobble with VLBI
 
 # Measuring the Chandler Wobble with VLBI
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:How_VLBI_Works.gif"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/How_VLBI_Works.gif?width=1100" alt="NASA diagram of very-long-baseline interferometry: separated radio telescopes observe the same distant source and correlate precisely timed signals." loading="lazy"></a>
+  <figcaption>NASA diagram of very-long-baseline interferometry: separated radio telescopes observe the same distant source and correlate precisely timed signals. <a href="https://commons.wikimedia.org/wiki/File:How_VLBI_Works.gif">Image source</a>.</figcaption>
+</figure>
+
+
 ## Overview
 
 The **Chandler wobble** is a free oscillation of Earth's rotation axis relative to the solid Earth. Its characteristic period is roughly **430–435 days**. Unlike the annual component of polar motion, which is driven by seasonal redistribution of atmospheric, oceanic, and hydrological mass, the Chandler wobble is a natural rotational mode of the Earth.
