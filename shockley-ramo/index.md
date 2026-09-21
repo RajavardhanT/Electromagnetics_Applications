@@ -5,6 +5,12 @@ title: Shockley–Ramo Theorem — Induced Current from Moving Charge
 
 # Shockley–Ramo Theorem and Induced Current
 
+<figure class="topic-figure">
+  <a href="https://indico.cern.ch/event/1252505/contributions/5365826/attachments/2651554/4591315/MADRV_WP.pdf"><img src="../assets/shockley-ramo-weighting.svg" alt="Weighting-field picture of Shockley–Ramo signal induction. Diagram redrawn for this reference from the weighting-field construction used in CERN/DESY detector training material." loading="lazy"></a>
+  <figcaption>Weighting-field picture of Shockley–Ramo signal induction. Diagram redrawn for this reference from the weighting-field construction used in CERN/DESY detector training material. <a href="https://indico.cern.ch/event/1252505/contributions/5365826/attachments/2651554/4591315/MADRV_WP.pdf">Image source</a>.</figcaption>
+</figure>
+
+
 The **Shockley–Ramo theorem** is one of the most useful results for understanding how the motion of charge inside a detector, vacuum device, semiconductor, plasma, or electrode structure produces a measurable current at an external electrode.
 
 Its key insight is subtle:
