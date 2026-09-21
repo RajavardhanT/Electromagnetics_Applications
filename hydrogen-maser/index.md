@@ -5,6 +5,12 @@ title: Hydrogen Maser
 
 # Hydrogen Maser
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Hydrogen_maser.jpg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Hydrogen_maser.jpg?width=1000" alt="Hydrogen maser hardware illustrating the microwave/atomic-frequency-standard connection. Credit: NASA/JPL-Caltech." loading="lazy"></a>
+  <figcaption>Hydrogen maser hardware illustrating the microwave/atomic-frequency-standard connection. Credit: NASA/JPL-Caltech. <a href="https://commons.wikimedia.org/wiki/File:Hydrogen_maser.jpg">Image source</a>.</figcaption>
+</figure>
+
+
 A **hydrogen maser** is an active atomic frequency standard in which the ground-state hyperfine transition of atomic hydrogen produces a highly stable microwave signal near **1.420405752 GHz**. It is one of the clearest examples of electromagnetics, quantum mechanics, microwave cavities, magnetic state selection, low-noise electronics, and precision metrology operating as one system.
 
 **MASER = Microwave Amplification by Stimulated Emission of Radiation.**
