@@ -86,3 +86,10 @@ th { background: #eef3f8; }
   th, td { border-color: #2a3e55; }
   .site-footer { color: #8195aa; }
 }
+
+/* Sourced topic figures */
+.topic-figure { margin: 1.4rem auto 2rem; max-width: 900px; text-align: center; padding: .8rem; border: 1px solid rgba(143,185,217,.22); border-radius: 14px; background: rgba(255,255,255,.025); }
+.topic-figure img { display: block; max-width: 100%; max-height: 560px; width: auto; height: auto; margin: 0 auto; border-radius: 8px; object-fit: contain; }
+.topic-figure figcaption { margin: .75rem auto .15rem; max-width: 780px; font-size: .88rem; line-height: 1.45; opacity: .82; }
+.topic-figure-small { max-width: 680px; }
+@media (max-width: 700px) { .topic-figure { padding: .45rem; margin: 1rem auto 1.5rem; } .topic-figure img { max-height: 420px; } }
