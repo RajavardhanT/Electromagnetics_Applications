@@ -5,6 +5,12 @@ title: Computational Electromagnetics — Spacecraft & Satellite Applications
 
 # Computational Electromagnetics
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Cassini%27s_High_and_Low_Gain_Antenna.jpg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Cassini%27s_High_and_Low_Gain_Antenna.jpg?width=1200" alt="Cassini spacecraft showing its high-gain antenna: a representative example of why antenna placement, installed patterns, coupling and spacecraft scattering matter in CEM." loading="lazy"></a>
+  <figcaption>Cassini spacecraft showing its high-gain antenna: a representative example of why antenna placement, installed patterns, coupling and spacecraft scattering matter in CEM. <a href="https://commons.wikimedia.org/wiki/File:Cassini%27s_High_and_Low_Gain_Antenna.jpg">Image source</a>.</figcaption>
+</figure>
+
+
 Many practical electromagnetic systems require numerical solutions of Maxwell's equations in geometries and environments that are too complex to treat analytically. **Satellites and spacecraft are particularly important applications of electromagnetic simulation** because the antenna is never truly isolated: the spacecraft bus, solar arrays, booms, reflectors, payloads, thermal structures, cables, other antennas, and the surrounding propagation environment all influence RF performance.
 
 NASA Johnson Space Center uses full-wave computational electromagnetics for antenna/device design, near- and far-field analysis, antenna coupling, radar cross section, and verification of antenna measurements. NASA states that its GEMINI Method-of-Moments solver has supported Shuttle, ISS, Constellation and other spaceflight work.
