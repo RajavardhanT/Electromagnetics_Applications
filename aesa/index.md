@@ -5,6 +5,12 @@ title: Active Electronically Scanned Arrays (AESA)
 
 # Active Electronically Scanned Arrays (AESA)
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Phased_array_antenna_system.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Phased_array_antenna_system.svg?width=1200" alt="Phased-array architecture showing individually phase-controlled antenna elements and electronic beam steering." loading="lazy"></a>
+  <figcaption>Phased-array architecture showing individually phase-controlled antenna elements and electronic beam steering. <a href="https://commons.wikimedia.org/wiki/File:Phased_array_antenna_system.svg">Image source</a>.</figcaption>
+</figure>
+
+
 An **active electronically scanned array (AESA)** is a phased-array antenna in which many radiating elements or small subarrays have their own active transmit/receive electronics. By electronically controlling the relative phase and amplitude across the aperture, the array can steer, shape, and adapt its beam without mechanically rotating the antenna.
 
 AESA technology connects **electromagnetics, antennas, microwave/RF integrated circuits, semiconductor power devices, digital signal processing, radar, communications, thermal engineering, calibration, and computational electromagnetics**.
