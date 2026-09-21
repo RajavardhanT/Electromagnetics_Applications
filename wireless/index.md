@@ -5,6 +5,12 @@ title: Wireless Communications — MIMO Interview Reference
 
 # Wireless Communications
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:MIMO_with_building.png"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/MIMO_with_building.png?width=1200" alt="MIMO exploits multiple propagation paths between multiple transmit and receive antennas to create spatial channels." loading="lazy"></a>
+  <figcaption>MIMO exploits multiple propagation paths between multiple transmit and receive antennas to create spatial channels. <a href="https://commons.wikimedia.org/wiki/File:MIMO_with_building.png">Image source</a>.</figcaption>
+</figure>
+
+
 Electromagnetic propagation, antennas, modulation, channel behavior, and RF hardware come together in wireless communication systems.
 
 ## Topics
