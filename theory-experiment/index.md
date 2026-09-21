@@ -6,6 +6,11 @@ description: A reusable workflow for converting electromagnetic theory into meas
 
 # Theory ↔ Experiment
 
+<figure class="topic-figure">
+  <img src="../assets/theory-experiment-template.svg" alt="Template showing measured data, theoretical curve, residuals, and the model-to-observable-to-instrument workflow">
+  <figcaption>A reusable comparison pattern: put theory and data on the same observable, then use residual structure to diagnose missing physics, calibration error, or noise.</figcaption>
+</figure>
+
 A strong technical reference should not stop at an equation or a plot. The useful chain is
 
 $$
