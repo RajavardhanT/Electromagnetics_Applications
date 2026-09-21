@@ -27,9 +27,13 @@ description: A connected, practical reference from Maxwell's equations to RF eng
 <a class="reference-card" href="knowledge-map/"><span class="badge">Map</span><strong>Knowledge Map</strong><span>Connections among fields, waves, forces, circuits, antennas, sensors and quantum interactions.</span></a>
 <a class="reference-card" href="reference/"><span class="badge">Reference</span><strong>Quick Reference</strong><span>Equations, scales, comparisons, scaling laws, derivations, misconceptions and history.</span></a>
 <a class="reference-card" href="worked-examples/"><span class="badge">Examples</span><strong>Worked Examples</strong><span>Numerical examples spanning RF, antennas, radar, optics, magnetometry and quantum sensing.</span></a>
+<a class="reference-card" href="calculators/"><span class="badge">Calculator</span><strong>Interactive Calculators</strong><span>Wavelength, link budget, noise, skin depth, cutoff, radar, Larmor, Rabi and Halbach calculations.</span></a>
 <a class="reference-card" href="measurements/"><span class="badge">Measurement</span><strong>Measurements & Instruments</strong><span>VNA, spectrum analyzer, VSA, oscilloscope, field probes, chambers, optical detectors and calibration.</span></a>
 <a class="reference-card" href="simulations/"><span class="badge">Simulation</span><strong>Simulation Library</strong><span>Python-ready models for arrays, waves, charged particles, resonances, Stark/Zeeman and atomic sensing.</span></a>
-<a class="reference-card" href="literature/"><span class="badge">Sources</span><strong>Literature Guide</strong><span>Foundational papers, classic texts, modern reviews, representative experiments and lecture collections.</span></a>
+<a class="reference-card" href="theory-experiment/"><span class="badge">Validation</span><strong>Theory ↔ Experiment</strong><span>Observable-first modeling, residuals, independent calibration and model validation.</span></a>
+<a class="reference-card" href="computational-methods/"><span class="badge">Computing</span><strong>Computational Methods</strong><span>Numerical workflows, CUDA/GPU computing, Julia and scientific-computing methods.</span></a>
+<a class="reference-card" href="literature/"><span class="badge">Sources</span><strong>Literature Guide</strong><span>Foundational papers, classic texts, modern reviews and representative experiments.</span></a>
+<a class="reference-card" href="presentations/"><span class="badge">Lectures</span><strong>Presentations & Lectures</strong><span>Curated technical presentations from universities, NASA, CERN and research institutions.</span></a>
 </div>
 
 ## The knowledge map
@@ -77,18 +81,28 @@ description: A connected, practical reference from Maxwell's equations to RF eng
 <a class="reference-card" href="medical/"><strong>Medical Electromagnetics</strong><span>MRI, RF coils, SAR, microwave imaging, ablation, hyperthermia and implants.</span></a>
 </div>
 
+## Fields, particles and induced signals
+
+<div class="card-grid">
+<a class="reference-card" href="lorentz-force/"><strong>Lorentz Force</strong><span>Electric and magnetic forces on charges, charged-particle motion, crossed fields and relativistic form.</span></a>
+<a class="reference-card" href="shockley-ramo/"><strong>Shockley–Ramo Theorem</strong><span>Weighting fields, induced current, detector signals, moving charges, TIA readout and magnetic-field effects.</span></a>
+<a class="reference-card" href="subatomic-particles/"><strong>Subatomic Particles & Accelerators</strong><span>Particle discovery, electromagnetic acceleration, bending, focusing, detection and spectrometry.</span></a>
+</div>
+
 ## Atomic, quantum, space and precision systems
 
 <div class="card-grid">
 <a class="reference-card" href="quantum/"><strong>Quantum Technologies</strong><span>Atom–field interaction, Rabi coupling, Stark/Zeeman physics, cavities, sensing and conversion.</span></a>
 <a class="reference-card" href="rydberg-semiclassical-effects/"><strong>Rydberg Semiclassical Optics</strong><span>EIT, AT splitting, dressed/Floquet states, multiphoton physics, nonlinearities and RF sensing.</span></a>
 <a class="reference-card" href="ground-state-magnetometry/"><strong>Ground-State Magnetometry</strong><span>Larmor precession, optical pumping, SERF, CPT/EIT, RF magnetometry and Halbach arrays.</span></a>
+<a class="reference-card" href="atomic-magnetometer/"><strong>Optically Pumped Atomic Magnetometers</strong><span>Zeeman interaction, spin polarization, Bloch dynamics, optical readout and scalar/vector magnetometry.</span></a>
 <a class="reference-card" href="hydrogen-maser/"><strong>Hydrogen Maser</strong><span>Hyperfine physics, stimulated microwave emission, cavities, stability and VLBI timing.</span></a>
-<a class="reference-card" href="computational-em/"><strong>Spacecraft EM</strong><span>Installed antenna patterns, coupling, EMC, satellite links, payloads and launch environments.</span></a>
+<a class="reference-card" href="computational-em/"><strong>Spacecraft Electromagnetics</strong><span>Installed antenna patterns, coupling, EMC, satellite links, payloads and launch environments.</span></a>
 <a class="reference-card" href="gravity-probe-b/"><strong>Gravity Probe B</strong><span>Superconducting gyroscopes, London moment, SQUID readout and end-to-end precision engineering.</span></a>
+<a class="reference-card" href="earth-space/chandler-wobble-vlbi.html"><strong>VLBI, Chandler Wobble & Earth Rotation</strong><span>Interferometric radio astronomy, precision timing, baseline geometry and Earth-orientation measurement.</span></a>
 </div>
 
-## Bookmarkable tools
+## Bookmarkable references
 
 <div class="card-grid">
 <a class="reference-card" href="reference/fundamental-equations.html"><strong>Equation Sheet</strong><span>The relations most often reused across EM, RF, optics and atomic sensing.</span></a>
@@ -97,6 +111,8 @@ description: A connected, practical reference from Maxwell's equations to RF eng
 <a class="reference-card" href="reference/comparison-tables.html"><strong>Comparison Tables</strong><span>FEM/FDTD/MoM, antennas, radar types, magnetometers, homodyne/heterodyne and more.</span></a>
 <a class="reference-card" href="reference/common-misconceptions.html"><strong>Common Misconceptions</strong><span>Short corrections for ideas that routinely cause errors in EM and quantum sensing.</span></a>
 <a class="reference-card" href="reference/derivations.html"><strong>Essential Derivations</strong><span>Selected derivations where the mathematics reveals useful physical structure.</span></a>
+<a class="reference-card" href="reference/history-timeline.html"><strong>History Timeline</strong><span>Major developments from Coulomb, Faraday and Maxwell to RF engineering and modern field metrology.</span></a>
+<a class="reference-card" href="reference/equation-history.html"><strong>History Behind the Equations</strong><span>Historical context for the equations that shaped electromagnetics.</span></a>
 </div>
 
 ## Technical page structure
