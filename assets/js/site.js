@@ -14,7 +14,7 @@
     ['Measurements & Instruments','/measurements/','vna spectrum analyzer vsa oscilloscope probes chamber calibration'],
     ['Simulation Library','/simulations/','python antenna array lorentz eit bloch halbach'],
     ['Theory ↔ Experiment','/theory-experiment/','model observable residual validation calibration theory experiment'],
-    ['Literature Guide','/literature/','books reviews papers sources'],
+    ['Literature Guide','/literature/','reviews papers primary literature institutional sources'],
     ['Presentations & Lectures','/presentations/','mit cern nasa lecture slides'],
     ['Foundations','/foundations/','maxwell waves boundary polarization poynting'],
     ['RF & Microwave','/rf-microwave/','transmission lines smith chart s parameters waveguide filter'],
@@ -40,6 +40,31 @@
     ['VLBI & Chandler Wobble','/earth-space/chandler-wobble-vlbi.html','radio astronomy geodesy interferometry'],
     ['About','/about/','author scope source policy']
   ];
+
+  const normalizePath = p => {
+    if (!p) return '/';
+    let out = p.replace(base || '', '') || '/';
+    if (!out.startsWith('/')) out = '/' + out;
+    if (out !== '/' && !out.includes('.') && !out.endsWith('/')) out += '/';
+    return out;
+  };
+
+  /* Highlight the current location in the sidebar. */
+  const currentPath = normalizePath(window.location.pathname);
+  const sidebarLinks = [...document.querySelectorAll('.sidebar a[href]')].filter(a => {
+    try { return new URL(a.href, window.location.href).origin === window.location.origin; } catch(e) { return false; }
+  });
+  let bestSidebarMatch = null;
+  sidebarLinks.forEach(a => {
+    const p = normalizePath(new URL(a.href, window.location.href).pathname);
+    if (currentPath === p || (p !== '/' && currentPath.startsWith(p))) {
+      if (!bestSidebarMatch || p.length > bestSidebarMatch.path.length) bestSidebarMatch = {a, path:p};
+    }
+  });
+  if (bestSidebarMatch) {
+    bestSidebarMatch.a.classList.add('active');
+    bestSidebarMatch.a.setAttribute('aria-current','page');
+  }
 
   const search = document.getElementById('site-search');
   const results = document.getElementById('search-results');
@@ -67,13 +92,29 @@
   const toc = document.getElementById('page-toc-list');
   if (toc) {
     const hs = [...document.querySelectorAll('.content h2, .content h3')].filter(h => !h.closest('.page-toc'));
+    const tocLinks = [];
     hs.forEach((h,i) => {
       if (!h.id) h.id = (h.textContent || `section-${i}`).toLowerCase().trim().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
       const a = document.createElement('a');
-      a.href = '#'+h.id; a.textContent = h.textContent; a.className = h.tagName === 'H3' ? 'toc-h3' : 'toc-h2'; toc.appendChild(a);
+      a.href = '#'+h.id; a.textContent = h.textContent; a.className = h.tagName === 'H3' ? 'toc-h3' : 'toc-h2'; toc.appendChild(a); tocLinks.push(a);
       const anchor = document.createElement('a'); anchor.className='heading-anchor'; anchor.href='#'+h.id; anchor.textContent='¶'; anchor.setAttribute('aria-label','Link to this section'); h.appendChild(anchor);
     });
     const details = toc.closest('details'); if (!hs.length && details) details.remove();
+
+    if (hs.length && 'IntersectionObserver' in window) {
+      let activeId = '';
+      const activate = id => {
+        if (!id || id === activeId) return;
+        activeId = id;
+        tocLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#'+id));
+      };
+      const observer = new IntersectionObserver(entries => {
+        const visible = entries.filter(e => e.isIntersecting).sort((a,b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible.length) activate(visible[0].target.id);
+      }, {rootMargin:'-92px 0px -68% 0px', threshold:[0,1]});
+      hs.forEach(h => observer.observe(h));
+      if (hs[0]) activate(hs[0].id);
+    }
   }
 
   document.querySelectorAll('pre').forEach(pre => {
