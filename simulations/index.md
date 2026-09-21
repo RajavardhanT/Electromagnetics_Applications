@@ -8,6 +8,19 @@ description: A roadmap from equations to reproducible numerical models for elect
 
 <div class="intuition"><span class="callout-title">Simulation principle</span>Use the simplest model that preserves the physics needed for the question. A model is useful when its assumptions are explicit, its limiting cases are checked, and at least one observable can be compared with experiment.</div>
 
+## Downloadable Python starting points
+
+The repository now includes small, readable scripts that produce numerical output and plots:
+
+- [Array factor and beam steering](python/array_factor.py)
+- [Free-space link budget](python/link_budget.py)
+- [Lorentz-force particle tracking with a Boris pusher](python/lorentz_boris.py)
+- [Driven dissipative two-level optical Bloch equations](python/optical_bloch_two_level.py)
+- [Ideal Halbach-cylinder field scaling](python/halbach_ideal.py)
+- [Python examples README](python/README.md)
+
+<div class="engineering"><span class="callout-title">Model hierarchy</span>These are deliberately first models. Validate the analytic limit first, then add geometry, loss, collisions, multilevel structure, uncertainty and the measured instrument transfer function only when the question requires them.</div>
+
 ## Model-selection map
 
 | Problem | First model | When to upgrade |
