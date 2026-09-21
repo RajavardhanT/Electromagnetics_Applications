@@ -13,6 +13,7 @@
     ['Interactive Calculators','/calculators/','wavelength friis skin waveguide larmor rabi halbach noise'],
     ['Measurements & Instruments','/measurements/','vna spectrum analyzer vsa oscilloscope probes chamber calibration'],
     ['Simulation Library','/simulations/','python antenna array lorentz eit bloch halbach'],
+    ['Theory ↔ Experiment','/theory-experiment/','model observable residual validation calibration theory experiment'],
     ['Literature Guide','/literature/','books reviews papers sources'],
     ['Presentations & Lectures','/presentations/','mit cern nasa lecture slides'],
     ['Foundations','/foundations/','maxwell waves boundary polarization poynting'],
