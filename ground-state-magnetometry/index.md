@@ -121,6 +121,8 @@ This frequency-to-field conversion is one reason atomic magnetometers can provid
 
 ## 3. Larmor precession
 
+<figure class="topic-figure topic-figure-small"><a href="https://commons.wikimedia.org/wiki/File:Larmor_precession.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Larmor_precession.svg?width=800" alt="Larmor precession of a magnetic moment about an applied magnetic field" loading="lazy"></a><figcaption>Larmor precession: a magnetic moment precesses around the applied field, the central dynamical picture behind ground-state atomic magnetometry. <a href="https://commons.wikimedia.org/wiki/File:Larmor_precession.svg">Image source</a>.</figcaption></figure>
+
 An atomic magnetic moment in a magnetic field experiences torque,
 
 $$
