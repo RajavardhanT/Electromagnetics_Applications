@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Quick Reference Hub
-description: Equations, orders of magnitude, scaling laws, comparisons, derivations, misconceptions, history, calculators, measurements, and worked examples for electromagnetics.
+description: Equations, orders of magnitude, scaling laws, comparisons, derivations, misconceptions, history, calculators, measurements, simulations and worked examples for electromagnetics.
 ---
 
 # Quick Reference Hub
 
-Use this page when you do not want a chapter — you want the **right equation, physical scale, comparison, derivation, or measurement method quickly**.
+Use this page when you do not want a chapter — you want the **right equation, physical scale, comparison, derivation, simulation, or measurement method quickly**.
 
 <div class="card-grid">
 <a class="reference-card" href="fundamental-equations.html"><span class="badge">Formula</span><strong>Fundamental Equations</strong><span>Maxwell, waves, transmission lines, antennas, radar, optics and atom–field interactions.</span></a>
@@ -19,6 +19,10 @@ Use this page when you do not want a chapter — you want the **right equation, 
 <a class="reference-card" href="equation-history.html"><span class="badge">Context</span><strong>History Behind the Equations</strong><span>Why the major relations arose and what problem each solved.</span></a>
 <a class="reference-card" href="../worked-examples/"><span class="badge">Numbers</span><strong>Worked Examples</strong><span>Compact calculations that build engineering intuition.</span></a>
 <a class="reference-card" href="../calculators/"><span class="badge">Interactive</span><strong>Calculators</strong><span>Wavelength, link budget, skin depth, cutoff, radar, Larmor, Rabi, Halbach and noise.</span></a>
+<a class="reference-card" href="../measurements/"><span class="badge">Lab</span><strong>Measurements & Instruments</strong><span>VNA, VSA, spectrum analyzer, oscilloscope, antenna range, EMC, optical and atomic-sensor readout.</span></a>
+<a class="reference-card" href="../simulations/"><span class="badge">Model</span><strong>Simulation Library</strong><span>Analytic-to-numerical workflows plus reusable Python scripts.</span></a>
+<a class="reference-card" href="../theory-experiment/"><span class="badge">Validate</span><strong>Theory ↔ Experiment</strong><span>Observable-first modeling, residuals, independent calibration and falsification tests.</span></a>
+<a class="reference-card" href="../literature/"><span class="badge">Research</span><strong>Literature Guide</strong><span>Foundational papers, classic textbooks, modern reviews and representative experiments.</span></a>
 </div>
 
 ## A useful lookup order
@@ -29,7 +33,9 @@ When you meet a new problem:
 2. Pick the governing relation from [Fundamental Equations](fundamental-equations.html).
 3. Check the expected scale in [Orders of Magnitude](orders-of-magnitude.html).
 4. Use a [Worked Example](../worked-examples/) or [Calculator](../calculators/) to verify arithmetic.
-5. Check [Measurements & Instruments](../measurements/) before designing an experiment.
-6. Check [Common Misconceptions](common-misconceptions.html) and engineering limitations before trusting the ideal model.
+5. Choose the simplest defensible model from the [Simulation Library](../simulations/).
+6. Check [Measurements & Instruments](../measurements/) before designing an experiment.
+7. Use [Theory ↔ Experiment](../theory-experiment/) to compare the model to the actual observable.
+8. Check [Common Misconceptions](common-misconceptions.html) and engineering limitations before trusting the ideal model.
 
 <div class="intuition"><span class="callout-title">Reference habit</span>Before solving an equation precisely, estimate the answer to one significant digit. If the exact result differs by orders of magnitude, investigate the model, units, and assumptions before investigating the hardware.</div>
