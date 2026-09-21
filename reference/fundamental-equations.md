@@ -5,6 +5,12 @@ title: Fundamental Equations & Relations
 
 # Fundamental Equations & Relations
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Electromagnetic_wave_EN.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Electromagnetic_wave_EN.svg?width=1200" alt="Electric and magnetic fields of a propagating electromagnetic wave — a compact visual anchor for the equation reference." loading="lazy"></a>
+  <figcaption>Electric and magnetic fields of a propagating electromagnetic wave — a compact visual anchor for the equation reference. <a href="https://commons.wikimedia.org/wiki/File:Electromagnetic_wave_EN.svg">Image source</a>.</figcaption>
+</figure>
+
+
 A compact daily-reference sheet connecting electromagnetic fields, waves, RF/microwave engineering, antennas, radar, wireless links, and atom–field interactions.
 
 > **Convention:** Time-harmonic quantities use $e^{j\omega t}$ unless otherwise noted. Symbols can vary between disciplines, so check the assumptions accompanying each relation.
