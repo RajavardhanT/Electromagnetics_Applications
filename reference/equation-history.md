@@ -5,6 +5,12 @@ title: History Behind the Fundamental Equations
 
 # History Behind the Fundamental Equations
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Maxwell%27s_equations.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Maxwell%27s_equations.svg?width=1200" alt="Maxwell's equations, the central synthesis from which much of classical electromagnetics developed." loading="lazy"></a>
+  <figcaption>Maxwell's equations, the central synthesis from which much of classical electromagnetics developed. <a href="https://commons.wikimedia.org/wiki/File:Maxwell%27s_equations.svg">Image source</a>.</figcaption>
+</figure>
+
+
 The equations on the [Fundamental Equations & Relations](fundamental-equations.md) page are not isolated formulas. They record several centuries of experiments, engineering problems, and changes in how physicists understood electricity, magnetism, light, radio, and quantum systems. This companion page gives a concise historical context for each major equation group.
 
 > **Reading principle:** use the equation sheet for calculation; use this page to remember **who developed the idea, what problem they were solving, and why the equation mattered**.
