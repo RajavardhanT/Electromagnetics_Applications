@@ -14,10 +14,55 @@ description: A connected, practical reference from Maxwell's equations to RF eng
 <a class="button" href="calculators/">Use Calculators</a>
 <a class="button" href="measurements/">Measurements & Instruments</a>
 </div>
-<figure class="hero-map">
-<img src="assets/em-knowledge-map.svg" alt="Electromagnetics knowledge map connecting fields and Maxwell equations to RF systems, antennas, radar, particle physics, space systems, and quantum sensors">
-<figcaption>A compact map of the reference: classical field theory branches into engineering systems and the atom–field interactions used in quantum sensing.</figcaption>
-</figure>
+
+<div class="system-map" aria-label="Interactive electromagnetics system map">
+  <div class="system-map-header">
+    <div><strong>Interactive Electromagnetics Map</strong><span>Click any node to open that part of the reference.</span></div>
+    <span>One field theory · multiple physical pathways</span>
+  </div>
+  <div class="system-map-hub">
+    <a class="system-map-node hub" href="foundations/">∇ · Maxwell fields<small>sources · boundary conditions · energy flow</small></a>
+  </div>
+  <div class="system-map-branches">
+    <div class="system-map-branch core">
+      <a class="system-map-node" href="foundations/electromagnetic-waves.html">Waves<small>propagation · polarization</small></a>
+      <div class="system-map-connector">↓</div>
+      <a class="system-map-node" href="rf-microwave/">RF & Microwave<small>lines · S-parameters · waveguides</small></a>
+      <div class="system-map-connector">↓</div>
+      <a class="system-map-node" href="antennas/">Antennas & Arrays<small>radiation · aperture · beamforming</small></a>
+      <div class="system-map-connector">↓</div>
+      <a class="system-map-node" href="radar/">Wireless & Radar<small>links · MIMO · sensing</small></a>
+    </div>
+    <div class="system-map-branch particle">
+      <a class="system-map-node" href="lorentz-force/">Lorentz Force<small>q(E + v × B)</small></a>
+      <div class="system-map-connector">↓</div>
+      <a class="system-map-node" href="subatomic-particles/">Particle Dynamics<small>acceleration · bending · focusing</small></a>
+      <div class="system-map-connector">↓</div>
+      <a class="system-map-node" href="shockley-ramo/">Shockley–Ramo<small>weighting field · induced current</small></a>
+      <div class="system-map-connector">↓</div>
+      <a class="system-map-node" href="measurements/">Detection & Readout<small>TIA · scope · spectrum</small></a>
+    </div>
+    <div class="system-map-branch quantum">
+      <a class="system-map-node" href="quantum/">Atom–Field Interaction<small>−d·E · −μ·B · Ω</small></a>
+      <div class="system-map-connector">↓</div>
+      <a class="system-map-node" href="rydberg-semiclassical-effects/">Rydberg Sensing<small>EIT · AT · Floquet · nonlinearities</small></a>
+      <div class="system-map-connector">↓</div>
+      <a class="system-map-node" href="ground-state-magnetometry/">Atomic Magnetometry<small>Zeeman · Larmor · SERF</small></a>
+      <div class="system-map-connector">↓</div>
+      <a class="system-map-node" href="measurements/">Optical/RF Readout<small>photodetection · calibration</small></a>
+    </div>
+    <div class="system-map-branch tool">
+      <a class="system-map-node" href="computational-methods/">Computational Methods<small>numerics · GPU · Julia</small></a>
+      <div class="system-map-connector">↓</div>
+      <a class="system-map-node" href="simulations/">Simulation Library<small>FEM · FDTD · MoM · Python</small></a>
+      <div class="system-map-connector">↓</div>
+      <a class="system-map-node" href="computational-em/">Spacecraft EM<small>installed antennas · coupling · EMC</small></a>
+      <div class="system-map-connector">↓</div>
+      <a class="system-map-node" href="theory-experiment/">Theory ↔ Experiment<small>observable · residual · validation</small></a>
+    </div>
+  </div>
+  <div class="system-map-footer">The detailed <a href="knowledge-map/">Knowledge Map</a> expands these branches and their cross-connections.</div>
+</div>
 </div>
 
 <div class="author-box">
@@ -39,36 +84,6 @@ description: A connected, practical reference from Maxwell's equations to RF eng
 <a class="reference-card" data-symbol="DOI" href="literature/"><span class="badge">Sources</span><strong>Literature Guide</strong><span>Foundational papers, modern reviews, representative experiments and institutional sources.</span></a>
 <a class="reference-card" data-symbol="PDF" href="presentations/"><span class="badge">Lectures</span><strong>Presentations & Lectures</strong><span>Curated technical presentations from universities, NASA, CERN and research institutions.</span></a>
 </div>
-
-## The knowledge map
-
-<div class="pathway">
-<a href="foundations/">Fields & Maxwell</a><span class="arrow">→</span>
-<a href="foundations/electromagnetic-waves.html">Waves</a><span class="arrow">→</span>
-<a href="rf-microwave/">Guided waves & circuits</a><span class="arrow">→</span>
-<a href="antennas/">Radiation & antennas</a><span class="arrow">→</span>
-<a href="wireless/">Wireless systems</a><span class="arrow">→</span>
-<a href="aesa/">Arrays</a><span class="arrow">→</span>
-<a href="radar/">Radar</a>
-</div>
-
-<div class="pathway">
-<a href="foundations/">Fields</a><span class="arrow">→</span>
-<a href="lorentz-force/">Force on charge</a><span class="arrow">→</span>
-<a href="subatomic-particles/">Particle motion</a><span class="arrow">→</span>
-<a href="shockley-ramo/">Induced signal</a><span class="arrow">→</span>
-<a href="measurements/">Electronics & measurement</a>
-</div>
-
-<div class="pathway">
-<a href="foundations/">Classical field</a><span class="arrow">→</span>
-<a href="quantum/">$-\mathbf d\cdot\mathbf E$ / $-\boldsymbol\mu\cdot\mathbf B$</a><span class="arrow">→</span>
-<a href="rydberg-semiclassical-effects/">EIT / AT / Floquet</a><span class="arrow">→</span>
-<a href="ground-state-magnetometry/">Atomic magnetometry</a><span class="arrow">→</span>
-<a href="measurements/">Optical/RF readout</a>
-</div>
-
-[Open the complete clickable map →](knowledge-map/)
 
 ## Core electromagnetics
 
