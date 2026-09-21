@@ -5,6 +5,12 @@ title: Semiclassical Quantum Optics for Rydberg EIT
 
 # Semiclassical Effects Relevant to Rydberg EIT
 
+<figure class="topic-figure">
+  <a href="https://www.nist.gov/image/rydberg-e-field-sensor-animation"><img src="https://www.nist.gov/sites/default/files/images/2026/01/15/quantum_sensors-e_field.gif" alt="Rydberg electric-field sensing: probe and coupling lasers interrogate atoms in a vapor cell while an applied RF field changes the optical response. Credit: S. Kelley/NIST." loading="lazy"></a>
+  <figcaption>Rydberg electric-field sensing: probe and coupling lasers interrogate atoms in a vapor cell while an applied RF field changes the optical response. Credit: S. Kelley/NIST. <a href="https://www.nist.gov/image/rydberg-e-field-sensor-animation">Image source</a>.</figcaption>
+</figure>
+
+
 Rydberg electromagnetically induced transparency (EIT) is naturally described by a **semiclassical quantum-optics model**: the internal atomic states are quantum mechanical, while the probe, coupling, RF/microwave, and static electromagnetic fields are usually treated as prescribed classical fields.
 
 A useful starting point is
