@@ -5,6 +5,12 @@ title: Gravity Probe B — Ultra-Precise Gyroscopes and Simulation
 
 # Gravity Probe B (GP-B)
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Einstein_gyro_gravity_probe_b.jpg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Einstein_gyro_gravity_probe_b.jpg?width=1200" alt="One of Gravity Probe B's extraordinarily spherical fused-quartz gyroscopes, shown refracting an image of Einstein. NASA/Stanford." loading="lazy"></a>
+  <figcaption>One of Gravity Probe B's extraordinarily spherical fused-quartz gyroscopes, shown refracting an image of Einstein. NASA/Stanford. <a href="https://commons.wikimedia.org/wiki/File:Einstein_gyro_gravity_probe_b.jpg">Image source</a>.</figcaption>
+</figure>
+
+
 **Gravity Probe B (GP-B)** was a NASA/Stanford space experiment designed to test two predictions of Einstein's general theory of relativity using extraordinarily precise gyroscopes in Earth orbit: **geodetic precession** (curvature of spacetime produced by Earth's mass) and **frame dragging** or the Lense–Thirring effect (the effect associated with Earth's rotation).
 
 The experiment is particularly interesting from an electromagnetics and simulation perspective because the measurement depended on **four ultra-precise, nearly spherical quartz gyroscope rotors**, electrostatic suspension, superconductivity, SQUID magnetometry, extreme magnetic shielding, cryogenics, drag-free spacecraft control, and detailed mathematical/computational modeling of tiny non-relativistic torques and disturbances.
