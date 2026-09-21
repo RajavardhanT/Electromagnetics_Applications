@@ -1,0 +1,168 @@
+/* Visual refinement layer: technical handbook + scientific documentation */
+
+:root {
+  --accent-core: #1676a3;
+  --accent-particle: #b06a16;
+  --accent-quantum: #7059b3;
+  --accent-tool: #168c7d;
+}
+
+/* Reading rhythm */
+.content > h2,
+.content h2 { margin-top: 3.35rem; }
+.content h2 + p,
+.content h2 + .card-grid,
+.content h2 + .topic-figure { margin-top: 1.15rem; }
+
+/* Homepage scientific centerpiece */
+.hero-map {
+  margin: 28px 0 0;
+  padding: 14px;
+  border: 1px solid #d6e1ea;
+  border-radius: 16px;
+  background: rgba(255,255,255,.72);
+  overflow: hidden;
+}
+.hero-map img { display:block; width:100%; height:auto; }
+.hero-map figcaption {
+  margin-top: 8px;
+  color: #6b7b8d;
+  font-size: .74rem;
+  text-align: center;
+}
+
+/* Homepage category hierarchy */
+.card-grid.category-tools .reference-card { border-top: 3px solid rgba(22,140,125,.72); }
+.card-grid.category-core .reference-card { border-top: 3px solid rgba(22,118,163,.72); }
+.card-grid.category-particles .reference-card { border-top: 3px solid rgba(176,106,22,.72); }
+.card-grid.category-quantum .reference-card { border-top: 3px solid rgba(112,89,179,.72); }
+.card-grid.category-reference .reference-card { border-top: 3px solid rgba(82,106,130,.68); }
+
+.reference-card[data-symbol] { position:relative; padding-top: 46px; }
+.reference-card[data-symbol]::before {
+  content: attr(data-symbol);
+  position:absolute;
+  top:14px;
+  left:18px;
+  display:grid;
+  place-items:center;
+  min-width:25px;
+  height:25px;
+  padding:0 5px;
+  border:1px solid #d1dce6;
+  border-radius:7px;
+  background:#f7fafc;
+  color:#294b65;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size:.72rem;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:-.02em;
+}
+.category-core .reference-card[data-symbol]::before { color:var(--accent-core); border-color:rgba(22,118,163,.28); background:rgba(22,118,163,.06); }
+.category-particles .reference-card[data-symbol]::before { color:var(--accent-particle); border-color:rgba(176,106,22,.28); background:rgba(176,106,22,.06); }
+.category-quantum .reference-card[data-symbol]::before { color:var(--accent-quantum); border-color:rgba(112,89,179,.28); background:rgba(112,89,179,.06); }
+.category-tools .reference-card[data-symbol]::before { color:var(--accent-tool); border-color:rgba(22,140,125,.28); background:rgba(22,140,125,.06); }
+
+.reference-card {
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+/* Active navigation: make location unmistakable */
+.sidebar a.active {
+  position:relative;
+  background:#112a40;
+  color:#fff;
+  font-weight:760;
+}
+.sidebar a.active::before {
+  content:"";
+  position:absolute;
+  left:-8px;
+  top:5px;
+  bottom:5px;
+  width:3px;
+  border-radius:2px;
+  background:#62d6c7;
+}
+
+/* Long-page navigation behaves like professional documentation */
+@media (min-width: 1120px) {
+  .page-toc {
+    position: sticky;
+    top: 92px;
+    max-height: calc(100vh - 118px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+}
+.page-toc a {
+  border-left: 2px solid transparent;
+  padding-left: 8px;
+  transition: color .15s ease, border-color .15s ease, background .15s ease;
+}
+.page-toc a.active {
+  border-left-color:#0f988a;
+  color:#0b665e;
+  background:rgba(15,152,138,.055);
+  font-weight:750;
+}
+
+/* Publication-like figures */
+main.content { counter-reset: topicfigure; }
+.topic-figure { counter-increment: topicfigure; box-shadow:0 5px 18px rgba(18,40,65,.045); }
+.topic-figure figcaption {
+  padding-top:.72rem;
+  border-top:1px solid #e4eaf0;
+  text-align:left;
+}
+.topic-figure figcaption::before {
+  content:"Figure " counter(topicfigure) ". ";
+  color:#304e67;
+  font-weight:800;
+}
+.topic-figure figcaption a { font-weight:650; }
+
+/* Equations: subtle journal-like framing */
+.equation-box {
+  position:relative;
+  border-left-width:3px;
+  box-shadow:0 2px 10px rgba(18,40,65,.035);
+}
+.equation-box::before {
+  content:"KEY RELATION";
+  display:block;
+  margin-bottom:.35rem;
+  color:#5d7388;
+  font-size:.62rem;
+  font-weight:850;
+  letter-spacing:.12em;
+}
+
+/* Technical footer index */
+.footer-topics {
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px 14px;
+  margin:0 0 18px;
+  padding:14px 0 16px;
+  border-bottom:1px solid var(--line);
+}
+.footer-topics a {
+  color:#425f78;
+  font-size:.75rem;
+  font-weight:700;
+}
+.footer-topics a:hover { color:#0f857a; }
+
+/* Keep small screens uncluttered */
+@media (max-width: 760px) {
+  .hero-map { margin-top:20px; padding:7px; border-radius:11px; }
+  .hero-map figcaption { display:none; }
+  .reference-card[data-symbol] { padding-top:42px; }
+  .page-toc { float:none; width:100%; margin:0 0 22px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reference-card { transition:none; }
+}
