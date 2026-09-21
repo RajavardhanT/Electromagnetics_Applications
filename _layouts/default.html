@@ -14,6 +14,7 @@
   <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
   <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/visual-refresh.css' | relative_url }}">
   <style>
     .chatgpt-badge{display:inline-flex;align-items:center;gap:.42rem;padding:.43rem .72rem;border:1px solid rgba(98,214,199,.72);border-radius:999px;background:rgba(98,214,199,.12);color:#dcfff9!important;font-weight:800;letter-spacing:.01em;white-space:nowrap;text-decoration:none!important;box-shadow:0 0 0 1px rgba(98,214,199,.05) inset}
     .chatgpt-badge::before{content:'✦';color:#62d6c7;font-size:.95em}
@@ -121,6 +122,18 @@
       {{ content }}
 
       <footer class="site-footer">
+        <nav class="footer-topics" aria-label="Technical topic index">
+          <a href="{{ '/foundations/' | relative_url }}">Maxwell</a>
+          <a href="{{ '/rf-microwave/' | relative_url }}">RF & Microwave</a>
+          <a href="{{ '/antennas/' | relative_url }}">Antennas</a>
+          <a href="{{ '/aesa/' | relative_url }}">Phased Arrays</a>
+          <a href="{{ '/radar/' | relative_url }}">Radar</a>
+          <a href="{{ '/optics-photonics/' | relative_url }}">Photonics</a>
+          <a href="{{ '/shockley-ramo/' | relative_url }}">Shockley–Ramo</a>
+          <a href="{{ '/rydberg-semiclassical-effects/' | relative_url }}">Rydberg Sensing</a>
+          <a href="{{ '/ground-state-magnetometry/' | relative_url }}">Magnetometry</a>
+          <a href="{{ '/computational-em/' | relative_url }}">Space</a>
+        </nav>
         <strong>Applications of Electromagnetics · Built using ChatGPT</strong><br>
         Curated by <a href="https://rajavardhant.github.io/">Rajavardhan Talashila</a> · <a href="https://github.com/RajavardhanT/Electromagnetics_Applications">source on GitHub</a>.<br>
         <span>Equations are accompanied by assumptions where practical; external figures and resources are linked to their sources.</span>
