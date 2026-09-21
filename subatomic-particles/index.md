@@ -5,6 +5,12 @@ title: Subatomic Particles & Electromagnetics
 
 # Subatomic Particles & Electromagnetics
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:CMS_160312_06.png"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/CMS_160312_06.png?width=1200" alt="Cutaway of the CMS particle detector, illustrating how multiple detector layers reconstruct particles created in high-energy collisions." loading="lazy"></a>
+  <figcaption>Cutaway of the CMS particle detector, illustrating how multiple detector layers reconstruct particles created in high-energy collisions. <a href="https://commons.wikimedia.org/wiki/File:CMS_160312_06.png">Image source</a>.</figcaption>
+</figure>
+
+
 Electromagnetism played a central role in the discovery of the first subatomic particles. Long before modern particle accelerators and collider detectors, physicists learned to infer the existence, charge, mass, momentum, and trajectories of invisible particles by observing how they interact with **electric and magnetic fields**.
 
 This page connects classical electromagnetics to the historical discovery of the electron, proton, neutron, and later particle physics.
