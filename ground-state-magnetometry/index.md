@@ -734,7 +734,227 @@ This allows simultaneous or correlated sensing of electric and magnetic fields a
 
 ---
 
-## 37. Applications
+## 37. Halbach permanent-magnet arrays
+
+A **Halbach array** is a deliberately arranged sequence of permanent magnets whose magnetization direction rotates from one magnet segment to the next. The geometry reinforces the magnetic field on one side of the array while suppressing it on the opposite side.
+
+For an ideal continuously varying planar Halbach magnetization, one can represent the rotating magnetization schematically as
+
+$
+\mathbf M(x)
+=
+M_0[
+\cos(kx)\hat x+
+\sin(kx)\hat y
+].
+$
+
+The resulting field is strongly concentrated on one side and approximately decays away from the array as
+
+$
+B(y)\propto e^{-ky}.
+$
+
+This is sometimes described as a **one-sided magnetic flux** structure.
+
+### Why Halbach arrays are useful for atomic sensing
+
+Atomic magnetometers often require a stable bias field but may also benefit from compactness, low electrical power, and reduced external stray field. A Halbach structure can provide:
+
+- a strong permanent bias field without a continuously powered coil;
+- reduced field on the exterior side of the magnet assembly;
+- compact magnetic circuits;
+- cylindrical geometries with a strong internal field;
+- mechanically stable field generation;
+- reduced power dissipation near a vapor cell.
+
+This can be useful for portable atomic sensors, compact spectroscopy systems, microwave hyperfine experiments, and experiments requiring a permanent quantization field.
+
+### Cylindrical Halbach array
+
+A particularly important configuration is the **Halbach cylinder**, in which magnetization rotates around a cylindrical shell.
+
+An ideal infinitely long $p=1$ Halbach cylinder produces an approximately uniform transverse magnetic field inside the bore while suppressing the external field.
+
+For an ideal cylindrical permanent magnet with inner radius $R_i$, outer radius $R_o$, and remanent flux density $B_r$, a commonly quoted ideal result is
+
+$
+\boxed{
+B_{bore}\approx B_r\ln\left(\frac{R_o}{R_i}\right)
+}
+$
+
+for the dipole Halbach configuration, subject to ideal material and infinite-length assumptions.
+
+Real arrays use discrete magnet blocks, finite length, and nonideal material properties, so the actual field and homogeneity must normally be calculated numerically and verified experimentally.
+
+### Segmented Halbach arrays
+
+A continuous rotating magnetization is difficult to manufacture. Practical arrays therefore use $N$ discrete permanent-magnet segments.
+
+Increasing the number of segments makes the magnetization distribution more closely approximate the ideal continuous Halbach pattern and generally improves field quality, at the cost of mechanical complexity.
+
+Common magnet materials include NdFeB and SmCo.
+
+### Field homogeneity
+
+For precision atomic spectroscopy, field magnitude alone is insufficient. The spatial variation across the atomic vapor is critical:
+
+$
+B(\mathbf r)=B_0+\delta B(\mathbf r).
+$
+
+A gradient produces a distribution of Larmor frequencies,
+
+$
+\omega_L(\mathbf r)=\gamma B(\mathbf r),
+$
+
+which broadens the atomic resonance and reduces coherence.
+
+A useful homogeneity measure over the sensing volume is
+
+$
+\frac{\Delta B}{B_0}.
+$
+
+Consequently a Halbach array intended for atomic sensing should be optimized for **field uniformity over the vapor-cell volume**, not merely maximum central field.
+
+### Halbach array versus Helmholtz coils
+
+| Halbach array | Helmholtz coils |
+|---|---|
+| Permanent field | Electrically generated field |
+| Essentially zero steady-state electrical power | Requires current |
+| Compact high-field designs possible | Excellent tunability |
+| Limited electronic tunability | Field easily swept/reversed |
+| Temperature dependence of magnets | Current-source stability matters |
+| Mechanical alignment important | Coil geometry/alignment important |
+| Can suppress external stray field | External field generally not inherently suppressed |
+
+A useful hybrid architecture is
+
+$
+\boxed{
+\text{Halbach array}
++
+\text{small trim coils}
+}
+$
+
+where the permanent magnets provide the main bias field and low-power coils provide fine tuning, gradient compensation, modulation, or field reversal.
+
+### Temperature stability
+
+Permanent-magnet remanence varies with temperature,
+
+$
+B_r=B_r(T).
+$
+
+Therefore a precision Halbach bias field can drift with ambient temperature. Temperature coefficients depend strongly on magnet material and grade.
+
+Possible mitigation includes:
+
+- temperature stabilization;
+- thermally compensated magnet combinations;
+- SmCo where appropriate for improved thermal stability;
+- field calibration using the atomic resonance itself;
+- trim coils under feedback control.
+
+### Magnetic shielding and Halbach arrays
+
+A Halbach structure can reduce stray field but does **not** automatically shield the atoms from environmental magnetic fields.
+
+High-sensitivity experiments may still require high-permeability shielding around the magnet/vapor-cell assembly.
+
+Care is also required because nearby magnetic shielding changes the boundary conditions and can perturb the Halbach field.
+
+The complete magnetic structure should therefore be modeled together when high field accuracy is required.
+
+### Numerical modeling
+
+Finite-element magnetostatic simulation is especially useful for realistic Halbach assemblies.
+
+Solve
+
+$
+\nabla\cdot\mathbf B=0,
+\qquad
+\nabla\times\mathbf H=\mathbf J,
+$
+
+with
+
+$
+\mathbf B=\mu_0(\mathbf H+\mathbf M)
+$
+
+inside the permanent magnets.
+
+Useful outputs include:
+
+- $B_x,B_y,B_z$ throughout the vapor cell;
+- field magnitude $|\mathbf B|$;
+- first- and higher-order gradients;
+- field-angle variation;
+- sensitivity to magnet-position errors;
+- sensitivity to magnetization-angle errors;
+- finite-length/end effects;
+- effects of shields and nearby magnetic materials.
+
+For an atomic sensor, the most meaningful simulation output is often the **distribution of Zeeman shifts across the illuminated atomic volume** rather than simply a magnetic-field map.
+
+### Connection to Rydberg EIT
+
+A Halbach array can also provide a controlled quantization field for Rydberg-EIT experiments.
+
+The chain becomes
+
+$
+\boxed{
+\text{Halbach field}
+\rightarrow
+\text{Zeeman-resolved }m_F/m_J\text{ structure}
+\rightarrow
+\text{polarization-selective optical/RF coupling}
+\rightarrow
+\text{EIT / AT / Floquet spectrum}.
+}
+$
+
+A sufficiently uniform bias field can define the quantization axis and separate magnetic sublevels. Conversely, excessive gradients broaden the Zeeman-resolved EIT peaks and complicate RF polarization and vector-field measurements.
+
+For experiments combining ground-state and Rydberg sensing, a compact Halbach-plus-trim-coil assembly could therefore provide a common, stable quantization field while retaining fine electronic control.
+
+### Applications beyond atomic sensing
+
+Halbach arrays are widely used in:
+
+- compact permanent-magnet MRI and NMR;
+- particle accelerators and undulators;
+- electric motors and generators;
+- magnetic bearings;
+- magnetic levitation;
+- magnetic separators;
+- laboratory bias-field sources;
+- portable spectroscopy instruments.
+
+The central design principle is
+
+$
+\boxed{
+\text{rotating magnetization}
+\rightarrow
+\text{constructive field on one side}
++
+\text{destructive field on the other}.
+}
+$
+
+---
+
+## 38. Applications
 
 Ground-state atomic magnetometers are used or studied for:
 
@@ -818,6 +1038,10 @@ $$
 11. T. W. Kornack et al., literature on SERF magnetometry and magnetic gradiometry.
 12. NIST, chip-scale atomic magnetometer and atomic-sensor research — https://www.nist.gov/
 13. C. L. Degen, F. Reinhard, and P. Cappellaro, “Quantum sensing,” *Reviews of Modern Physics* **89**, 035002 (2017). https://doi.org/10.1103/RevModPhys.89.035002
+14. K. Halbach, “Design of permanent multipole magnets with oriented rare earth cobalt material,” *Nuclear Instruments and Methods* **169**, 1–10 (1980). https://doi.org/10.1016/0029-554X(80)90094-4
+15. J. C. Mallinson, “One-sided fluxes — A magnetic curiosity?” *IEEE Transactions on Magnetics* **9**, 678–682 (1973). https://doi.org/10.1109/TMAG.1973.1067714
+16. R. Bjørk et al., “The efficiency and the demagnetization field of a general Halbach cylinder,” *Journal of Applied Physics* **104**, 013910 (2008). https://doi.org/10.1063/1.2952537
+17. Permanent-magnet Halbach geometries are also widely developed in compact NMR/MRI literature, where bore-field homogeneity and finite-length optimization closely parallel atomic-spectroscopy requirements.
 
 ---
 
