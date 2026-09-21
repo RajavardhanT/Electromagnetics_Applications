@@ -32,6 +32,9 @@ Phased-array fundamentals, electronic beam steering, T/R modules, GaAs/GaN, grat
 ### [Wireless Communications & MIMO](wireless/)
 Wireless propagation and an interview-oriented MIMO reference covering channel matrices, rank, diversity, spatial multiplexing, beamforming, precoding, EVM, and RF impairments.
 
+### [Semiclassical Quantum Optics for Rydberg EIT](rydberg-semiclassical-effects/)
+A structured reference to EIT, dark states, optical Bloch equations, Rabi coupling, AT splitting, Stark/Zeeman effects, Doppler and transit physics, Floquet/dressed states, multiphoton processes, avoided crossings, nonlinear optics, heterodyne mixing, Rydberg interactions, noise, ionization, and Maxwell–Bloch propagation.
+
 ### [Hydrogen Maser](hydrogen-maser/)
 Atomic hydrogen hyperfine transition, stimulated microwave emission, magnetic state selection, storage bulb, microwave cavity, cavity pulling, wall shifts, Allan deviation, active/passive masers, VLBI, and NASA Deep Space Network applications.
 
