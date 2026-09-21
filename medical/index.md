@@ -5,6 +5,12 @@ title: Medical Applications of Electromagnetics
 
 # Medical Applications of Electromagnetics
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Mri_scanner_schematic_labelled.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mri_scanner_schematic_labelled.svg?width=1200" alt="MRI scanner cross-section showing the superconducting main magnet, gradient coils and RF transmit/receive structures." loading="lazy"></a>
+  <figcaption>MRI scanner cross-section showing the superconducting main magnet, gradient coils and RF transmit/receive structures. <a href="https://commons.wikimedia.org/wiki/File:Mri_scanner_schematic_labelled.svg">Image source</a>.</figcaption>
+</figure>
+
+
 Electromagnetic fields interact with biological tissue through **magnetic moments, induced electric fields, dielectric polarization, conduction currents, and energy absorption**. These interactions make electromagnetics central to modern medical imaging, diagnosis, therapy, physiological sensing, implants, and safety engineering.
 
 A useful organizing chain is
