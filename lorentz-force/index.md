@@ -5,6 +5,12 @@ title: Lorentz Force — Electrodynamics, History & Modern Applications
 
 # Lorentz Force — Electrodynamics, History & Modern Applications
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:ForceLorentz.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/ForceLorentz.svg?width=1000" alt="Lorentz-force geometry showing the relation between charge motion, magnetic field and force." loading="lazy"></a>
+  <figcaption>Lorentz-force geometry showing the relation between charge motion, magnetic field and force. <a href="https://commons.wikimedia.org/wiki/File:ForceLorentz.svg">Image source</a>.</figcaption>
+</figure>
+
+
 The **Lorentz force law** is the bridge between electromagnetic fields and mechanical motion. Maxwell's equations describe how electric and magnetic fields are generated and evolve; the Lorentz force describes how those fields act on charged matter.
 
 ## 1. Fundamental equation
