@@ -5,6 +5,12 @@ title: Atomic Ground-State Magnetic-Field Sensing
 
 # Atomic Ground-State Magnetic-Field Sensing
 
+<figure class="topic-figure">
+  <a href="https://www.mdpi.com/1424-8220/25/2/433"><img src="https://www.mdpi.com/sensors/sensors-25-00433/article_deploy/html/images/sensors-25-00433-g001.png" alt="Representative optically pumped magnetometer assembly with vapor cell, optical components, field coils, heater and photodetector." loading="lazy"></a>
+  <figcaption>Representative optically pumped magnetometer assembly with vapor cell, optical components, field coils, heater and photodetector. <a href="https://www.mdpi.com/1424-8220/25/2/433">Image source</a>.</figcaption>
+</figure>
+
+
 Atomic ground-state magnetometers use the **Zeeman response and coherent spin dynamics of long-lived ground-state atomic levels** to measure magnetic fields. Alkali-metal atoms such as cesium (Cs), rubidium (Rb), and potassium (K) are especially useful because optical pumping and optical readout provide efficient access to their ground-state electron/nuclear spin polarization.
 
 Unlike Rydberg electrometry, where highly excited states provide enormous electric-dipole response, ground-state atomic magnetometry primarily exploits the magnetic interaction
@@ -756,6 +762,12 @@ B(y)\propto e^{-ky}.
 $
 
 This is sometimes described as a **one-sided magnetic flux** structure.
+
+
+<figure class="topic-figure topic-figure-small">
+  <a href="https://commons.wikimedia.org/wiki/File:Halbach_array.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Halbach_array.svg?width=900" alt="Halbach array magnetization directions and one-sided magnetic-field concentration" loading="lazy"></a>
+  <figcaption>Halbach-array magnetization pattern: rotating permanent-magnet orientation reinforces flux on one side while suppressing it on the other. <a href="https://commons.wikimedia.org/wiki/File:Halbach_array.svg">Image source: Wikimedia Commons, CC0</a>.</figcaption>
+</figure>
 
 ### Why Halbach arrays are useful for atomic sensing
 
