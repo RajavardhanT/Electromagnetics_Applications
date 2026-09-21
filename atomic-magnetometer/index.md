@@ -5,6 +5,12 @@ title: Optically Pumped Atomic Magnetometer — RF & Quantum Sensing
 
 # Optically Pumped Atomic Magnetometer
 
+<figure class="topic-figure">
+  <a href="https://www.mdpi.com/1424-8220/25/2/433"><img src="https://www.mdpi.com/sensors/sensors-25-00433/article_deploy/html/images/sensors-25-00433-g001.png" alt="Representative SERF optically pumped magnetometer architecture: laser preparation/readout, alkali vapor cell, compensation coils, heater and photodiode." loading="lazy"></a>
+  <figcaption>Representative SERF optically pumped magnetometer architecture: laser preparation/readout, alkali vapor cell, compensation coils, heater and photodiode. <a href="https://www.mdpi.com/1424-8220/25/2/433">Image source</a>.</figcaption>
+</figure>
+
+
 An **optically pumped atomic magnetometer (OPM)** is one of the clearest examples of a device in which **quantum states, optics, RF engineering, magnetic fields, feedback electronics, and precision measurement** operate as one system.
 
 The essential idea is simple:
