@@ -1,23 +1,43 @@
 # Applications of Electromagnetics
 
-A growing physics-to-engineering reference connecting electromagnetic theory to modern technologies.
+A connected physics-to-engineering reference from **Maxwell's equations to RF/microwave systems, antennas, wireless, radar, EMC, photonics, power, biomedical electromagnetics, spacecraft systems, atomic sensors, and quantum technologies**.
 
-The goal is to connect
+Public site: https://rajavardhant.github.io/Electromagnetics_Applications/
 
-**physical principle → governing equations → engineering implementation → real-world application**.
+## Design goal
 
-## Topics
+The project is organized around
+
+**physical intuition → governing equations → worked numbers → simulation → measurement → engineering reality → literature**.
+
+It is intended to function as a bookmarkable daily reference rather than a linear textbook.
+
+## Main entry points
+
+- [Knowledge Map](knowledge-map/)
+- [Quick Reference Hub](reference/)
+- [Worked Examples](worked-examples/)
+- [Interactive Calculators](calculators/)
+- [Measurements & Instruments](measurements/)
+- [Simulation Library](simulations/)
+- [Literature Guide](literature/)
+- [Presentations & Lectures](presentations/)
+
+## Core domains
 
 - [Foundations](foundations/)
-- [Antennas & Radiation](antennas/)
 - [RF & Microwave Engineering](rf-microwave/)
-- [Wireless Communications](wireless/)
+- [Antennas & Radiation](antennas/)
+- [Wireless & MIMO](wireless/)
+- [AESA / Phased Arrays](aesa/)
 - [Radar & Remote Sensing](radar/)
-- [Optics & Photonics](optics-photonics/)
 - [EMI / EMC](emc/)
+- [Optics & Photonics](optics-photonics/)
 - [Power & Energy](power-energy/)
-- [Medical Applications](medical/)
+- [Medical Electromagnetics](medical/)
 - [Quantum Technologies](quantum/)
-- [Computational Electromagnetics](computational-em/)
+- [Rydberg Semiclassical Optics](rydberg-semiclassical-effects/)
+- [Ground-State Magnetometry](ground-state-magnetometry/)
+- [Spacecraft EM](computational-em/)
 
-This repository is intended to grow into a technical collection of explanations, equations, examples, simulations, and references.
+Curated by [Rajavardhan Talashila](https://rajavardhant.github.io/). Developed as a living technical reference with ChatGPT.

@@ -1,6 +1,14 @@
 title: Applications of Electromagnetics
-description: From Maxwell's equations to antennas, wireless, radar, photonics, and quantum technologies
-theme: jekyll-theme-cayman
+description: A connected reference from Maxwell's equations to RF, antennas, radar, EMC, photonics, power, space systems, atomic sensors, and quantum technologies.
+url: https://rajavardhant.github.io
+baseurl: /Electromagnetics_Applications
+author: Rajavardhan Talashila
 markdown: kramdown
 kramdown:
   math_engine: mathjax
+  input: GFM
+plugins:
+  - jekyll-seo-tag
+exclude:
+  - Gemfile
+  - Gemfile.lock
