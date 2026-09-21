@@ -11,6 +11,9 @@ A minimal, growing reference connecting electromagnetic physics to real systems 
 
 ## Reference
 
+### [Presentations & Lectures](presentations/)
+Curated external presentations, lecture slides, recordings, and course material on electromagnetics applications from MIT, CERN, NASA, Stanford, NYU, UC San Diego, and other authoritative sources — including antennas, phased arrays, radar, RF systems, accelerator magnets, Halbach/permanent magnets, spacecraft antennas, microwave engineering, and MRI.
+
 ### [Fundamental Equations](reference/fundamental-equations.html)
 A compact equation sheet for fields, waves, transmission lines, antennas, RF systems, radar, optics, and atom–field interactions.
 
