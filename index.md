@@ -96,6 +96,7 @@ description: A connected, practical reference from Maxwell's equations to RF eng
 <a class="reference-card" data-symbol="R⁴" href="radar/"><strong>Radar & Remote Sensing</strong><span>Radar equation, range/Doppler, FMCW, RCS, phased arrays, SAR and measurement limits.</span></a>
 <a class="reference-card" data-symbol="EMC" href="emc/"><strong>EMI / EMC</strong><span>Emissions, immunity, coupling, shielding, grounding, crosstalk, compliance and troubleshooting.</span></a>
 <a class="reference-card" data-symbol="λ" href="optics-photonics/"><strong>Optics & Photonics</strong><span>Fresnel physics, diffraction, fibers, lasers, guided optics and photonic systems.</span></a>
+<a class="reference-card" data-symbol="Δν" href="laser-systems/"><strong>Laser Systems</strong><span>Laser linewidth, frequency noise, cavity locking, PDH stabilization, SHG and linewidth transfer through frequency doubling.</span></a>
 <a class="reference-card" data-symbol="ΦB" href="power-energy/"><strong>Power & Energy</strong><span>Induction, transformers, motors, generators, magnetic materials and wireless power.</span></a>
 <a class="reference-card" data-symbol="B₀" href="medical/"><strong>Medical Electromagnetics</strong><span>MRI, RF coils, SAR, microwave imaging, ablation, hyperthermia and implants.</span></a>
 </div>
