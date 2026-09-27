@@ -24,6 +24,7 @@
     ['Radar & Remote Sensing','/radar/','radar equation fmcw doppler sar rcs'],
     ['EMI / EMC','/emc/','emissions immunity shielding grounding crosstalk compliance'],
     ['Optics & Photonics','/optics-photonics/','fresnel fiber laser diffraction photonics'],
+    ['Laser Systems','/laser-systems/','laser linewidth frequency noise cavity locking pdh pound drever hall shg second harmonic generation coherence beat note self heterodyne'],
     ['Power & Energy','/power-energy/','faraday transformer motor generator wireless power'],
     ['Medical Electromagnetics','/medical/','mri rf coil sar ablation hyperthermia'],
     ['Quantum Technologies','/quantum/','rabi stark atom field cavity quantum sensing'],
