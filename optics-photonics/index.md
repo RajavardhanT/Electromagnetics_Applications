@@ -79,6 +79,10 @@ A laser combines:
 
 Key practical quantities are linewidth, output power, frequency noise, relative intensity noise, mode structure, polarization and beam quality.
 
+For a detailed treatment of **laser linewidth, frequency-noise spectra, heterodyne/self-heterodyne linewidth measurement, Fabry-Perot reference cavities, Pound-Drever-Hall locking, cavity-stabilized linewidths, SHG systems, and linewidth transfer through frequency doubling**, see the dedicated [Laser Systems](../laser-systems/) reference.
+
+<div class="pathway"><a href="../laser-systems/">Laser oscillator</a><span class="arrow">→</span><a href="../laser-systems/#cavity-stabilized-lasers">cavity stabilization</a><span class="arrow">→</span><a href="../laser-systems/#second-harmonic-generation-shg-laser-systems">SHG</a><span class="arrow">→</span><a href="../rydberg-semiclassical-effects/">atomic / Rydberg experiment</a></div>
+
 ## 9. Integrated photonics
 
 Waveguides, ring resonators, Mach–Zehnder interferometers, modulators and photodetectors move optical functions onto chips. The same concepts of impedance/mode matching, scattering matrices, resonances and coupling reappear in optical form.
@@ -126,4 +130,4 @@ This sets the length scale over which the beam radius remains near its waist.
 - A. E. Siegman, *Lasers*.
 - R. W. Boyd, *Nonlinear Optics*.
 
-Related: [Foundations](../foundations/) · [Quantum Technologies](../quantum/) · [Measurements](../measurements/)
+Related: [Laser Systems](../laser-systems/) · [Foundations](../foundations/) · [Quantum Technologies](../quantum/) · [Measurements](../measurements/)
