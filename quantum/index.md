@@ -141,4 +141,4 @@ Many atomic-sensing experiments can treat the applied laser/RF fields classicall
 - T. F. Gallagher, *Rydberg Atoms*.
 - C. L. Degen, F. Reinhard and P. Cappellaro, “Quantum sensing,” *Rev. Mod. Phys.* 89, 035002 (2017).
 
-Related: [Rydberg EIT](../rydberg-semiclassical-effects/) · [Ground-State Magnetometry](../ground-state-magnetometry/) · [Hydrogen Maser](../hydrogen-maser/) · [Theory ↔ Experiment](../theory-experiment/)
+Related: [Rydberg EIT](../rydberg-semiclassical-effects/) · [Paul Traps](../paul-traps/) · [Ground-State Magnetometry](../ground-state-magnetometry/) · [Hydrogen Maser](../hydrogen-maser/) · [Theory ↔ Experiment](../theory-experiment/)
