@@ -36,6 +36,7 @@
     ['Lorentz Force','/lorentz-force/','charged particle electric magnetic force'],
     ['Shockley–Ramo Current','/shockley-ramo/','weighting field induced current detector'],
     ['Subatomic Particles','/subatomic-particles/','accelerator detector charged particle'],
+    ['Paul Traps','/paul-traps/','paul trap rf ion trap quadrupole mathieu stability pseudopotential secular motion micromotion ion crystal mass filter'],
     ['Computational Methods','/computational-methods/','cuda gpu julia numerical'],
     ['Spacecraft EM','/computational-em/','satellite antenna emc installed pattern'],
     ['Gravity Probe B','/gravity-probe-b/','gyroscope squid london moment space'],
