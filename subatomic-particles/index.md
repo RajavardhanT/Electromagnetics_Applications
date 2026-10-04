@@ -223,7 +223,23 @@ This converts particle velocity into an optical measurement.
 
 ---
 
-## 10. Book note — Steven Weinberg, *The Discovery of Subatomic Particles*
+## 10. Paul traps: dynamic confinement of charged particles
+
+Charged particles need not only be accelerated or deflected; they can also be **confined**. A Paul trap uses a rapidly oscillating quadrupole electric field to dynamically stabilize an ion even though a static electrostatic field cannot create a stable three-dimensional minimum in free space.
+
+The same Lorentz-force starting point,
+
+$
+\mathbf F=Q\mathbf E,
+$
+
+leads to the Mathieu equation when the quadrupole field varies periodically in time. Stable regions of the Mathieu parameters determine whether an ion remains trapped. In the high-frequency limit, the RF field can be interpreted through an effective pseudopotential.
+
+See the dedicated [Paul Traps — RF Ion Trapping](../paul-traps/) reference for Mathieu stability, pseudopotential, secular motion, micromotion, RF resonators, ion crystals, mass filtering, and trapped-ion quantum applications.
+
+---
+
+## 11. Book note — Steven Weinberg, *The Discovery of Subatomic Particles*
 
 Steven Weinberg's *The Discovery of Subatomic Particles* is especially appropriate for this section because it tells the history of particle discovery through the development of the underlying physics rather than presenting the electron, proton, and neutron merely as established facts.
 
@@ -247,7 +263,7 @@ A CERN Courier review emphasizes a particularly useful feature of the book: Wein
 
 ---
 
-## 11. Why subatomic particles belong in an electromagnetics applications collection
+## 12. Why subatomic particles belong in an electromagnetics applications collection
 
 Particle physics may appear to sit far beyond conventional RF and microwave engineering, but historically and experimentally the connection is direct.
 
