@@ -107,6 +107,7 @@ description: A connected, practical reference from Maxwell's equations to RF eng
 <a class="reference-card" data-symbol="qF" href="lorentz-force/"><strong>Lorentz Force</strong><span>Electric and magnetic forces on charges, charged-particle motion, crossed fields and relativistic form.</span></a>
 <a class="reference-card" data-symbol="Ew" href="shockley-ramo/"><strong>Shockley–Ramo Theorem</strong><span>Weighting fields, induced current, detector signals, moving charges, TIA readout and magnetic-field effects.</span></a>
 <a class="reference-card" data-symbol="q/m" href="subatomic-particles/"><strong>Subatomic Particles & Accelerators</strong><span>Particle discovery, electromagnetic acceleration, bending, focusing, detection and spectrometry.</span></a>
+<a class="reference-card" data-symbol="qM" href="paul-traps/"><strong>Paul Traps — RF Ion Trapping</strong><span>Quadrupole RF fields, Mathieu stability, pseudopotential, secular motion, micromotion, ion crystals and trapped-ion systems.</span></a>
 </div>
 
 ## Atomic, quantum, space and precision systems
