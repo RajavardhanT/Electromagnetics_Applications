@@ -27,7 +27,7 @@ $$
 <div class="knowledge-map">
 <div class="map-column"><h3>Guided energy</h3><a href="../rf-microwave/">Transmission lines</a><a href="../rf-microwave/">Waveguides</a><a href="../rf-microwave/">Resonators & filters</a><a href="../emc/">Interconnects & EMC</a></div>
 <div class="map-column"><h3>Radiated energy</h3><a href="../antennas/">Antennas</a><a href="../aesa/">Phased arrays</a><a href="../wireless/">Wireless links & MIMO</a><a href="../radar/">Radar</a></div>
-<div class="map-column"><h3>Forces & induction</h3><a href="../power-energy/">Transformers</a><a href="../power-energy/">Motors & generators</a><a href="../subatomic-particles/">Accelerators</a><a href="../shockley-ramo/">Detector signals</a></div>
+<div class="map-column"><h3>Forces & induction</h3><a href="../power-energy/">Transformers</a><a href="../power-energy/">Motors & generators</a><a href="../subatomic-particles/">Accelerators</a><a href="../paul-traps/">Paul traps</a><a href="../shockley-ramo/">Detector signals</a></div>
 <div class="map-column"><h3>High-frequency EM</h3><a href="../optics-photonics/">Optics & photonics</a><a href="../laser-systems/">Laser systems</a><a href="../medical/">MRI & biomedical EM</a><a href="../computational-em/">Spacecraft systems</a></div>
 </div>
 
@@ -60,6 +60,9 @@ $$
 
 ### Maxwell → Rydberg RF sensor
 <div class="pathway"><span class="node">RF $\mathbf E$</span><span class="arrow">→</span><span class="node">$-\mathbf d\cdot\mathbf E$</span><span class="arrow">→</span><span class="node">Rabi coupling</span><span class="arrow">→</span><a href="../rydberg-semiclassical-effects/">EIT / AT / Floquet</a><span class="arrow">→</span><span class="node">photodetector</span><span class="arrow">→</span><span class="node">field estimate</span></div>
+
+### RF field → trapped ion
+<div class="pathway"><a href="../rf-microwave/">RF drive</a><span class="arrow">→</span><span class="node">quadrupole electric field</span><span class="arrow">→</span><a href="../paul-traps/">Mathieu stability / pseudopotential</a><span class="arrow">→</span><span class="node">trapped-ion motion</span><span class="arrow">→</span><a href="../quantum/">quantum control</a></div>
 
 ### Charged particle → measured current
 <div class="pathway"><a href="../lorentz-force/">$q(\mathbf E+\mathbf v\times\mathbf B)$</a><span class="arrow">→</span><span class="node">trajectory</span><span class="arrow">→</span><a href="../shockley-ramo/">$q\mathbf v\cdot\mathbf E_w$</a><span class="arrow">→</span><span class="node">TIA</span><span class="arrow">→</span><a href="../measurements/">oscilloscope / spectrum</a></div>
