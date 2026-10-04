@@ -146,4 +146,4 @@ See [Measurements & Instruments](../measurements/).
 - S. Ramo, J. R. Whinnery and T. Van Duzer, *Fields and Waves in Communication Electronics*.
 - MIT OpenCourseWare, [Electromagnetics and Applications](https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/).
 
-Related: [Antennas](../antennas/) · [EMC](../emc/) · [Calculators](../calculators/) · [Worked Examples](../worked-examples/)
+Related: [Antennas](../antennas/) · [Paul Traps](../paul-traps/) · [EMC](../emc/) · [Calculators](../calculators/) · [Worked Examples](../worked-examples/)
