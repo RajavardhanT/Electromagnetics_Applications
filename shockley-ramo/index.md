@@ -535,7 +535,7 @@ Large ensembles are natural candidates for the [CUDA/GPU methods](../computation
 
 For simple parallel plates, $\mathbf E_w$ can be calculated analytically.
 
-For realistic finite plates, vapor cells, guard electrodes, dielectrics, windows, nearby grounded objects, and amplifier connections, solve
+For realistic finite plates, detector cells, guard electrodes, dielectrics, windows, nearby grounded objects, and amplifier connections, solve
 
 $$
 \nabla\cdot(\epsilon\nabla\phi_w)=0
