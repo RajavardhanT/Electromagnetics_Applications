@@ -37,7 +37,7 @@ up to the sign convention used for electrode current and weighting potential.
 
 Here $\mathbf E_{w,k}$ is the **weighting field** associated with electrode $k$.
 
-Some references define $\mathbf E_w=-\nabla\phi_w$ and write the electrode-current convention with an explicit minus sign. The important point is to define the current direction and weighting-field convention consistently.
+Some references define $\mathbf E_w=-\nabla\phi_w$ and write the electrode-current convention with an explicit minus sign. The important point is to define the current direction and weighting-field convention consistently; this page does not infer physical mechanisms from measured voltage polarity alone.
 
 The theorem separates the problem into two pieces:
 
@@ -338,7 +338,7 @@ $$
 i(t).
 $$
 
-A magnetic field can consequently alter the magnitude, waveform, timing, or even sign of the measured induced current if it changes the velocity component projected onto the weighting field or changes which trajectories survive/terminate.
+A magnetic field can consequently alter the magnitude, waveform, and timing of the measured induced current by changing the velocity component projected onto the weighting field or by changing which trajectories survive or terminate.
 
 This is a useful connection to the [Lorentz-force](../lorentz-force/) section.
 
@@ -360,7 +360,7 @@ $$
 
 Electrons have a much larger charge-to-mass ratio than heavy ions and are therefore deflected much more strongly for the same $B$ and velocity scale.
 
-In gases and vapor cells, however, collisions can substantially modify ideal cyclotron motion. The relevant comparison is often between cyclotron frequency and collision rate:
+In gases and collisional media, however, collisions can substantially modify ideal cyclotron motion. The relevant comparison is often between cyclotron frequency and collision rate:
 
 $$
 \boxed{\omega_c/\nu_{coll}}.
@@ -417,7 +417,6 @@ The Shockley–Ramo theorem shows that a moving charge can induce current even w
 The actual trajectory can be driven by other mechanisms:
 
 - initial kinetic energy;
-- photoionization;
 - thermal motion;
 - plasma fields;
 - space-charge fields;
@@ -473,66 +472,13 @@ $$
 
 as well as harmonics and intermodulation products.
 
-The Shockley–Ramo theorem does not itself create nonlinear mixing. It provides the conversion from the resulting charge motion/current density to the electrode current. The nonlinear physics must enter through ionization, transport, field-dependent mobility, plasma dynamics, atomic response, or another mechanism.
+The Shockley–Ramo theorem does not itself create nonlinear mixing. It provides the conversion from the resulting charge motion/current density to the electrode current. The nonlinear physics must enter through charge generation, transport, field-dependent mobility, plasma dynamics, circuit nonlinearity, or another mechanism.
 
 ---
 
-# 14. Application to atomic vapor and Rydberg experiments
-
-In an optically excited atomic vapor, a useful conceptual chain is
-
-$$
-\text{laser excitation}
-\rightarrow
-\text{Rydberg population}
-\rightarrow
-\text{ionization}
-\rightarrow
-e^-+\mathrm{Cs}^+
-\rightarrow
-\text{transport}
-\rightarrow
-\text{Shockley–Ramo current}.
-$$
-
-Possible ionization mechanisms include:
-
-- blackbody photoionization;
-- collisions between Rydberg atoms;
-- Rydberg-ground collisions;
-- associative ionization;
-- Penning-type processes;
-- photoionization by optical fields;
-- RF-assisted ionization;
-- field ionization.
-
-The atomic physics determines **how many charges are produced and when**.
-
-Transport physics determines **where they move**.
-
-The weighting field determines **how their motion appears at the electrodes**.
-
-The electronics determines **what waveform is finally measured**.
-
-Thus a complete model should separate
-
-$$
-\boxed{
-\text{atomic excitation}
-\rightarrow
-\text{ionization}
-\rightarrow
-\text{charged-particle transport}
-\rightarrow
-\text{induced current}
-\rightarrow
-\text{electronics}.
-}
-$$
-
 ---
 
-# 15. Monte Carlo implementation
+# 14. Monte Carlo implementation
 
 For particle $j$, propagate
 
@@ -585,7 +531,7 @@ Large ensembles are natural candidates for the [CUDA/GPU methods](../computation
 
 ---
 
-# 16. Weighting-field simulation
+# 15. Weighting-field simulation
 
 For simple parallel plates, $\mathbf E_w$ can be calculated analytically.
 
@@ -614,7 +560,7 @@ This field can then be stored on a grid and interpolated during Monte Carlo part
 
 ---
 
-# 17. Dielectrics and finite geometries
+# 16. Dielectrics and finite geometries
 
 In realistic detector structures, dielectric interfaces alter the weighting field.
 
@@ -628,7 +574,7 @@ $$
 =0.
 $$
 
-This can matter in vapor cells because glass windows and nearby structures change capacitive coupling.
+This can matter in detector cells and enclosed electrode structures because dielectric windows and nearby materials change capacitive coupling.
 
 The infinite-parallel-plate approximation may therefore be insufficient when:
 
@@ -639,7 +585,7 @@ The infinite-parallel-plate approximation may therefore be insufficient when:
 
 ---
 
-# 18. Space charge
+# 17. Space charge
 
 The classical weighting-field calculation is independent of the moving charges, but the **actual trajectory field** need not be.
 
@@ -671,7 +617,7 @@ The weighting field remains a separate auxiliary field used for signal induction
 
 ---
 
-# 19. Diffusion and mobility
+# 18. Diffusion and mobility
 
 In a collisional medium, deterministic ballistic trajectories may not be sufficient.
 
@@ -701,40 +647,9 @@ This provides a bridge between individual-particle Monte Carlo models and contin
 
 ---
 
-# 20. Signal polarity
-
-The sign of the observed signal can depend on several layers:
-
-1. sign of charge $q$;
-2. particle velocity direction;
-3. weighting-field direction;
-4. which electrode is read out;
-5. current sign convention;
-6. TIA inversion;
-7. AC coupling/filtering;
-8. relative electron and ion contributions.
-
-Therefore an observed voltage-polarity reversal should not immediately be interpreted as a reversal in the number of ions produced.
-
-The correct chain is
-
-$$
-\boxed{
-q\mathbf v\cdot\mathbf E_w
-\rightarrow
-I_{electrode}
-\rightarrow
-Z_T
-\rightarrow
-V_{measured}.
-}
-$$
-
-This is particularly important when magnetic fields modify trajectories.
-
 ---
 
-# 21. Shockley–Ramo versus collected current
+# 19. Shockley–Ramo versus collected current
 
 It is useful to distinguish:
 
@@ -754,7 +669,7 @@ An experimental signal can contain several of these simultaneously.
 
 ---
 
-# 22. Applications
+# 20. Applications
 
 The Shockley–Ramo framework is used in:
 
@@ -780,7 +695,7 @@ It is especially valuable whenever the **shape and timing of a measured electric
 
 ---
 
-# 23. Historical context
+# 21. Historical context
 
 The theorem is associated primarily with **William Shockley** and **Simon Ramo**, who independently developed closely related formulations in the late 1930s.
 
@@ -794,7 +709,7 @@ Later work extended the framework to semiconductor devices, detector systems, ti
 
 ---
 
-# 24. Connection to reciprocity
+# 22. Connection to reciprocity
 
 The theorem is deeply connected to electrostatic reciprocity.
 
@@ -818,7 +733,7 @@ This is why the method is exceptionally useful for Monte Carlo detector simulati
 
 ---
 
-# 25. Quick reference
+# 23. Quick reference
 
 | Quantity | Meaning |
 |---|---|
