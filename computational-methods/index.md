@@ -317,7 +317,15 @@ The most important lesson is that **computational method and physical model shou
 
 ---
 
-## 17. Signal/power integrity simulation and GPU hardware
+## 17. AMS and SerDes modeling
+
+Analog mixed-signal and high-speed IO development relies heavily on behavioral modeling and automated analysis. MATLAB, Python, SystemVerilog real-number models, and Verilog-AMS are commonly used to evaluate equalization, calibration convergence, jitter, BER, ADC/DAC nonidealities, and PVT sweeps before or alongside transistor-level implementation.
+
+See [Analog Mixed-Signal IC Design](../analog-mixed-signal/) and [High-Speed SerDes & IO](../high-speed-serdes/).
+
+---
+
+## 18. Signal/power integrity simulation and GPU hardware
 
 High-speed digital hardware is another major computational-electromagnetics application. SI solvers extract transmission-line, via, connector, and package S-parameters; PI models calculate board/package PDN impedance, resonances, and transient rail behavior. Modern GPU accelerators combine PCIe/NVLink-class links with extremely high-current power delivery.
 
@@ -325,7 +333,7 @@ See [Signal Integrity & Power Integrity](../signal-power-integrity/) for PCIe, U
 
 ---
 
-## 18. Electromagnetic simulation of quantum-computing hardware
+## 19. Electromagnetic simulation of quantum-computing hardware
 
 Superconducting quantum processors are also complex microwave structures. Classical EM solvers are used to extract capacitance and inductance, identify qubit/resonator/package modes, calculate S-parameters and cross-talk, estimate Purcell channels, and determine electromagnetic energy participation before the results are mapped into a quantum Hamiltonian.
 
