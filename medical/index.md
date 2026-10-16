@@ -407,6 +407,20 @@ The unifying idea is that **the same Maxwell equations used for antennas, microw
 
 ---
 
+## 15. CT / CAT scan physics
+
+Computed tomography uses ionizing X-ray electromagnetic radiation rather than RF or static magnetic fields. It reconstructs the spatial attenuation coefficient from many angular projections:
+
+$
+-\ln\left(\frac{I}{I_0}\right)
+=
+\int_L\mu(\mathbf r)\,dl.
+$
+
+The dedicated [CT / CAT Scan Physics](ct-scan-physics.html) reference covers X-ray production, Beer–Lambert attenuation, Hounsfield units, fan/cone-beam geometry, filtered backprojection, iterative reconstruction, helical CT, detector physics, photon-counting CT, dose metrics, beam hardening, scatter, and common artifacts.
+
+---
+
 ## References and further reading
 
 1. [FDA — Magnetic Resonance Imaging (MRI)](https://www.fda.gov/radiation-emitting-products/medical-imaging/mri-magnetic-resonance-imaging)
