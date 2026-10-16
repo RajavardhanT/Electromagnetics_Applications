@@ -99,6 +99,7 @@ description: A connected, practical reference from Maxwell's equations to RF eng
 <a class="reference-card" data-symbol="Δν" href="laser-systems/"><strong>Laser Systems</strong><span>Laser linewidth, frequency noise, cavity locking, PDH stabilization, SHG and linewidth transfer through frequency doubling.</span></a>
 <a class="reference-card" data-symbol="ΦB" href="power-energy/"><strong>Power & Energy</strong><span>Induction, transformers, motors, generators, magnetic materials and wireless power.</span></a>
 <a class="reference-card" data-symbol="B₀" href="medical/"><strong>Medical Electromagnetics</strong><span>MRI, RF coils, SAR, microwave imaging, ablation, hyperthermia and implants.</span></a>
+<a class="reference-card" data-symbol="CT" href="medical/ct-scan-physics.html"><strong>CT / CAT Scan Physics</strong><span>X-ray generation, attenuation, Hounsfield units, projection geometry, reconstruction, dose, detector physics and artifacts.</span></a>
 </div>
 
 ## Fields, particles and induced signals
@@ -114,6 +115,7 @@ description: A connected, practical reference from Maxwell's equations to RF eng
 
 <div class="card-grid category-quantum">
 <a class="reference-card" data-symbol="ℏ" href="quantum/"><strong>Quantum Technologies</strong><span>Atom–field interaction, Rabi coupling, Stark/Zeeman physics, cavities, sensing and conversion.</span></a>
+<a class="reference-card" data-symbol="EM→Q" href="quantum/em-simulation-quantum-computing.html"><strong>EM Simulation of Quantum Computing</strong><span>Superconducting qubits, resonators, coupling, package modes, Purcell loss, participation ratios and quantization workflows.</span></a>
 <a class="reference-card" data-symbol="EIT" href="rydberg-semiclassical-effects/"><strong>Rydberg Semiclassical Optics</strong><span>EIT, AT splitting, dressed/Floquet states, multiphoton physics, nonlinearities and RF sensing.</span></a>
 <a class="reference-card" data-symbol="ωL" href="ground-state-magnetometry/"><strong>Ground-State Magnetometry</strong><span>Larmor precession, optical pumping, SERF, CPT/EIT, RF magnetometry and Halbach arrays.</span></a>
 <a class="reference-card" data-symbol="OPM" href="atomic-magnetometer/"><strong>Optically Pumped Atomic Magnetometers</strong><span>Zeeman interaction, spin polarization, Bloch dynamics, optical readout and scalar/vector magnetometry.</span></a>
