@@ -28,7 +28,7 @@ $$
 <div class="map-column"><h3>Guided energy</h3><a href="../rf-microwave/">Transmission lines</a><a href="../rf-microwave/">Waveguides</a><a href="../rf-microwave/">Resonators & filters</a><a href="../emc/">Interconnects & EMC</a></div>
 <div class="map-column"><h3>Radiated energy</h3><a href="../antennas/">Antennas</a><a href="../aesa/">Phased arrays</a><a href="../wireless/">Wireless links & MIMO</a><a href="../radar/">Radar</a></div>
 <div class="map-column"><h3>Forces & induction</h3><a href="../power-energy/">Transformers</a><a href="../power-energy/">Motors & generators</a><a href="../subatomic-particles/">Accelerators</a><a href="../paul-traps/">Paul traps</a><a href="../shockley-ramo/">Detector signals</a></div>
-<div class="map-column"><h3>High-frequency EM</h3><a href="../optics-photonics/">Optics & photonics</a><a href="../laser-systems/">Laser systems</a><a href="../medical/">MRI & biomedical EM</a><a href="../computational-em/">Spacecraft systems</a></div>
+<div class="map-column"><h3>High-frequency EM</h3><a href="../optics-photonics/">Optics & photonics</a><a href="../laser-systems/">Laser systems</a><a href="../medical/">MRI & biomedical EM</a><a href="../medical/ct-scan-physics.html">CT / X-ray imaging</a><a href="../computational-em/">Spacecraft systems</a></div>
 </div>
 
 ## 3. Classical-to-quantum bridge
@@ -54,6 +54,12 @@ $$
 
 ### Maxwell → MRI
 <div class="pathway"><span class="node">static $B_0$</span><span class="arrow">→</span><span class="node">spin precession</span><span class="arrow">→</span><span class="node">RF $B_1$</span><span class="arrow">→</span><a href="../medical/">RF coil</a><span class="arrow">→</span><span class="node">gradient encoding</span><span class="arrow">→</span><span class="node">image</span></div>
+
+### X-ray field → CT image
+<div class="pathway"><span class="node">accelerated electrons</span><span class="arrow">→</span><a href="../medical/ct-scan-physics.html">X-ray spectrum</a><span class="arrow">→</span><span class="node">attenuation line integrals</span><span class="arrow">→</span><span class="node">detector projections</span><span class="arrow">→</span><a href="../medical/ct-scan-physics.html">reconstructed image</a></div>
+
+### EM geometry → superconducting quantum Hamiltonian
+<div class="pathway"><span class="node">chip + package</span><span class="arrow">→</span><a href="../quantum/em-simulation-quantum-computing.html">Maxwell solver</a><span class="arrow">→</span><span class="node">modes / S-parameters / participation</span><span class="arrow">→</span><span class="node">effective circuit</span><span class="arrow">→</span><a href="../quantum/">quantum Hamiltonian</a></div>
 
 ### Laser system → coherent atomic excitation
 <div class="pathway"><a href="../laser-systems/">laser oscillator</a><span class="arrow">→</span><a href="../laser-systems/#cavity-stabilized-lasers">cavity lock</a><span class="arrow">→</span><a href="../laser-systems/#second-harmonic-generation-shg-laser-systems">SHG / wavelength conversion</a><span class="arrow">→</span><span class="node">$-\mathbf d\cdot\mathbf E$</span><span class="arrow">→</span><a href="../rydberg-semiclassical-effects/">EIT / Rabi coupling</a></div>
