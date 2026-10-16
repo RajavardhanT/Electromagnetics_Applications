@@ -134,6 +134,14 @@ Many atomic-sensing experiments can treat the applied laser/RF fields classicall
 
 <div class="engineering"><span class="callout-title">What broadens the ideal picture?</span>Doppler averaging, transit time, laser linewidth, RF inhomogeneity, stray fields, collisions, blackbody transitions, spatial beam profiles, detector bandwidth and calibration uncertainty.</div>
 
+## 15. Electromagnetic simulation of quantum-computing hardware
+
+Quantum processors require extensive classical electromagnetic modeling. In superconducting platforms, EM solvers predict qubit capacitance, readout and package modes, couplings, Purcell channels, field participation, control-line cross-talk, and packaging effects before those electromagnetic quantities are mapped into an effective quantum Hamiltonian.
+
+See [Electromagnetic Simulation of Quantum-Computing Hardware](em-simulation-quantum-computing.html) for full-wave and quasistatic workflows, eigenmode and S-parameter analysis, participation ratios, black-box/energy-participation quantization, package modes, seam loss, flux-line modeling, and multi-qubit package simulation.
+
+---
+
 ## References
 
 - C. Cohen-Tannoudji, J. Dupont-Roc and G. Grynberg, *Atom–Photon Interactions*.
