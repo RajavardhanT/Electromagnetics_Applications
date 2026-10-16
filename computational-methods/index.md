@@ -317,17 +317,11 @@ The most important lesson is that **computational method and physical model shou
 
 ---
 
-# Practical learning path
+## 17. Electromagnetic simulation of quantum-computing hardware
 
-For scientific work, a useful progression is:
+Superconducting quantum processors are also complex microwave structures. Classical EM solvers are used to extract capacitance and inductance, identify qubit/resonator/package modes, calculate S-parameters and cross-talk, estimate Purcell channels, and determine electromagnetic energy participation before the results are mapped into a quantum Hamiltonian.
 
-1. Learn numerical linear algebra, FFTs, ODE/PDE integration, sparse matrices, and numerical error.
-2. Profile existing Python/Julia calculations before rewriting them.
-3. Learn GPU concepts: threads, blocks, warps, memory hierarchy, synchronization, and data transfer.
-4. Use optimized CUDA libraries before implementing custom kernels.
-5. Learn Julia's type system, multiple dispatch, broadcasting, profiling, and allocation control.
-6. Use CUDA.jl for naturally parallel scientific workloads.
-7. Validate GPU results against trusted CPU calculations, including convergence and precision tests.
+See [Electromagnetic Simulation of Quantum-Computing Hardware](../quantum/em-simulation-quantum-computing.html) for a dedicated treatment of full-wave and quasistatic workflows, transmons, package modes, control lines, participation ratios, black-box quantization, and validation against measured devices.
 
 ---
 
