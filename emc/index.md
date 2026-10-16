@@ -67,6 +67,8 @@ Fast digital systems are electromagnetic systems. Important effects include:
 
 A useful design rule is to think in **edge rate** rather than clock frequency alone.
 
+See the dedicated [Signal Integrity & Power Integrity](../signal-power-integrity/) reference for transmission-line channels, eye diagrams, jitter, BER, TDR, PDN impedance, decoupling, PCIe, USB/USB4, DDR, and NVIDIA GPU/accelerator hardware.
+
 ## 8. Conducted and radiated emissions
 
 ### Conducted
@@ -126,4 +128,4 @@ See [Measurements & Instruments](../measurements/).
 - C. R. Paul, *Introduction to Electromagnetic Compatibility*.
 - Clayton Paul, *Analysis of Multiconductor Transmission Lines*.
 
-Related: [RF & Microwave](../rf-microwave/) · [Antennas](../antennas/) · [Spacecraft EM](../computational-em/) · [Measurements](../measurements/)
+Related: [RF & Microwave](../rf-microwave/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [Antennas](../antennas/) · [Spacecraft EM](../computational-em/) · [Measurements](../measurements/)
