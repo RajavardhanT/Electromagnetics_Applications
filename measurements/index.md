@@ -228,4 +228,4 @@ In practice, distinguish:
 
 ## Related pages
 
-[EMI/EMC](../emc/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [RF & Microwave](../rf-microwave/) · [Antennas](../antennas/) · [Ground-State Magnetometry](../ground-state-magnetometry/) · [Rydberg Semiclassical Optics](../rydberg-semiclassical-effects/) · [Theory ↔ Experiment](../theory-experiment/)
+[EMI/EMC](../emc/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [High-Speed SerDes & IO](../high-speed-serdes/) · [Analog Mixed-Signal IC Design](../analog-mixed-signal/) · [RF & Microwave](../rf-microwave/) · [Antennas](../antennas/) · [Ground-State Magnetometry](../ground-state-magnetometry/) · [Rydberg Semiclassical Optics](../rydberg-semiclassical-effects/) · [Theory ↔ Experiment](../theory-experiment/)
