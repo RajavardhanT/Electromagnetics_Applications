@@ -23,6 +23,7 @@
     ['AESA & Phased Arrays','/aesa/','beam steering array factor grating lobes tr modules'],
     ['Radar & Remote Sensing','/radar/','radar equation fmcw doppler sar rcs'],
     ['EMI / EMC','/emc/','emissions immunity shielding grounding crosstalk compliance'],
+    ['Signal Integrity & Power Integrity','/signal-power-integrity/','signal integrity power integrity si pi pcie pci express usb usb4 usb c pdn decoupling eye jitter ber tdr s parameters nvidia gpu h100 nvlink ddr ethernet hdmi displayport'],
     ['Optics & Photonics','/optics-photonics/','fresnel fiber laser diffraction photonics'],
     ['Laser Systems','/laser-systems/','laser linewidth frequency noise cavity locking pdh pound drever hall shg second harmonic generation coherence beat note self heterodyne allan deviation stability'],
     ['Allan Deviation & Laser Stability','/laser-systems/allan-deviation.html','allan deviation adev modified allan mdev overlapping allan frequency stability oscillator stability cavity laser beat note shg drift random walk flicker white noise'],
