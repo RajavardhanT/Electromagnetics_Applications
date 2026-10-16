@@ -1070,4 +1070,10 @@ $$
 - NVIDIA, [H100 Tensor Core GPU specifications](https://www.nvidia.com/en-us/data-center/h100/) — PCIe/SXM power, PCIe Gen5, HBM and NVLink examples.
 - NVIDIA, [NVLink](https://www.nvidia.com/en-us/data-center/nvlink/) — GPU interconnect bandwidth by architecture.
 
-Related: [RF & Microwave](../rf-microwave/) · [EMI / EMC](../emc/) · [Computational Methods](../computational-methods/) · [Measurements & Instruments](../measurements/) · [Electromagnetic Simulation of Quantum-Computing Hardware](../quantum/em-simulation-quantum-computing.html)
+## 54. On-die SerDes and mixed-signal implementation
+
+Board-level SI/PI is only one part of a high-speed link. Inside the SoC, serializers, TX drivers, CTLE/DFE equalizers, CDRs, PLLs, ADCs, calibration loops, and low-noise supplies determine how much channel impairment the system can tolerate.
+
+See [High-Speed SerDes & IO](../high-speed-serdes/) for TX/RX architecture, NRZ/PAM4, equalization and CDR, and [Analog Mixed-Signal IC Design](../analog-mixed-signal/) for the circuit blocks, mismatch/noise/stability, digitally assisted calibration, FinFET implementation, layout, and silicon characterization behind those interfaces.
+
+Related: [High-Speed SerDes & IO](../high-speed-serdes/) · [Analog Mixed-Signal IC Design](../analog-mixed-signal/) · [RF & Microwave](../rf-microwave/) · [EMI / EMC](../emc/) · [Computational Methods](../computational-methods/) · [Measurements & Instruments](../measurements/) · [Electromagnetic Simulation of Quantum-Computing Hardware](../quantum/em-simulation-quantum-computing.html)
