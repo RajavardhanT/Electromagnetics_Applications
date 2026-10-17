@@ -6,6 +6,11 @@ description: Poynting vector, electromagnetic energy density, power flow, comple
 
 # Electromagnetic Power & Poynting Vector
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Poynting_vectors_of_DC_circuit.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Poynting_vectors_of_DC_circuit.svg?width=1200" alt="Poynting-vector energy flow around a battery and resistor circuit." loading="lazy"></a>
+  <figcaption>Field-energy flow around a simple DC circuit: the Poynting vector points from the source through surrounding fields toward the load. <a href="https://commons.wikimedia.org/wiki/File:Poynting_vectors_of_DC_circuit.svg">Image source: Wikimedia Commons, Chetvorno / King of Hearts</a>.</figcaption>
+</figure>
+
 <div class="intuition"><span class="callout-title">30-second intuition</span>The Poynting vector tells you where electromagnetic energy is flowing. In a transmission line, waveguide, antenna beam or optical system, useful power is transported by fields through space—not by an abstract voltage alone.</div>
 
 ## Instantaneous power flow
