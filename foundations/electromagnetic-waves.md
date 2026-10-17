@@ -5,6 +5,10 @@ description: Wave equation, propagation constant, intrinsic impedance, phase, at
 ---
 
 # Electromagnetic Waves
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Electromagnetic_wave_EN.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Electromagnetic_wave_EN.svg?width=1200" alt="Electric and magnetic fields of a propagating electromagnetic wave." loading="lazy"></a>
+  <figcaption>A plane electromagnetic wave with mutually perpendicular electric and magnetic fields. <a href="https://commons.wikimedia.org/wiki/File:Electromagnetic_wave_EN.svg">Image source: Wikimedia Commons, Piotr Fita, CC0</a>.</figcaption>
+</figure>
 
 <div class="intuition"><span class="callout-title">30-second intuition</span>A time-varying electric field and magnetic field can sustain each other and propagate energy through space. In a uniform far-field plane wave, $\mathbf E$, $\mathbf H$, and the propagation direction are mutually perpendicular.</div>
 
