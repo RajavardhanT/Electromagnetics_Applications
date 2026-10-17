@@ -6,6 +6,11 @@ description: Equations, orders of magnitude, scaling laws, comparisons, derivati
 
 # Quick Reference Hub
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Maxwell%27s_equations.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Maxwell%27s_equations.svg?width=1100" alt="Illustration of Maxwell's equations and electromagnetic field quantities." loading="lazy"></a>
+  <figcaption>The quick-reference hub ultimately connects back to Maxwell's field laws and their engineering consequences. <a href="https://commons.wikimedia.org/wiki/File:Maxwell%27s_equations.svg">Image source: Wikimedia Commons, Euisudyi, CC BY-SA 4.0</a>.</figcaption>
+</figure>
+
 A compact access point for the **equations, physical scales, comparisons, derivations, simulations, measurements, and source material** used throughout this reference.
 
 <div class="card-grid">
