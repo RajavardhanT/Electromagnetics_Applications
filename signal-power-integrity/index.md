@@ -6,6 +6,11 @@ description: Practical reference for high-speed digital signal integrity and pow
 
 # Signal Integrity & Power Integrity
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Eye_pattern_example.png"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Eye_pattern_example.png?width=1200" alt="Measured eye pattern of a high-speed serial data signal." loading="lazy"></a>
+  <figcaption>Measured eye pattern of a high-speed serial data stream—the most recognizable visual summary of signal-integrity margin. <a href="https://commons.wikimedia.org/wiki/File:Eye_pattern_example.png">Image source: Wikimedia Commons</a>.</figcaption>
+</figure>
+
 <div class="intuition"><span class="callout-title">30-second intuition</span>At high data rates, a PCB trace is not an ideal wire and a power rail is not an ideal voltage source. <strong>Signal integrity (SI)</strong> asks whether bits arrive with enough voltage and timing margin. <strong>Power integrity (PI)</strong> asks whether every device receives sufficiently clean, stable power across frequency and load transients. Modern GPUs, PCIe links, USB4, DDR memory, and high-speed accelerators require both to work simultaneously.</div>
 
 <div class="pathway"><span class="node">package / PCB geometry</span><span class="arrow">→</span><span class="node">channel + PDN impedance</span><span class="arrow">→</span><span class="node">loss / reflection / crosstalk / droop</span><span class="arrow">→</span><span class="node">eye + jitter + rail noise</span><span class="arrow">→</span><span class="node">BER / stability / performance</span></div>
@@ -571,6 +576,11 @@ High-power GPUs depend far more on auxiliary power than on slot-delivered power 
 # Part IV — USB and USB-C
 
 ## 28. USB is not the same as USB-C
+
+<figure class="topic-figure topic-figure-small">
+  <a href="https://commons.wikimedia.org/wiki/File:USB_Type-C_plug_pinout.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/USB_Type-C_plug_pinout.svg?width=1200" alt="USB Type-C plug pinout showing high-speed, power and configuration contacts." loading="lazy"></a>
+  <figcaption>USB Type-C plug pinout. The connector supports power, configuration and multiple high-speed signal paths; the connector type alone does not define the protocol or data rate. <a href="https://commons.wikimedia.org/wiki/File:USB_Type-C_plug_pinout.svg">Image source: Wikimedia Commons, Chindi.ap, CC BY-SA 4.0</a>.</figcaption>
+</figure>
 
 **USB-C is a connector and cable ecosystem.**
 
