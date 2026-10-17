@@ -5,6 +5,10 @@ description: Practical electromagnetic compatibility reference covering source-p
 ---
 
 # Electromagnetic Compatibility (EMC)
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:EMI_shielding_faraday_cage.jpg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/EMI_shielding_faraday_cage.jpg?width=850" alt="Conductive EMI shielding around an MRI room during construction." loading="lazy"></a>
+  <figcaption>A real conductive shielding enclosure: EMC becomes a practical problem of currents, apertures, seams, bonding and field penetration. <a href="https://commons.wikimedia.org/wiki/File:EMI_shielding_faraday_cage.jpg">Image source: Wikimedia Commons, Ptrump16, CC BY-SA 4.0</a>.</figcaption>
+</figure>
 
 <div class="intuition"><span class="callout-title">30-second intuition</span>Every EMC problem can be organized as <strong>source → coupling path → victim</strong>. Reduce the source, interrupt the path, harden the victim—or combine all three.</div>
 
