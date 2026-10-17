@@ -5,6 +5,11 @@ title: Electromagnetics Presentations & Lectures
 
 # Electromagnetics Presentations & Lectures
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Maxwell%27s_equations.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Maxwell%27s_equations.svg?width=1100" alt="Illustration of Maxwell's equations." loading="lazy"></a>
+  <figcaption>The lecture collection spans applications that ultimately connect back to the same electromagnetic field framework. <a href="https://commons.wikimedia.org/wiki/File:Maxwell%27s_equations.svg">Image source: Wikimedia Commons, Euisudyi, CC BY-SA 4.0</a>.</figcaption>
+</figure>
+
 This page is a curated collection of **high-quality presentations, lecture slides, recorded lectures, and downloadable course material** connecting electromagnetic theory to engineering and scientific applications.
 
 The emphasis is on authoritative university, national-laboratory, NASA, CERN, and research-institution material rather than generic slide-sharing websites.
