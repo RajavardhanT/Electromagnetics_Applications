@@ -6,6 +6,11 @@ description: Fast comparison tables for modes, field regions, antennas, numerica
 
 # Electromagnetics Comparison Tables
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Smith_chart_explanation.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Smith_chart_explanation.svg?width=1100" alt="Smith chart connecting normalized impedance and reflection coefficient." loading="lazy"></a>
+  <figcaption>A Smith chart is itself a compact comparison map, relating many impedance states to their corresponding reflection coefficients. <a href="https://commons.wikimedia.org/wiki/File:Smith_chart_explanation.svg">Image source: Wikimedia Commons</a>.</figcaption>
+</figure>
+
 Use these tables when the question is not “what is the equation?” but **“which model, instrument, architecture, or technology fits this problem?”**
 
 ## TEM vs TE vs TM
