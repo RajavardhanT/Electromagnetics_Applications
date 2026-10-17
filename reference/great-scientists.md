@@ -6,6 +6,11 @@ description: A concise historical guide to major scientists from Euclid and Arch
 
 # Great Scientists — A Short Historical Guide
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:James_clerk_maxwell.jpg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/James_clerk_maxwell.jpg?width=700" alt="Historical portrait of James Clerk Maxwell." loading="lazy"></a>
+  <figcaption>James Clerk Maxwell, whose synthesis of electricity, magnetism and optics is central to this reference. <a href="https://commons.wikimedia.org/wiki/File:James_clerk_maxwell.jpg">Image source: Wikimedia Commons, public domain</a>.</figcaption>
+</figure>
+
 <div class="intuition"><span class="callout-title">Perspective</span>Science did not develop as a straight line. Geometry, astronomy, mechanics, chemistry, biology, electromagnetism, quantum physics, and cosmology grew through many overlapping traditions. This page gives a compact historical map of some of the people whose ideas changed how we describe nature.</div>
 
 ## The Ancients
@@ -89,6 +94,11 @@ Dalton developed a modern atomic theory of matter in which chemical elements are
 ## The Nineteenth Century
 
 ### Michael Faraday
+
+<figure class="topic-figure topic-figure-small">
+  <a href="https://commons.wikimedia.org/wiki/File:Portrait_of_Michael_Faraday_(1791-1867)_Wellcome_M0002002.jpg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Portrait_of_Michael_Faraday_(1791-1867)_Wellcome_M0002002.jpg?width=650" alt="Historical portrait of Michael Faraday." loading="lazy"></a>
+  <figcaption>Michael Faraday, whose experiments and field-line viewpoint transformed electricity and magnetism. <a href="https://commons.wikimedia.org/wiki/File:Portrait_of_Michael_Faraday_(1791-1867)_Wellcome_M0002002.jpg">Image source: Wellcome Collection via Wikimedia Commons</a>.</figcaption>
+</figure>
 Faraday discovered electromagnetic induction and developed the physical idea of **fields and lines of force**.
 
 His induction law ultimately became part of Maxwell's equations:
@@ -117,6 +127,11 @@ Mendel's experiments with pea plants revealed quantitative rules of inheritance,
 Mendeleyev organized the chemical elements into the periodic table and successfully predicted properties of several elements not yet discovered.
 
 ### James Clerk Maxwell
+
+<figure class="topic-figure topic-figure-small">
+  <a href="https://commons.wikimedia.org/wiki/File:Maxwell%27s_equations.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Maxwell%27s_equations.svg?width=1000" alt="Illustration of the relationships among electric and magnetic field quantities in Maxwell's equations." loading="lazy"></a>
+  <figcaption>Visual representation of Maxwell's equations and the relationships among electric and magnetic field quantities. <a href="https://commons.wikimedia.org/wiki/File:Maxwell%27s_equations.svg">Image source: Wikimedia Commons, Euisudyi, CC BY-SA 4.0</a>.</figcaption>
+</figure>
 Maxwell unified electricity, magnetism, and optics into a single field theory.
 
 In vacuum,
