@@ -6,6 +6,11 @@ description: Selected derivations of the wave equation, Poynting theorem, skin d
 
 # Essential Electromagnetics Derivations
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Electromagnetic_waves_using_integral_Maxwell_equations.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Electromagnetic_waves_using_integral_Maxwell_equations.svg?width=1100" alt="Integral Maxwell equations connected to electromagnetic-wave propagation." loading="lazy"></a>
+  <figcaption>Good derivations expose how Maxwell's laws generate reusable wave and energy relations. <a href="https://commons.wikimedia.org/wiki/File:Electromagnetic_waves_using_integral_Maxwell_equations.svg">Image source: Wikimedia Commons, Guy vandegrift, CC BY-SA 4.0</a>.</figcaption>
+</figure>
+
 The goal here is not to reproduce a textbook. These are derivations worth remembering because each reveals a **reusable physical structure**.
 
 ## 1. Wave equation from Maxwell's equations
