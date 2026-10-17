@@ -6,6 +6,11 @@ description: Practical reference for Allan deviation, overlapping and modified A
 
 # Allan Deviation & Laser Frequency Stability
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Plot_of_Allan_Deviation_showing_how_a_quartz_LO_impacts_the_Dick_Effect_for_Atomic_Clock.jpg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Plot_of_Allan_Deviation_showing_how_a_quartz_LO_impacts_the_Dick_Effect_for_Atomic_Clock.jpg?width=1200" alt="Representative Allan-deviation plot showing frequency stability versus averaging time." loading="lazy"></a>
+  <figcaption>Representative Allan-deviation plot illustrating how frequency stability changes with averaging time. <a href="https://commons.wikimedia.org/wiki/File:Plot_of_Allan_Deviation_showing_how_a_quartz_LO_impacts_the_Dick_Effect_for_Atomic_Clock.jpg">Image source: Wikimedia Commons</a>.</figcaption>
+</figure>
+
 <div class="intuition"><span class="callout-title">30-second intuition</span><strong>Laser linewidth</strong> asks how spectrally narrow and phase-coherent the laser is over a specified observation interval. <strong>Allan deviation</strong> asks how stable the average frequency remains as the averaging time $\tau$ changes. A laser can have a very narrow instantaneous linewidth and still drift over seconds or hours, so precision laser systems are best characterized with both spectral/noise metrics and time-domain stability metrics.</div>
 
 <div class="pathway"><span class="node">frequency record $\nu(t)$</span><span class="arrow">→</span><span class="node">fractional frequency $y(t)$</span><span class="arrow">→</span><span class="node">average over $\tau$</span><span class="arrow">→</span><span class="node">successive differences</span><span class="arrow">→</span><span class="node">$\sigma_y(\tau)$</span></div>
