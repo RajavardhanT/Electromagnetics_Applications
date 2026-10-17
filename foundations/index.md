@@ -6,6 +6,11 @@ description: Maxwell equations, waves, boundary conditions, polarization, energy
 
 # Foundations of Electromagnetics
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Maxwell%27s_equations.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Maxwell%27s_equations.svg?width=1200" alt="Illustration of Maxwell's equations and electromagnetic field quantities." loading="lazy"></a>
+  <figcaption>Maxwell's equations provide the field-law foundation for the topics collected here. <a href="https://commons.wikimedia.org/wiki/File:Maxwell%27s_equations.svg">Image source: Wikimedia Commons, Euisudyi, CC BY-SA 4.0</a>.</figcaption>
+</figure>
+
 <div class="intuition"><span class="callout-title">30-second intuition</span>Electromagnetics is a theory of fields, sources, propagation and energy transfer. Maxwell's equations tell fields how to diverge and curl; material relations tell the fields how matter responds; boundary conditions connect regions; the Lorentz force tells charged matter how fields push it.</div>
 
 ## The four Maxwell equations
