@@ -6,6 +6,11 @@ description: A curated collection of foundational papers, modern reviews, repres
 
 # Electromagnetics Literature Guide
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:James_clerk_maxwell.jpg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/James_clerk_maxwell.jpg?width=650" alt="Historical portrait of James Clerk Maxwell." loading="lazy"></a>
+  <figcaption>James Clerk Maxwell represents the union of mathematical theory and physical insight that underlies much of the literature collected here. <a href="https://commons.wikimedia.org/wiki/File:James_clerk_maxwell.jpg">Image source: Wikimedia Commons, public domain</a>.</figcaption>
+</figure>
+
 This page groups sources by **domain and source type** so that foundational literature, modern reviews, representative experiments, institutional resources, and metrology sources remain easy to locate.
 
 ## General electromagnetics
