@@ -6,6 +6,11 @@ description: Concise corrections to common conceptual mistakes in fields, antenn
 
 # Common Electromagnetics Misconceptions
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Plane_electromagnetic_wave.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Plane_electromagnetic_wave.svg?width=1100" alt="Plane electromagnetic wave with electric and magnetic field vectors." loading="lazy"></a>
+  <figcaption>A physically correct field picture is often the fastest way to avoid conceptual mistakes in electromagnetics. <a href="https://commons.wikimedia.org/wiki/File:Plane_electromagnetic_wave.svg">Image source: Wikimedia Commons, Chetvorno, CC0</a>.</figcaption>
+</figure>
+
 These are useful because many technical errors come from a **correct equation applied with an incorrect mental model**.
 
 ## 1. “A higher-gain antenna creates extra RF power.”
