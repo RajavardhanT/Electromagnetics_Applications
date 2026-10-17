@@ -5,6 +5,10 @@ description: Linear, circular and elliptical polarization, Jones-vector intuitio
 ---
 
 # Polarization
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Polarisation_(Circular).svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Polarisation_(Circular).svg?width=700" alt="Circularly polarized electromagnetic wave represented as a rotating electric-field vector." loading="lazy"></a>
+  <figcaption>Circular polarization visualized as a rotating transverse electric-field vector. <a href="https://commons.wikimedia.org/wiki/File:Polarisation_(Circular).svg">Image source: Wikimedia Commons, Inductiveload, public domain</a>.</figcaption>
+</figure>
 
 <div class="intuition"><span class="callout-title">30-second intuition</span>Polarization describes how the electric-field vector moves at a fixed point in space. If its tip traces a line, the wave is linearly polarized; a circle gives circular polarization; the general case is an ellipse.</div>
 
