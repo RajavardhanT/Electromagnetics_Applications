@@ -6,6 +6,11 @@ description: Practical guide to electromagnetic simulation of superconducting qu
 
 # Electromagnetic Simulation of Quantum-Computing Hardware
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:24_Transmon_Qubits_Patterned_by_Direct_Write_LASER_Lithography_002.jpg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/24_Transmon_Qubits_Patterned_by_Direct_Write_LASER_Lithography_002.jpg?width=1200" alt="Superconducting transmon-qubit chip mounted on a chip package." loading="lazy"></a>
+  <figcaption>A superconducting transmon-qubit chip on a package, illustrating the real microwave geometry that EM simulation must capture. <a href="https://commons.wikimedia.org/wiki/File:24_Transmon_Qubits_Patterned_by_Direct_Write_LASER_Lithography_002.jpg">Image source: Wikimedia Commons, OJB Quantum</a>.</figcaption>
+</figure>
+
 <div class="intuition"><span class="callout-title">30-second intuition</span>A superconducting quantum processor is also a microwave circuit. Qubits, resonators, couplers, control lines, package cavities, wire bonds, bumps, seams, and ground structures all support electromagnetic fields. Full-wave and quasistatic simulation determine <strong>where the fields live, how strongly structures couple, where energy is lost, and which unintended modes can spoil coherence</strong>.</div>
 
 <div class="pathway"><span class="node">chip/package geometry</span><span class="arrow">→</span><span class="node">Maxwell solver</span><span class="arrow">→</span><span class="node">modes / fields / S-parameters</span><span class="arrow">→</span><span class="node">circuit parameters</span><span class="arrow">→</span><span class="node">quantized Hamiltonian</span><span class="arrow">→</span><span class="node">device performance</span></div>
@@ -384,6 +389,11 @@ Purcell filters are engineered microwave structures designed to preserve fast re
 ---
 
 ## 16. Package modes
+
+<figure class="topic-figure topic-figure-small">
+  <a href="https://commons.wikimedia.org/wiki/File:Wire_Bonded_Superconducting_Quantum_Chip_with_6_Transmons_003.png"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Wire_Bonded_Superconducting_Quantum_Chip_with_6_Transmons_003.png?width=1200" alt="Wire-bonded superconducting quantum chip in a package." loading="lazy"></a>
+  <figcaption>Wire-bonded superconducting quantum chip and package. Package walls, bonds, ground structures and chip geometry all participate in the microwave mode spectrum. <a href="https://commons.wikimedia.org/wiki/File:Wire_Bonded_Superconducting_Quantum_Chip_with_6_Transmons_003.png">Image source: Wikimedia Commons, OJB Quantum</a>.</figcaption>
+</figure>
 
 The package, enclosure, sample box, PCB, interposer, lid, and chip ground plane can form microwave cavities.
 
