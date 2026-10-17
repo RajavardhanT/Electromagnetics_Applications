@@ -6,6 +6,11 @@ description: Short numerical examples that turn common electromagnetic equations
 
 # Worked Examples
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Electromagnetic_spectrum_with_sources.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Electromagnetic_spectrum_with_sources.svg?width=1100" alt="Electromagnetic spectrum with wavelength, frequency and representative sources." loading="lazy"></a>
+  <figcaption>A broad scale map helps place worked RF, microwave, optical and quantum examples in the same electromagnetic spectrum. <a href="https://commons.wikimedia.org/wiki/File:Electromagnetic_spectrum_with_sources.svg">Image source: Wikimedia Commons, CC BY-SA 3.0</a>.</figcaption>
+</figure>
+
 These examples are intentionally compact. Each one shows the **equation → substitution → number → interpretation** pattern.
 
 ## 1. Wavelength at 5.8 GHz
