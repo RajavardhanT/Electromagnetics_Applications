@@ -6,6 +6,11 @@ description: Practical laser systems reference covering linewidth, frequency noi
 
 # Laser Systems
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Laser_Diagram.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Laser_Diagram.svg?width=1200" alt="Representative laser cavity architectures for solid-state and fiber lasers." loading="lazy"></a>
+  <figcaption>Representative laser cavity architectures, illustrating resonator, gain-medium and output-coupling concepts. <a href="https://commons.wikimedia.org/wiki/File:Laser_Diagram.svg">Image source: Wikimedia Commons, Matthew Leigh, CC BY 3.0</a>.</figcaption>
+</figure>
+
 <div class="intuition"><span class="callout-title">30-second intuition</span>A useful laser system is more than a light source. It is an oscillator whose <strong>frequency, phase, intensity, polarization, spatial mode and pointing</strong> must all remain sufficiently controlled for the experiment. For precision spectroscopy and atomic sensing, laser linewidth and frequency noise are often as important as optical power.</div>
 
 <div class="pathway"><span class="node">laser oscillator</span><span class="arrow">→</span><span class="node">amplifier</span><span class="arrow">→</span><span class="node">frequency stabilization</span><span class="arrow">→</span><span class="node">SHG / nonlinear conversion</span><span class="arrow">→</span><span class="node">AOM / EOM</span><span class="arrow">→</span><span class="node">experiment</span></div>
@@ -327,6 +332,11 @@ This illustrates why ultrastable cavities require careful vibration isolation, t
 ---
 
 # Second-harmonic-generation (SHG) laser systems
+
+<figure class="topic-figure topic-figure-small">
+  <a href="https://commons.wikimedia.org/wiki/File:Second_Harmonic_Generation.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Second_Harmonic_Generation.svg?width=1200" alt="Second-harmonic generation in a nonlinear optical crystal." loading="lazy"></a>
+  <figcaption>Second-harmonic generation: two photons at the fundamental frequency are converted coherently into radiation at twice the optical frequency. <a href="https://commons.wikimedia.org/wiki/File:Second_Harmonic_Generation.svg">Image source: Wikimedia Commons, Jkwchui, CC BY-SA 3.0</a>.</figcaption>
+</figure>
 
 ## 11. What is SHG?
 
