@@ -6,6 +6,11 @@ description: Electromagnetic induction, transformers, motors, generators, magnet
 
 # Power & Energy Electromagnetics
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Ideal_transformer.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Ideal_transformer.svg?width=1200" alt="Ideal transformer coupling a source to a load." loading="lazy"></a>
+  <figcaption>The transformer is a direct engineering application of magnetic flux linkage and Faraday induction. <a href="https://commons.wikimedia.org/wiki/File:Ideal_transformer.svg">Image source: Wikimedia Commons, CC0</a>.</figcaption>
+</figure>
+
 <div class="intuition"><span class="callout-title">30-second intuition</span>Power conversion is controlled electromagnetism: electric current creates magnetic field, changing magnetic flux creates voltage, and magnetic fields exchange force/torque with current-carrying conductors and magnetized matter.</div>
 
 ## 1. Faraday induction
