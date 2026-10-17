@@ -6,6 +6,11 @@ description: How electromagnetic quantities are actually measured: VNA, spectrum
 
 # Measurements & Instruments
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Vector_network_analyzer.PNG"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Vector_network_analyzer.PNG?width=1100" alt="Simplified block diagram of a vector network analyzer." loading="lazy"></a>
+  <figcaption>Simplified VNA architecture showing how incident and reflected/transmitted waves are separated and measured. <a href="https://commons.wikimedia.org/wiki/File:Vector_network_analyzer.PNG">Image source: Wikimedia Commons, public domain</a>.</figcaption>
+</figure>
+
 <div class="intuition"><span class="callout-title">30-second intuition</span>A theoretical quantity becomes useful only when you know <strong>what instrument measures it, what calibration establishes its scale, what bandwidth is implied, and what uncertainty or systematic error can corrupt it</strong>.</div>
 
 ## Measurement map
