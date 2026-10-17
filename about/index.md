@@ -6,6 +6,11 @@ description: Purpose, author context, editorial structure, sourcing policy, and 
 
 # About This Reference
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Electromagnetic_wave_EN.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Electromagnetic_wave_EN.svg?width=1100" alt="Electric and magnetic fields in a propagating electromagnetic wave." loading="lazy"></a>
+  <figcaption>The reference is organized around the propagation and interaction of electric and magnetic fields across scales and applications. <a href="https://commons.wikimedia.org/wiki/File:Electromagnetic_wave_EN.svg">Image source: Wikimedia Commons, Piotr Fita, CC0</a>.</figcaption>
+</figure>
+
 ## Purpose
 
 **Applications of Electromagnetics** is designed as a long-term technical reference rather than a linear textbook. Its purpose is to make the connections between field theory and real systems easy to recover:
