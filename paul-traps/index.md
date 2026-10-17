@@ -6,6 +6,11 @@ description: Electromagnetic reference for Paul traps covering quadrupole RF fie
 
 # Paul Traps — RF Ion Trapping
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Paul-Trap.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Paul-Trap.svg?width=1200" alt="Schematic Paul trap using an oscillating quadrupole electric field to confine charged particles." loading="lazy"></a>
+  <figcaption>Schematic Paul trap showing dynamic confinement by an oscillating quadrupole electric field. <a href="https://commons.wikimedia.org/wiki/File:Paul-Trap.svg">Image source: Wikimedia Commons, Arian Kriesch</a>.</figcaption>
+</figure>
+
 <div class="intuition"><span class="callout-title">30-second intuition</span>A Paul trap confines charged particles using a rapidly oscillating <strong>quadrupole electric field</strong>. The instantaneous electric force alternately focuses and defocuses the ion, but when the RF drive is sufficiently fast the net slow motion experiences an effective restoring potential. The result is stable confinement without requiring a static electric-field minimum in free space.</div>
 
 <div class="pathway"><a href="../rf-microwave/">RF voltage</a><span class="arrow">→</span><span class="node">quadrupole field</span><span class="arrow">→</span><a href="../lorentz-force/">time-dependent force</a><span class="arrow">→</span><span class="node">Mathieu dynamics</span><span class="arrow">→</span><span class="node">secular confinement + micromotion</span></div>
@@ -173,6 +178,11 @@ This immediately shows why electrode size, RF voltage, drive frequency, charge-t
 ---
 
 ## 6. Linear Paul trap
+
+<figure class="topic-figure topic-figure-small">
+  <a href="https://commons.wikimedia.org/wiki/File:Ion_trap.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Ion_trap.svg?width=1000" alt="Illustration of a linear ion trap with a laser beam illuminating a trapped ion." loading="lazy"></a>
+  <figcaption>Linear ion-trap geometry with optical access to the trapped ion. <a href="https://commons.wikimedia.org/wiki/File:Ion_trap.svg">Image source: Wikimedia Commons</a>.</figcaption>
+</figure>
 
 A **linear Paul trap** uses RF electrodes to confine the ion radially while separate DC end electrodes provide axial confinement.
 
