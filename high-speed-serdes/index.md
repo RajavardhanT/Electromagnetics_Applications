@@ -6,6 +6,11 @@ description: Reference for high-speed serial-link architecture and circuit desig
 
 # High-Speed SerDes & IO
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Eye_diagram.png"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Eye_diagram.png?width=900" alt="Four-level PAM eye diagram representative of PAM4 serial signaling." loading="lazy"></a>
+  <figcaption>Four-level PAM eye diagram, illustrating the multiple decision regions and reduced vertical margin characteristic of PAM4 signaling. <a href="https://commons.wikimedia.org/wiki/File:Eye_diagram.png">Image source: Wikimedia Commons, CC BY 2.5</a>.</figcaption>
+</figure>
+
 <div class="intuition"><span class="callout-title">30-second intuition</span>A high-speed SerDes converts wide low-rate parallel data into a very fast serial waveform, sends it through a lossy channel, and reconstructs both <strong>data and timing</strong> at the receiver. At 100+ Gb/s-class operation, the design problem spans analog circuits, clocking, digital logic, channel physics, adaptation, coding, and lab correlation.</div>
 
 <div class="pathway"><span class="node">parallel data</span><span class="arrow">→</span><span class="node">serializer + TX FFE</span><span class="arrow">→</span><span class="node">channel</span><span class="arrow">→</span><span class="node">RX CTLE / ADC / DFE</span><span class="arrow">→</span><span class="node">CDR</span><span class="arrow">→</span><span class="node">deserializer</span></div>
@@ -182,6 +187,11 @@ The taps pre-distort the transmitted waveform so that the combination of TX and 
 ---
 
 ## 9. De-emphasis and pre-emphasis
+
+<figure class="topic-figure topic-figure-small">
+  <a href="https://commons.wikimedia.org/wiki/File:Eye_pattern_emphasis.png"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Eye_pattern_emphasis.png?width=1200" alt="Serial-data eye pattern measured with transmitter pre-emphasis." loading="lazy"></a>
+  <figcaption>Measured serial-data eye with transmitter pre-emphasis, illustrating how equalization reshapes the waveform to compensate channel loss. <a href="https://commons.wikimedia.org/wiki/File:Eye_pattern_emphasis.png">Image source: Wikimedia Commons</a>.</figcaption>
+</figure>
 
 De-emphasis reduces steady-state amplitude relative to transition amplitude.
 
