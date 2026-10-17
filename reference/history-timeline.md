@@ -54,4 +54,4 @@ This timeline emphasizes a recurring pattern: **new physical understanding → n
 
 The most important advances often came when a quantity that had been abstract became **measurable and controllable**: current produced magnetic fields; changing flux produced voltage; Maxwell fields propagated; radio waves could be generated; spin resonance could be driven; coherent optical transitions could be prepared; atomic states could become calibrated field sensors.
 
-See [History Behind the Fundamental Equations](equation-history.html) for equation-by-equation context.
+See [Great Scientists — A Short Historical Guide](great-scientists.html) for concise profiles from Euclid through Stephen Hawking, and [History Behind the Fundamental Equations](equation-history.html) for equation-by-equation context.
