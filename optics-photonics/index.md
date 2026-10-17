@@ -6,6 +6,11 @@ description: Electromagnetic foundations of reflection, refraction, interference
 
 # Optics & Photonics
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:DispersionPrismSimple.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/DispersionPrismSimple.svg?width=1200" alt="White light dispersed by a prism." loading="lazy"></a>
+  <figcaption>Optical dispersion reveals the wavelength dependence of refractive index. <a href="https://commons.wikimedia.org/wiki/File:DispersionPrismSimple.svg">Image source: Wikimedia Commons, Respublika Narodnaya, CC BY-SA 4.0</a>.</figcaption>
+</figure>
+
 <div class="intuition"><span class="callout-title">30-second intuition</span>Optics is electromagnetics at very high frequency. The same Maxwell equations still govern propagation, reflection, polarization and guided modes; quantum mechanics becomes essential when the discreteness of photons and atomic transitions matters.</div>
 
 ## 1. Refractive index
