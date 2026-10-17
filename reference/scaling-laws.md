@@ -6,6 +6,11 @@ description: A regime map for electrical size, far field, skin depth, loss, reso
 
 # Scaling Laws & Dimensionless Numbers
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Frequency_ranges_of_the_electromagnetic_spectrum.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Frequency_ranges_of_the_electromagnetic_spectrum.svg?width=1100" alt="Frequency ranges across the electromagnetic spectrum." loading="lazy"></a>
+  <figcaption>Scaling laws connect device size, wavelength, frequency and regime; the spectrum provides a visual anchor for those changes of scale. <a href="https://commons.wikimedia.org/wiki/File:Frequency_ranges_of_the_electromagnetic_spectrum.svg">Image source: Wikimedia Commons, Amitchell125, CC BY-SA 4.0</a>.</figcaption>
+</figure>
+
 <div class="intuition"><span class="callout-title">Physical intuition in 30 seconds</span>A scaling law tells you what matters before you calculate the exact coefficient. A dimensionless number tells you which physical model is appropriate.</div>
 
 ## 1. Electrical size: $ka$
