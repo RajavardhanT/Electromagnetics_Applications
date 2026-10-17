@@ -6,6 +6,11 @@ description: Numerical models for electromagnetics, RF systems, charged particle
 
 # Simulation Library
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Finite_element_mesh.jpg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Finite_element_mesh.jpg?width=800" alt="Finite element mesh used in numerical field simulation." loading="lazy"></a>
+  <figcaption>Finite-element meshes discretize complex geometry so field equations can be solved numerically. <a href="https://commons.wikimedia.org/wiki/File:Finite_element_mesh.jpg">Image source: Wikimedia Commons, Bruno Sudret, CC BY 4.0</a>.</figcaption>
+</figure>
+
 <div class="intuition"><span class="callout-title">Simulation principle</span>Use the simplest model that preserves the physics needed for the question. A model is useful when its assumptions are explicit, its limiting cases are checked, and at least one observable can be compared with experiment.</div>
 
 ## Downloadable Python starting points
