@@ -6,6 +6,11 @@ description: A concise timeline from electrostatics and induction through Maxwel
 
 # Electromagnetics History Timeline
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Portrait_of_Michael_Faraday_(1791-1867)_Wellcome_M0002002.jpg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Portrait_of_Michael_Faraday_(1791-1867)_Wellcome_M0002002.jpg?width=650" alt="Historical portrait of Michael Faraday." loading="lazy"></a>
+  <figcaption>Michael Faraday's experimental discoveries and field-line viewpoint form a central bridge in the history from electricity and magnetism to Maxwell's field theory. <a href="https://commons.wikimedia.org/wiki/File:Portrait_of_Michael_Faraday_(1791-1867)_Wellcome_M0002002.jpg">Image source: Wellcome Collection via Wikimedia Commons</a>.</figcaption>
+</figure>
+
 This timeline emphasizes a recurring pattern: **new physical understanding → new way to generate/control fields → new measurement technology → new applications**.
 
 | Period | Person / development | Why it matters to this reference |
