@@ -5,6 +5,10 @@ description: A bridge from classical electromagnetic fields to atom-field Hamilt
 ---
 
 # Quantum Technologies through Electromagnetics
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Bloch_sphere.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Bloch_sphere.svg?width=700" alt="Bloch sphere representation of a two-level quantum system." loading="lazy"></a>
+  <figcaption>The Bloch sphere is a compact geometric representation of coherent state evolution in a two-level quantum system. <a href="https://commons.wikimedia.org/wiki/File:Bloch_sphere.svg">Image source: Wikimedia Commons, Smite-Meister, CC BY-SA 3.0</a>.</figcaption>
+</figure>
 
 <div class="intuition"><span class="callout-title">30-second intuition</span>Classical electromagnetics tells us the field $\mathbf E(\mathbf r,t),\mathbf B(\mathbf r,t)$. Quantum mechanics tells us how discrete states respond to those fields. The bridge is the interaction Hamiltonian.</div>
 
