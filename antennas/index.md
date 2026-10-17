@@ -6,6 +6,11 @@ description: Practical antenna reference covering radiation, gain, aperture, pol
 
 # Antennas & Radiation
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Dipole_Antenna.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Dipole_Antenna.svg?width=1200" alt="Half-wave dipole antenna with voltage distribution." loading="lazy"></a>
+  <figcaption>The half-wave dipole is a canonical example connecting current/voltage distribution to electromagnetic radiation. <a href="https://commons.wikimedia.org/wiki/File:Dipole_Antenna.svg">Image source: Wikimedia Commons, CC0</a>.</figcaption>
+</figure>
+
 <div class="intuition"><span class="callout-title">30-second intuition</span>An antenna is the transition between a guided electromagnetic mode and a radiated free-space mode. Its geometry controls the current distribution; the current distribution controls the radiated field; the field pattern determines where power goes and how efficiently another antenna can receive it.</div>
 
 ## 1. Radiation from time-varying current
