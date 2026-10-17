@@ -6,6 +6,11 @@ description: Reference for analog and mixed-signal integrated-circuit design cov
 
 # Analog Mixed-Signal IC Design
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:EPROM_IC_Micrograph.jpg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/EPROM_IC_Micrograph.jpg?width=1200" alt="Micrograph of an integrated-circuit die showing dense analog and digital structures." loading="lazy"></a>
+  <figcaption>Integrated-circuit die micrograph. Real AMS performance emerges from transistor design together with interconnect, matching, parasitics and layout. <a href="https://commons.wikimedia.org/wiki/File:EPROM_IC_Micrograph.jpg">Image source: Wikimedia Commons, Zephyris</a>.</figcaption>
+</figure>
+
 <div class="intuition"><span class="callout-title">30-second intuition</span>Analog mixed-signal design translates continuously varying voltages, currents, timing, and frequency into robust behavior inside deeply scaled CMOS. The challenge is not only making a schematic work; it is making the circuit meet <strong>gain, bandwidth, noise, linearity, power, mismatch, PVT, reliability, layout, test, and production</strong> requirements simultaneously.</div>
 
 <div class="pathway"><span class="node">system requirement</span><span class="arrow">→</span><span class="node">block specification</span><span class="arrow">→</span><span class="node">transistor-level design</span><span class="arrow">→</span><span class="node">layout + extraction</span><span class="arrow">→</span><span class="node">silicon characterization</span><span class="arrow">→</span><span class="node">production correlation</span></div>
@@ -596,6 +601,11 @@ The optimal architecture balances analog accuracy against digital correction.
 # Part VII — Advanced CMOS and FinFET design
 
 ## 28. FinFET fundamentals
+
+<figure class="topic-figure topic-figure-small">
+  <a href="https://commons.wikimedia.org/wiki/File:Semiconductor_Wafer_of_Microelectronics.jpg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Semiconductor_Wafer_of_Microelectronics.jpg?width=1200" alt="Semiconductor wafer containing many microelectronic test dies." loading="lazy"></a>
+  <figcaption>Semiconductor wafer with repeated microelectronic dies, representative of the manufacturing context in which PVT variation, matching and yield become circuit-design constraints. <a href="https://commons.wikimedia.org/wiki/File:Semiconductor_Wafer_of_Microelectronics.jpg">Image source: Wikimedia Commons, DrHughManning</a>.</figcaption>
+</figure>
 
 FinFETs use a gate that wraps around a fin-shaped channel, improving electrostatic control.
 
