@@ -6,6 +6,11 @@ description: Radar equation, range, Doppler, FMCW, pulsed radar, RCS, phased arr
 
 # Radar & Remote Sensing
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Sonar_Principle_EN.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Sonar_Principle_EN.svg?width=1200" alt="Round-trip ranging principle applicable to active radar." loading="lazy"></a>
+  <figcaption>Active radar infers range from the round-trip propagation of a transmitted wave and its echo. <a href="https://commons.wikimedia.org/wiki/File:Sonar_Principle_EN.svg">Image source: Wikimedia Commons</a>.</figcaption>
+</figure>
+
 <div class="intuition"><span class="callout-title">30-second intuition</span>Radar converts electromagnetic propagation delay, Doppler shift, angle-dependent antenna response and target scattering into estimates of range, velocity, direction and target properties.</div>
 
 ## 1. Range from time delay
