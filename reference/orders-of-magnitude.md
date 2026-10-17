@@ -6,6 +6,11 @@ description: A practical scale reference for electromagnetic frequency, waveleng
 
 # Orders of Magnitude in Electromagnetics
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Complete_electromagnetic_spectrum.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Complete_electromagnetic_spectrum.svg?width=1100" alt="Logarithmic electromagnetic spectrum with named frequency ranges and applications." loading="lazy"></a>
+  <figcaption>The electromagnetic spectrum is naturally an orders-of-magnitude map spanning radio through ionizing radiation. <a href="https://commons.wikimedia.org/wiki/File:Complete_electromagnetic_spectrum.svg">Image source: Wikimedia Commons, Michel Bakni, CC BY-SA 4.0</a>.</figcaption>
+</figure>
+
 <div class="intuition"><span class="callout-title">Why this page matters</span>Many mistakes are detectable before calculation. If you know roughly what a wavelength, noise floor, magnetic field, skin depth or RF period should be, a unit error becomes obvious immediately.</div>
 
 ## Frequency, period and wavelength
