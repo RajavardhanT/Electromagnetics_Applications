@@ -5,6 +5,10 @@ description: Transmission lines, matching, S-parameters, waveguides, resonators,
 ---
 
 # RF & Microwave Engineering
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Smith_chart_explanation.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Smith_chart_explanation.svg?width=1200" alt="Smith chart relating normalized impedance and reflection coefficient." loading="lazy"></a>
+  <figcaption>The Smith chart connects transmission-line impedance to the complex reflection coefficient and remains one of RF engineering's most useful graphical tools. <a href="https://commons.wikimedia.org/wiki/File:Smith_chart_explanation.svg">Image source: Wikimedia Commons</a>.</figcaption>
+</figure>
 
 <div class="intuition"><span class="callout-title">30-second intuition</span>At RF and microwave frequencies, interconnects are no longer “just wires.” Their physical length becomes comparable with wavelength, so voltage and current propagate as waves, reflections matter, and geometry becomes part of the circuit.</div>
 
