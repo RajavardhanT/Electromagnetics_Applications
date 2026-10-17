@@ -6,6 +6,11 @@ description: A clickable map connecting electromagnetic fundamentals to RF, ante
 
 # Electromagnetics Knowledge Map
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:EM_Spectrum_Properties.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/EM_Spectrum_Properties.svg?width=1100" alt="Electromagnetic spectrum with frequency, wavelength and representative scales." loading="lazy"></a>
+  <figcaption>The same field theory spans enormous ranges of wavelength and frequency, linking the many branches in this knowledge map. <a href="https://commons.wikimedia.org/wiki/File:EM_Spectrum_Properties.svg">Image source: Wikimedia Commons, adapted from NASA material</a>.</figcaption>
+</figure>
+
 <div class="intuition"><span class="callout-title">Physical intuition in 30 seconds</span>Most electromagnetic technologies can be described by the same recurring questions: <strong>What fields exist? How do they propagate? How do they interact with matter? What device converts that interaction into a useful signal or force? How does the complete system use it?</strong></div>
 
 The organizing chain for this site is
