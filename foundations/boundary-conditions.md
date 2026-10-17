@@ -5,6 +5,10 @@ description: Tangential and normal field boundary conditions, surface charge/cur
 ---
 
 # Electromagnetic Boundary Conditions
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Reflection_and_refraction.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Reflection_and_refraction.svg?width=1200" alt="Reflection and refraction of a wave at a material boundary." loading="lazy"></a>
+  <figcaption>Reflection and transmission at a material interface are direct consequences of electromagnetic boundary conditions. <a href="https://commons.wikimedia.org/wiki/File:Reflection_and_refraction.svg">Image source: Wikimedia Commons, Epzcaw, CC BY-SA</a>.</figcaption>
+</figure>
 
 <div class="intuition"><span class="callout-title">30-second intuition</span>Maxwell's equations must remain true across an interface. Applying them to an infinitesimal loop or pillbox tells us exactly which field components remain continuous and which can jump because of surface charge or surface current.</div>
 
