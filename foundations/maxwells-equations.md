@@ -5,6 +5,10 @@ description: Physical meaning, differential and integral forms, displacement cur
 ---
 
 # Maxwell's Equations
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Electromagnetic_waves_using_integral_Maxwell_equations.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Electromagnetic_waves_using_integral_Maxwell_equations.svg?width=1200" alt="Electromagnetic-wave construction using integral forms of Maxwell's equations." loading="lazy"></a>
+  <figcaption>Integral Maxwell laws connected directly to electromagnetic-wave propagation. <a href="https://commons.wikimedia.org/wiki/File:Electromagnetic_waves_using_integral_Maxwell_equations.svg">Image source: Wikimedia Commons, Guy vandegrift, CC BY-SA 4.0</a>.</figcaption>
+</figure>
 
 <div class="intuition"><span class="callout-title">30-second intuition</span>Maxwell's equations tell electromagnetic fields how sources create divergence, how changing magnetic field curls electric field, how current and changing electric flux curl magnetic field, and why isolated magnetic charge has not been observed. Together they predict electromagnetic waves.</div>
 
