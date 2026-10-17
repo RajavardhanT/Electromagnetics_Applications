@@ -6,6 +6,11 @@ description: Physics and engineering of computed tomography, including X-ray pro
 
 # CT / CAT Scan Physics
 
+<figure class="topic-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:CT_Scanner_(NIH_BioArt_373_-_632567).svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/CT_Scanner_(NIH_BioArt_373_-_632567).svg?width=1200" alt="Perspective illustration of a medical CT scanner." loading="lazy"></a>
+  <figcaption>Representative medical CT scanner. <a href="https://commons.wikimedia.org/wiki/File:CT_Scanner_(NIH_BioArt_373_-_632567).svg">Image source: NIAID/NIH via Wikimedia Commons, public domain</a>.</figcaption>
+</figure>
+
 <div class="intuition"><span class="callout-title">30-second intuition</span>A CT scanner sends X-rays through the body from many angles. Each detector measurement records how strongly tissue attenuates the X-ray beam along one path. A computer then reconstructs the spatial distribution of attenuation coefficient from thousands of such line-integral measurements. CT is therefore <strong>electromagnetic propagation + matter interaction + inverse reconstruction</strong>.</div>
 
 <div class="pathway"><span class="node">X-ray tube</span><span class="arrow">→</span><span class="node">collimation / filtration</span><span class="arrow">→</span><span class="node">patient attenuation</span><span class="arrow">→</span><span class="node">detector array</span><span class="arrow">→</span><span class="node">projection data</span><span class="arrow">→</span><span class="node">reconstructed CT image</span></div>
@@ -157,6 +162,11 @@ Exact values depend on X-ray spectrum, reconstruction, scanner calibration, and 
 ---
 
 ## 7. Projection geometry
+
+<figure class="topic-figure topic-figure-small">
+  <a href="https://commons.wikimedia.org/wiki/File:PrincipCT.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/PrincipCT.svg?width=1100" alt="Diagram illustrating the projection geometry used in computed tomography." loading="lazy"></a>
+  <figcaption>Basic CT projection geometry: measurements from many angular views are combined to reconstruct the interior attenuation map. <a href="https://commons.wikimedia.org/wiki/File:PrincipCT.svg">Image source: Wikimedia Commons, public domain</a>.</figcaption>
+</figure>
 
 A modern CT scanner rotates an X-ray source and detector array around the patient.
 
