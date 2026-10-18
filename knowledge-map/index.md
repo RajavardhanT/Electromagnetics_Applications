@@ -30,7 +30,7 @@ $$
 ## 2. Classical engineering branches
 
 <div class="knowledge-map">
-<div class="map-column"><h3>Guided energy</h3><a href="../rf-microwave/">Transmission lines</a><a href="../rf-microwave/">Waveguides</a><a href="../rf-microwave/">Resonators & filters</a><a href="../signal-power-integrity/">Signal & power integrity</a><a href="../high-speed-serdes/">High-speed SerDes</a><a href="../analog-mixed-signal/">Analog mixed-signal IC</a><a href="../emc/">Interconnects & EMC</a></div>
+<div class="map-column"><h3>Guided energy</h3><a href="../rf-microwave/">Transmission lines</a><a href="../rf-microwave/">Waveguides</a><a href="../rf-microwave/">Resonators & filters</a><a href="../signal-power-integrity/">Signal & power integrity</a><a href="../high-speed-serdes/">High-speed SerDes</a><a href="../analog-mixed-signal/">Analog mixed-signal IC</a><a href="../silicon-soc/">Silicon / SoC / GDS</a><a href="../emc/">Interconnects & EMC</a></div>
 <div class="map-column"><h3>Radiated energy</h3><a href="../antennas/">Antennas</a><a href="../aesa/">Phased arrays</a><a href="../wireless/">Wireless links & MIMO</a><a href="../radar/">Radar</a></div>
 <div class="map-column"><h3>Forces & induction</h3><a href="../power-energy/">Transformers</a><a href="../power-energy/">Motors & generators</a><a href="../subatomic-particles/">Accelerators</a><a href="../paul-traps/">Paul traps</a><a href="../shockley-ramo/">Detector signals</a></div>
 <div class="map-column"><h3>High-frequency EM</h3><a href="../optics-photonics/">Optics & photonics</a><a href="../laser-systems/">Laser systems</a><a href="../medical/">MRI & biomedical EM</a><a href="../medical/ct-scan-physics.html">CT / X-ray imaging</a><a href="../computational-em/">Spacecraft systems</a></div>
@@ -52,7 +52,10 @@ $$
 ## 4. From Maxwell to complete systems
 
 ### Architecture → high-speed IO silicon
-<div class="pathway"><span class="node">system BER / power / channel</span><span class="arrow">→</span><a href="../high-speed-serdes/">TX / RX / PLL / CDR</a><span class="arrow">→</span><a href="../analog-mixed-signal/">AMS circuit blocks + calibration</a><span class="arrow">→</span><span class="node">layout / timing / signoff</span><span class="arrow">→</span><span class="node">silicon characterization</span></div>
+<div class="pathway"><span class="node">system BER / power / channel</span><span class="arrow">→</span><a href="../high-speed-serdes/">TX / RX / PLL / CDR</a><span class="arrow">→</span><a href="../analog-mixed-signal/">AMS circuit blocks + calibration</a><span class="arrow">→</span><a href="../silicon-soc/">RTL / STA / physical design / GDS</a><span class="arrow">→</span><span class="node">silicon characterization</span></div>
+
+### Architecture → SoC → tapeout
+<div class="pathway"><span class="node">RISC-V / Arm + PCIe / DDR / Ethernet / UCIe</span><span class="arrow">→</span><a href="../silicon-soc/">controller + PHY + NoC</a><span class="arrow">→</span><span class="node">synthesis + floorplan + P&amp;R</span><span class="arrow">→</span><span class="node">STA / DRC / LVS / IR / EM</span><span class="arrow">→</span><span class="node">GDSII / tapeout</span></div>
 
 ### PCB/package → reliable high-speed link
 <div class="pathway"><span class="node">stackup + geometry</span><span class="arrow">→</span><a href="../signal-power-integrity/">channel / PDN impedance</a><span class="arrow">→</span><span class="node">loss + reflection + crosstalk + droop</span><span class="arrow">→</span><span class="node">eye / BER / rail margin</span><span class="arrow">→</span><span class="node">PCIe / USB / GPU system</span></div>
