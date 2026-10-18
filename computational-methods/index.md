@@ -333,7 +333,13 @@ See [Signal Integrity & Power Integrity](../signal-power-integrity/) for PCIe, U
 
 ---
 
-## 19. Electromagnetic simulation of quantum-computing hardware
+## 19. Silicon design automation and SoC implementation
+
+Modern SoC development adds another computational stack: RTL simulation, formal verification, synthesis, static timing analysis, placement/routing, parasitic extraction, IR/EM analysis, DFT insertion, and large regression flows. See [Silicon Interfaces & SoC Implementation](../silicon-soc/) for PCIe, UCIe, DDR, Ethernet, RISC-V, Arm, NoC, GDSII, and tapeout context.
+
+---
+
+## 20. Electromagnetic simulation of quantum-computing hardware
 
 Superconducting quantum processors are also complex microwave structures. Classical EM solvers are used to extract capacitance and inductance, identify qubit/resonator/package modes, calculate S-parameters and cross-talk, estimate Purcell channels, and determine electromagnetic energy participation before the results are mapped into a quantum Hamiltonian.
 
