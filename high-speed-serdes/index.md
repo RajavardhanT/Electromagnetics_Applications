@@ -999,4 +999,4 @@ $$
 
 That intersection is exactly why SerDes design is a demanding mixed-signal discipline.
 
-Related: [Analog Mixed-Signal IC Design](../analog-mixed-signal/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [RF & Microwave](../rf-microwave/) · [Measurements](../measurements/) · [Computational Methods](../computational-methods/)
+Related: [Analog Mixed-Signal IC Design](../analog-mixed-signal/) · [Silicon Interfaces & SoC Implementation](../silicon-soc/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [RF & Microwave](../rf-microwave/) · [Measurements](../measurements/) · [Computational Methods](../computational-methods/)
