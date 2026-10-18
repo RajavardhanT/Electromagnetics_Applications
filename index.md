@@ -138,6 +138,7 @@ description: A connected, practical reference from Maxwell's equations to RF eng
 <a class="reference-card" data-symbol="≠" href="reference/common-misconceptions.html"><strong>Common Misconceptions</strong><span>Short corrections for ideas that routinely cause errors in EM and quantum sensing.</span></a>
 <a class="reference-card" data-symbol="⇒" href="reference/derivations.html"><strong>Essential Derivations</strong><span>Selected derivations where the mathematics reveals useful physical structure.</span></a>
 <a class="reference-card" data-symbol="t" href="reference/history-timeline.html"><strong>History Timeline</strong><span>Major developments from Coulomb, Faraday and Maxwell to RF engineering and modern field metrology.</span></a>
+<a class="reference-card" data-symbol="1925" href="literature/day-we-found-universe.html"><strong>The Day We Found the Universe</strong><span>Visual memory notes on Leavitt, Slipher, Shapley, Curtis, Hubble, Lemaître, the Great Debate, galaxies and cosmic expansion.</span></a>
 <a class="reference-card" data-symbol="∫dt" href="reference/equation-history.html"><strong>History Behind the Equations</strong><span>Historical context for the equations that shaped electromagnetics.</span></a>
 </div>
 
