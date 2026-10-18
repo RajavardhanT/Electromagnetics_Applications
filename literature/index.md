@@ -13,6 +13,10 @@ description: A curated collection of foundational papers, modern reviews, repres
 
 This page groups sources by **domain and source type** so that foundational literature, modern reviews, representative experiments, institutional resources, and metrology sources remain easy to locate.
 
+## Science history visual notes
+
+- [**The Day We Found the Universe — visual notes**](day-we-found-universe.html) — a long-term-memory timeline and detailed study notes on Leavitt, Hertzsprung, Slipher, Shapley, Curtis, van Maanen, Hubble, Lemaître, the Great Debate, the Andromeda Cepheid, and the emergence of the expanding-universe picture.
+
 ## General electromagnetics
 
 ### Open university and institutional resources
