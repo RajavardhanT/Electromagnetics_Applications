@@ -81,8 +81,8 @@ $$
 ### Maxwell → Rydberg RF sensor
 <div class="pathway"><span class="node">RF $\mathbf E$</span><span class="arrow">→</span><span class="node">$-\mathbf d\cdot\mathbf E$</span><span class="arrow">→</span><span class="node">Rabi coupling</span><span class="arrow">→</span><a href="../rydberg-semiclassical-effects/">EIT / AT / Floquet</a><span class="arrow">→</span><span class="node">photodetector</span><span class="arrow">→</span><span class="node">field estimate</span></div>
 
-### Motion → inertial navigation solution
-<div class="pathway"><span class="node">gyro + accelerometer</span><span class="arrow">→</span><a href="../inertial-navigation/">attitude + strapdown mechanization</a><span class="arrow">→</span><span class="node">velocity + position</span><span class="arrow">→</span><span class="node">Kalman / sensor fusion</span><span class="arrow">→</span><span class="node">PNT</span></div>
+### Rotation → gyroscope → inertial navigation
+<div class="pathway"><span class="node">rotation</span><span class="arrow">→</span><a href="../modern-gyroscopes/">MEMS / FOG / RLG / HRG gyro</a><span class="arrow">→</span><span class="node">angular rate</span><span class="arrow">→</span><a href="../inertial-navigation/">attitude + strapdown mechanization</a><span class="arrow">→</span><span class="node">PNT</span></div>
 
 ### RF field → trapped ion
 <div class="pathway"><a href="../rf-microwave/">RF drive</a><span class="arrow">→</span><span class="node">quadrupole electric field</span><span class="arrow">→</span><a href="../paul-traps/">Mathieu stability / pseudopotential</a><span class="arrow">→</span><span class="node">trapped-ion motion</span><span class="arrow">→</span><a href="../quantum/">quantum control</a></div>
