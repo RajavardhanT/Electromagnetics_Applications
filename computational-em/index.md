@@ -239,6 +239,12 @@ See [Modern Inertial Navigation Systems](../inertial-navigation/) for IMUs, stra
 
 ---
 
+## Microwave and space electronics components
+
+The system-level spacecraft models on this page are ultimately built from real RF hardware: LNAs, mixers, filters, frequency references, power amplifiers/TWTAs, transfer switches, diplexers, waveguide/coax, transponders, and antennas. See [Microwave & Space Electronics Components](../microwave-space-components/) for a component-by-component reference grounded in Microwave Journal and NASA/JPL material.
+
+---
+
 ## Artemis lunar communications
 
 NASA's Artemis architecture is a useful concrete spacecraft-EM case study because it combines installed phased-array antennas on Orion, Near Space Network and Deep Space Network handoffs, RF tracking, optical communications, lunar occultation, and future lunar relay/Gateway links.
