@@ -231,6 +231,14 @@ A useful mental chain is
 
 This is why electromagnetic simulation is important in satellite engineering: it translates field theory into decisions about **antenna location, beam direction, isolation, communication reliability, EMC and spacecraft architecture**.
 
+## Inertial navigation and spacecraft PNT
+
+Spacecraft guidance, navigation, and control commonly combines inertial sensors with star trackers, GNSS when available, radio navigation, optical navigation, or other external references. The inertial solution supplies high-rate attitude and motion propagation while external measurements bound long-term drift.
+
+See [Modern Inertial Navigation Systems](../inertial-navigation/) for IMUs, strapdown mechanization, Earth/reference frames, Kalman filtering, multisensor fusion, GNSS-denied navigation, and emerging quantum inertial sensors.
+
+---
+
 ## NASA references
 
 1. [NASA JSC — Communication Subsystems](https://www.nasa.gov/reference/jsc-communication-subsystems/) — spacecraft antenna CEM, near/far fields, antenna coupling, RF coverage, multipath, communication-system simulation and relay-satellite testing.
