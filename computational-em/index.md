@@ -239,6 +239,14 @@ See [Modern Inertial Navigation Systems](../inertial-navigation/) for IMUs, stra
 
 ---
 
+## Artemis lunar communications
+
+NASA's Artemis architecture is a useful concrete spacecraft-EM case study because it combines installed phased-array antennas on Orion, Near Space Network and Deep Space Network handoffs, RF tracking, optical communications, lunar occultation, and future lunar relay/Gateway links.
+
+See [Artemis Lunar Communications](../artemis-communications/) for the end-to-end architecture from spacecraft avionics and antennas through DSN/NSN, optical terminals, ranging/Doppler tracking, lunar relays, and LunaNet.
+
+---
+
 ## NASA references
 
 1. [NASA JSC — Communication Subsystems](https://www.nasa.gov/reference/jsc-communication-subsystems/) — spacecraft antenna CEM, near/far fields, antenna coupling, RF coverage, multipath, communication-system simulation and relay-satellite testing.
