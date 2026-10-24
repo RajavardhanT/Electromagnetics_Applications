@@ -18,6 +18,7 @@
     ['Presentations & Lectures','/presentations/','mit cern nasa lecture slides'],
     ['Foundations','/foundations/','maxwell waves boundary polarization poynting'],
     ['RF & Microwave','/rf-microwave/','transmission lines smith chart s parameters waveguide filter'],
+    ['Microwave & Space Electronics Components','/microwave-space-components/','microwave rf components space satcom lna pa sspa twta mixer filter diplexer duplexer imux omux switch circulator isolator limiter attenuator dsa phase shifter beamformer coupler hybrid pll vco synthesizer oscillator adc dac mmic gan gaas sige soi transponder waveguide rad hard radiation'],
     ['Antennas & Radiation','/antennas/','dipole patch horn gain aperture pattern polarization'],
     ['Wireless & MIMO','/wireless/','mimo channel rank ofdm evm precoding'],
     ['AESA & Phased Arrays','/aesa/','beam steering array factor grating lobes tr modules'],
