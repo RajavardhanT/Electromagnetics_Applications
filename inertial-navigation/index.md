@@ -86,8 +86,6 @@ Modern INS commonly uses several gyro technologies.
 
 For the detailed operating physics—including MEMS Coriolis vibratory gyros, fiber-optic gyros, ring-laser gyros, hemispherical resonator gyros, noise/error mechanisms, and emerging atom-interferometric gyros—see [Modern Gyroscopes — How They Work](../modern-gyroscopes/).
 
-Modern INS commonly uses several gyro technologies.
-
 ### MEMS gyro
 
 MEMS gyros infer rotation through Coriolis coupling in a vibrating mechanical structure.
