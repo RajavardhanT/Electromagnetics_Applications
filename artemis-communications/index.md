@@ -94,6 +94,8 @@ That connects directly to [Spacecraft Electromagnetics](../computational-em/).
 
 ## 5. RF communication path
 
+For the component-level hardware behind this chain—LNAs, filters, mixers, PLLs, drivers, PAs/TWTAs, switches, couplers, transponders, waveguide, power electronics, and space qualification—see [Microwave & Space Electronics Components](../microwave-space-components/).
+
 A simplified spacecraft RF chain is
 
 $$
