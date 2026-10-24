@@ -46,6 +46,7 @@
     ['Computational Methods','/computational-methods/','cuda gpu julia numerical'],
     ['Spacecraft EM','/computational-em/','satellite antenna emc installed pattern'],
     ['Modern Inertial Navigation','/inertial-navigation/','inertial navigation ins imu mems fog rlg gyro accelerometer strapdown quaternion kalman gnss pnt sensor fusion visual lidar radar schuler coning sculling allan deviation quantum atom interferometer'],
+    ['Modern Gyroscopes','/modern-gyroscopes/','gyroscope gyro mems coriolis tuning fork fog fiber optic ring laser rlg sagnac hrg hemispherical resonator bias instability angle random walk allan deviation scale factor atom interferometer'],
     ['Gravity Probe B','/gravity-probe-b/','gyroscope squid london moment space'],
     ['VLBI & Chandler Wobble','/earth-space/chandler-wobble-vlbi.html','radio astronomy geodesy interferometry'],
     ['Great Scientists','/reference/great-scientists.html','euclid archimedes hipparchus ptolemy arab scientists leonardo copernicus vesalius galileo huygens leeuwenhoek hooke newton linnaeus hutton lavoisier dalton faraday babbage darwin pasteur mendel mendeleyev maxwell planck curie rutherford einstein wegener bohr hubble heisenberg pauling dna crick watson franklin hawking history'],
