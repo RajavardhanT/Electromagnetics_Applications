@@ -125,6 +125,7 @@ description: A connected, practical reference from Maxwell's equations to RF eng
 <a class="reference-card" data-symbol="OPM" href="atomic-magnetometer/"><strong>Optically Pumped Atomic Magnetometers</strong><span>Zeeman interaction, spin polarization, Bloch dynamics, optical readout and scalar/vector magnetometry.</span></a>
 <a class="reference-card" data-symbol="νH" href="hydrogen-maser/"><strong>Hydrogen Maser</strong><span>Hyperfine physics, stimulated microwave emission, cavities, stability and VLBI timing.</span></a>
 <a class="reference-card" data-symbol="S/C" href="computational-em/"><strong>Spacecraft Electromagnetics</strong><span>Installed antenna patterns, coupling, EMC, satellite links, payloads and launch environments.</span></a>
+<a class="reference-card" data-symbol="INS" href="inertial-navigation/"><strong>Modern Inertial Navigation</strong><span>IMUs, MEMS/FOG/RLG gyros, strapdown mechanization, quaternions, drift, Kalman filtering, multisensor fusion and GNSS-denied PNT.</span></a>
 <a class="reference-card" data-symbol="SQUID" href="gravity-probe-b/"><strong>Gravity Probe B</strong><span>Superconducting gyroscopes, London moment, SQUID readout and end-to-end precision engineering.</span></a>
 <a class="reference-card" data-symbol="VLBI" href="earth-space/chandler-wobble-vlbi.html"><strong>VLBI, Chandler Wobble & Earth Rotation</strong><span>Interferometric radio astronomy, precision timing, baseline geometry and Earth-orientation measurement.</span></a>
 </div>
