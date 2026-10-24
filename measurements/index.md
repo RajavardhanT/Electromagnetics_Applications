@@ -231,6 +231,12 @@ In practice, distinguish:
 <label><input type="checkbox"> Can the result be cross-checked by a second method?</label>
 </div>
 
+## Inertial-navigation measurements
+
+INS characterization connects sensor physics directly to precision measurement. Important observables include gyro/accelerometer bias, scale factor, axis misalignment, vibration sensitivity, turn-on repeatability, temperature coefficients, Allan deviation, timing latency, and error growth during GNSS outages.
+
+See [Modern Inertial Navigation Systems](../inertial-navigation/).
+
 ## Related pages
 
 [EMI/EMC](../emc/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [High-Speed SerDes & IO](../high-speed-serdes/) · [Analog Mixed-Signal IC Design](../analog-mixed-signal/) · [RF & Microwave](../rf-microwave/) · [Antennas](../antennas/) · [Ground-State Magnetometry](../ground-state-magnetometry/) · [Rydberg Semiclassical Optics](../rydberg-semiclassical-effects/) · [Theory ↔ Experiment](../theory-experiment/)
