@@ -235,7 +235,7 @@ In practice, distinguish:
 
 INS characterization connects sensor physics directly to precision measurement. Important observables include gyro/accelerometer bias, scale factor, axis misalignment, vibration sensitivity, turn-on repeatability, temperature coefficients, Allan deviation, timing latency, and error growth during GNSS outages.
 
-See [Modern Inertial Navigation Systems](../inertial-navigation/).
+See [Modern Gyroscopes — How They Work](../modern-gyroscopes/) for gyro-specific rate-table, bias, vibration, scale-factor, and Allan-deviation measurements, and [Modern Inertial Navigation Systems](../inertial-navigation/) for the complete INS context.
 
 ## Related pages
 
