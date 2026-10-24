@@ -150,4 +150,8 @@ See [Measurements & Instruments](../measurements/).
 - S. Ramo, J. R. Whinnery and T. Van Duzer, *Fields and Waves in Communication Electronics*.
 - MIT OpenCourseWare, [Electromagnetics and Applications](https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/).
 
+## Microwave and space component reference
+
+For a hardware-oriented map of the components that make up real microwave and satellite RF chains—including LNAs, PAs/TWTAs, mixers, filters, switches, circulators, limiters, PLL/VCOs, beamformers, ADC/DACs, waveguide hardware, MMIC technologies, and space qualification—see [Microwave & Space Electronics Components](../microwave-space-components/).
+
 Related: [Antennas](../antennas/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [Paul Traps](../paul-traps/) · [EMC](../emc/) · [Calculators](../calculators/) · [Worked Examples](../worked-examples/)
