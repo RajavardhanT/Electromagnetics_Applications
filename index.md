@@ -90,6 +90,7 @@ description: A connected, practical reference from Maxwell's equations to RF eng
 <div class="card-grid category-core">
 <a class="reference-card" data-symbol="∇" href="foundations/"><strong>Foundations</strong><span>Maxwell equations, boundary conditions, waves, polarization, energy and Poynting flow.</span></a>
 <a class="reference-card" data-symbol="Z₀" href="rf-microwave/"><strong>RF & Microwave</strong><span>Transmission lines, Smith chart, S-parameters, waveguides, resonators, filters and networks.</span></a>
+<a class="reference-card" data-symbol="RFIC" href="microwave-space-components/"><strong>Microwave & Space Electronics Components</strong><span>LNAs, PAs/TWTAs, mixers, filters, PLL/VCOs, switches, ferrites, beamformers, ADC/DAC, waveguide hardware, rad-hard power and space qualification.</span></a>
 <a class="reference-card" data-symbol="G" href="antennas/"><strong>Antennas & Radiation</strong><span>Dipoles, loops, patches, horns, aperture, gain, polarization, near/far field and measurement.</span></a>
 <a class="reference-card" data-symbol="H" href="wireless/"><strong>Wireless & MIMO</strong><span>Propagation, link budgets, channel matrices, rank, multiplexing, beamforming and EVM.</span></a>
 <a class="reference-card" data-symbol="AF" href="aesa/"><strong>AESA & Phased Arrays</strong><span>Array factor, steering, T/R modules, scan loss, grating lobes, calibration and thermal limits.</span></a>
