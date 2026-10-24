@@ -33,7 +33,7 @@ $$
 <div class="map-column"><h3>Guided energy</h3><a href="../rf-microwave/">Transmission lines</a><a href="../rf-microwave/">Waveguides</a><a href="../rf-microwave/">Resonators & filters</a><a href="../signal-power-integrity/">Signal & power integrity</a><a href="../high-speed-serdes/">High-speed SerDes</a><a href="../analog-mixed-signal/">Analog mixed-signal IC</a><a href="../silicon-soc/">Silicon / SoC / GDS</a><a href="../emc/">Interconnects & EMC</a></div>
 <div class="map-column"><h3>Radiated energy</h3><a href="../antennas/">Antennas</a><a href="../aesa/">Phased arrays</a><a href="../wireless/">Wireless links & MIMO</a><a href="../radar/">Radar</a></div>
 <div class="map-column"><h3>Forces & induction</h3><a href="../power-energy/">Transformers</a><a href="../power-energy/">Motors & generators</a><a href="../subatomic-particles/">Accelerators</a><a href="../paul-traps/">Paul traps</a><a href="../shockley-ramo/">Detector signals</a></div>
-<div class="map-column"><h3>High-frequency EM</h3><a href="../optics-photonics/">Optics & photonics</a><a href="../laser-systems/">Laser systems</a><a href="../medical/">MRI & biomedical EM</a><a href="../medical/ct-scan-physics.html">CT / X-ray imaging</a><a href="../computational-em/">Spacecraft systems</a><a href="../inertial-navigation/">Inertial navigation / PNT</a></div>
+<div class="map-column"><h3>High-frequency EM</h3><a href="../optics-photonics/">Optics & photonics</a><a href="../laser-systems/">Laser systems</a><a href="../medical/">MRI & biomedical EM</a><a href="../medical/ct-scan-physics.html">CT / X-ray imaging</a><a href="../computational-em/">Spacecraft systems</a><a href="../artemis-communications/">Artemis lunar communications</a><a href="../inertial-navigation/">Inertial navigation / PNT</a></div>
 </div>
 
 ## 3. Classical-to-quantum bridge
@@ -80,6 +80,9 @@ $$
 
 ### Maxwell → Rydberg RF sensor
 <div class="pathway"><span class="node">RF $\mathbf E$</span><span class="arrow">→</span><span class="node">$-\mathbf d\cdot\mathbf E$</span><span class="arrow">→</span><span class="node">Rabi coupling</span><span class="arrow">→</span><a href="../rydberg-semiclassical-effects/">EIT / AT / Floquet</a><span class="arrow">→</span><span class="node">photodetector</span><span class="arrow">→</span><span class="node">field estimate</span></div>
+
+### Earth ↔ Moon communications
+<div class="pathway"><span class="node">Orion / lunar asset</span><span class="arrow">→</span><a href="../artemis-communications/">RF / optical terminal</a><span class="arrow">→</span><span class="node">NSN / DSN / lunar relay</span><span class="arrow">→</span><span class="node">ground network</span><span class="arrow">→</span><span class="node">Mission Control</span></div>
 
 ### Rotation → gyroscope → inertial navigation
 <div class="pathway"><span class="node">rotation</span><span class="arrow">→</span><a href="../modern-gyroscopes/">MEMS / FOG / RLG / HRG gyro</a><span class="arrow">→</span><span class="node">angular rate</span><span class="arrow">→</span><a href="../inertial-navigation/">attitude + strapdown mechanization</a><span class="arrow">→</span><span class="node">PNT</span></div>
