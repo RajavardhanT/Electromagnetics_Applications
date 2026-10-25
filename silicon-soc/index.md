@@ -1094,6 +1094,14 @@ That is the **silicon side** of protocols and computer architecture.
 
 ---
 
-## 58. Related pages
+## 58. Development boards versus production silicon
+
+Arduino and similar development boards expose the same fundamental concepts that appear in production SoCs—GPIO, timers, ADCs, serial interfaces, clocking, interrupts, memory, and power domains—but behind a much simpler software and board abstraction.
+
+See [Arduino Boards — What You Need to Know](../arduino/) for the development-board view of these peripherals.
+
+---
+
+## 59. Related pages
 
 [High-Speed SerDes & IO](../high-speed-serdes/) · [Analog Mixed-Signal IC Design](../analog-mixed-signal/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [Computational Methods](../computational-methods/) · [EMI / EMC](../emc/)
