@@ -1281,7 +1281,25 @@ For space parts, add
 
 ---
 
-## 45. Relation to the rest of this reference
+## 45. Arduino / MCU control of RF components
+
+Many laboratory RF components are digitally controlled even though the signal path is analog or microwave. Arduino-class MCUs are often sufficient to configure PLLs, DSAs, RF switches, synthesizers, detectors, relays, and temperature/power-monitoring ICs over SPI, I²C, UART, or GPIO.
+
+A common control path is
+
+$
+\text{PC}
+\rightarrow
+\text{Arduino / MCU}
+\xrightarrow{SPI}
+\text{PLL / attenuator / switch}.
+$
+
+See [Arduino Boards — What You Need to Know](../arduino/) for voltage levels, buses, timers, interrupts, drivers, and debugging.
+
+---
+
+## 46. Relation to the rest of this reference
 
 This page connects component-level RF hardware to the larger system:
 
