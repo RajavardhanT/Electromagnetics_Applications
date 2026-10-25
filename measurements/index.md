@@ -237,6 +237,12 @@ INS characterization connects sensor physics directly to precision measurement. 
 
 See [Modern Gyroscopes — How They Work](../modern-gyroscopes/) for gyro-specific rate-table, bias, vibration, scale-factor, and Allan-deviation measurements, and [Modern Inertial Navigation Systems](../inertial-navigation/) for the complete INS context.
 
+## Arduino and laboratory control
+
+Arduino-class microcontrollers are useful for low-level experimental control: reading sensors, generating triggers, switching relays, programming SPI/I²C devices, controlling motors, and collecting slow telemetry. They should be treated as real embedded hardware with voltage/current/timing constraints rather than as generic USB peripherals.
+
+See [Arduino Boards — What You Need to Know](../arduino/).
+
 ## Related pages
 
 [EMI/EMC](../emc/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [High-Speed SerDes & IO](../high-speed-serdes/) · [Analog Mixed-Signal IC Design](../analog-mixed-signal/) · [RF & Microwave](../rf-microwave/) · [Antennas](../antennas/) · [Ground-State Magnetometry](../ground-state-magnetometry/) · [Rydberg Semiclassical Optics](../rydberg-semiclassical-effects/) · [Theory ↔ Experiment](../theory-experiment/)
