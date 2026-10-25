@@ -81,6 +81,9 @@ $$
 ### Maxwell → Rydberg RF sensor
 <div class="pathway"><span class="node">RF $\mathbf E$</span><span class="arrow">→</span><span class="node">$-\mathbf d\cdot\mathbf E$</span><span class="arrow">→</span><span class="node">Rabi coupling</span><span class="arrow">→</span><a href="../rydberg-semiclassical-effects/">EIT / AT / Floquet</a><span class="arrow">→</span><span class="node">photodetector</span><span class="arrow">→</span><span class="node">field estimate</span></div>
 
+### Sensor / control → embedded hardware
+<div class="pathway"><span class="node">sensor / switch</span><span class="arrow">→</span><a href="../arduino/">MCU / Arduino</a><span class="arrow">→</span><span class="node">GPIO / ADC / timer / serial bus</span><span class="arrow">→</span><span class="node">driver / actuator / instrument</span></div>
+
 ### Component → RF chain → spacecraft link
 <div class="pathway"><a href="../microwave-space-components/">LNA / mixer / PLL / PA / filter</a><span class="arrow">→</span><span class="node">receiver / transmitter</span><span class="arrow">→</span><span class="node">antenna / array</span><span class="arrow">→</span><a href="../computational-em/">spacecraft RF system</a><span class="arrow">→</span><span class="node">mission link</span></div>
 
