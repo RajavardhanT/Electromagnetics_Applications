@@ -317,7 +317,15 @@ The most important lesson is that **computational method and physical model shou
 
 ---
 
-## 17. AMS and SerDes modeling
+## 17. Embedded microcontrollers and Arduino
+
+Not every laboratory or control problem needs a GPU or large computer. Microcontrollers are often the correct computational layer for deterministic GPIO, sensor acquisition, SPI/I²C configuration, triggers, motor control, and slow instrumentation.
+
+See [Arduino Boards — What You Need to Know](../arduino/) for MCU architecture, GPIO, ADC/DAC/PWM, timers, interrupts, UART/I²C/SPI/CAN/USB, power, and debugging.
+
+---
+
+## 18. AMS and SerDes modeling
 
 Analog mixed-signal and high-speed IO development relies heavily on behavioral modeling and automated analysis. MATLAB, Python, SystemVerilog real-number models, and Verilog-AMS are commonly used to evaluate equalization, calibration convergence, jitter, BER, ADC/DAC nonidealities, and PVT sweeps before or alongside transistor-level implementation.
 
@@ -325,7 +333,7 @@ See [Analog Mixed-Signal IC Design](../analog-mixed-signal/) and [High-Speed Ser
 
 ---
 
-## 18. Signal/power integrity simulation and GPU hardware
+## 19. Signal/power integrity simulation and GPU hardware
 
 High-speed digital hardware is another major computational-electromagnetics application. SI solvers extract transmission-line, via, connector, and package S-parameters; PI models calculate board/package PDN impedance, resonances, and transient rail behavior. Modern GPU accelerators combine PCIe/NVLink-class links with extremely high-current power delivery.
 
@@ -333,13 +341,13 @@ See [Signal Integrity & Power Integrity](../signal-power-integrity/) for PCIe, U
 
 ---
 
-## 19. Silicon design automation and SoC implementation
+## 20. Silicon design automation and SoC implementation
 
 Modern SoC development adds another computational stack: RTL simulation, formal verification, synthesis, static timing analysis, placement/routing, parasitic extraction, IR/EM analysis, DFT insertion, and large regression flows. See [Silicon Interfaces & SoC Implementation](../silicon-soc/) for PCIe, UCIe, DDR, Ethernet, RISC-V, Arm, NoC, GDSII, and tapeout context.
 
 ---
 
-## 20. Electromagnetic simulation of quantum-computing hardware
+## 21. Electromagnetic simulation of quantum-computing hardware
 
 Superconducting quantum processors are also complex microwave structures. Classical EM solvers are used to extract capacitance and inductance, identify qubit/resonator/package modes, calculate S-parameters and cross-talk, estimate Purcell channels, and determine electromagnetic energy participation before the results are mapped into a quantum Hamiltonian.
 
