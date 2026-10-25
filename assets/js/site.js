@@ -45,6 +45,7 @@
     ['Subatomic Particles','/subatomic-particles/','accelerator detector charged particle'],
     ['Paul Traps','/paul-traps/','paul trap rf ion trap quadrupole mathieu stability pseudopotential secular motion micromotion ion crystal mass filter'],
     ['Computational Methods','/computational-methods/','cuda gpu julia numerical'],
+    ['Arduino Boards','/arduino/','arduino uno r3 r4 nano esp32 mkr giga portenta microcontroller mcu gpio adc dac pwm timer interrupt uart i2c spi can usb sensor motor mosfet debugging embedded'],
     ['Spacecraft EM','/computational-em/','satellite antenna emc installed pattern'],
     ['Artemis Lunar Communications','/artemis-communications/','artemis moon lunar orion communications deep space network dsn near space network nsn s band ka band optical laser o2o lunanet gateway relay pnt tracking doppler ranging phased array'],
     ['Modern Inertial Navigation','/inertial-navigation/','inertial navigation ins imu mems fog rlg gyro accelerometer strapdown quaternion kalman gnss pnt sensor fusion visual lidar radar schuler coning sculling allan deviation quantum atom interferometer'],
