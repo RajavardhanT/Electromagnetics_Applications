@@ -386,6 +386,8 @@ Never interpret every raw edge from a mechanical button as a genuine press.
 
 # 16. ADC
 
+For a deeper treatment of converter architecture and specifications—including ENOB, SINAD, SFDR, INL/DNL, jitter, SAR/pipeline/delta-sigma ADCs, DAC settling and RF converters—see [ADC & DAC — Data Converters](../data-converters/).
+
 An ADC converts voltage into a digital code.
 
 For an ideal $N$-bit ADC,
