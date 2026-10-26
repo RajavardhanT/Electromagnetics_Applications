@@ -81,6 +81,9 @@ $$
 ### Maxwell → Rydberg RF sensor
 <div class="pathway"><span class="node">RF $\mathbf E$</span><span class="arrow">→</span><span class="node">$-\mathbf d\cdot\mathbf E$</span><span class="arrow">→</span><span class="node">Rabi coupling</span><span class="arrow">→</span><a href="../rydberg-semiclassical-effects/">EIT / AT / Floquet</a><span class="arrow">→</span><span class="node">photodetector</span><span class="arrow">→</span><span class="node">field estimate</span></div>
 
+### Analog ↔ digital conversion
+<div class="pathway"><span class="node">sensor / RF / analog waveform</span><span class="arrow">→</span><a href="../data-converters/">ADC</a><span class="arrow">→</span><span class="node">DSP / FPGA / MCU</span><span class="arrow">→</span><a href="../data-converters/">DAC</a><span class="arrow">→</span><span class="node">analog / RF output</span></div>
+
 ### Sensor / control → embedded hardware
 <div class="pathway"><span class="node">sensor / switch</span><span class="arrow">→</span><a href="../arduino/">MCU / Arduino</a><span class="arrow">→</span><span class="node">GPIO / ADC / timer / serial bus</span><span class="arrow">→</span><span class="node">driver / actuator / instrument</span></div>
 
