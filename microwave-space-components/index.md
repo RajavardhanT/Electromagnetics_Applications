@@ -645,6 +645,8 @@ Important impairments include
 
 # 23. ADC and DAC
 
+For the dedicated high-speed converter reference—including direct-RF sampling/synthesis, jitter limits, ENOB/SFDR, JESD204, ADC/DAC architectures and measurement—see [ADC & DAC — Data Converters](../data-converters/).
+
 Modern microwave systems increasingly digitize closer to the antenna.
 
 Important ADC metrics:
