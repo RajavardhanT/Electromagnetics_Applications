@@ -243,6 +243,12 @@ Arduino-class microcontrollers are useful for low-level experimental control: re
 
 See [Arduino Boards — What You Need to Know](../arduino/).
 
+## ADC and DAC characterization
+
+Data converters require both static and spectral measurements. ADC testing commonly uses code-density/ramp methods for INL/DNL and low-distortion sine/FFT tests for SNR, SINAD, SFDR and ENOB. DAC testing includes code sweeps, settling/glitch measurements, and spectral analysis of dynamic outputs.
+
+See [ADC & DAC — Data Converters](../data-converters/).
+
 ## Related pages
 
 [EMI/EMC](../emc/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [High-Speed SerDes & IO](../high-speed-serdes/) · [Analog Mixed-Signal IC Design](../analog-mixed-signal/) · [RF & Microwave](../rf-microwave/) · [Antennas](../antennas/) · [Ground-State Magnetometry](../ground-state-magnetometry/) · [Rydberg Semiclassical Optics](../rydberg-semiclassical-effects/) · [Theory ↔ Experiment](../theory-experiment/)
