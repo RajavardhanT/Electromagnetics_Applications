@@ -277,6 +277,8 @@ Calibration can correct threshold and offset errors.
 
 ## 14. ADC-based receiver
 
+For ADC/DAC architecture, ENOB/SNDR/SFDR, sampling-jitter limits, time interleaving, and converter measurements, see [ADC & DAC — Data Converters](../data-converters/).
+
 An ADC-based SerDes samples the waveform with multiple bits of resolution and performs substantial equalization digitally.
 
 Advantages include
