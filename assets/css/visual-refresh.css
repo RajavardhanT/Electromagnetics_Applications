@@ -208,3 +208,141 @@ main.content { counter-reset: topicfigure; }
 @media (prefers-reduced-motion: reduce) {
   .reference-card,.system-map-node { transition:none; }
 }
+
+
+/* ------------------------------------------------------------
+   Global typography + section palettes
+   ------------------------------------------------------------ */
+
+/* Each page receives data-section from the shared layout. The palette changes
+   accents and a very light canvas tint while preserving one visual identity. */
+body {
+  --section-accent: #0f8f82;
+  --section-accent-2: #397ca6;
+  --section-heading: #173d55;
+  --section-border: #bddbd7;
+  --section-soft: #edf8f6;
+  --section-page: #f7fafb;
+  --section-dark-soft: #0d2528;
+  --section-dark-border: #28545a;
+  background: var(--section-page);
+}
+
+body[data-section="home"] {
+  --section-accent:#0f8f82; --section-accent-2:#397ca6; --section-heading:#173d55;
+  --section-border:#bddbd7; --section-soft:#edf8f6; --section-page:#f7fafb;
+  --section-dark-soft:#0d2528; --section-dark-border:#28545a;
+}
+body[data-section="foundations"] {
+  --section-accent:#176fa3; --section-accent-2:#3a98b8; --section-heading:#173f60;
+  --section-border:#bfd9e7; --section-soft:#edf6fb; --section-page:#f7fafc;
+  --section-dark-soft:#102433; --section-dark-border:#2b526b;
+}
+body[data-section="rf"] {
+  --section-accent:#087f88; --section-accent-2:#2d6f9e; --section-heading:#174c59;
+  --section-border:#b7dadd; --section-soft:#edf8f8; --section-page:#f7fbfb;
+  --section-dark-soft:#0b292d; --section-dark-border:#28565d;
+}
+body[data-section="silicon"] {
+  --section-accent:#5368b8; --section-accent-2:#287f9e; --section-heading:#303f78;
+  --section-border:#c9d0ec; --section-soft:#f1f3fb; --section-page:#f9f9fc;
+  --section-dark-soft:#181d35; --section-dark-border:#424f79;
+}
+body[data-section="optics"] {
+  --section-accent:#7455ad; --section-accent-2:#b15c90; --section-heading:#4e3975;
+  --section-border:#d5c8e8; --section-soft:#f5f0fb; --section-page:#fbf9fc;
+  --section-dark-soft:#241a32; --section-dark-border:#574371;
+}
+body[data-section="power"] {
+  --section-accent:#aa6917; --section-accent-2:#9a8b28; --section-heading:#694714;
+  --section-border:#e2cea9; --section-soft:#fbf5e9; --section-page:#fbfaf7;
+  --section-dark-soft:#2a2112; --section-dark-border:#66502a;
+}
+body[data-section="medical"] {
+  --section-accent:#ad4d69; --section-accent-2:#7b62a8; --section-heading:#71364a;
+  --section-border:#e4c6d0; --section-soft:#fcf1f4; --section-page:#fcfafb;
+  --section-dark-soft:#2b1820; --section-dark-border:#68404d;
+}
+body[data-section="particles"] {
+  --section-accent:#ad6719; --section-accent-2:#9c4e43; --section-heading:#6d4318;
+  --section-border:#e4cfaf; --section-soft:#fbf5ec; --section-page:#fcfaf7;
+  --section-dark-soft:#2c2115; --section-dark-border:#6c4e2f;
+}
+body[data-section="quantum"] {
+  --section-accent:#6756b0; --section-accent-2:#39859a; --section-heading:#473c76;
+  --section-border:#cec8e8; --section-soft:#f3f1fb; --section-page:#faf9fc;
+  --section-dark-soft:#201c34; --section-dark-border:#504777;
+}
+body[data-section="space"] {
+  --section-accent:#2d6fa3; --section-accent-2:#4d8290; --section-heading:#294f70;
+  --section-border:#c3d7e6; --section-soft:#eff6fa; --section-page:#f8fafc;
+  --section-dark-soft:#122536; --section-dark-border:#34556d;
+}
+body[data-section="tools"] {
+  --section-accent:#2b7f73; --section-accent-2:#657d94; --section-heading:#315d59;
+  --section-border:#c3dcd7; --section-soft:#f0f8f6; --section-page:#f8fbfa;
+  --section-dark-soft:#102825; --section-dark-border:#345b55;
+}
+
+/* Section color is intentionally subtle: hierarchy stays constant, accents move. */
+a { color:var(--section-accent); }
+.reading-progress { background:linear-gradient(90deg,var(--section-accent),var(--section-accent-2)); }
+.content > h1:first-of-type { color:var(--section-heading); }
+.content h2 { border-bottom-color:var(--section-border); }
+.content h3 { color:var(--section-heading); }
+.crumb a,
+.page-toc a.active,
+.footer-topics a:hover { color:var(--section-accent); }
+.page-toc a.active { border-left-color:var(--section-accent); background:var(--section-soft); }
+.sidebar-title { color:var(--section-accent); }
+.sidebar a.active::before { background:var(--section-accent); }
+.site-search:focus { border-color:var(--section-accent); box-shadow:0 0 0 3px color-mix(in srgb,var(--section-accent) 16%, transparent); }
+.heading-anchor { color:var(--section-accent); }
+blockquote { border-left-color:var(--section-accent); background:var(--section-soft); }
+.equation-box { border-left-color:var(--section-accent); }
+.button.primary { border-color:var(--section-accent); background:var(--section-accent); }
+.reference-card:hover { border-color:var(--section-border); }
+.reference-card strong { color:var(--section-heading); }
+.page-toc,
+.topic-figure,
+.reference-card,
+.stat,
+.author-box,
+.map-column,
+.calculator { border-color:color-mix(in srgb,var(--section-border) 72%, #dbe3ec); }
+
+/* Give article callouts a tiny local tint without overriding semantic colors. */
+.example-box,
+.assumption-box { border-color:var(--section-border); }
+.example-box { background:color-mix(in srgb,var(--section-soft) 58%, white); }
+
+/* Home hero inherits the home palette while retaining its established composition. */
+.hero {
+  background:
+    radial-gradient(circle at 85% 10%,color-mix(in srgb,var(--section-accent) 12%, transparent),transparent 34%),
+    linear-gradient(145deg,#ffffff,color-mix(in srgb,var(--section-soft) 62%, #f3f8fb));
+}
+.hero-kicker { color:var(--section-accent); }
+
+@media (prefers-color-scheme: dark) {
+  body { background:#091321; }
+  .content > h1:first-of-type { color:color-mix(in srgb,var(--section-accent) 42%, #f1f6fb); }
+  .content h3 { color:color-mix(in srgb,var(--section-accent) 46%, #dbe9f5); }
+  a { color:color-mix(in srgb,var(--section-accent) 58%, #9bdcff); }
+  .page-toc a.active { color:color-mix(in srgb,var(--section-accent) 55%, #dbe9f5); background:var(--section-dark-soft); }
+  blockquote { background:var(--section-dark-soft); }
+  .reference-card:hover,
+  .page-toc,
+  .topic-figure,
+  .reference-card,
+  .stat,
+  .author-box,
+  .map-column,
+  .calculator { border-color:var(--section-dark-border); }
+  .reference-card strong { color:color-mix(in srgb,var(--section-accent) 40%, #e6f1f8); }
+  .hero {
+    background:
+      radial-gradient(circle at 85% 10%,color-mix(in srgb,var(--section-accent) 14%, transparent),transparent 34%),
+      linear-gradient(145deg,#0d1a2a,#0a1625);
+  }
+}
