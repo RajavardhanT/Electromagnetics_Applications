@@ -13,6 +13,9 @@
   <meta name="twitter:card" content="summary">
   <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
   <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700;750;800;850&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/visual-refresh.css' | relative_url }}">
   <style>
@@ -33,7 +36,29 @@
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script defer src="{{ '/assets/js/site.js' | relative_url }}"></script>
 </head>
-<body data-baseurl="{{ site.baseurl }}">
+{% assign section_theme = 'tools' %}
+{% if page.url == '/' %}
+  {% assign section_theme = 'home' %}
+{% elsif page.url contains '/foundations/' %}
+  {% assign section_theme = 'foundations' %}
+{% elsif page.url contains '/rf-microwave/' or page.url contains '/microwave-space-components/' or page.url contains '/antennas/' or page.url contains '/wireless/' or page.url contains '/aesa/' or page.url contains '/radar/' or page.url contains '/emc/' %}
+  {% assign section_theme = 'rf' %}
+{% elsif page.url contains '/signal-power-integrity/' or page.url contains '/analog-mixed-signal/' or page.url contains '/data-converters/' or page.url contains '/high-speed-serdes/' or page.url contains '/silicon-soc/' or page.url contains '/arduino/' %}
+  {% assign section_theme = 'silicon' %}
+{% elsif page.url contains '/optics-photonics/' or page.url contains '/laser-systems/' %}
+  {% assign section_theme = 'optics' %}
+{% elsif page.url contains '/power-energy/' %}
+  {% assign section_theme = 'power' %}
+{% elsif page.url contains '/medical/' %}
+  {% assign section_theme = 'medical' %}
+{% elsif page.url contains '/lorentz-force/' or page.url contains '/shockley-ramo/' or page.url contains '/subatomic-particles/' or page.url contains '/paul-traps/' %}
+  {% assign section_theme = 'particles' %}
+{% elsif page.url contains '/quantum/' or page.url contains '/rydberg-semiclassical-effects/' or page.url contains '/ground-state-magnetometry/' or page.url contains '/atomic-magnetometer/' or page.url contains '/hydrogen-maser/' %}
+  {% assign section_theme = 'quantum' %}
+{% elsif page.url contains '/computational-em/' or page.url contains '/artemis-communications/' or page.url contains '/inertial-navigation/' or page.url contains '/modern-gyroscopes/' or page.url contains '/gravity-probe-b/' or page.url contains '/earth-space/' %}
+  {% assign section_theme = 'space' %}
+{% endif %}
+<body data-baseurl="{{ site.baseurl }}" data-section="{{ section_theme }}">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div id="reading-progress" class="reading-progress" aria-hidden="true"></div>
 
