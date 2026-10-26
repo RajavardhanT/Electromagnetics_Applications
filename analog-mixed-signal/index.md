@@ -272,6 +272,8 @@ Important nonidealities include
 
 # Part III — ADCs and DACs
 
+For the dedicated converter reference—including sampling/aliasing, ENOB/SNDR/SFDR, INL/DNL, aperture jitter, ADC/DAC architecture comparison, RF data converters, JESD204, measurement methods, and recent 2024–2026 reviews—see [ADC & DAC — Data Converters](../data-converters/).
+
 ## 12. ADC performance metrics
 
 For an ideal $N$-bit converter,
