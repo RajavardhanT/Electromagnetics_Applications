@@ -95,6 +95,7 @@ description: A connected, practical reference from Maxwell's equations to RF eng
 <a class="reference-card" data-symbol="G" href="antennas/"><strong>Antennas & Radiation</strong><span>Dipoles, loops, patches, horns, aperture, gain, polarization, near/far field and measurement.</span></a>
 <a class="reference-card" data-symbol="H" href="wireless/"><strong>Wireless & MIMO</strong><span>Propagation, link budgets, channel matrices, rank, multiplexing, beamforming and EVM.</span></a>
 <a class="reference-card" data-symbol="3GPP" href="3gpp-standards/"><strong>3GPP Standards</strong><span>NR/LTE RF requirements, UE/gNB conformance, RRM, PHY, RRC, capabilities, NSA/SA, RedCap, NTN and 5G-Advanced.</span></a>
+<a class="reference-card" data-symbol="GHz" href="rf-bands/"><strong>RF Bands — Compact Reference</strong><span>GSM, LTE, 5G NR, Wi-Fi/ISM, GNSS, and L/S/C/X/Ku/K/Ka/V/W microwave bands in one lookup page.</span></a>
 <a class="reference-card" data-symbol="AF" href="aesa/"><strong>AESA & Phased Arrays</strong><span>Array factor, steering, T/R modules, scan loss, grating lobes, calibration and thermal limits.</span></a>
 <a class="reference-card" data-symbol="R⁴" href="radar/"><strong>Radar & Remote Sensing</strong><span>Radar equation, range/Doppler, FMCW, RCS, phased arrays, SAR and measurement limits.</span></a>
 <a class="reference-card" data-symbol="EMC" href="emc/"><strong>EMI / EMC</strong><span>Emissions, immunity, coupling, shielding, grounding, crosstalk, compliance and troubleshooting.</span></a>
