@@ -298,6 +298,8 @@ Crew safety voice/telemetry is therefore prioritized differently from high-resol
 
 # RF bands and data
 
+For a compact cross-domain frequency reference covering cellular, GNSS, and L/S/C/X/Ku/K/Ka/V/W bands, see [RF Bands — Compact Reference](../rf-bands/).
+
 ## 14. S-band RF links
 
 Orion's primary RF communications historically use S-band-class links for crew voice, command, telemetry, and data.
