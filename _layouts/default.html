@@ -41,7 +41,7 @@
   {% assign section_theme = 'home' %}
 {% elsif page.url contains '/foundations/' %}
   {% assign section_theme = 'foundations' %}
-{% elsif page.url contains '/rf-microwave/' or page.url contains '/microwave-space-components/' or page.url contains '/antennas/' or page.url contains '/wireless/' or page.url contains '/aesa/' or page.url contains '/radar/' or page.url contains '/emc/' %}
+{% elsif page.url contains '/rf-microwave/' or page.url contains '/microwave-space-components/' or page.url contains '/antennas/' or page.url contains '/wireless/' or page.url contains '/3gpp-standards/' or page.url contains '/aesa/' or page.url contains '/radar/' or page.url contains '/emc/' %}
   {% assign section_theme = 'rf' %}
 {% elsif page.url contains '/signal-power-integrity/' or page.url contains '/analog-mixed-signal/' or page.url contains '/data-converters/' or page.url contains '/high-speed-serdes/' or page.url contains '/silicon-soc/' or page.url contains '/arduino/' %}
   {% assign section_theme = 'silicon' %}
@@ -171,6 +171,7 @@
           <a href="{{ '/antennas/' | relative_url }}">Antennas</a>
           <a href="{{ '/aesa/' | relative_url }}">Phased Arrays</a>
           <a href="{{ '/radar/' | relative_url }}">Radar</a>
+          <a href="{{ '/3gpp-standards/' | relative_url }}">3GPP</a>
           <a href="{{ '/signal-power-integrity/' | relative_url }}">SI / PI</a>
           <a href="{{ '/analog-mixed-signal/' | relative_url }}">AMS IC</a>
           <a href="{{ '/high-speed-serdes/' | relative_url }}">SerDes</a>
