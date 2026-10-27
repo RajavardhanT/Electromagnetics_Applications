@@ -154,4 +154,8 @@ See [Measurements & Instruments](../measurements/).
 
 For a hardware-oriented map of the components that make up real microwave and satellite RF chains—including LNAs, PAs/TWTAs, mixers, filters, switches, circulators, limiters, PLL/VCOs, beamformers, ADC/DACs, waveguide hardware, MMIC technologies, and space qualification—see [Microwave & Space Electronics Components](../microwave-space-components/).
 
+## Cellular RF standards
+
+For NR/LTE transmitter, receiver, RRM, conformance and test-environment specifications, see [3GPP Standards — What an RF & Wireless Engineer Should Know](../3gpp-standards/).
+
 Related: [Antennas](../antennas/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [Paul Traps](../paul-traps/) · [EMC](../emc/) · [Calculators](../calculators/) · [Worked Examples](../worked-examples/)
