@@ -81,6 +81,9 @@ $$
 ### Maxwell → Rydberg RF sensor
 <div class="pathway"><span class="node">RF $\mathbf E$</span><span class="arrow">→</span><span class="node">$-\mathbf d\cdot\mathbf E$</span><span class="arrow">→</span><span class="node">Rabi coupling</span><span class="arrow">→</span><a href="../rydberg-semiclassical-effects/">EIT / AT / Floquet</a><span class="arrow">→</span><span class="node">photodetector</span><span class="arrow">→</span><span class="node">field estimate</span></div>
 
+### Wireless standard → RF requirement → conformance
+<div class="pathway"><a href="../3gpp-standards/">3GPP requirement</a><span class="arrow">→</span><span class="node">RF / RRM / protocol test</span><span class="arrow">→</span><a href="../measurements/">measurement setup</a><span class="arrow">→</span><span class="node">UE / gNB pass-fail</span></div>
+
 ### Analog ↔ digital conversion
 <div class="pathway"><span class="node">sensor / RF / analog waveform</span><span class="arrow">→</span><a href="../data-converters/">ADC</a><span class="arrow">→</span><span class="node">DSP / FPGA / MCU</span><span class="arrow">→</span><a href="../data-converters/">DAC</a><span class="arrow">→</span><span class="node">analog / RF output</span></div>
 
