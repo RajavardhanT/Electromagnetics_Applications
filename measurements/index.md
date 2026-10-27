@@ -249,6 +249,12 @@ Data converters require both static and spectral measurements. ADC testing commo
 
 See [ADC & DAC — Data Converters](../data-converters/).
 
+## 3GPP RF and conformance measurements
+
+For cellular RF work, measurement conditions and limits should be traced to the applicable 3GPP requirement and conformance specification rather than treated as generic instrument settings. The key UE chain is typically 38.101-x → 38.521-x → 38.508-1, while gNB RF uses 38.104 → 38.141-1/-2.
+
+See [3GPP Standards — What an RF & Wireless Engineer Should Know](../3gpp-standards/).
+
 ## Related pages
 
 [EMI/EMC](../emc/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [High-Speed SerDes & IO](../high-speed-serdes/) · [Analog Mixed-Signal IC Design](../analog-mixed-signal/) · [RF & Microwave](../rf-microwave/) · [Antennas](../antennas/) · [Ground-State Magnetometry](../ground-state-magnetometry/) · [Rydberg Semiclassical Optics](../rydberg-semiclassical-effects/) · [Theory ↔ Experiment](../theory-experiment/)
