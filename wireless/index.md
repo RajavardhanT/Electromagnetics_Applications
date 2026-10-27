@@ -203,6 +203,10 @@ Useful interview concepts include **anechoic chambers, channel emulators, radiat
 
 **What does a high condition number mean?** The spatial eigenchannels have very unequal strengths; channel inversion becomes sensitive to noise and spatial multiplexing performance degrades.
 
+## 3GPP standards
+
+For the practical standards map behind NR/LTE RF, RRM, conformance and signaling—including TS 38.101, 38.521, 38.508, 38.133, 38.533, 38.331, 38.306, the 38.21x PHY family, gNB 38.104/38.141, EN-DC 37.340, LTE 36-series, RedCap and NTN—see [3GPP Standards — What an RF & Wireless Engineer Should Know](../3gpp-standards/).
+
 ## Interview mental model
 
 Remember this chain:
