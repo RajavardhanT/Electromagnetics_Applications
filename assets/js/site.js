@@ -22,6 +22,7 @@
     ['Antennas & Radiation','/antennas/','dipole patch horn gain aperture pattern polarization'],
     ['Wireless & MIMO','/wireless/','mimo channel rank ofdm evm precoding'],
     ['3GPP Standards','/3gpp-standards/','3gpp nr lte 5g advanced 38.101 38.521 38.508 38.133 38.533 38.331 38.306 38.211 38.212 38.213 38.214 38.104 38.141 37.340 endc nsa sa redcap ntn conformance rrm'],
+    ['RF Bands — Compact Reference','/rf-bands/','rf bands gsm lte nr 5g n77 n78 n41 n260 n261 l band s band c band x band ku k ka v w wifi ism gnss spectrum frequency'],
     ['AESA & Phased Arrays','/aesa/','beam steering array factor grating lobes tr modules'],
     ['Radar & Remote Sensing','/radar/','radar equation fmcw doppler sar rcs'],
     ['EMI / EMC','/emc/','emissions immunity shielding grounding crosstalk compliance'],
