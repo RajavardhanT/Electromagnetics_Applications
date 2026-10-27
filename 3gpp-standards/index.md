@@ -10,6 +10,10 @@ description: Practical guide to the 3GPP specifications most useful for NR/LTE R
 
 <div class="pathway"><span class="node">requirement</span><span class="arrow">→</span><span class="node">conformance test</span><span class="arrow">→</span><span class="node">test environment</span><span class="arrow">→</span><span class="node">UE / gNB implementation</span></div>
 
+## RF operating-band lookup
+
+For a compact lookup of the most important GSM, LTE and NR bands—together with L/S/C/X/Ku/K/Ka/V/W microwave naming—see [RF Bands — Compact Reference](../rf-bands/).
+
 ## 1. The specifications to know first
 
 If your work is mainly **RF validation, wireless compliance, conformance, UE characterization, or modem/RF debugging**, start with these:
