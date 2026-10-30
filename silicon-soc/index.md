@@ -1102,6 +1102,12 @@ See [Arduino Boards — What You Need to Know](../arduino/) for the development-
 
 ---
 
-## 59. Related pages
+## 59. From silicon interface to board
+
+The PHY/controller implementation on silicon must ultimately meet a package and PCB channel. For PCIe, USB, Thunderbolt, HDMI and low-speed board buses, see [Hardware Interfaces & PCB/Flex Design](../hardware-interfaces-pcb-flex/) for stackup, routing, connector, flex, SI/PI and bring-up considerations.
+
+---
+
+## 60. Related pages
 
 [High-Speed SerDes & IO](../high-speed-serdes/) · [Analog Mixed-Signal IC Design](../analog-mixed-signal/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [Computational Methods](../computational-methods/) · [EMI / EMC](../emc/)
