@@ -27,6 +27,7 @@
     ['Radar & Remote Sensing','/radar/','radar equation fmcw doppler sar rcs'],
     ['EMI / EMC','/emc/','emissions immunity shielding grounding crosstalk compliance'],
     ['Signal Integrity & Power Integrity','/signal-power-integrity/','signal integrity power integrity si pi pcie pci express usb usb4 usb c pdn decoupling eye jitter ber tdr s parameters nvidia gpu h100 nvlink ddr ethernet hdmi displayport'],
+    ['Hardware Interfaces & PCB/Flex Design','/hardware-interfaces-pcb-flex/','pcie usb thunderbolt i2c spi uart hdmi pcb flex rigid flex layout altium allegro cadence xpedition kicad signal integrity power integrity differential pair impedance via backdrill stackup'],
     ['Analog Mixed-Signal IC Design','/analog-mixed-signal/','analog mixed signal ams bandgap bias ldo amplifier comparator switched capacitor adc dac oscillator pll filter mismatch noise linearity stability calibration lms finfet layout characterization verilog ams systemverilog matlab python'],
     ['ADC & DAC — Data Converters','/data-converters/','adc dac data converter analog digital sampling quantization nyquist aliasing enob sndr sinad sfdr inl dnl aperture jitter sar flash pipeline delta sigma noise shaping current steering jesd204 rf converter settling glitch'],
     ['High-Speed SerDes & IO','/high-speed-serdes/','serdes high speed io tx rx pll cdr ctle dfe ffe equalization adaptation nrz pam4 serializer deserializer 100g 112g pcie usb displayport mphy primetime nanotime timing closure ip delivery lab debug'],
