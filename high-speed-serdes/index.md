@@ -1001,4 +1001,8 @@ $$
 
 That intersection is exactly why SerDes design is a demanding mixed-signal discipline.
 
+## Board-level interface implementation
+
+For PCIe/USB/Thunderbolt/HDMI PCB channels, connector launches, controlled impedance, via stubs, backdrilling, flex/rigid-flex routing and CAD/bring-up workflow, see [Hardware Interfaces & PCB/Flex Design](../hardware-interfaces-pcb-flex/).
+
 Related: [Analog Mixed-Signal IC Design](../analog-mixed-signal/) · [Silicon Interfaces & SoC Implementation](../silicon-soc/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [RF & Microwave](../rf-microwave/) · [Measurements](../measurements/) · [Computational Methods](../computational-methods/)
