@@ -1243,4 +1243,6 @@ If you can do these things, you understand Arduino at an engineering level rathe
 - [Portenta H7](https://www.arduino.cc/pro/hardware-product-portenta-h7) — dual-core STM32H747 professional module.
 - [Arduino Language Reference](https://docs.arduino.cc/language-reference/) — GPIO, time, interrupts and standard API.
 
+For a deeper board-level treatment of I²C, SPI, UART, USB and high-speed interface layout, see [Hardware Interfaces & PCB/Flex Design](../hardware-interfaces-pcb-flex/).
+
 Related: [Measurements & Instruments](../measurements/) · [Computational Methods](../computational-methods/) · [Silicon Interfaces & SoC](../silicon-soc/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [Microwave & Space Electronics Components](../microwave-space-components/)
