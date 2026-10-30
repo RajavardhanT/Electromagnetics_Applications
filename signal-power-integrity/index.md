@@ -1086,4 +1086,8 @@ Board-level SI/PI is only one part of a high-speed link. Inside the SoC, seriali
 
 See [High-Speed SerDes & IO](../high-speed-serdes/) for TX/RX architecture, NRZ/PAM4, equalization and CDR, and [Analog Mixed-Signal IC Design](../analog-mixed-signal/) for the circuit blocks, mismatch/noise/stability, digitally assisted calibration, FinFET implementation, layout, and silicon characterization behind those interfaces.
 
+## Hardware interfaces and PCB/flex implementation
+
+For a board-level reference connecting PCIe, USB, Thunderbolt, I²C, SPI, UART and HDMI to stackup, controlled impedance, differential routing, vias, connectors, rigid-flex constraints, CAD tools and bring-up, see [Hardware Interfaces & PCB/Flex Design](../hardware-interfaces-pcb-flex/).
+
 Related: [High-Speed SerDes & IO](../high-speed-serdes/) · [Analog Mixed-Signal IC Design](../analog-mixed-signal/) · [Silicon Interfaces & SoC Implementation](../silicon-soc/) · [RF & Microwave](../rf-microwave/) · [EMI / EMC](../emc/) · [Computational Methods](../computational-methods/) · [Measurements & Instruments](../measurements/) · [Electromagnetic Simulation of Quantum-Computing Hardware](../quantum/em-simulation-quantum-computing.html)
