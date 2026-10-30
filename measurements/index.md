@@ -255,6 +255,12 @@ For cellular RF work, measurement conditions and limits should be traced to the 
 
 See [3GPP Standards — What an RF & Wireless Engineer Should Know](../3gpp-standards/).
 
+## Hardware-interface bring-up
+
+Board-level interface debug connects protocol behavior to physical measurements. PCIe, USB, Thunderbolt, HDMI, I²C, SPI and UART bring-up may require a combination of oscilloscope, logic analyzer, TDR/TDT, VNA, BERT and protocol-analyzer measurements.
+
+See [Hardware Interfaces & PCB/Flex Design](../hardware-interfaces-pcb-flex/) for interface-specific signal, layout and debug considerations.
+
 ## Related pages
 
 [EMI/EMC](../emc/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [High-Speed SerDes & IO](../high-speed-serdes/) · [Analog Mixed-Signal IC Design](../analog-mixed-signal/) · [RF & Microwave](../rf-microwave/) · [Antennas](../antennas/) · [Ground-State Magnetometry](../ground-state-magnetometry/) · [Rydberg Semiclassical Optics](../rydberg-semiclassical-effects/) · [Theory ↔ Experiment](../theory-experiment/)
