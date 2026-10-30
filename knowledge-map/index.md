@@ -87,6 +87,9 @@ $$
 ### Wireless standard → RF requirement → conformance
 <div class="pathway"><a href="../3gpp-standards/">3GPP requirement</a><span class="arrow">→</span><span class="node">RF / RRM / protocol test</span><span class="arrow">→</span><a href="../measurements/">measurement setup</a><span class="arrow">→</span><span class="node">UE / gNB pass-fail</span></div>
 
+### Interface → PCB channel → bring-up
+<div class="pathway"><span class="node">PCIe / USB / Thunderbolt / HDMI / I²C / SPI</span><span class="arrow">→</span><a href="../hardware-interfaces-pcb-flex/">schematic + PCB/flex constraints</a><span class="arrow">→</span><span class="node">SI/PI + DFM</span><span class="arrow">→</span><span class="node">scope / TDR / VNA / protocol debug</span></div>
+
 ### Analog ↔ digital conversion
 <div class="pathway"><span class="node">sensor / RF / analog waveform</span><span class="arrow">→</span><a href="../data-converters/">ADC</a><span class="arrow">→</span><span class="node">DSP / FPGA / MCU</span><span class="arrow">→</span><a href="../data-converters/">DAC</a><span class="arrow">→</span><span class="node">analog / RF output</span></div>
 
