@@ -81,6 +81,9 @@ $$
 ### Maxwell → Rydberg RF sensor
 <div class="pathway"><span class="node">RF $\mathbf E$</span><span class="arrow">→</span><span class="node">$-\mathbf d\cdot\mathbf E$</span><span class="arrow">→</span><span class="node">Rabi coupling</span><span class="arrow">→</span><a href="../rydberg-semiclassical-effects/">EIT / AT / Floquet</a><span class="arrow">→</span><span class="node">photodetector</span><span class="arrow">→</span><span class="node">field estimate</span></div>
 
+### Sky signal → cryogenic receiver → correlator
+<div class="pathway"><span class="node">astronomical EM field</span><span class="arrow">→</span><a href="../radio-astronomy-rf/">feed / cryogenic LNA or mixer</a><span class="arrow">→</span><span class="node">IF / ADC / PFB</span><span class="arrow">→</span><span class="node">correlator / beamformer</span><span class="arrow">→</span><span class="node">spectrum / image</span></div>
+
 ### Frequency → operating band → application
 <div class="pathway"><a href="../rf-bands/">RF frequency</a><span class="arrow">→</span><span class="node">GSM / LTE / NR / L-S-C-X-Ku-Ka</span><span class="arrow">→</span><span class="node">wireless / radar / GNSS / space</span></div>
 
