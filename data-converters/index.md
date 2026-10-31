@@ -972,6 +972,10 @@ FoMs are useful for research comparison, but they should not replace application
 
 # Part XV — Measuring an ADC
 
+## Spectrum analyzers as ADC/DSP systems
+
+A modern real-time spectrum analyzer is a practical example of a high-speed data-converter system: RF is frequency-translated, digitized, windowed, FFT processed, calibrated and reduced by detector/trace logic. See [Spectrum Analyzer Signal Processing](../spectrum-analyzer-signal-processing/) for the Signal Hound BB60D example.
+
 ## 44. DC / histogram tests
 
 Useful static tests include
