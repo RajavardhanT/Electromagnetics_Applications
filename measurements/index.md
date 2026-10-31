@@ -269,6 +269,10 @@ Board-level interface debug connects protocol behavior to physical measurements.
 
 See [Hardware Interfaces & PCB/Flex Design](../hardware-interfaces-pcb-flex/) for interface-specific signal, layout and debug considerations.
 
+## Radio-astronomy receiver measurements
+
+Radio-astronomy hardware characterization includes receiver noise temperature/Y-factor, gain and bandpass stability, cryogenic LNA/mixer performance, LO phase noise, polarization isolation, ADC headroom and RFI linearity. See [Radio Astronomy — RF Circuits & Receiver Systems](../radio-astronomy-rf/).
+
 ## Related pages
 
 [EMI/EMC](../emc/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [High-Speed SerDes & IO](../high-speed-serdes/) · [Analog Mixed-Signal IC Design](../analog-mixed-signal/) · [RF & Microwave](../rf-microwave/) · [Antennas](../antennas/) · [Ground-State Magnetometry](../ground-state-magnetometry/) · [Rydberg Semiclassical Optics](../rydberg-semiclassical-effects/) · [Theory ↔ Experiment](../theory-experiment/)
