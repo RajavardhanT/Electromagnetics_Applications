@@ -13,6 +13,7 @@
     ['Interactive Calculators','/calculators/','wavelength friis skin waveguide larmor rabi halbach noise'],
     ['Measurements & Instruments','/measurements/','vna spectrum analyzer vsa oscilloscope probes chamber calibration'],
     ['Spectrum Analyzer Signal Processing','/spectrum-analyzer-signal-processing/','spectrum analyzer signal hound bb60d superheterodyne fft rbw vbw window nuttall flattop detector real time persistence waterfall iq streaming adc usb dsp danl sfdr phase noise'],
+    ['Modern Signal Generator','/modern-signal-generator/','signal generator vector signal generator vsg keysight vxg m9484c rohde schwarz smw200a pll phase noise iq modulation arb waveform dds nco interpolation dac direct rf alc attenuator evm acpr crest factor mimo coherent'],
     ['Simulation Library','/simulations/','python antenna array lorentz eit bloch halbach'],
     ['Theory ↔ Experiment','/theory-experiment/','model observable residual validation calibration theory experiment'],
     ['Literature Guide','/literature/','reviews papers primary literature institutional sources'],
