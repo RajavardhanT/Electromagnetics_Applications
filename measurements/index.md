@@ -72,7 +72,7 @@ Key settings:
 
 A narrower RBW reduces displayed noise power approximately with $10\log_{10}B$, but also slows measurement and may hide fast events.
 
-## 3. Vector signal analysis and EVM
+## 4. Vector signal analysis and EVM
 
 A VSA demodulates a known modulation format. Error vector magnitude is conceptually
 
@@ -83,7 +83,7 @@ $$
 
 EVM is a compact metric that can include amplifier nonlinearity, IQ imbalance, phase noise, frequency error, noise, compression and channel effects. Interpretation depends strongly on the equalization and reference definitions used.
 
-## 4. Oscilloscope
+## 5. Oscilloscope
 
 An oscilloscope connects electromagnetic systems to time-domain behavior: pulses, envelopes, beat notes, transients, switching, detector signals and TIA outputs.
 
@@ -98,13 +98,13 @@ For a nominally Gaussian system, a rough rise-time relation is
 
 $$t_r\approx\frac{0.35}{BW}.$$
 
-## 5. RF power measurement
+## 6. RF power measurement
 
 Power meters are often more accurate than spectrum analyzers for absolute average power. Directional couplers allow forward/reflected measurements in high-power paths.
 
 Mismatch uncertainty matters because source and sensor reflection coefficients interact. For pulsed/high-PAPR signals, ensure the sensor supports the waveform's crest factor and bandwidth.
 
-## 6. Noise figure
+## 7. Noise figure
 
 For the Y-factor method,
 
@@ -113,7 +113,7 @@ $$
 
 combined with the calibrated excess-noise ratio of the source. Noise-figure work is sensitive to source ENR calibration, connector loss, gain variation, image responses and analyzer noise floor.
 
-## 7. Antenna patterns, gain and efficiency
+## 8. Antenna patterns, gain and efficiency
 
 ### Far-field range
 
@@ -132,7 +132,7 @@ Planar, cylindrical or spherical near-field measurements can be transformed comp
 
 Modern wireless devices are often evaluated over the air because the antenna, enclosure, transceiver and beamforming algorithms behave as one coupled system.
 
-## 8. EMC and compliance measurement
+## 9. EMC and compliance measurement
 
 EMC measurements usually separate into:
 
@@ -147,7 +147,7 @@ Instrumentation can include LISNs, current probes, CDN/BCI fixtures, antennas, p
 
 A compliance result is not just a spectrum: detector type, bandwidth, distance, antenna factor, cable loss, preamplifier gain and chamber/site validation all matter.
 
-## 9. Electric-field measurement
+## 10. Electric-field measurement
 
 Possible methods include:
 
@@ -164,7 +164,7 @@ $$
 
 under the calibration convention used. Probe perturbation, polarization, near-field structure and spatial averaging can dominate uncertainty.
 
-## 10. Magnetic-field measurement
+## 11. Magnetic-field measurement
 
 - **Hall sensor:** DC to moderate-frequency local field, compact but offset/temperature sensitive.
 - **Fluxgate:** precise low-frequency vector field.
@@ -172,7 +172,7 @@ under the calibration convention used. Probe perturbation, polarization, near-fi
 - **Optically pumped magnetometer:** atomic Larmor/Zeeman response, potentially extremely sensitive.
 - **NMR probe:** accurate field magnitude in suitable ranges/materials.
 
-## 11. Optical readout for atomic systems
+## 12. Optical readout for atomic systems
 
 A common chain is
 
@@ -196,7 +196,7 @@ Measure and record:
 - RF source calibration and cable loss;
 - lock-in/reference phase if demodulating.
 
-## 12. Calibration hierarchy
+## 13. Calibration hierarchy
 
 A strong experiment separates **instrument calibration** from **physical-model calibration**.
 
@@ -208,7 +208,7 @@ Examples:
 - Atomic AT splitting can provide field calibration through a known transition dipole.
 - A photodetector transfer function converts current to measured voltage.
 
-## 13. Measurement uncertainty
+## 14. Measurement uncertainty
 
 For independent input quantities $x_i$, first-order uncertainty propagation is
 
@@ -226,7 +226,7 @@ In practice, distinguish:
 - spatial variation;
 - bandwidth / filtering uncertainty.
 
-## 14. A reusable measurement checklist
+## 15. A reusable measurement checklist
 
 <div class="checklist">
 <label><input type="checkbox"> What physical quantity is being inferred?</label>
