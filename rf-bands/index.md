@@ -8,6 +8,8 @@ description: Compact RF band reference covering GSM, LTE, 5G NR, Wi-Fi/ISM, GNSS
 
 <div class="intuition"><span class="callout-title">30-second intuition</span>RF engineers use several overlapping naming systems. <strong>3GPP bands</strong> such as n77 or LTE Band 3 define a radio service with exact uplink/downlink ranges. <strong>IEEE letter bands</strong> such as L, S, C, X, Ku and Ka describe broad microwave frequency regions. <strong>Wi-Fi, GNSS and satellite bands</strong> are service allocations inside those broader regions. Always ask: “Is this a 3GPP operating band, a radar/microwave letter band, or a service allocation?”</div>
 
+For practical measurement of these bands, including swept versus real-time analysis and FFT/RBW processing, see [Spectrum Analyzer Signal Processing](../spectrum-analyzer-signal-processing/).
+
 ## 1. The spectrum map to remember
 
 | Frequency | Name / region | What to associate with it |
