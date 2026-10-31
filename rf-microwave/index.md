@@ -154,6 +154,10 @@ See [Measurements & Instruments](../measurements/).
 
 For a hardware-oriented map of the components that make up real microwave and satellite RF chains—including LNAs, PAs/TWTAs, mixers, filters, switches, circulators, limiters, PLL/VCOs, beamformers, ADC/DACs, waveguide hardware, MMIC technologies, and space qualification—see [Microwave & Space Electronics Components](../microwave-space-components/).
 
+## Modern RF signal generation
+
+For the internal architecture of a modern RF/vector signal generator—including reference clocks, PLLs, baseband I/Q, interpolation, DDS/NCO, DACs, I/Q modulation, direct-RF generation, ALC, phase noise and multi-channel coherence—see [Modern Signal Generator](../modern-signal-generator/).
+
 ## Spectrum analyzer signal processing
 
 For the internal RF/DSP chain of a modern real-time analyzer—using the Signal Hound BB60D as a concrete example—see [Spectrum Analyzer Signal Processing](../spectrum-analyzer-signal-processing/).
