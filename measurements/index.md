@@ -52,6 +52,8 @@ $$
 
 ## 2. Spectrum analyzer
 
+For a detailed explanation of how a modern FFT/real-time spectrum analyzer forms the displayed trace—including superheterodyne conversion, ADC sampling, windowing, RBW/VBW, detectors, persistence, I/Q streaming and the Signal Hound BB60D architecture—see [Spectrum Analyzer Signal Processing](../spectrum-analyzer-signal-processing/).
+
 Use a spectrum analyzer for carrier power, harmonics, spurious emissions, occupied bandwidth, phase-noise-related skirts and interference searches.
 
 Key settings:
