@@ -154,6 +154,10 @@ See [Measurements & Instruments](../measurements/).
 
 For a hardware-oriented map of the components that make up real microwave and satellite RF chains—including LNAs, PAs/TWTAs, mixers, filters, switches, circulators, limiters, PLL/VCOs, beamformers, ADC/DACs, waveguide hardware, MMIC technologies, and space qualification—see [Microwave & Space Electronics Components](../microwave-space-components/).
 
+## Spectrum analyzer signal processing
+
+For the internal RF/DSP chain of a modern real-time analyzer—using the Signal Hound BB60D as a concrete example—see [Spectrum Analyzer Signal Processing](../spectrum-analyzer-signal-processing/).
+
 ## RF band quick reference
 
 For a compact table of GSM/LTE/NR operating bands plus L/S/C/X/Ku/K/Ka/V/W microwave bands, see [RF Bands — Compact Reference](../rf-bands/).
