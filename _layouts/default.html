@@ -41,7 +41,7 @@
   {% assign section_theme = 'home' %}
 {% elsif page.url contains '/foundations/' %}
   {% assign section_theme = 'foundations' %}
-{% elsif page.url contains '/rf-microwave/' or page.url contains '/microwave-space-components/' or page.url contains '/antennas/' or page.url contains '/wireless/' or page.url contains '/3gpp-standards/' or page.url contains '/rf-bands/' or page.url contains '/aesa/' or page.url contains '/radar/' or page.url contains '/emc/' %}
+{% elsif page.url contains '/rf-microwave/' or page.url contains '/microwave-space-components/' or page.url contains '/radio-astronomy-rf/' or page.url contains '/antennas/' or page.url contains '/wireless/' or page.url contains '/3gpp-standards/' or page.url contains '/rf-bands/' or page.url contains '/aesa/' or page.url contains '/radar/' or page.url contains '/emc/' %}
   {% assign section_theme = 'rf' %}
 {% elsif page.url contains '/signal-power-integrity/' or page.url contains '/hardware-interfaces-pcb-flex/' or page.url contains '/analog-mixed-signal/' or page.url contains '/data-converters/' or page.url contains '/high-speed-serdes/' or page.url contains '/silicon-soc/' or page.url contains '/arduino/' %}
   {% assign section_theme = 'silicon' %}
@@ -103,6 +103,7 @@
       <a href="{{ '/foundations/' | relative_url }}">Fields, Waves & Maxwell</a>
       <a href="{{ '/rf-microwave/' | relative_url }}">RF & Microwave</a>
       <a href="{{ '/microwave-space-components/' | relative_url }}">↳ Microwave & Space Components</a>
+      <a href="{{ '/radio-astronomy-rf/' | relative_url }}">↳ Radio Astronomy — RF Circuits</a>
       <a href="{{ '/antennas/' | relative_url }}">Antennas & Radiation</a>
       <a href="{{ '/wireless/' | relative_url }}">Wireless & MIMO</a>
       <a href="{{ '/3gpp-standards/' | relative_url }}">↳ 3GPP Standards</a>
@@ -172,6 +173,7 @@
           <a href="{{ '/foundations/' | relative_url }}">Maxwell</a>
           <a href="{{ '/rf-microwave/' | relative_url }}">RF & Microwave</a>
           <a href="{{ '/microwave-space-components/' | relative_url }}">RF Components</a>
+          <a href="{{ '/radio-astronomy-rf/' | relative_url }}">Radio Astronomy RF</a>
           <a href="{{ '/antennas/' | relative_url }}">Antennas</a>
           <a href="{{ '/aesa/' | relative_url }}">Phased Arrays</a>
           <a href="{{ '/radar/' | relative_url }}">Radar</a>
