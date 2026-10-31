@@ -590,3 +590,8 @@ Temperature changes PA/LNA behavior and channel phase/amplitude, which changes t
 ---
 
 [← Home](../)
+
+
+## Multi-channel coherent stimulus
+
+Modern multi-channel vector signal generators can provide phase-coherent, time-aligned RF outputs for phased-array, beamforming, MIMO and angle-of-arrival receiver tests. See [Modern Signal Generator](../modern-signal-generator/) for DDS/NCO, phase alignment, triggering and coherent-channel concepts.
