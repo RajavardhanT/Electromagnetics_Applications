@@ -50,7 +50,13 @@ $$
 
 <div class="engineering"><span class="callout-title">Engineering reality</span>A beautiful $S_{11}$ trace can mostly describe your fixture if the calibration plane is wrong. At mmWave, connector repeatability, cable flexure and launch design can dominate.</div>
 
-## 2. Spectrum analyzer
+## 2. Signal generator
+
+A modern vector signal generator is a calibrated RF transmitter used to create CW, modulated, pulsed, multicarrier and arbitrary waveforms. Its internal chain combines precision references, PLL/DDS synthesis, digital baseband, interpolation, DACs, vector or direct-RF conversion, filtering, ALC and switched attenuation.
+
+See [Modern Signal Generator — RF & Vector Signal Generation](../modern-signal-generator/) for the detailed architecture.
+
+## 3. Spectrum analyzer
 
 For a detailed explanation of how a modern FFT/real-time spectrum analyzer forms the displayed trace—including superheterodyne conversion, ADC sampling, windowing, RBW/VBW, detectors, persistence, I/Q streaming and the Signal Hound BB60D architecture—see [Spectrum Analyzer Signal Processing](../spectrum-analyzer-signal-processing/).
 
