@@ -10,6 +10,10 @@ description: Practical guide to the 3GPP specifications most useful for NR/LTE R
 
 <div class="pathway"><span class="node">requirement</span><span class="arrow">→</span><span class="node">conformance test</span><span class="arrow">→</span><span class="node">test environment</span><span class="arrow">→</span><span class="node">UE / gNB implementation</span></div>
 
+## Spectrum-analyzer measurement processing
+
+For how RBW, VBW, FFT windows, detectors, averaging, real-time persistence and I/Q streaming affect RF measurements, see [Spectrum Analyzer Signal Processing](../spectrum-analyzer-signal-processing/).
+
 ## RF operating-band lookup
 
 For a compact lookup of the most important GSM, LTE and NR bands—together with L/S/C/X/Ku/K/Ka/V/W microwave naming—see [RF Bands — Compact Reference](../rf-bands/).
