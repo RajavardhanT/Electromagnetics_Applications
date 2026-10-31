@@ -972,6 +972,10 @@ FoMs are useful for research comparison, but they should not replace application
 
 # Part XV — Measuring an ADC
 
+## Radio astronomy as an ADC/correlator system
+
+Radio-telescope backends are a demanding ADC application: wide analog bandwidth, Gaussian-noise quantization, RFI headroom, digital downconversion, polyphase filter banks and cross-correlation. See [Radio Astronomy — RF Circuits & Receiver Systems](../radio-astronomy-rf/).
+
 ## Signal generators as DAC/DSP systems
 
 A modern vector signal generator is the complementary converter system to a spectrum analyzer: digital waveforms are interpolated and frequency-shifted, converted by high-speed DACs, filtered and translated/directly synthesized at RF. See [Modern Signal Generator](../modern-signal-generator/) for the full chain.
