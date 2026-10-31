@@ -139,3 +139,8 @@ Antenna measurement is strongly affected by reference antenna calibration, chamb
 - MIT OpenCourseWare, [Electromagnetics and Applications](https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/).
 
 Related: [RF & Microwave](../rf-microwave/) · [Wireless & MIMO](../wireless/) · [AESA](../aesa/) · [Measurements](../measurements/)
+
+
+## Radio-telescope feeds and receiver chains
+
+Radio astronomy connects antenna aperture, feed illumination, spillover and polarization directly to receiver noise temperature and interferometric sensitivity. See [Radio Astronomy — RF Circuits & Receiver Systems](../radio-astronomy-rf/) for feed horns, OMTs, cryogenic receivers, calibration and correlator backends.
