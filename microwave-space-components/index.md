@@ -1301,6 +1301,12 @@ See [Arduino Boards — What You Need to Know](../arduino/) for voltage levels, 
 
 ---
 
+## Radio-astronomy receiver components
+
+Radio astronomy pushes many of these components to their sensitivity limits: cryogenic InP HEMT LNAs, superconducting SIS mixers, waveguide hybrids/OMTs, ultra-low-phase-noise LO chains, IF amplifiers, ADCs and correlator electronics. See [Radio Astronomy — RF Circuits & Receiver Systems](../radio-astronomy-rf/).
+
+---
+
 ## 46. Relation to the rest of this reference
 
 This page connects component-level RF hardware to the larger system:
