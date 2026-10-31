@@ -84,6 +84,9 @@ $$
 ### Frequency → operating band → application
 <div class="pathway"><a href="../rf-bands/">RF frequency</a><span class="arrow">→</span><span class="node">GSM / LTE / NR / L-S-C-X-Ku-Ka</span><span class="arrow">→</span><span class="node">wireless / radar / GNSS / space</span></div>
 
+### RF signal → analyzer → digital spectrum
+<div class="pathway"><span class="node">RF signal</span><span class="arrow">→</span><a href="../spectrum-analyzer-signal-processing/">superhet + ADC + FFT</a><span class="arrow">→</span><span class="node">RBW / detector / averaging</span><span class="arrow">→</span><span class="node">spectrum / persistence / IQ</span></div>
+
 ### Wireless standard → RF requirement → conformance
 <div class="pathway"><a href="../3gpp-standards/">3GPP requirement</a><span class="arrow">→</span><span class="node">RF / RRM / protocol test</span><span class="arrow">→</span><a href="../measurements/">measurement setup</a><span class="arrow">→</span><span class="node">UE / gNB pass-fail</span></div>
 
