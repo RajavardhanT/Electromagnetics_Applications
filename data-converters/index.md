@@ -972,6 +972,10 @@ FoMs are useful for research comparison, but they should not replace application
 
 # Part XV — Measuring an ADC
 
+## Signal generators as DAC/DSP systems
+
+A modern vector signal generator is the complementary converter system to a spectrum analyzer: digital waveforms are interpolated and frequency-shifted, converted by high-speed DACs, filtered and translated/directly synthesized at RF. See [Modern Signal Generator](../modern-signal-generator/) for the full chain.
+
 ## Spectrum analyzers as ADC/DSP systems
 
 A modern real-time spectrum analyzer is a practical example of a high-speed data-converter system: RF is frequency-translated, digitized, windowed, FFT processed, calibrated and reduced by detector/trace logic. See [Spectrum Analyzer Signal Processing](../spectrum-analyzer-signal-processing/) for the Signal Hound BB60D example.
