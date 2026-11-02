@@ -158,6 +158,10 @@ For a hardware-oriented map of the components that make up real microwave and sa
 
 For cryogenic LNAs, SIS mixers, low-noise feeds/OMTs, phase-stable LO distribution, IF chains, ADC/channelizer backends, RFI linearity and interferometric correlation, see [Radio Astronomy — RF Circuits & Receiver Systems](../radio-astronomy-rf/).
 
+## RF transceiver architectures
+
+For an interview-focused comparison of superheterodyne, zero-IF, low-IF, image-reject, IF-sampling and direct-RF-sampling receivers—plus direct-conversion/direct-RF transmitters, TDD/FDD front ends, mixers, synthesizers, I/Q impairments and calibration—see [RF Transceiver Architectures — Interview Ready](../rf-transceiver-architectures/).
+
 ## Modern RF signal generation
 
 For the internal architecture of a modern RF/vector signal generator—including reference clocks, PLLs, baseband I/Q, interpolation, DDS/NCO, DACs, I/Q modulation, direct-RF generation, ALC, phase noise and multi-channel coherence—see [Modern Signal Generator](../modern-signal-generator/).
