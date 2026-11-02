@@ -10,12 +10,13 @@ description: Technical guide to modern RF/vector signal generators: reference cl
 
 <div class="pathway"><span class="node">reference clock</span><span class="arrow">→</span><span class="node">waveform / DSP</span><span class="arrow">→</span><span class="node">interpolation + NCO/DDS</span><span class="arrow">→</span><span class="node">DAC</span><span class="arrow">→</span><span class="node">I/Q upconversion or direct RF</span><span class="arrow">→</span><span class="node">ALC + attenuator</span><span class="arrow">→</span><span class="node">RF output</span></div>
 
-Two useful modern examples are:
+Three useful modern examples are:
 
+- [Signal Hound VSG60A Vector Signal Generator](https://signalhound.com/products/vsg60a-6-ghz-vector-signal-generator/)
 - [Keysight M9484C VXG Vector Signal Generator](https://www.keysight.com/us/en/products/signal-generators-signal-sources/vector-signal-generators/m9484c-vxg-vector-signal-generator.html)
 - [Rohde & Schwarz SMW200A Vector Signal Generator](https://www.rohde-schwarz.com/products/test-and-measurement/vector-signal-generators/rs-smw200a-vector-signal-generator_63493-38656.html)
 
-The SMW200A is a useful example of a highly integrated digital-baseband + vector-modulator architecture. The M9484C illustrates the newer trend toward direct digital synthesis and direct-DAC RF generation.
+The **VSG60A** is a useful example of a compact USB-streaming vector generator in which the PC supplies I/Q data continuously while the instrument performs FPGA interpolation, DAC conversion, quadrature modulation and RF filtering. The **SMW200A** illustrates a highly integrated high-end digital-baseband + vector-modulator architecture. The **M9484C** illustrates the newer trend toward direct digital synthesis and direct-DAC RF generation.
 
 ---
 
@@ -1395,9 +1396,426 @@ Official references:
 
 ---
 
+## 63. Signal Hound VSG60A
+
+The **Signal Hound VSG60A** is a compact, USB-powered vector signal generator covering a specified RF range of
+
+$
+50\ \mathrm{MHz}\le f_{RF}\le6\ \mathrm{GHz},
+$
+
+with operation usable down to approximately 30 MHz at reduced specification margin.
+
+Its design is especially useful for understanding a modern **PC-streaming VSG architecture** because Signal Hound documents the internal signal path in unusual detail.
+
+### VSG60A functional chain
+
+$
+\boxed{
+\begin{aligned}
+\text{PC waveform / I/Q}
+&\rightarrow
+\text{USB 3.0}\\
+&\rightarrow
+\text{FPGA}\\
+&\rightarrow
+\text{digital upsampling}\\
+&\rightarrow
+\text{dual-channel I/Q DAC}\\
+&\rightarrow
+\text{reconstruction filter}\\
+&\rightarrow
+\text{quadrature modulator}\\
+&\rightarrow
+\text{RF gain / attenuation}\\
+&\rightarrow
+\text{harmonic filter}\\
+&\rightarrow
+\text{RF output}.
+\end{aligned}
+}
+$
+
+This architecture is different from a large bench VSG that stores and synthesizes everything internally. The VSG60A can continuously stream custom waveform samples from the host computer, so waveform length is not strongly limited by an internal ARB-memory depth.
+
+### Main specifications
+
+| Parameter | VSG60A |
+|---|---:|
+| Specified RF range | 50 MHz–6 GHz |
+| Usable low-frequency range | down to ~30 MHz |
+| Streaming modulation bandwidth | **40 MHz** |
+| User I/Q sample rate | **12.5 kS/s–51.2 MS/s** |
+| Nominal calibrated amplitude range | **−55 to +7 dBm** |
+| Extended digital/reduced-performance range | roughly −85 to +10 dBm |
+| Queued frequency-hop settling | **200 µs** |
+| External reference | **10 MHz input** |
+| Trigger | synchronized 3.3 V trigger output |
+| Interface | USB 3.0 |
+| Typical power consumption | ~6 W |
+| Typical EVM example | **0.3%** at 1 GHz, 1 MS/s 16-QAM |
+| Typical phase noise @ 1 GHz, 10 kHz offset | about **−125 dBc/Hz** |
+| Typical non-harmonic spurs | ~−50 dBc for many conditions |
+| Typical harmonics | ~−35 dBc |
+
+### FPGA interpolation
+
+Signal Hound documents PC-to-FPGA I/Q rates of roughly
+
+$
+22\text{–}51.2\ \mathrm{MS/s},
+$
+
+depending on configuration.
+
+Inside the FPGA the stream is digitally upsampled by a factor of approximately
+
+$
+L=2\ \text{or}\ 3.
+$
+
+The dual-channel DAC then operates over roughly
+
+$
+66\text{–}102.4\ \mathrm{MS/s}.
+$
+
+This lets the instrument use one optimized reconstruction-filter architecture while still supporting many user-selected baseband sample rates.
+
+Conceptually,
+
+$
+I[n],Q[n]
+\rightarrow
+\uparrow L
+\rightarrow
+\text{interpolation filter}
+\rightarrow
+DAC_I,DAC_Q.
+$
+
+Signal Hound specifies better than roughly 60 dB typical rejection of aliased baseband products from this reconstruction approach.
+
+### Two quadrature-modulator paths
+
+At the heart of the RF conversion are **two quadrature modulators**.
+
+One is used primarily below about 2 GHz, while another handles the higher-frequency range, with a small architecture-dependent overlap region.
+
+This gives the VSG60A a conventional vector-modulator structure:
+
+$
+s(t)
+=
+I(t)\cos\omega_{LO}t
+-
+Q(t)\sin\omega_{LO}t.
+$
+
+The important point is that the instrument does **not** directly synthesize the full 6 GHz carrier with the DAC. The DAC produces calibrated I/Q baseband, and analog quadrature modulation moves that waveform to RF.
+
+### LO architecture
+
+The local oscillator uses a low-phase-noise synthesizer.
+
+Signal Hound documents approximately
+
+$
+L(10\ \mathrm{kHz})
+\approx
+-125\ \mathrm{dBc/Hz}
+$
+
+typical at a 1 GHz carrier.
+
+Below about 2 GHz, the LO can operate at twice the RF frequency and then be digitally divided to create quadrature.
+
+At higher frequencies, a polyphase network generates the quadrature LO signals used by the mixers.
+
+The LO can switch frequency and settle in approximately
+
+$
+200\ \mu\mathrm{s},
+$
+
+which makes the VSG60A useful for frequency-hopping and stepped-frequency signals.
+
+### Digital tuning / low-spur mode
+
+The VSG60A uses a fractional-N PLL.
+
+Fractional-N synthesis can create
+
+- fractional spurs;
+- integer-boundary spurs;
+- close-in discrete products.
+
+Signal Hound's low-spur mode deliberately places the analog LO on a nearby coarse frequency and performs the final fine-frequency correction digitally.
+
+Conceptually,
+
+$
+f_{RF}
+=
+f_{LO,coarse}
++
+f_{digital}.
+$
+
+This provides extremely fine tuning resolution while moving predictable PLL spurs away from the desired carrier.
+
+With digital tuning disabled, the LO itself provides approximately 1/6-Hz frequency resolution.
+
+### Frequency and amplitude commands in the I/Q stream
+
+One particularly useful implementation detail is that frequency and amplitude commands can be embedded in the same streamed command/data sequence as the I/Q waveform.
+
+This allows deterministic transitions between
+
+- waveform blocks;
+- RF frequency;
+- output amplitude.
+
+The FPGA can coordinate streamed I/Q with fast LO and attenuator changes, which is useful for
+
+- frequency hopping;
+- stepped sweeps;
+- burst testing;
+- automated receiver tests.
+
+### RF level control
+
+After the I/Q modulators, the VSG60A provides a combination of RF gain and attenuation.
+
+Signal Hound documents approximately
+
+- up to 20 dB gain;
+- up to 50 dB attenuation;
+- 2 dB hardware steps.
+
+Fine level control is then applied digitally with approximately
+
+$
+0.01\ \mathrm{dB}
+$
+
+resolution.
+
+The software normally selects the hardware gain/attenuation state automatically.
+
+This illustrates an important VSG principle:
+
+$
+\boxed{
+\text{coarse analog gain/attenuation}
++
+\text{fine digital scaling}
+}
+$
+
+provides a much larger usable output range than digital scaling alone.
+
+### Harmonic filtering
+
+A bank of RF harmonic filters follows the modulator/amplifier chain.
+
+The purpose is to suppress
+
+$
+2f_c,\ 3f_c,\ldots
+$
+
+and other out-of-band conversion products before the RF output connector.
+
+This is the signal-generator equivalent of preselection/filtering in a spectrum analyzer.
+
+### Internal and external reference
+
+The internal frequency system ultimately derives from a 10 MHz VCTCXO-based reference.
+
+The VSG60A also accepts an external
+
+$
+10\ \mathrm{MHz}
+$
+
+reference.
+
+A common lab configuration is therefore
+
+$
+\boxed{
+10\ \mathrm{MHz\ reference}
+\rightarrow
+\begin{cases}
+\text{VSG60A}\\
+\text{BB60D / SP145}\\
+\text{oscilloscope / other RF instruments}
+\end{cases}
+}
+$
+
+so the stimulus and measurement instruments share a common frequency basis.
+
+### Trigger output
+
+The VSG60A provides a synchronized 3.3 V trigger output.
+
+The trigger can mark events such as
+
+- waveform start;
+- pulse/burst timing;
+- hopping events;
+- synchronized analyzer acquisition.
+
+This is useful when coordinating the VSG60A with a spectrum analyzer, oscilloscope, digitizer or DUT.
+
+### Continuous I/Q streaming
+
+One of the VSG60A's biggest practical strengths is the ability to stream custom I/Q continuously from a PC at arbitrary sample rates up to approximately
+
+$
+51.2\ \mathrm{MS/s}.
+$
+
+This supports custom generation workflows from
+
+- C/C++;
+- MATLAB;
+- Python through an appropriate wrapper/application layer;
+- binary I/Q files;
+- CSV I/Q files.
+
+Signal Hound supplies an SDK as well as C++ and MATLAB examples.
+
+### Supported waveform types
+
+The supplied software supports a broad range of waveform types, including
+
+- CW;
+- AM/FM;
+- pulse;
+- multitone;
+- sweep/chirp;
+- AWGN;
+- FSK/GFSK;
+- ASK/OOK;
+- MSK/GMSK;
+- PSK;
+- QPSK;
+- 16/64/256/1024-QAM;
+- custom OFDM;
+- LTE;
+- 802.11a/n/ac/ax;
+- Bluetooth LE;
+- arbitrary/custom I/Q.
+
+Digital impairments can also be deliberately introduced, including
+
+- AWGN;
+- I/Q offset/imbalance;
+- frequency offset;
+- level offset;
+- sample-rate error;
+- custom channel response;
+- spectrum inversion.
+
+This makes the VSG60A useful not only as a clean source but also as a **controlled impairment generator**.
+
+### Modulation quality
+
+A representative Signal Hound specification is approximately
+
+$
+EVM_{RMS}\approx0.3\%
+$
+
+typical for a 1 GHz carrier with 1 MS/s 16-QAM under the stated raised-cosine test condition.
+
+For a QPSK 4 MS/s / 5 MHz-channel test, published ACPR is approximately
+
+$
+<-50\ \mathrm{dBc}
+$
+
+below 3 GHz, with typical performance around −55 dBc, and approximately
+
+$
+<-40\ \mathrm{dBc}
+$
+
+from 3–6 GHz, with typical performance around −45 dBc.
+
+These numbers are important because source modulation quality must be comfortably better than the DUT requirement when the VSG60A is used for receiver or PA characterization.
+
+### Output linearity
+
+The VSG60A is USB powered, so there is a deliberate trade between
+
+- output power;
+- power consumption;
+- linearity.
+
+Signal Hound notes that the best modulation linearity is generally obtained around
+
+$
+P_{out}\lesssim -10\ \mathrm{dBm}.
+$
+
+At high output levels—especially above about 3 GHz—compression and intermodulation become more important.
+
+For a test needing both high output power and excellent EVM/ACPR, a clean external amplifier may therefore be preferable to running the VSG60A close to its maximum output.
+
+### VSG60A + Signal Hound analyzer
+
+A particularly natural low-cost test system is
+
+$
+\boxed{
+\text{VSG60A}
+\rightarrow
+\text{DUT}
+\rightarrow
+\text{BB60D / SP145}.
+}
+$
+
+With a shared 10 MHz reference, this arrangement can support
+
+- gain/compression tests;
+- receiver sensitivity;
+- blocking;
+- frequency-response sweeps;
+- custom I/Q stimulus;
+- ACPR;
+- modulation experiments;
+- frequency hopping;
+- automated RF characterization.
+
+The VSG60A should therefore be thought of as a **compact streaming vector source**, while the BB60D/SP145 acts as the corresponding digitizing spectrum/vector receiver.
+
+### Where the VSG60A fits
+
+| Instrument | Best mental model |
+|---|---|
+| **VSG60A** | compact USB VSG, 6 GHz, 40 MHz modulation, custom streamed I/Q |
+| **R&S SMW200A** | high-end integrated VSG with very wide modulation/fading/MIMO capabilities |
+| **Keysight M9484C VXG** | high-end microwave VSG with DDS/direct-DAC and multi-virtual-source architecture |
+
+The VSG60A is especially attractive when the requirement is **custom sub-6-GHz waveform generation, automation, long streamed I/Q sequences, hopping, and moderate-cost RF experimentation**, rather than multi-GHz instantaneous modulation bandwidth or mmWave output.
+
+Official references:
+
+- [Signal Hound VSG60A product page](https://signalhound.com/products/vsg60a-6-ghz-vector-signal-generator/)
+- [VSG60A Product Manual](https://signalhound.com/sigdownloads/VSG60/VSG60A-Product-Manual.pdf)
+- [VSG60A Data Sheet](https://signalhound.com/sigdownloads/datasheets/VSG60A-data-sheet.pdf)
+- [VSG60 / VSG200 Downloads and SDK](https://signalhound.com/support/product-downloads/vsg60a-downloads/)
+
+---
+
 # Part XXXIII — Signal generator and spectrum analyzer together
 
-## 63. Complementary instruments
+## 64. Complementary instruments
 
 A useful mental pair is
 
@@ -1446,7 +1864,7 @@ See [Spectrum Analyzer Signal Processing](../spectrum-analyzer-signal-processing
 
 # Part XXXIV — What the set frequency/power really means
 
-## 64. A setpoint is the end of a long processing chain
+## 65. A setpoint is the end of a long processing chain
 
 When you request:
 
@@ -1486,7 +1904,7 @@ The displayed number is therefore the calibrated result of digital, analog and R
 
 # Part XXXV — Practical measurement guidance
 
-## 65. Generating a clean CW tone
+## 66. Generating a clean CW tone
 
 Use
 
@@ -1500,7 +1918,7 @@ Verify with a spectrum analyzer whose phase noise and spur performance are bette
 
 ---
 
-## 66. Receiver sensitivity test
+## 67. Receiver sensitivity test
 
 Use
 
@@ -1514,7 +1932,7 @@ If DUT sensitivity is near -100 dBm, generator residual noise/spurs and external
 
 ---
 
-## 67. Blocking test
+## 68. Blocking test
 
 The blocker can be tens of dB stronger than the desired signal.
 
@@ -1529,7 +1947,7 @@ Otherwise the **test source**, not the DUT, determines the result.
 
 ---
 
-## 68. PA test
+## 69. PA test
 
 For PA characterization, the generator must be cleaner than the PA.
 
@@ -1551,7 +1969,7 @@ $$
 
 # Part XXXVI — Ten concepts to remember
 
-## 69. Core ideas
+## 70. Core ideas
 
 1. carrier generation starts from a precision frequency reference;
 2. vector modulation is complex I/Q;
@@ -1566,7 +1984,7 @@ $$
 
 ---
 
-## 70. Modern signal-generator mental model
+## 71. Modern signal-generator mental model
 
 $$
 \boxed{
@@ -1598,6 +2016,13 @@ That is the signal-generation counterpart to the modern real-time spectrum analy
 ---
 
 # References
+
+## Signal Hound
+
+- [VSG60A Product Page](https://signalhound.com/products/vsg60a-6-ghz-vector-signal-generator/)
+- [VSG60A Product Manual](https://signalhound.com/sigdownloads/VSG60/VSG60A-Product-Manual.pdf)
+- [VSG60A Data Sheet](https://signalhound.com/sigdownloads/datasheets/VSG60A-data-sheet.pdf)
+- [VSG60/VSG200 Software and SDK Downloads](https://signalhound.com/support/product-downloads/vsg60a-downloads/)
 
 ## Keysight
 
