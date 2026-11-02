@@ -1,23 +1,50 @@
 ---
 layout: default
-title: Spectrum Analyzer Signal Processing — Signal Hound BB60D Example
-description: Technical guide to modern spectrum-analyzer signal processing using the Signal Hound BB60D as a concrete example: RF front end, superheterodyne conversion, ADC, FFT, RBW/VBW, windows, detectors, real-time processing, I/Q streaming, dynamic range, channel power, and measurement interpretation.
+title: Modern Spectrum Analyzer Signal Processing — BB60D, SP145 & R&S FSW
+description: Technical guide to modern spectrum-analyzer signal processing using Signal Hound BB60D, Signal Hound SP145, and Rohde & Schwarz FSW as parallel examples: RF front ends, superheterodyne and low-IF conversion, ADC/FPGA processing, FFT, RBW/VBW, real-time analysis, I/Q streaming, dynamic range, phase noise, and vector-signal analysis.
 ---
 
-# Spectrum Analyzer Signal Processing — Signal Hound BB60D Example
+# Modern Spectrum Analyzer Signal Processing — BB60D, SP145 & R&S FSW
 
-<div class="intuition"><span class="callout-title">30-second intuition</span>A modern spectrum analyzer such as the <strong>Signal Hound BB60D</strong> is not simply an RF voltmeter sweeping a narrow analog filter. It is a <strong>hybrid RF + digital signal-processing instrument</strong>. The RF front end selects and frequency-translates a portion of spectrum; an ADC digitizes the IF; the data is streamed to a computer; FFTs, window functions, detectors, averaging and display processing turn those time-domain samples into the spectrum you see.</div>
+<div class="intuition"><span class="callout-title">30-second intuition</span>A modern spectrum analyzer is not simply an RF voltmeter sweeping a narrow analog filter. It is a <strong>frequency-selective RF receiver followed by high-speed data conversion and DSP</strong>. The architecture can vary substantially: the <strong>BB60D</strong> uses a superheterodyne chain with hardware preselection, the <strong>SP145</strong> uses a hybrid direct-conversion/low-IF architecture with much faster FPGA processing, and a high-end analyzer such as the <strong>R&S FSW</strong> combines precision microwave front ends with very wide internal analysis bandwidth and dedicated vector-signal/standards applications.</div>
 
-<div class="pathway"><span class="node">RF input</span><span class="arrow">→</span><span class="node">attenuator / preselector / mixer</span><span class="arrow">→</span><span class="node">IF</span><span class="arrow">→</span><span class="node">14-bit ADC</span><span class="arrow">→</span><span class="node">FPGA + USB 3.0</span><span class="arrow">→</span><span class="node">FFT / DSP on PC</span><span class="arrow">→</span><span class="node">spectrum / waterfall / IQ</span></div>
+<div class="pathway"><span class="node">RF input</span><span class="arrow">→</span><span class="node">preselection / gain / mixer</span><span class="arrow">→</span><span class="node">IF or low IF</span><span class="arrow">→</span><span class="node">ADC</span><span class="arrow">→</span><span class="node">FPGA / DSP</span><span class="arrow">→</span><span class="node">FFT / demodulation / real-time analysis</span><span class="arrow">→</span><span class="node">spectrum / IQ / EVM / persistence</span></div>
 
-The BB60D is particularly useful for learning this architecture because Signal Hound documents both the RF hardware and the software/API processing.
+The three instruments below are useful because they represent three levels of modern spectrum-analysis architecture:
+
+| Analyzer | Useful mental model |
+|---|---|
+| **Signal Hound BB60D** | compact superheterodyne + hardware-preselector analyzer with PC-hosted FFT processing |
+| **Signal Hound SP145** | compact high-speed hybrid direct-conversion / low-IF real-time analyzer |
+| **R&S FSW** | high-end benchtop signal-and-spectrum analyzer with very wide internal analysis bandwidth and specialized vector/standards applications |
 
 Official references:
 
 - [Signal Hound BB60D product page](https://signalhound.com/products/bb60d-6-ghz-real-time-spectrum-analyzer/)
 - [BB60D User Manual](https://signalhound.com/sigdownloads/BB60C/BB60D-User-Manual.pdf)
-- [BB60 API documentation](https://signalhound.com/sigdownloads/SDK/online_docs/bb_api/index.html)
+- [Signal Hound SP145 product page](https://signalhound.com/products/sp145-14-5-ghz-real-time-spectrum-analyzer/)
+- [SP145 User Manual](https://signalhound.com/sigdownloads/SP145/SP145-User-Manual.pdf)
+- [Signal Hound analyzer comparison](https://signalhound.com/support/compare-our-spectrum-analyzers-and-signal-generators/)
+- [R&S FSW product page](https://www.rohde-schwarz.com/product/fswk15)
+- [R&S FSW User Manual](https://www.rohde-schwarz.com/us/manual/fsw/)
 - [Spike software documentation](https://signalhound.com/sigdownloads/Spike/docs/html/index.html)
+
+## At-a-glance comparison
+
+| Parameter | **BB60D** | **SP145** | **R&S FSW** |
+|---|---:|---:|---:|
+| Frequency range | 9 kHz–6 GHz | 100 kHz–14.5 GHz | 2 Hz–85 GHz; up to 90 GHz with FSW85 option |
+| Real-time bandwidth | 27 MHz | 40 MHz | up to 800 MHz real-time |
+| Max. analysis / I/Q bandwidth | 27 MHz streaming | 40 MHz streaming | up to 8.312 GHz internal analysis bandwidth |
+| Sweep speed | 24 GHz/s | 200 GHz/s typical | architecture optimized for high-performance swept + wideband FFT analysis |
+| Architecture | superheterodyne + preselector | hybrid direct conversion / low IF | multi-conversion precision signal/spectrum analyzer |
+| Hardware preselection | **Yes** | **No tunable preselector** | Yes / model- and mode-dependent microwave preselection |
+| Phase noise @ 1 GHz, 10 kHz offset | ~−93 dBc/Hz typical comparison value | ~−120 dBc/Hz typical | <−136 dBc/Hz specified on current models |
+| Built-in GPS | No | **Yes** | external/reference options rather than field-GPS focus |
+| Host architecture | USB 3.0 + PC | USB-C + PC | self-contained benchtop instrument |
+| Best fit | weak signals, spurious/EMC, sub-6 GHz | fast surveys, telecom/X-band, VSA | demanding 5G/mmWave/radar/EVM/phase-noise analysis |
+
+The numbers are not perfectly equivalent across vendors because test conditions, options and definitions differ. The table is intended as an architectural comparison, not a replacement for the individual data sheets.
 
 ---
 
@@ -247,6 +274,551 @@ This type of frequency planning is used to manage
 
 ---
 
+
+---
+
+# Part II-B — Signal Hound SP145 architecture
+
+## SP145 signal path
+
+The SP145 represents a newer Signal Hound architecture than the BB60D.
+
+Signal Hound describes it as a **hybrid direct-conversion / low-IF spectrum analyzer**:
+
+$
+\boxed{
+\text{RF input}
+\rightarrow
+\text{gain / attenuation}
+\rightarrow
+\text{quadrature mixers}
+\rightarrow
+\text{low IF}
+\rightarrow
+\text{ADC}
+\rightarrow
+\text{FPGA filters / decimators}
+\rightarrow
+\text{corrected I/Q}
+\rightarrow
+\text{USB-C / PC}.
+}
+$
+
+Unlike the BB60D, the SP145 does not use a tunable hardware preselector ahead of the receiver.
+
+This is a deliberate trade:
+
+$
+\boxed{
+\text{less front-end selectivity}
+\longleftrightarrow
+\text{much faster tuning + wider frequency coverage}.
+}
+$
+
+---
+
+## SP145 sampling and FPGA processing
+
+Signal Hound documents approximately
+
+$
+245.76\ \mathrm{MS/s}
+$
+
+of analog sampling inside the SP145.
+
+The FPGA then performs digital processing and reduces this to approximately
+
+$
+61.44\ \mathrm{million\ corrected\ I/Q\ samples/s}.
+$
+
+The usable calibrated streaming bandwidth is
+
+$
+\boxed{
+40\ \mathrm{MHz}.
+}
+$
+
+This is wider than the BB60D's 27 MHz instantaneous/streaming bandwidth.
+
+The important architectural change is that more filtering, correction and decimation are performed inside the SP145 FPGA before data reaches the host PC.
+
+---
+
+## SP145 real-time operation
+
+The SP145 can continuously stream without time gaps over its real-time bandwidth.
+
+That matters for
+
+- high probability of intercept;
+- burst signals;
+- frequency hopping;
+- spectrum monitoring;
+- RF drive testing;
+- airborne measurements.
+
+Its published sweep speed reaches approximately
+
+$
+200\ \mathrm{GHz/s}
+$
+
+under the stated wide-RBW condition.
+
+Compared with the BB60D:
+
+$
+\frac{200}{24}\approx8.3.
+$
+
+So the SP145 can scan a wide frequency range dramatically faster.
+
+---
+
+## SP145 phase noise
+
+A major improvement is analyzer LO phase noise.
+
+Signal Hound's current data sheet gives a typical value near
+
+$
+L(10\ \mathrm{kHz})
+\approx
+-120\ \mathrm{dBc/Hz}
+$
+
+for a 1 GHz center frequency.
+
+The older BB60D comparison value is about
+
+$
+-93\ \mathrm{dBc/Hz}.
+$
+
+This difference is very important when measuring
+
+- close-in spurs;
+- PLLs/VCOs;
+- high-order QAM;
+- EVM;
+- weak signals near strong carriers.
+
+A low DANL does not compensate for poor phase noise close to a carrier.
+
+---
+
+## SP145 DANL and linearity
+
+Typical SP145 DANL values are frequency dependent and reach roughly the high
+
+$
+-160\ \mathrm{dBm/Hz}
+$
+
+range through much of the microwave region.
+
+Signal Hound also quotes strong typical third-order intercept performance, with IIP3 values around +30 dBm in lower-frequency ranges and somewhat lower at higher microwave frequencies.
+
+This gives the SP145 good intrinsic linearity.
+
+However, because it lacks BB60D-style hardware preselection, a very strong **out-of-band** transmitter can still enter the receiver and contribute to compression or intermodulation.
+
+An external bandpass filter can therefore be valuable in severe RF environments.
+
+---
+
+## SP145 residual responses
+
+A useful subtle distinction is:
+
+- **BB60D:** stronger hardware preselection and very low residual responses;
+- **SP145:** much better phase noise, bandwidth, speed and frequency range.
+
+The SP145 manual specifies residual responses around
+
+$
+<-103\ \mathrm{dBm}
+$
+
+under its stated condition.
+
+Thus the SP145 is not simply “better at everything.”
+
+For extremely weak CW/spur searching below 6 GHz in a crowded environment, the BB60D preselector can still be valuable.
+
+---
+
+## Internal GPS
+
+The SP145 includes internal GPS.
+
+When locked, Signal Hound specifies approximately
+
+$
+\pm1\ \mathrm{ppb}
+$
+
+typical frequency-reference accuracy and GPS-based timestamping.
+
+This is useful for
+
+- mobile RF surveys;
+- drive testing;
+- geolocated interference hunting;
+- distributed monitoring;
+- field measurements.
+
+This is one of the clearest ways the SP145 differs from a conventional desktop-only analyzer.
+
+---
+
+## BB60D versus SP145 — parallel architecture
+
+| Stage | **BB60D** | **SP145** |
+|---|---|---|
+| Input selection | sub-octave hardware preselection above ~130 MHz | wideband input, no tunable preselector |
+| RF conversion | two-stage superheterodyne | hybrid direct conversion / low IF |
+| Sampling | 80 MS/s, 14-bit ADC | ~245.76 MS/s internal sampling |
+| FPGA role | packetization/high-rate transport | substantial filtering, correction and decimation |
+| Host I/Q | up to 40 M complex pairs/s; 27 MHz useful BW | 61.44 M corrected I/Q/s; 40 MHz useful BW |
+| Real-time BW | 27 MHz | 40 MHz |
+| Frequency ceiling | 6 GHz | 14.5 GHz |
+| Sweep speed | 24 GHz/s | 200 GHz/s |
+| Phase noise | modest | much better |
+| Field timing | external reference | integrated GPS |
+| Strong OOB environment | **advantage BB60D** | external filtering may help |
+| Fast/wide RF survey | adequate | **advantage SP145** |
+| X-band analysis | no | **yes** |
+
+---
+
+# Part II-C — High-end example: Rohde & Schwarz FSW
+
+## Why include the FSW?
+
+The BB60D and SP145 are compact analyzers that rely heavily on an external PC.
+
+The **R&S FSW** shows what happens when the same RF/DSP concepts are pushed into a high-performance benchtop instrument designed for
+
+- 5G NR;
+- Wi-Fi / wideband OFDM;
+- radar;
+- satellite;
+- phase-noise characterization;
+- amplifier measurements;
+- mmWave;
+- very-wideband vector-signal analysis.
+
+The signal-processing ideas remain recognizable, but almost every subsystem becomes more sophisticated.
+
+---
+
+## FSW frequency and bandwidth scale
+
+Current FSW models span from
+
+$
+2\ \mathrm{Hz}
+$
+
+up to
+
+$
+85\ \mathrm{GHz},
+$
+
+with the FSW85 extendable to approximately
+
+$
+90\ \mathrm{GHz}
+$
+
+through the corresponding frequency-extension option.
+
+Depending on model and bandwidth options, the internal analysis bandwidth can reach
+
+$
+\boxed{
+8.312\ \mathrm{GHz}.
+}
+$
+
+Real-time analysis bandwidth can reach approximately
+
+$
+800\ \mathrm{MHz}.
+$
+
+This is a fundamentally different class from the 27–40 MHz real-time bandwidth of the compact Signal Hound units.
+
+---
+
+## FSW architecture — conceptual view
+
+A useful simplified architecture is
+
+$
+\boxed{
+\begin{aligned}
+RF
+&\rightarrow
+\text{precision attenuator / preselector / preamp}\\
+&\rightarrow
+\text{multi-stage frequency conversion}\\
+&\rightarrow
+\text{wideband IF}\\
+&\rightarrow
+\text{high-dynamic-range ADC system}\\
+&\rightarrow
+\text{FPGA / DSP fabric}\\
+&\rightarrow
+\begin{cases}
+\text{swept spectrum}\\
+\text{FFT spectrum}\\
+\text{real-time spectrum}\\
+\text{I/Q capture}\\
+\text{standards demodulation}\\
+\text{phase-noise analysis}
+\end{cases}
+\end{aligned}
+}
+$
+
+The exact internal implementation varies by FSW model and bandwidth option, but the conceptual difference is clear: the FSW is designed to preserve high dynamic range over far wider instantaneous bandwidths while supporting many specialized measurement applications internally.
+
+---
+
+## Phase noise and close-in dynamic range
+
+Current FSW models specify phase noise better than approximately
+
+$
+-136\ \mathrm{dBc/Hz}
+$
+
+at a 1 GHz carrier and 10 kHz offset under the vendor's specified condition.
+
+That puts the analyzer in a different class for
+
+- oscillator characterization;
+- blocking measurements;
+- radar;
+- EVM on high-order modulation;
+- weak-sideband measurements.
+
+This also illustrates why a more expensive analyzer can outperform a cheaper analyzer even when both show a similar DANL far from the carrier.
+
+---
+
+## Wideband vector signal analysis
+
+The FSW can capture very wide complex I/Q bandwidths and then perform vector analysis.
+
+For 5G NR, dedicated measurement applications can analyze quantities such as
+
+- EVM;
+- channel power;
+- frequency error;
+- per-channel/per-signal power;
+- modulation quality;
+- allocation-specific measurements.
+
+For very wide signals, the analyzer's internal analysis bandwidth determines whether the entire waveform can be captured in one coherent record.
+
+This matters for
+
+- wide NR carriers;
+- carrier aggregation;
+- Wi-Fi 7 / very-wide OFDM;
+- radar chirps;
+- satellite payload signals.
+
+---
+
+## Dedicated measurement applications
+
+A high-end signal analyzer is more than a general-purpose FFT display.
+
+The FSW platform supports dedicated applications for areas such as
+
+- 3GPP LTE;
+- 5G NR uplink/downlink;
+- WLAN including 802.11ad/ay;
+- OFDM vector-signal analysis;
+- phase-noise measurement;
+- amplifier characterization;
+- multi-standard radio analysis;
+- real-time spectrum analysis.
+
+These applications understand the waveform structure and compute measurements that cannot be obtained from a simple power-versus-frequency trace alone.
+
+---
+
+## Multi-standard radio analysis
+
+A modern RF product may transmit several signals or standards simultaneously.
+
+The FSW multi-standard architecture can analyze multiple radio standards in one measurement context.
+
+This is useful when studying
+
+- coexistence;
+- intermodulation;
+- carrier aggregation;
+- adjacent-channel interaction;
+- transmitter coexistence.
+
+A compact USB spectrum analyzer can often capture the raw I/Q, but the high-end analyzer integrates much more of the demodulation and standards analysis directly in the instrument software.
+
+---
+
+## Real-time spectrum versus wide analysis bandwidth
+
+These two numbers should not be confused.
+
+For the FSW:
+
+$
+B_{analysis}
+\le
+8.312\ \mathrm{GHz}
+$
+
+in supported wideband configurations,
+
+while real-time spectrum-analysis bandwidth is smaller:
+
+$
+B_{RT}
+\le
+800\ \mathrm{MHz}.
+$
+
+**Analysis bandwidth** asks:
+
+> How wide a complex waveform can I capture/analyze coherently?
+
+**Real-time bandwidth** asks:
+
+> Over what bandwidth can I continuously process spectrum without acquisition gaps at the specified real-time performance?
+
+This same distinction also applies to lower-cost analyzers.
+
+---
+
+## Preselection tradeoff at extreme bandwidth
+
+At very wide analysis bandwidths, a traditional narrow YIG/preselector can itself become the bandwidth bottleneck.
+
+High-end analyzers therefore change or bypass parts of the preselection path in certain ultra-wideband modes.
+
+The engineering trade remains the same:
+
+$
+\boxed{
+\text{more instantaneous bandwidth}
+\longleftrightarrow
+\text{less aggressive analog preselection}.
+}
+$
+
+This is the same trade visible between BB60D and SP145, only implemented at a much higher performance level.
+
+---
+
+## BB60D vs SP145 vs FSW — what changes architecturally?
+
+| Question | **BB60D** | **SP145** | **R&S FSW** |
+|---|---|---|---|
+| Where is most DSP? | host PC | FPGA + host PC | internal high-performance DSP/CPU/FPGA |
+| Instantaneous analysis | tens of MHz | tens of MHz | hundreds of MHz to multi-GHz |
+| Front-end strategy | strong preselection | wideband low-IF | precision multi-path/multi-conversion front end |
+| VSA capability | raw/calibrated I/Q + software | stronger VSA capability + I/Q | extensive integrated VSA/standards apps |
+| Phase-noise performance | basic | strong | **metrology/high-end class** |
+| Frequency coverage | sub-6 GHz | through X band | microwave/mmWave through 90 GHz |
+| Field portability | excellent | excellent | bench/lab instrument |
+| GPS field work | external | **built in** | not the primary design goal |
+| Best value | weak-signal sub-6 measurements | fast/wide portable RF analysis | advanced communications/radar/mmWave R&D |
+
+---
+
+## Which instrument for which measurement?
+
+### Choose BB60D when
+
+- measurements are below 6 GHz;
+- weak-signal hunting matters;
+- hardware preselection is valuable;
+- EMC/spurious work is important;
+- 27 MHz real-time bandwidth is sufficient.
+
+### Choose SP145 when
+
+- you need 6–14.5 GHz;
+- sweep speed matters;
+- phase noise/EVM performance matters;
+- you need X-band;
+- field/GPS measurements matter;
+- 40 MHz real-time/IQ bandwidth is sufficient.
+
+### Choose an FSW-class analyzer when
+
+- you need 100 MHz to multi-GHz-wide vector analysis;
+- you need high-order-QAM EVM with large margin;
+- phase-noise characterization is critical;
+- you need integrated 5G/WLAN/radar applications;
+- you need mmWave coverage;
+- the analyzer must be substantially better than a state-of-the-art DUT.
+
+---
+
+## A useful hierarchy
+
+The three analyzers can be viewed as
+
+$
+\boxed{
+\begin{array}{c}
+\text{BB60D}\\
+\text{compact RF spectrum / real-time analyzer}
+\end{array}
+}
+$
+
+$
+\Downarrow
+$
+
+$
+\boxed{
+\begin{array}{c}
+\text{SP145}\\
+\text{fast portable microwave real-time / vector analyzer}
+\end{array}
+}
+$
+
+$
+\Downarrow
+$
+
+$
+\boxed{
+\begin{array}{c}
+\text{R&S FSW}\\
+\text{wideband high-dynamic-range signal + spectrum analysis platform}
+\end{array}
+}
+$
+
+The underlying mathematics—mixing, sampling, filtering, FFTs, detectors and I/Q analysis—is the same. What changes is how much **RF selectivity, bandwidth, dynamic range, phase-noise performance, processing power and measurement intelligence** the instrument can provide.
+
+
 # Part III — ADC and digital transport
 
 ## 9. ADC
@@ -401,7 +973,7 @@ The choice of window changes
 
 ## 15. Flat-top window
 
-The BB60 swept mode commonly uses a **flat-top window**.
+Signal Hound swept-analysis modes commonly use a **flat-top window** when amplitude accuracy is the priority.
 
 Advantages:
 
@@ -420,7 +992,7 @@ Signal Hound recommends the flat-top RBW shape when accurate CW marker amplitude
 
 ## 16. Nuttall window
 
-BB60 real-time mode uses a **Nuttall window**.
+Signal Hound BB/SP real-time processing uses **Nuttall-style windowing** in relevant real-time modes.
 
 Compared with flat-top:
 
@@ -535,7 +1107,7 @@ Therefore
 
 > “marker peak amplitude” is partly a DSP/windowing problem.
 
-For precision amplitude measurement on BB60D, use an appropriate flat-top window or integrated channel-power measurement.
+For precision amplitude measurement, use an amplitude-accurate window such as flat-top where supported, or use properly integrated channel-power measurement.
 
 ---
 
@@ -1422,7 +1994,7 @@ to recover
 - frequency error;
 - modulation symbols.
 
-A modern streaming analyzer such as the BB60D can provide both spectrum and raw/calibrated I/Q for software-based analysis.
+Modern analyzers such as the BB60D and SP145 can provide spectrum plus calibrated I/Q for software-based analysis, while higher-end instruments such as the FSW also perform extensive vector/standards analysis internally.
 
 ---
 
@@ -1445,9 +2017,9 @@ If you work with a modern spectrum analyzer, understand:
 
 ---
 
-## 67. BB60D mental model
+## 67. Three-analyzer mental model
 
-The entire instrument can be summarized as
+The BB60D baseline architecture can be summarized as
 
 $$
 \boxed{
@@ -1482,11 +2054,21 @@ That mental model transfers directly to many modern USB-, PCIe-, and Ethernet-co
 ## Signal Hound
 
 - [BB60D 6 GHz Real-Time Spectrum Analyzer](https://signalhound.com/products/bb60d-6-ghz-real-time-spectrum-analyzer/)
+- [SP145 14.5 GHz Real-Time Spectrum Analyzer](https://signalhound.com/products/sp145-14-5-ghz-real-time-spectrum-analyzer/)
+- [SP145 User Manual](https://signalhound.com/sigdownloads/SP145/SP145-User-Manual.pdf)
+- [Signal Hound Analyzer Comparison](https://signalhound.com/support/compare-our-spectrum-analyzers-and-signal-generators/)
 - [BB60D User Manual](https://signalhound.com/sigdownloads/BB60C/BB60D-User-Manual.pdf)
 - [BB60 API Reference](https://signalhound.com/sigdownloads/SDK/online_docs/bb_api/index.html)
 - [BB60 API — Measurement Types](https://signalhound.com/sigdownloads/SDK/online_docs/bb_api/measurement_types.html)
 - [Spike Software Manual](https://signalhound.com/sigdownloads/Spike/docs/html/index.html)
 - [Channel Power and Occupied Bandwidth](https://signalhound.com/news/what-is-channel-power-and-occupied-bandwidth/)
+
+## Rohde & Schwarz
+
+- [R&S FSW Signal and Spectrum Analyzer](https://www.rohde-schwarz.com/product/fswk15)
+- [R&S FSW Specifications](https://scdn.rohde-schwarz.com/ur/pws/dl_downloads/pdm/cl_brochures_and_datasheets/specifications/5215_6749_22/FSW_specs_en_5215-6749-22_v1701.pdf)
+- [R&S FSW User Manual](https://www.rohde-schwarz.com/us/manual/fsw/)
+- [R&S FSW Real-Time Measurements Manual](https://www.rohde-schwarz.com/in/manual/fsw-real-time-measurements-user-manual_78701-42755.html)
 
 ## Related pages
 
