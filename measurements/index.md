@@ -58,7 +58,7 @@ See [Modern Signal Generator — RF & Vector Signal Generation](../modern-signal
 
 ## 3. Spectrum analyzer
 
-For a detailed explanation of how a modern FFT/real-time spectrum analyzer forms the displayed trace—including superheterodyne conversion, ADC sampling, windowing, RBW/VBW, detectors, persistence, I/Q streaming and the Signal Hound BB60D architecture—see [Spectrum Analyzer Signal Processing](../spectrum-analyzer-signal-processing/).
+For a detailed explanation of modern FFT/real-time spectrum analyzers—including the Signal Hound BB60D superheterodyne/preselector architecture, SP145 low-IF architecture, and the much wider-band R&S FSW platform—see [Modern Spectrum Analyzer Signal Processing](../spectrum-analyzer-signal-processing/).
 
 Use a spectrum analyzer for carrier power, harmonics, spurious emissions, occupied bandwidth, phase-noise-related skirts and interference searches.
 
