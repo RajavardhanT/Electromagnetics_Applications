@@ -853,3 +853,8 @@ A strong review process makes assumptions, margins, ownership, and failure modes
 - See also [High-Speed SerDes & IO](../high-speed-serdes/) and [Signal Integrity & Power Integrity](../signal-power-integrity/).
 
 Related: [High-Speed SerDes & IO](../high-speed-serdes/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [RF & Microwave](../rf-microwave/) · [Measurements](../measurements/)
+
+
+## RF transceiver architecture context
+
+Mixers, VGAs, PLLs, ADC/DACs, baseband filters and calibration loops are best understood as parts of a complete radio architecture. See [RF Transceiver Architectures — Interview Ready](../rf-transceiver-architectures/) for superheterodyne, zero-IF, low-IF, direct-sampling and transmitter tradeoffs.
