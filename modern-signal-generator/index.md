@@ -20,6 +20,8 @@ The **VSG60A** is a useful example of a compact USB-streaming vector generator i
 
 ---
 
+For the corresponding architectures inside practical wireless transmitters and receivers, see [RF Transceiver Architectures — Interview Ready](../rf-transceiver-architectures/).
+
 # Part I — What type of signal generator?
 
 ## 1. CW RF signal generator
