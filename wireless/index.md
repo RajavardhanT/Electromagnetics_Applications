@@ -203,6 +203,10 @@ Useful interview concepts include **anechoic chambers, channel emulators, radiat
 
 **What does a high condition number mean?** The spatial eigenchannels have very unequal strengths; channel inversion becomes sensitive to noise and spatial multiplexing performance degrades.
 
+## RF transceiver architectures
+
+For the hardware architecture behind a wireless PHY—superhet, zero-IF, low-IF, direct RF sampling, integrated SDR transceivers, duplexing, gain control and TX/RX impairment tradeoffs—see [RF Transceiver Architectures — Interview Ready](../rf-transceiver-architectures/).
+
 ## RF bands
 
 For a compact frequency map covering GSM/LTE/NR, Wi-Fi/ISM, GNSS and the L/S/C/X/Ku/K/Ka/V/W microwave bands, see [RF Bands — Compact Reference](../rf-bands/).
