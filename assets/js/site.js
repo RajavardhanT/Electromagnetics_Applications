@@ -20,6 +20,7 @@
     ['Presentations & Lectures','/presentations/','mit cern nasa lecture slides'],
     ['Foundations','/foundations/','maxwell waves boundary polarization poynting'],
     ['RF & Microwave','/rf-microwave/','transmission lines smith chart s parameters waveguide filter'],
+    ['RF Transceiver Architectures — Interview Ready','/rf-transceiver-architectures/','rf transceiver receiver transmitter superheterodyne superhet zero if direct conversion low if image reject hartley weaver direct rf sampling sdr mixer lna pa pll vco i q imbalance dc offset lo leakage iip2 iip3 tdd fdd duplexer circulator dpd cfr interview'],
     ['Microwave & Space Electronics Components','/microwave-space-components/','microwave rf components space satcom lna pa sspa twta mixer filter diplexer duplexer imux omux switch circulator isolator limiter attenuator dsa phase shifter beamformer coupler hybrid pll vco synthesizer oscillator adc dac mmic gan gaas sige soi transponder waveguide rad hard radiation'],
     ['Radio Astronomy — RF Circuits','/radio-astronomy-rf/','radio astronomy rf receiver cryogenic lna inp hemt sis mixer alma vla vlbi ska feed horn omt system temperature radiometer sefd local oscillator if adc correlator channelizer pfb rfi interferometry hydrogen 21 cm'],
     ['Antennas & Radiation','/antennas/','dipole patch horn gain aperture pattern polarization'],
