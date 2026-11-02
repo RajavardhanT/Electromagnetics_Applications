@@ -48,6 +48,8 @@ The numbers are not perfectly equivalent across vendors because test conditions,
 
 ---
 
+For the corresponding receiver architectures used in radios—superheterodyne, zero-IF, low-IF, image-reject and direct-RF sampling—see [RF Transceiver Architectures — Interview Ready](../rf-transceiver-architectures/).
+
 # Part I — What is inside a modern spectrum analyzer?
 
 ## 1. Conventional swept analyzer
