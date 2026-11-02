@@ -90,6 +90,9 @@ $$
 ### Digital waveform → calibrated RF stimulus
 <div class="pathway"><span class="node">bits / waveform</span><span class="arrow">→</span><a href="../modern-signal-generator/">DSP / DDS / DAC / RF synthesis</a><span class="arrow">→</span><span class="node">calibrated RF stimulus</span><span class="arrow">→</span><span class="node">DUT</span></div>
 
+### RF channel → transceiver architecture → baseband
+<div class="pathway"><span class="node">antenna / RF front end</span><span class="arrow">→</span><a href="../rf-transceiver-architectures/">superhet / zero-IF / low-IF / RF sampling</a><span class="arrow">→</span><span class="node">ADC/DAC + DDC/DUC</span><span class="arrow">→</span><span class="node">modem / DSP</span></div>
+
 ### RF signal → analyzer → digital spectrum
 <div class="pathway"><span class="node">RF signal</span><span class="arrow">→</span><a href="../spectrum-analyzer-signal-processing/">superhet + ADC + FFT</a><span class="arrow">→</span><span class="node">RBW / detector / averaging</span><span class="arrow">→</span><span class="node">spectrum / persistence / IQ</span></div>
 
