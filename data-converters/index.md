@@ -976,6 +976,10 @@ FoMs are useful for research comparison, but they should not replace application
 
 Radio-telescope backends are a demanding ADC application: wide analog bandwidth, Gaussian-noise quantization, RFI headroom, digital downconversion, polyphase filter banks and cross-correlation. See [Radio Astronomy — RF Circuits & Receiver Systems](../radio-astronomy-rf/).
 
+## ADC/DAC placement determines radio architecture
+
+The location of the converters is one of the defining choices in an RF transceiver: baseband conversion, IF sampling and direct-RF sampling place fundamentally different requirements on sample rate, SFDR, jitter, filtering and power. See [RF Transceiver Architectures — Interview Ready](../rf-transceiver-architectures/).
+
 ## Signal generators as DAC/DSP systems
 
 A modern vector signal generator is the complementary converter system to a spectrum analyzer: digital waveforms are interpolated and frequency-shifted, converted by high-speed DACs, filtered and translated/directly synthesized at RF. See [Modern Signal Generator](../modern-signal-generator/) for the full chain.
