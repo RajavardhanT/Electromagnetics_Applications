@@ -311,3 +311,20 @@ For each derivation, try to identify:
 - the experimentally measurable quantity at the end.
 
 That is more valuable than memorizing the algebra alone.
+
+
+---
+
+## Advanced derivation — group delay and complex network phase
+
+For a linear two-port with complex forward transmission \(S_{21}(\omega)=|S_{21}(\omega)|e^{j\phi(\omega)}\), group delay is
+
+$$\tau_g(\omega)=-\frac{d\phi}{d\omega}.$$
+
+This follows by expanding a smooth transmission phase near carrier \(\omega_0\): \(\phi(\omega)\approx\phi(\omega_0)+(\omega-\omega_0)\phi'(\omega_0)\). The linear phase-slope term produces a delay of the modulated envelope.
+
+**Important qualifications:** phase must be unwrapped consistently; the measured delay may become unstable near transmission zeros; group delay is not generally the energy transit time of an arbitrary broadband, strongly distorted pulse. When fitting experimental data, propagate correlated complex \(S_{21}\) uncertainty through the phase derivative and avoid taking noisy finite differences without regularization.
+
+**Exercise:** compare group delay of a matched uniform transmission line, a resonant bandpass filter and a notch filter. Show why a narrow phase feature can give a large signed derivative without implying superluminal information transfer.
+
+**Further reading:** D. M. Pozar, *Microwave Engineering*.
