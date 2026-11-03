@@ -142,3 +142,26 @@ The “engineering reality” corrections can be comparable to, or larger than, 
 ---
 
 Use the [Interactive Calculators](../calculators/) to vary the numbers and the [Measurements](../measurements/) page to see how each quantity is obtained experimentally.
+
+
+---
+
+## Advanced example — receiver cascade sensitivity versus noise figure
+
+Consider an LNA with \(NF_1=2\) dB and \(G_1=20\) dB, followed by a mixer with \(NF_2=6\) dB. Convert noise figures and gain to linear quantities: \(F_1=1.5849,\ F_2=3.9811,\ G_1=100\). Friis gives
+
+$$F=F_1+\frac{F_2-1}{G_1}=1.6147,\qquad NF\approx2.08\ \mathrm{dB}.$$
+
+For effective noise bandwidth \(B=1\) MHz near 290 K, input-referred thermal noise is approximately
+
+$$P_n=-174+10\log_{10}(10^6)+2.08=-111.92\ \mathrm{dBm}.$$
+
+This is a **noise level**, not a receiver sensitivity. A specified demodulation SNR threshold, bandwidth and desired error probability are needed to compute sensitivity. Repeat after introducing a passive 3 dB attenuation *before* the LNA; compare the penalty against 3 dB attenuation after the LNA.
+
+## Advanced example — two-element active impedance
+
+For an illustrative reciprocal network with \(S_{11}=S_{22}=0.1\) and \(S_{12}=S_{21}=0.2\), equal excitation \(a_1=a_2=1\) gives
+
+$$\Gamma_{\mathrm{act},1}=0.1+0.2=0.3.$$
+
+Opposite-phase excitation \(a_1=1,\ a_2=-1\) gives \(\Gamma_{\mathrm{act},1}=0.1-0.2=-0.1\). Thus the same fixed network displays different active input match as the excitation vector changes. Real antenna-network parameters are complex and frequency dependent.
