@@ -169,3 +169,22 @@ The far-field pattern is approximately the spatial Fourier transform of tangenti
 **Advanced exercise:** calculate the active reflection coefficients versus scan angle using a measured or simulated multiport \(\mathbf S\) matrix. Compare the isolated-element array-factor prediction with an embedded-element-pattern synthesis.
 
 **Further reading:** [IIT Bombay EE6110 Advanced Engineering Electromagnetics](https://www.ee.iitb.ac.in/academics/courses/EE6110/); R. F. Harrington, *Time-Harmonic Electromagnetic Fields*; R. C. Hansen, *Phased Array Antennas*.
+
+
+---
+
+## Advanced topic — coupling-aware arrays and active impedance
+
+In a finite phased array, radiating elements are coupled ports, not independent sources. With incident port-wave amplitudes \(\mathbf a\) and scattering matrix \(\mathbf S\), the **active reflection coefficient** of element \(i\) (for \(a_i\ne0\)) is
+
+$$\Gamma_{\mathrm{act},i}=\frac{\sum_j S_{ij}a_j}{a_i}.$$
+
+It depends on the excitation phases and therefore on the steering angle. An array that is well matched under single-port measurement can exhibit poor scan-angle-dependent matching, even without any change in physical hardware. Embedded element patterns are needed to predict realized radiation patterns accurately; multiplying an isolated-element pattern by an ideal array factor omits coupling.
+
+For equal real port-reference impedances and power-wave normalization, accepted array power is
+
+$$P_{\mathrm{acc}}=\mathbf a^\dagger(\mathbf I-\mathbf S^\dagger\mathbf S)\mathbf a.$$
+
+**Advanced experiment:** extract the full complex multiport \(\mathbf S\)-matrix from an EM solver, apply progressive scan-phase excitations, and plot active match, accepted power and realized gain versus scan angle. Compare isolated and embedded-element predictions.
+
+**Further reading:** R. C. Hansen, *Phased Array Antennas*; [IIT Bombay Advanced Engineering Electromagnetics](https://www.ee.iitb.ac.in/academics/courses/EE6110/).
