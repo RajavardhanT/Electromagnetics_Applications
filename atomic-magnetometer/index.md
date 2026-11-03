@@ -476,3 +476,16 @@ That same systems-level viewpoint applies to the hydrogen maser, Rydberg receive
 10. [Holloway, Simons & Gordon — Atom-Based RF Electric Field Metrology](https://www.nist.gov/publications/atom-based-rf-electric-field-metrology-self-calibrated-measurements-subwavelength-and) — useful comparison with Rydberg-atom RF electric-field sensing.
 
 [← Home](../)
+
+
+---
+
+## Advanced topic — spin projection noise and bandwidth tradeoffs
+
+Magnetometer sensitivity cannot be assessed solely from a Zeeman frequency shift. For approximately independent spin measurements, projection noise scales with the available spin ensemble and interrogation time, while optical shot noise, spin-destruction collisions and technical magnetic noise add separate limits. Relaxation controls both linewidth and the response bandwidth.
+
+For a simple Lorentzian magnetic resonance, the signal slope near the operating point can be improved by narrowing the linewidth, but the field-tracking bandwidth may decrease. Therefore an attractive slope does not imply universally better sensor performance: specify whether the target is DC, slowly varying field, narrowband AC, or wideband transient measurement.
+
+**Advanced exercise:** construct Bloch-equation frequency responses with variable transverse relaxation \(T_2\), then plot field-to-observable transfer, equivalent input noise and 3 dB bandwidth. Investigate how optical pumping strength changes contrast, linewidth and back-action.
+
+**Further reading:** D. Budker and M. Romalis, *Optical Magnetometry*, Nature Physics **3**, 227–234 (2007), [DOI](https://doi.org/10.1038/nphys566).
