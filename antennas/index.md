@@ -144,3 +144,28 @@ Related: [RF & Microwave](../rf-microwave/) · [Wireless & MIMO](../wireless/) �
 ## Radio-telescope feeds and receiver chains
 
 Radio astronomy connects antenna aperture, feed illumination, spillover and polarization directly to receiver noise temperature and interferometric sensitivity. See [Radio Astronomy — RF Circuits & Receiver Systems](../radio-astronomy-rf/) for feed horns, OMTs, cryogenic receivers, calibration and correlator backends.
+
+
+---
+
+## Advanced study — embedded patterns, mutual coupling and array calibration
+
+### From isolated element patterns to active element patterns
+
+An array is a coupled multiport network. Each element's radiation depends on its neighbors, terminations and scan state. If the incident waves at the element ports form vector \(\mathbf a\), the accepted power, for a common real reference impedance and power-wave normalization, is
+
+$$P_{\mathrm{acc}}=\mathbf a^\dagger(\mathbf I-\mathbf S^\dagger\mathbf S)\mathbf a.$$
+
+The embedded-element far fields can be assembled into an array response \(\mathbf e(\theta,\phi)\). Its realized beam pattern depends on feed-network losses, the active reflection coefficients and the excitation vector—not only the textbook array factor. For \(\mathbf a_i\ne0\), the **active reflection coefficient** at port \(i\) is
+
+$$\Gamma_{\mathrm{act},i}=\frac{\sum_j S_{ij}a_j}{a_i}.$$
+
+Consequently an array well matched under single-port excitation can be badly matched when steered to a particular scan angle. Investigate scan blindness, grating lobes, surface waves and active impedance together.
+
+### Aperture fields and measurement inversion
+
+The far-field pattern is approximately the spatial Fourier transform of tangential aperture fields under suitable planar-aperture assumptions. Planar near-field scans exploit this connection to reconstruct radiated fields. Probe correction, finite scan truncation, sample spacing and multiple reflections all bias the reconstructed result.
+
+**Advanced exercise:** calculate the active reflection coefficients versus scan angle using a measured or simulated multiport \(\mathbf S\) matrix. Compare the isolated-element array-factor prediction with an embedded-element-pattern synthesis.
+
+**Further reading:** [IIT Bombay EE6110 Advanced Engineering Electromagnetics](https://www.ee.iitb.ac.in/academics/courses/EE6110/); R. F. Harrington, *Time-Harmonic Electromagnetic Fields*; R. C. Hansen, *Phased Array Antennas*.
