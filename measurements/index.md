@@ -276,3 +276,22 @@ Radio-astronomy hardware characterization includes receiver noise temperature/Y-
 ## Related pages
 
 [EMI/EMC](../emc/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [High-Speed SerDes & IO](../high-speed-serdes/) · [Analog Mixed-Signal IC Design](../analog-mixed-signal/) · [RF & Microwave](../rf-microwave/) · [Antennas](../antennas/) · [Ground-State Magnetometry](../ground-state-magnetometry/) · [Rydberg Semiclassical Optics](../rydberg-semiclassical-effects/) · [Theory ↔ Experiment](../theory-experiment/)
+
+
+---
+
+## Advanced topic — uncertainty covariance and calibration reference planes
+
+For measured parameters \(\mathbf x\) with covariance \(\mathbf U_x\), the first-order uncertainty of derived results \(\mathbf y=f(\mathbf x)\) is
+
+$$\mathbf U_y\approx\mathbf J\mathbf U_x\mathbf J^T,\qquad \mathbf J=\frac{\partial f}{\partial\mathbf x}.$$
+
+For complex VNA data, treat real and imaginary parts consistently. Errors due to standards, cable flexure and instrument drift are often correlated across frequency. Consequently, independent error bars can misrepresent the uncertainty of a fitted resonance or group delay.
+
+**Calibration choice matters:** SOLT, TRL and multiline TRL impose different assumptions about known standards and transmission lines. De-embedding is only as valid as the fixture model and reference-plane definition. Validate using a device not employed in the calibration.
+
+For modulated signals, EVM is not unambiguous without specifying the reference waveform and permitted gain, phase, timing and equalization corrections.
+
+**Advanced exercise:** fit a resonator to complex \(S_{21}\) data with an explicitly correlated measurement covariance; compare extracted \(Q\) uncertainty to an unweighted magnitude-only fit.
+
+**Further reading:** [NIST covariance-based VNA uncertainty](https://www.nist.gov/publications/covariance-based-vector-network-analyzer-uncertainty-analysis-time-and-frequency-domain); [NIST mm-wave VSA calibration](https://www.nist.gov/publications/system-level-calibration-millimeter-wave-vector-signal-analyzer-uncertainties).
