@@ -179,3 +179,32 @@ For a compact table of GSM/LTE/NR operating bands plus L/S/C/X/Ku/K/Ka/V/W micro
 For NR/LTE transmitter, receiver, RRM, conformance and test-environment specifications, see [3GPP Standards — What an RF & Wireless Engineer Should Know](../3gpp-standards/).
 
 Related: [Antennas](../antennas/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [Paul Traps](../paul-traps/) · [EMC](../emc/) · [Calculators](../calculators/) · [Worked Examples](../worked-examples/)
+
+
+---
+
+## Advanced study — network stability, power waves and nonlinear RF design
+
+### Cascading linear networks correctly
+
+For a two-port network, \(S\)-parameters are referenced to port impedances. Power transfer depends on source/load match, so \(|S_{21}|^2\) is **not** generally the transducer power gain. When cascading stages, use an ABCD or chain-scattering representation with consistent port conventions, then convert the combined network back to \(S\)-parameters. Avoid multiplying individual \(S_{21}\) terms when substantial interstage reflections are present.
+
+### Stability and matching
+
+For a two-port transistor network define \(\Delta=S_{11}S_{22}-S_{12}S_{21}\) and
+
+$$K=\frac{1-|S_{11}|^2-|S_{22}|^2+|\Delta|^2}{2|S_{12}S_{21}|}.$$
+
+For the usual two-port small-signal stability test, \(K>1\) and \(|\Delta|<1\) indicate unconditional stability for passive source and load terminations at the frequency examined. This is a **linear frequency-domain** statement; check bias-dependent stability, out-of-band modes, packaging resonances and large-signal behavior separately.
+
+### Noise and nonlinear tradeoffs
+
+The Friis noise-factor cascade is
+
+$$F_{\mathrm{tot}}=F_1+\frac{F_2-1}{G_1}+\frac{F_3-1}{G_1G_2}+\cdots,$$
+
+with linear available gains under the assumptions of the cascade model. Early attenuation can dominate noise figure, while early high gain may compromise blocker tolerance. Power amplifiers require large-signal load-pull, AM-AM/AM-PM and efficiency characterization instead of small-signal \(S\)-parameters alone.
+
+**Advanced exercise:** design an LNA chain against simultaneous NF, IIP3 and stability constraints. Document impedance reference planes and a sensitivity analysis to component tolerances.
+
+**Further reading:** D. M. Pozar, *Microwave Engineering*; G. Gonzalez, *Microwave Transistor Amplifiers*; [NIST VNA uncertainty analysis](https://www.nist.gov/publications/covariance-based-vector-network-analyzer-uncertainty-analysis-time-and-frequency-domain).
