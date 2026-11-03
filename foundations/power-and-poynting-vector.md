@@ -110,3 +110,20 @@ Power flow is inferred using power meters, calibrated antennas/probes, direction
 - S. Ramo, J. R. Whinnery and T. Van Duzer, *Fields and Waves in Communication Electronics*.
 
 Related: [Electromagnetic Waves](electromagnetic-waves.html) · [Antennas](../antennas/) · [Fundamental Equations](../reference/fundamental-equations.html)
+
+
+---
+
+## Advanced topic — reactive near-field power and energy accounting
+
+For time-harmonic phasors with a consistent RMS or peak convention, the **complex Poynting vector** separates the real power flux from a quadrature term associated with reactive energy exchange. With peak phasors,
+
+$$\mathbf S_c=\frac12\mathbf E\times\mathbf H^*.$$
+
+Its real part gives time-averaged energy flux. The imaginary part should not be interpreted as an independently transported average power; near-field energy is repeatedly stored and returned.
+
+For a closed surface enclosing sources and lossy objects, apply the frequency-domain Poynting theorem to distinguish radiation, conductor/dielectric dissipation and local storage. In dispersive materials, electromagnetic stored-energy density needs a treatment compatible with material dispersion, rather than indiscriminately using \(\tfrac14(\epsilon|E|^2+\mu|H|^2)\).
+
+**Advanced exercise:** integrate complex power over spheres surrounding a Hertzian dipole and compare the radiated real power with the radius-dependent reactive contribution.
+
+**Further reading:** R. F. Harrington, *Time-Harmonic Electromagnetic Fields*.
