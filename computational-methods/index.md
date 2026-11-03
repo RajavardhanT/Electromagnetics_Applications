@@ -371,3 +371,16 @@ See [Electromagnetic Simulation of Quantum-Computing Hardware](../quantum/em-sim
 ---
 
 [← Home](../)
+
+
+---
+
+## Advanced scientific computing — conditioning, reproducibility and accelerator limits
+
+Before accelerating a model on GPU, determine whether its dominant cost is arithmetic, memory traffic, data transfer or synchronization. Arithmetic intensity (floating-point operations per byte transferred) helps distinguish bandwidth-bound from compute-bound algorithms. For iterative linear solvers, numerical conditioning and preconditioning often matter more than peak floating-point performance.
+
+For a linear system \(\mathbf A\mathbf x=\mathbf b\), the condition number \(\kappa(\mathbf A)\) governs sensitivity to perturbations in the matrix and right-hand side; small residuals do not always imply small forward error in ill-conditioned problems. Near-degenerate atomic eigenstates and fine electromagnetic meshes require particular attention to basis ordering and solver tolerances.
+
+**Advanced exercise:** compare dense eigensolvers, sparse shift-invert solvers and overlap-tracked eigenpairs for a parameter-dependent Hamiltonian; report eigen-residual norms, state-overlap continuity, runtime and memory use. Validate results across precision settings and hardware backends.
+
+**Further reading:** N. J. Higham, *Accuracy and Stability of Numerical Algorithms*; Y. Saad, *Iterative Methods for Sparse Linear Systems*.
