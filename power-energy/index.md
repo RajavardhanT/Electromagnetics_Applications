@@ -114,3 +114,20 @@ A real design must then account for regulation, copper loss, core flux density a
 - R. W. Erickson and D. Maksimović, *Fundamentals of Power Electronics*.
 
 Related: [Lorentz Force](../lorentz-force/) · [EMC](../emc/) · [Measurements](../measurements/)
+
+
+---
+
+## Advanced topic — magnetic co-energy and force extraction
+
+In a quasi-static electromagnetic actuator, magnetic co-energy \(W_m'(i,x)\) determines mechanical force at fixed current:
+
+$$F_x=\left.\frac{\partial W_m'}{\partial x}\right|_i.$$
+
+For a linear single-winding inductor \(W_m'=\frac12 L(x)i^2\), giving \(F_x=\frac12i^2\,dL/dx\). This expression assumes linear magnetics and should not be applied uncritically to saturated or hysteretic systems. With nonlinear flux linkage \(\lambda(i,x)\), integrate the measured \(\lambda\)–\(i\) relation to evaluate co-energy.
+
+For coupled-resonator wireless power, the magnetic coupling coefficient is \(k=M/\sqrt{L_1L_2}\). Efficiency depends not just on coupling but on loaded \(Q\), detuning, matching, rectifier loss and thermal behavior.
+
+**Advanced exercise:** compare a linear FEM force estimate with a co-energy calculation from nonlinear magnetic material data; quantify error caused by using constant permeability.
+
+**Further reading:** S. J. Chapman, *Electric Machinery Fundamentals*; [MIT Electromagnetics and Applications](https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/).
