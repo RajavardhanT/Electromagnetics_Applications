@@ -797,3 +797,21 @@ when charged-particle signals are measured.
 ---
 
 [← Home](../)
+
+
+---
+
+## Advanced research direction — Floquet line strengths versus quasienergy gaps
+
+A dressed-state diagram is not equivalent to a predicted probe-transmission spectrum. Each observed feature depends on the projection of the Floquet eigenstate onto optically accessible atomic states, polarization-dependent transition matrix elements, population redistribution, dephasing and velocity averaging. This distinction is especially important when comparing \(m_J\)-resolved avoided crossings.
+
+An avoided-crossing gap in an effective two-state model,
+
+$$H_{\mathrm{eff}}=\begin{pmatrix}\delta/2&V\\V^*&-\delta/2\end{pmatrix},\qquad
+\Delta E=\sqrt{\delta^2+4|V|^2},$$
+
+is \(2|V|\) at zero detuning. But the effective coupling \(V\) may arise through several off-resonant Floquet pathways. An interpretation in terms of individual RF-photon absorption is not established by the quasienergy gap alone.
+
+**Advanced validation:** compare (a) tracked Floquet eigenvectors, (b) transition-strength weighting, (c) a density-matrix probe-susceptibility prediction, and (d) experimentally observed peak amplitudes. Include RF-field calibration uncertainty and identify where the high-field model fails.
+
+**Reference:** J. H. Shirley, *Phys. Rev.* **138**, B979 (1965), [DOI](https://doi.org/10.1103/PhysRev.138.B979).
