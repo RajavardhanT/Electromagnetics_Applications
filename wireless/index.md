@@ -224,3 +224,20 @@ Remember this chain:
 That connects electromagnetic intuition to communication-system behavior and is particularly useful in RF validation, antenna, wireless-system, and modem interviews.
 
 [← Home](../)
+
+
+---
+
+## Advanced topic — MIMO covariance, colored noise and imperfect channel information
+
+For the complex Gaussian MIMO model with noise covariance \(\mathbf R_n\), channel \(\mathbf H\) and transmit covariance \(\mathbf Q\), spectral efficiency is bounded by
+
+$$C=\log_2\det\!\left[\mathbf I+\mathbf R_n^{-1/2}\mathbf H\mathbf Q\mathbf H^\dagger\mathbf R_n^{-1/2}\right]$$
+
+under an appropriate power constraint and normalization. Matrix rank alone does not determine useful throughput: weak singular modes and imperfect channel estimates can make high-rank operation inefficient.
+
+OFDM phase noise has at least two distinct effects: common phase error rotates subcarrier constellations, while time-varying phase within a symbol produces intercarrier interference. Receiver performance must also account for carrier offsets, phase-tracking pilots, PA memory effects and colored interference.
+
+**Advanced exercise:** simulate a 4×4 channel with adjustable spatial correlation and imperfect CSI. Compare ZF, MMSE and singular-mode processing at fixed total transmitted power; report BER and EVM as well as rate.
+
+**Further reading:** D. Tse and P. Viswanath, [*Fundamentals of Wireless Communication*](https://web.stanford.edu/~dntse/wireless_book.html); A. Goldsmith, *Wireless Communications*.
