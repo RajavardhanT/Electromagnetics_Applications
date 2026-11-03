@@ -23,6 +23,7 @@ Public site: https://rajavardhant.github.io/Electromagnetics_Applications/
 
 - [Foundations](foundations/)
 - [RF & Microwave Engineering](rf-microwave/)
+- [Software-Defined Radio (SDR)](sdr/)
 - [Antennas & Radiation](antennas/)
 - [Wireless & MIMO](wireless/)
 - [AESA / Phased Arrays](aesa/)
