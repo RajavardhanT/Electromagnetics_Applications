@@ -136,3 +136,24 @@ This sets the length scale over which the beam radius remains near its waist.
 - R. W. Boyd, *Nonlinear Optics*.
 
 Related: [Laser Systems](../laser-systems/) · [Foundations](../foundations/) · [Quantum Technologies](../quantum/) · [Measurements](../measurements/)
+
+
+---
+
+## Advanced topic — waveguide dispersion and loaded resonators
+
+For a translationally invariant optical waveguide, fields can be decomposed into eigenmodes proportional to \(e^{j(\beta z-\omega t)}\). Their propagation constants \(\beta(\omega)\) depend on geometry and dispersive permittivity. Group velocity is \(v_g=(d\beta/d\omega)^{-1}\), while group-velocity dispersion is
+
+$$\beta_2=\frac{d^2\beta}{d\omega^2}.$$
+
+A finite-bandwidth pulse broadens when propagating through a dispersive waveguide. The relevant parameter is the mode's *total* dispersion, including both material and waveguide effects.
+
+An optical resonator has loaded quality factor \(Q_L\), intrinsic \(Q_i\), and coupling \(Q_c\):
+
+$$\frac1{Q_L}=\frac1{Q_i}+\frac1{Q_c}.$$
+
+Measured linewidth generally reveals the *loaded* response. Separate coupling loss from intrinsic attenuation before inferring absorption or material loss.
+
+**Advanced exercise:** numerically calculate effective index and dispersion of a slab waveguide, then estimate pulse broadening and sensitivity to waveguide dimensions.
+
+**Further reading:** B. E. A. Saleh and M. C. Teich, *Fundamentals of Photonics*; [MIT Advanced Electromagnetism](https://ocw.mit.edu/courses/6-635-advanced-electromagnetism-spring-2003/).
