@@ -311,3 +311,20 @@ Before solving:
 | Is optical propagation weak or strong? | $OD$ |
 
 That table is often a better starting point than choosing an equation by memory.
+
+
+---
+
+## Advanced scaling — sensitivity is not determined by one exponent
+
+Scaling laws are valid only while the underlying model assumptions remain unchanged. A nominally high-order antenna gain or atomic polarizability scaling does not translate directly into a whole-system sensitivity improvement if bandwidth, matching, readout noise or dynamic range changes simultaneously.
+
+For a receiver with equivalent noise temperature \(T_{\mathrm{sys}}\) and effective bandwidth \(B\), available noise power is
+
+$$P_n=k_BT_{\mathrm{sys}}B.$$
+
+For coherent narrowband measurements, integrating longer reduces estimation variance only when the underlying signal remains coherent and the noise process supports that averaging law. Technical drifts, frequency instability and flicker noise can prevent indefinite improvement.
+
+**Advanced exercise:** compare measured SNR versus averaging time against the expected white-noise scaling, then compute Allan deviation to identify the timescale where drift begins to dominate. When reporting a claimed sensitivity scaling with Rydberg principal quantum number, hold the relevant optical linewidth, atomic density, RF polarization, measurement bandwidth and calibration assumptions explicit.
+
+**Further reading:** [NIST measurement resources](https://www.nist.gov/); [Allan deviation reference](../laser-systems/allan-deviation.html).
