@@ -784,3 +784,18 @@ $$
 ---
 
 [← Home](../)
+
+
+---
+
+## Advanced topic — weighting fields, transport and measurable terminal current
+
+The Shockley–Ramo weighting field is obtained from an auxiliary electrostatic boundary-value problem with the electrode of interest at unit potential, other electrodes at zero, and mobile space charge absent. For a moving point charge, an induced-current convention may be written
+
+$$i_k=q\,\mathbf v\cdot\mathbf E_{w,k},$$
+
+where the sign depends on the defined terminal-current direction. The weighting field is not necessarily the physical drift field. An induced signal can occur without the charge reaching the collecting electrode.
+
+**Advanced discrimination experiment:** independently vary collection bias, electrode geometry, charge-generation location and magnetic field. Compare transient-current waveforms against trajectories in the physical field, with the weighting field applied only during the readout calculation. Include amplifier bandwidth and capacitance before comparing the predicted sign to the recorded signal.
+
+**Reference:** S. Ramo, *Currents Induced by Electron Motion*, Proc. IRE **27**, 584–585 (1939), [DOI](https://doi.org/10.1109/JRPROC.1939.228757).
