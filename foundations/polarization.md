@@ -105,3 +105,22 @@ Polarization can be measured by rotating a linearly polarized receive antenna, u
 - B. E. A. Saleh and M. C. Teich, *Fundamentals of Photonics*.
 
 Related: [Antennas](../antennas/) · [Optics](../optics-photonics/) · [Rydberg Semiclassical Optics](../rydberg-semiclassical-effects/)
+
+
+---
+
+## Advanced topic — Stokes parameters and polarization coherence
+
+Jones vectors describe fully polarized coherent fields, but partially polarized statistical mixtures require a coherency matrix or Stokes parameters. For transverse complex amplitudes \(E_x,E_y\), define
+
+$$\mathbf J_c=\left\langle\begin{bmatrix}E_x\\E_y\end{bmatrix}\begin{bmatrix}E_x^*&E_y^*\end{bmatrix}\right\rangle.$$
+
+Under the convention \(S_0=J_{xx}+J_{yy}\), \(S_1=J_{xx}-J_{yy}\), \(S_2=2\Re J_{xy}\), \(S_3=-2\Im J_{xy}\), the degree of polarization is
+
+$$\mathrm{DoP}=\frac{\sqrt{S_1^2+S_2^2+S_3^2}}{S_0}.$$
+
+The sign assigned to circular polarization depends on propagation direction and the adopted handedness convention. Do not compare RHCP/LHCP labels across references without checking the convention.
+
+**Advanced exercise:** propagate a partially polarized field through a retarder and polarizer using Mueller matrices, and compare it with the Jones-model result for the fully coherent limit.
+
+**Further reading:** M. Born and E. Wolf, *Principles of Optics*.
