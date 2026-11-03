@@ -136,3 +136,20 @@ Receiver noise floor scales with $kTB$. Detection performance depends on integra
 - MIT Lincoln Laboratory, [Introduction to Radar Systems](https://ocw.mit.edu/courses/res-ll-001-introduction-to-radar-systems-spring-2007/).
 
 Related: [AESA](../aesa/) · [Antennas](../antennas/) · [Wireless](../wireless/) · [Measurements](../measurements/)
+
+
+---
+
+## Advanced topic — matched filtering and range–Doppler ambiguity
+
+For transmitted complex envelope \(s(t)\), a target with propagation delay \(\tau\) and Doppler shift \(f_D\) produces a matched-filter response governed by
+
+$$\chi(\tau,f_D)=\int s(t)s^*(t-\tau)e^{-j2\pi f_Dt}\,dt.$$
+
+The magnitude of the ambiguity function reveals the waveform's delay/Doppler resolution and sidelobe tradeoff. The familiar range-resolution approximation \(\Delta R=c/(2B)\) does not specify detection probability, false-alarm rate or clutter suppression.
+
+For FMCW, \(f_b\approx S\tau\) for stationary targets, where \(S=B/T\), and motion introduces a signed Doppler contribution. Chirp nonlinearity, LO phase noise, near-range leakage and interference can bias the estimated range. Coherent processing across chirps requires stable timing and phase.
+
+**Advanced exercise:** calculate the ambiguity functions of a linear-FM chirp and a phase-coded pulse at equal energy; compare their sidelobes, range–Doppler coupling and response to a moving target.
+
+**Further reading:** M. A. Richards, *Fundamentals of Radar Signal Processing*; [MIT radar laboratory course](https://ocw.mit.edu/courses/res-ll-003-build-a-small-radar-system-capable-of-sensing-range-doppler-and-synthetic-aperture-radar-imaging-january-iap-2011/).
