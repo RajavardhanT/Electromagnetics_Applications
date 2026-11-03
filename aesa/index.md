@@ -595,3 +595,20 @@ Temperature changes PA/LNA behavior and channel phase/amplitude, which changes t
 ## Multi-channel coherent stimulus
 
 Modern multi-channel vector signal generators can provide phase-coherent, time-aligned RF outputs for phased-array, beamforming, MIMO and angle-of-arrival receiver tests. See [Modern Signal Generator](../modern-signal-generator/) for DDS/NCO, phase alignment, triggering and coherent-channel concepts.
+
+
+---
+
+## Advanced topic — wideband beam squint and calibrated digital arrays
+
+A fixed phase gradient steers a monochromatic array, but does not produce a constant delay across a wide frequency span. For interelement spacing \(d\), a phase shift designed for steering at \(f_0\) gives a frequency-dependent apparent angle approximately satisfying
+
+$$\sin\theta(f)=\frac{f_0}{f}\sin\theta_0$$
+
+for an ideal uniform linear array using a fixed phase-shifter setting and the same steering-angle convention. This is **beam squint**. True-time-delay elements alleviate it by applying physical delay rather than fixed phase; practical implementations trade insertion loss, complexity, resolution and bandwidth.
+
+Digital beamforming also needs interchannel gain, phase and timing calibration. A shared frequency reference does not automatically ensure deterministic sample alignment, nor does a narrow synthesized beam guarantee the array is properly calibrated under temperature drift.
+
+**Advanced exercise:** simulate wideband beam pointing at three subbands for phase-shifter and true-time-delay arrays. Include random element group-delay error and plot worst-case sidelobe levels.
+
+**Further reading:** R. C. Hansen, *Phased Array Antennas*; [IIT Bombay advanced EM course](https://www.ee.iitb.ac.in/academics/courses/EE6110/).
