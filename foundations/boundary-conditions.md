@@ -90,3 +90,20 @@ Interface behavior is commonly characterized using VNA reflection/transmission, 
 - C. A. Balanis, *Advanced Engineering Electromagnetics*.
 
 Related: [Electromagnetic Waves](electromagnetic-waves.html) · [RF & Microwave](../rf-microwave/) · [Optics](../optics-photonics/)
+
+
+---
+
+## Advanced topic — impedance boundary conditions and layered media
+
+The perfect-electric-conductor boundary is an idealization. For a good conductor with skin depth much smaller than the local radius of curvature, a surface-impedance approximation relates tangential electric and magnetic fields, under an explicitly stated normal and sign convention. In a good nonmagnetic conductor,
+
+$$\delta\approx\sqrt{\frac{2}{\omega\mu\sigma}},\qquad Z_s\approx(1+j)\sqrt{\frac{\omega\mu}{2\sigma}}$$
+
+for the common \(e^{j\omega t}\) convention. Its validity breaks down for thin films, strong nonlocal effects, very sharp features or frequencies where material response differs from the assumed model.
+
+For layered dielectrics, Fresnel coefficients become complex functions of incidence angle, polarization and layer thickness. Transfer-matrix methods capture multiple internal reflections; large attenuation or evanescent layers may require numerically stable scattering-matrix formulations.
+
+**Advanced exercise:** calculate TE/TM reflection from a lossy multilayer stack and identify the Brewster-like minimum, tunneling regime and resonant thicknesses.
+
+**Further reading:** M. Born and E. Wolf, *Principles of Optics*; D. M. Pozar, *Microwave Engineering*.
