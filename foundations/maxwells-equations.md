@@ -133,7 +133,7 @@ In anisotropic linear materials, constitutive relations become tensor equations 
 
 For two source/field configurations in a reciprocal linear region, a Lorentz reciprocity identity takes the form
 
-$$\int_V(\mathbf E_1\cdot\mathbf J_2-\mathbf E_2\cdot\mathbf J_1)dV=\oint_{\partial V}(\mathbf E_1\times\mathbf H_2-\mathbf E_2\times\mathbf H_1)\cdot d\mathbf A,$$
+$$\int_V(\mathbf E_2\cdot\mathbf J_1-\mathbf E_1\cdot\mathbf J_2)dV=\oint_{\partial V}(\mathbf E_1\times\mathbf H_2-\mathbf E_2\times\mathbf H_1)\cdot d\mathbf A,$$
 
 with compatible harmonic time conventions and no uncompensated magnetic sources. The surface term and boundary assumptions must be accounted for.
 
