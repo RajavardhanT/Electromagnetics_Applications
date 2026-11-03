@@ -431,3 +431,20 @@ The dedicated [CT / CAT Scan Physics](ct-scan-physics.html) reference covers X-r
 6. [K. R. Foster and E. A. Cheever, Microwave Radiometry in Biomedicine: A Reappraisal, *Bioelectromagnetics* 13, 567–579 (1992)](https://doi.org/10.1002/bem.2250130611)
 
 [← Daily Reference Home](../)
+
+
+---
+
+## Advanced topic — RF heating and constrained inverse problems
+
+MRI RF transmit coils generate electric fields as well as the desired rotating magnetic-field component \(B_1^+\). In conductive tissue, electromagnetic power deposition is connected to the local electric field. For harmonic fields represented by RMS amplitudes,
+
+$$\mathrm{SAR}=\frac{\sigma|\mathbf E_{\mathrm{rms}}|^2}{\rho}$$
+
+in W/kg for a simple isotropic conductive-tissue model, where \(\sigma\) is conductivity and \(\rho\) is mass density. SAR is spatially nonuniform, and regulatory/clinical assessments depend on defined averaging masses and exposure durations.
+
+In microwave tomography, the inverse problem is nonlinear because the unknown permittivity distribution also modifies the illuminating field. Resolution, depth sensitivity and parameter identifiability depend on frequency, antenna aperture, regularization and noisy multi-static scattering data.
+
+**Advanced exercise:** compare local SAR distributions for two RF coil excitations with similar mean \(B_1^+\), demonstrating why transmit efficiency and patient heating cannot be inferred from RF magnetic-field amplitude alone.
+
+**Further reading:** J. Jin, *Electromagnetic Analysis and Design in Magnetic Resonance Imaging*; A. C. Kak and M. Slaney, *Principles of Computerized Tomographic Imaging*.
