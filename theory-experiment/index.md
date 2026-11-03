@@ -172,3 +172,22 @@ For publication-quality theory/experiment comparisons, show whenever possible:
 <div class="engineering"><span class="callout-title">Key principle</span>A model is strongest when it predicts a new experimental change, not when it can reproduce one curve after enough fitting.</div>
 
 See [Measurements & Instruments](../measurements/), [Simulation Library](../simulations/), and [Scaling Laws](../reference/scaling-laws.html).
+
+
+---
+
+## Advanced topic — identifiability and experiment design
+
+An excellent numerical fit does not prove the physical mechanism. If measured observables \(\mathbf y=f(\boldsymbol\theta)\) depend on parameters \(\boldsymbol\theta\), the sensitivity matrix is \(\mathbf J=\partial f/\partial\boldsymbol\theta\). Nearly dependent columns reveal parameters that cannot be separately estimated.
+
+With Gaussian measurement noise covariance \(\mathbf\Sigma\), the local Fisher information is
+
+$$\mathbf F=\mathbf J^T\mathbf\Sigma^{-1}\mathbf J.$$
+
+Small eigenvalues of \(\mathbf F\) reveal weakly identifiable parameter combinations. Deliberately varying field polarization, RF frequency, detuning, temperature or geometry can increase identifiability rather than merely increasing the number of repeated measurements.
+
+Distinguish random measurement noise, calibration uncertainty, parameter uncertainty and model discrepancy. Plot residuals against the independent variables and against time; structured residuals can reveal unmodeled field gradients or drift.
+
+**Advanced exercise:** fit competing models to one dataset, then select a new measurement condition where their predictions diverge maximally. Use held-out data for model validation.
+
+**Further reading:** JCGM 100, *Guide to the Expression of Uncertainty in Measurement*; A. Tarantola, *Inverse Problem Theory*.
