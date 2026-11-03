@@ -154,3 +154,22 @@ See [Electromagnetic Simulation of Quantum-Computing Hardware](em-simulation-qua
 - C. L. Degen, F. Reinhard and P. Cappellaro, “Quantum sensing,” *Rev. Mod. Phys.* 89, 035002 (2017).
 
 Related: [Rydberg EIT](../rydberg-semiclassical-effects/) · [Paul Traps](../paul-traps/) · [Ground-State Magnetometry](../ground-state-magnetometry/) · [Hydrogen Maser](../hydrogen-maser/) · [Theory ↔ Experiment](../theory-experiment/)
+
+
+---
+
+## Advanced topic — open-system Floquet spectroscopy
+
+A periodically driven Hamiltonian predicts Floquet quasienergies; it does not alone predict measurable EIT amplitudes. Optical selection rules, state populations, velocity averaging, laser linewidth and relaxation determine the observed transmission. For an open quantum system use
+
+$$\dot\rho=-\frac{i}{\hbar}[H(t),\rho]+\sum_k\gamma_k\left(L_k\rho L_k^\dagger-\frac12\{L_k^\dagger L_k,\rho\}\right).$$
+
+Probe absorption is determined by a relevant optical coherence, not simply the presence of an eigenvalue. For periodic \(H(t+T)=H(t)\), the Floquet equation is
+
+$$(H(t)-i\hbar\partial_t)u_\alpha(t)=\epsilon_\alpha u_\alpha(t),$$
+
+with quasienergies defined modulo the drive quantum \(\hbar\omega\). An avoided crossing indicates drive-induced hybridization in the modeled basis, but does not by itself establish absorption of individual classical-drive photons.
+
+**Advanced exercise:** calculate Floquet energies and density-matrix probe susceptibility for a driven four-level ladder; compare peak strengths and gaps as RF amplitude increases.
+
+**Further reading:** J. H. Shirley, *Physical Review* **138**, B979 (1965), [DOI](https://doi.org/10.1103/PhysRev.138.B979); M. O. Scully and M. S. Zubairy, *Quantum Optics*.
