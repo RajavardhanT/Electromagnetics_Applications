@@ -123,3 +123,20 @@ The equations predict fields; instruments usually measure derived quantities:
 - S. Ramo, J. R. Whinnery and T. Van Duzer, *Fields and Waves in Communication Electronics*.
 
 Related: [Electromagnetic Waves](electromagnetic-waves.html) · [Boundary Conditions](boundary-conditions.html) · [Poynting Vector](power-and-poynting-vector.html) · [Essential Derivations](../reference/derivations.html)
+
+
+---
+
+## Advanced topic — reciprocity, constitutive tensors and nonlocal media
+
+In anisotropic linear materials, constitutive relations become tensor equations \(\mathbf D=\overline{\overline{\epsilon}}\mathbf E\) and \(\mathbf B=\overline{\overline{\mu}}\mathbf H\). For reciprocal media under standard assumptions, the constitutive tensors obey appropriate symmetry relations. Magneto-optical bias, time modulation or nonlinear operation can invalidate a simple reciprocity argument.
+
+For two source/field configurations in a reciprocal linear region, a Lorentz reciprocity identity takes the form
+
+$$\int_V(\mathbf E_1\cdot\mathbf J_2-\mathbf E_2\cdot\mathbf J_1)dV=\oint_{\partial V}(\mathbf E_1\times\mathbf H_2-\mathbf E_2\times\mathbf H_1)\cdot d\mathbf A,$$
+
+with compatible harmonic time conventions and no uncompensated magnetic sources. The surface term and boundary assumptions must be accounted for.
+
+**Advanced exercise:** derive the identity directly from the two Maxwell curl equations and identify the terms that change for nonsymmetric constitutive tensors.
+
+**Further reading:** J. A. Kong, *Electromagnetic Wave Theory*; [MIT advanced EM](https://ocw.mit.edu/courses/6-635-advanced-electromagnetism-spring-2003/).
