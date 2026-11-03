@@ -276,3 +276,16 @@ See [Artemis Lunar Communications](../artemis-communications/) for the end-to-en
 10. [NASA NTRS — Computational Electromagnetics Laboratory: Simulation Planning Guide](https://ntrs.nasa.gov/citations/20110023486) — NASA JSC CEM workflow and simulation planning.
 
 [← Home](../)
+
+
+---
+
+## Advanced topic — installed-array performance and platform scattering
+
+Spacecraft antenna pattern prediction requires a coupled model of the radiating aperture, feed network, deployed structures and surrounding conductive/dielectric bodies. The isolated antenna pattern is often a poor predictor of the installed pattern. Diffraction from solar-panel edges, reflections from a bus and multipath among appendages can shift the phase center and produce nulls in operational directions.
+
+**Simulation methodology:** calculate antenna-port accepted power; solve radiation for embedded element excitations; report realized gain including match and feed loss; perform mesh and radiation-boundary convergence; and sweep the uncertain mechanical configuration. For electrically large platforms, compare full-wave modeling with physical optics/UTD hybrid predictions in their valid regions.
+
+**Advanced exercise:** quantify the difference between an isolated aperture gain and installed gain as a rotating boom or panel changes orientation. Translate the pattern change into a link-margin distribution rather than quoting a single peak-gain number.
+
+**Further reading:** R. F. Harrington, *Time-Harmonic Electromagnetic Fields*; J.-M. Jin, *The Finite Element Method in Electromagnetics*.
