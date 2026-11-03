@@ -89,3 +89,18 @@ Maxwell's equations predict fields, but experiments often measure voltages, curr
 **Maxwell → waves → boundaries → Poynting → transmission lines → antennas → RF systems → interaction with matter → quantum/atomic sensing.**
 
 For compact formulas use [Fundamental Equations](../reference/fundamental-equations.html); for history see [History Timeline](../reference/history-timeline.html).
+
+
+---
+
+## Advanced roadmap — graduate electromagnetic field theory
+
+The next level beyond Maxwell-equation recall is solving boundary-value and inverse problems using **dyadic Green functions, surface equivalence, spectral methods, radiation conditions and scattering operators**. In a homogeneous isotropic region, an electric field driven by current may be expressed using a dyadic Green tensor:
+
+$$\mathbf E(\mathbf r)=i\omega\mu\int\overline{\overline{\mathbf G}}(\mathbf r,\mathbf r')\mathbf J(\mathbf r')\,d^3r',$$
+
+under the \(e^{-i\omega t}\) convention and a compatible definition of \(\overline{\overline{\mathbf G}}\). Boundary and radiation conditions determine the correct Green function.
+
+**Advanced sequence:** derive Lorentz reciprocity; calculate an angular spectrum with evanescent components; solve a layered-medium reflection problem; formulate an electric-field integral equation; compare FEM/FDTD/MoM convergence on the same finite scatterer. Distinguish mathematical field singularities from poor meshing and erroneous physical models.
+
+**Further reading:** [MIT 6.635 Advanced Electromagnetism](https://ocw.mit.edu/courses/6-635-advanced-electromagnetism-spring-2003/); W. C. Chew, *Waves and Fields in Inhomogeneous Media*.
