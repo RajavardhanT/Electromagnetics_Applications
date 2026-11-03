@@ -153,3 +153,18 @@ See [Comparison Tables](../reference/comparison-tables.html) and [Computational 
 <label><input type="checkbox"> Compare an actual observable, not only hidden state variables.</label>
 <label><input type="checkbox"> Distinguish fitted parameters from independently measured inputs.</label>
 </div>
+
+
+---
+
+## Advanced simulation standards — verification before visualization
+
+A numerical field picture is not a validated simulation. For every computed observable record the governing equations, boundary conditions, mesh or basis truncation, discretization order, solver tolerance, conserved quantities and computational cost.
+
+**Mesh-convergence method:** calculate observable \(Q(h)\) at several element sizes \(h\), compare the asymptotic behavior against discretization order, and quantify discretization uncertainty separately from uncertainty in material properties. For an open-region EM problem, vary both the near-field mesh and absorbing-boundary/PML distance; a converged mesh can still produce an incorrect result if the boundary reflects energy.
+
+**Validation hierarchy:** (1) compare against a closed-form limit, (2) compare an independent numerical formulation, (3) compare with calibrated physical measurements, and (4) perform sensitivity and uncertainty analysis. Agreement obtained only after fitting multiple unconstrained parameters is not independent validation.
+
+**Research extension:** reconstruct scattered far fields from equivalent surface currents and compare them with a direct radiation calculation; investigate errors introduced by finite surface truncation.
+
+**Further reading:** [MIT Advanced Electromagnetism](https://ocw.mit.edu/courses/6-635-advanced-electromagnetism-spring-2003/); A. Taflove and S. C. Hagness, *Computational Electrodynamics*.
