@@ -133,3 +133,18 @@ See [Measurements & Instruments](../measurements/).
 - Clayton Paul, *Analysis of Multiconductor Transmission Lines*.
 
 Related: [RF & Microwave](../rf-microwave/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [Antennas](../antennas/) · [Spacecraft EM](../computational-em/) · [Measurements](../measurements/)
+
+
+---
+
+## Advanced topic — transfer impedance and resonant coupling paths
+
+Treat an interference problem as **source spectrum × coupling transfer function × victim susceptibility**. A shielded cable may still radiate strongly if common-mode shield current flows; connector bonding and routing can dominate the result.
+
+The transfer impedance of a cable shield expresses induced longitudinal voltage per unit length per external shield current under a defined test geometry. It can be more informative for cable susceptibility than a single plane-wave shielding-effectiveness number. Enclosure slots and internal cavities introduce frequency-selective resonances, so shielding does not improve monotonically with metal thickness.
+
+**Measurement limitations:** LISN impedance, antenna factor, detector type (peak, quasi-peak, average), receiver bandwidth, chamber validation and calibration uncertainty affect emissions readings. A pre-compliance scan is a diagnostic, not a substitute for an appropriately conducted formal test.
+
+**Advanced exercise:** calculate a first estimate of enclosure cavity resonances, then distinguish source harmonics from enclosure/cable transfer resonances through controlled cable-routing and absorber experiments.
+
+**Further reading:** H. W. Ott, *Electromagnetic Compatibility Engineering*; C. R. Paul, *Introduction to Electromagnetic Compatibility*.
