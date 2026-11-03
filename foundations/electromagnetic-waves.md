@@ -126,3 +126,20 @@ Wave quantities are inferred from:
 - D. J. Griffiths, *Introduction to Electrodynamics*.
 
 Related: [Maxwell's Equations](maxwells-equations.html) · [Polarization](polarization.html) · [Antennas](../antennas/) · [Orders of Magnitude](../reference/orders-of-magnitude.html)
+
+
+---
+
+## Advanced topic — evanescent spectra and dispersive propagation
+
+Any sufficiently regular tangential field distribution on a plane can be decomposed into a transverse spatial spectrum. In a homogeneous isotropic medium,
+
+$$k_z=\sqrt{k^2-k_x^2-k_y^2},$$
+
+with the outgoing/decaying branch chosen according to the time convention and radiation condition. Terms with \(k_x^2+k_y^2>k^2\) are evanescent in a lossless medium and decay away from the source plane. They contribute strongly to near fields but do not form propagating plane waves in the unbounded medium.
+
+In a dispersive medium, phase velocity \(v_p=\omega/\Re k\) and group velocity \(v_g=(d\Re k/d\omega)^{-1}\) need not be equal. In absorptive bands, interpreting group velocity as energy or information velocity requires particular care.
+
+**Advanced exercise:** Fourier-decompose a Gaussian aperture field and compare propagating versus evanescent spectral content as aperture width approaches a wavelength.
+
+**Further reading:** W. C. Chew, *Waves and Fields in Inhomogeneous Media*.
