@@ -208,3 +208,24 @@ with linear available gains under the assumptions of the cascade model. Early at
 **Advanced exercise:** design an LNA chain against simultaneous NF, IIP3 and stability constraints. Document impedance reference planes and a sensitivity analysis to component tolerances.
 
 **Further reading:** D. M. Pozar, *Microwave Engineering*; G. Gonzalez, *Microwave Transistor Amplifiers*; [NIST VNA uncertainty analysis](https://www.nist.gov/publications/covariance-based-vector-network-analyzer-uncertainty-analysis-time-and-frequency-domain).
+
+
+---
+
+## Advanced topic — stability and cascade noise
+
+The usual two-port small-signal stability quantities are
+
+$$\Delta=S_{11}S_{22}-S_{12}S_{21},\qquad K=\frac{1-|S_{11}|^2-|S_{22}|^2+|\Delta|^2}{2|S_{12}S_{21}|}.$$
+
+For a linear two-port, \(K>1\) and \(|\Delta|<1\) indicate unconditional stability for passive source and load terminations at the frequency considered. Inspect out-of-band frequencies, bias dependence and large-signal operating points as well. Forward gain \(|S_{21}|^2\) is not generally the transducer gain if the source and load are mismatched.
+
+For a noise-factor cascade with linear available gains,
+
+$$F_{\mathrm{total}}=F_1+\frac{F_2-1}{G_1}+\frac{F_3-1}{G_1G_2}+\cdots.$$
+
+Loss preceding the first LNA often dominates receiver noise figure; excessive early gain may instead compromise blocker tolerance.
+
+**Advanced experiment:** design a two-stage receiver to meet NF, compression and stability simultaneously, then propagate VNA calibration and bias uncertainty into the predicted gain.
+
+**Further reading:** D. M. Pozar, *Microwave Engineering*; [NIST covariance-based VNA uncertainty](https://www.nist.gov/publications/covariance-based-vector-network-analyzer-uncertainty-analysis-time-and-frequency-domain).
