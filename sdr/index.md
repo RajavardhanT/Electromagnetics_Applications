@@ -184,3 +184,18 @@ Choose hardware based on **frequency range, usable instantaneous bandwidth, full
 - [GNU Radio documentation](https://wiki.gnuradio.org/index.php/Main_Page).
 - [Ettus Research UHD manual](https://files.ettus.com/manual/).
 - [Analog Devices — Software-Defined Radio](https://www.analog.com/en/solutions/software-defined-radio.html).
+
+
+---
+
+## 11. Advanced SDR — estimation and synchronization limits
+
+An SDR receiver must estimate and correct carrier-frequency offset, sampling-clock offset, carrier phase and symbol timing. A digital local oscillator corrects a frequency offset, but does not automatically correct sampling-rate mismatch or phase noise.
+
+For an \(M\)-sample observation of a complex tone with AWGN, frequency-estimation accuracy depends on coherent observation duration, sampling rate, tone amplitude and noise variance. A longer coherent record improves frequency resolution only while the oscillator phase remains stable enough for the assumed model. Frequency uncertainty should be distinguished from FFT-bin spacing \(f_s/N\).
+
+In coherent multichannel SDR, synchronize the sample clocks, trigger/sample epochs and LO phases. A distributed 10 MHz reference alone does not establish deterministic relative phase across independent receivers. Calibrate electrical cable delays and antenna-channel phase offsets before estimating angle of arrival or forming beams.
+
+**Advanced experiment:** inject one common coherent tone into two receiver channels, measure relative phase versus frequency and elapsed time, and separate fixed delay from time-varying drift. Repeat after independent device reconfiguration and power cycling.
+
+**Further reading:** F. M. Gardner, *Phaselock Techniques*; [GNU Radio documentation](https://wiki.gnuradio.org/index.php/Main_Page).
