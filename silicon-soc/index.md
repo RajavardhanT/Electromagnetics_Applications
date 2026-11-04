@@ -5,6 +5,9 @@ description: Silicon-side reference for PCIe, UCIe, DDR, RISC-V, Arm, Ethernet, 
 ---
 
 # Silicon Interfaces & SoC Implementation
+# Silicon Interfaces & SoC Implementation
+
+For chip-to-package electromagnetic extraction, semiconductor power integrity and thermal/reliability analysis, see [Ansys Electronics & Semiconductor Software](../ansys-electronics/).
 
 <figure class="topic-figure">
   <a href="https://commons.wikimedia.org/wiki/File:EPROM_IC_Micrograph.jpg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/EPROM_IC_Micrograph.jpg?width=1200" alt="Integrated-circuit die micrograph showing dense functional blocks and interconnect." loading="lazy"></a>
