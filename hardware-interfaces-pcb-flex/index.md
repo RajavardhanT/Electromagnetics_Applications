@@ -1190,3 +1190,8 @@ SPI and UART are implemented across many device families rather than governed by
 ## 64. Related pages
 
 [Signal Integrity & Power Integrity](../signal-power-integrity/) · [High-Speed SerDes & IO](../high-speed-serdes/) · [Silicon Interfaces & SoC](../silicon-soc/) · [ADC & DAC](../data-converters/) · [Arduino Boards](../arduino/) · [Measurements & Instruments](../measurements/)
+
+
+## Related Ansys/Synopsys simulation software
+
+See [Ansys Electronics & Semiconductor Software](../ansys-electronics/) for HFSS, SIwave, Q3D, Icepak, HFSS-IC and chip/package workflows.
