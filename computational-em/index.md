@@ -289,3 +289,8 @@ Spacecraft antenna pattern prediction requires a coupled model of the radiating 
 **Advanced exercise:** quantify the difference between an isolated aperture gain and installed gain as a rotating boom or panel changes orientation. Translate the pattern change into a link-margin distribution rather than quoting a single peak-gain number.
 
 **Further reading:** R. F. Harrington, *Time-Harmonic Electromagnetic Fields*; J.-M. Jin, *The Finite Element Method in Electromagnetics*.
+
+
+## Related spacecraft payloads
+
+See [Spacecraft Scientific Instruments](../spacecraft-scientific-instruments/) for infrared and ultraviolet cameras, magnetometers, electric-field probes, particle analyzers, radar, detectors, and NASA/ESA mission hardware.
