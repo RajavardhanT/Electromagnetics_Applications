@@ -49,6 +49,7 @@ Public site: https://rajavardhant.github.io/Electromagnetics_Applications/
 - [Optically Pumped Atomic Magnetometers](atomic-magnetometer/)
 - [Hydrogen Maser](hydrogen-maser/)
 - [Spacecraft Electromagnetics](computational-em/)
+- [Spacecraft Scientific Instruments](spacecraft-scientific-instruments/)
 - [Gravity Probe B](gravity-probe-b/)
 - [VLBI, Chandler Wobble & Earth Rotation](earth-space/chandler-wobble-vlbi.md)
 
