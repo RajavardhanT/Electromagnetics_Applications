@@ -133,3 +133,11 @@ A robust instrument performance budget should propagate uncertainties from the p
 7. [NASA Cassini Magnetometer Technical Description](https://science.nasa.gov/mission/cassini/spacecraft/cassini-orbiter/magnetometer/mag-technical-write-up/) — exemplary engineering-focused flight-instrument documentation.
 
 This page is an instrument-family overview. Mission pages should be consulted for flight-specific wavelength ranges, detector technologies, field noise floors, bandwidths, and calibrated accuracy.
+
+---
+
+## Advanced engineering companion chapters
+
+The instrument overview is complemented by dedicated references on [payload detector electronics](../payload-electronics/), [radiometric calibration](../radiometry-calibration/), [magnetic cleanliness](../magnetic-cleanliness/), [radiation effects](../radiation-effects-electronics/), [spacecraft charging](../spacecraft-charging/), [cryogenic detectors](../cryogenic-detectors/), [precision timing](../precision-timing-synchronization/) and [environmental qualification](../spacecraft-qualification/).
+
+For three complete examples tracing a physical signal through the readout and into calibrated data, see [Inside a Scientific Instrument](../inside-scientific-instruments/). The [Advanced Engineering Learning Map](../advanced-engineering/) connects the full collection.

@@ -6,6 +6,15 @@ Public site: https://rajavardhant.github.io/Electromagnetics_Applications/
 
 **Built using ChatGPT.** Curated by [Rajavardhan Talashila](https://rajavardhant.github.io/).
 
+## Advanced engineering expansion (2026)
+
+Start with the [Advanced Engineering Learning Map](advanced-engineering/) for seven linked disciplines, 17 graduate-level technical chapters, and complete Cassini MAG / JWST / Deep Space Network instrument case studies.
+
+- **Spacecraft payloads:** [readout electronics](payload-electronics/), [radiometry](radiometry-calibration/), [magnetic cleanliness](magnetic-cleanliness/), [radiation effects](radiation-effects-electronics/), [charging](spacecraft-charging/), [cryogenic detectors](cryogenic-detectors/).
+- **System engineering:** [timing](precision-timing-synchronization/), [radio science](radio-science-tracking/), [optical communications](optical-space-communications/), [attitude](spacecraft-attitude-determination/), [data systems](spacecraft-data-systems/), [qualification](spacecraft-qualification/).
+- **Advanced RF/EM:** [inverse problems](inverse-em-problems/), [direction finding](rf-direction-finding/), [antenna metrology](advanced-antenna-metrology/), [multiphysics](multiphysics-electronics/).
+- **Hands-on work:** [four numerical experiments](simulations/python/README.md) for magnetic booms, RF synchronization, array direction finding and infrared photon budgets.
+
 ## Main entry points
 
 - [Knowledge Map](knowledge-map/)

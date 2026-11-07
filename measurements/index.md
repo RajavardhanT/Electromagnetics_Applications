@@ -295,3 +295,8 @@ For modulated signals, EVM is not unambiguous without specifying the reference w
 **Advanced exercise:** fit a resonator to complex \(S_{21}\) data with an explicitly correlated measurement covariance; compare extracted \(Q\) uncertainty to an unweighted magnitude-only fit.
 
 **Further reading:** [NIST covariance-based VNA uncertainty](https://www.nist.gov/publications/covariance-based-vector-network-analyzer-uncertainty-analysis-time-and-frequency-domain); [NIST mm-wave VSA calibration](https://www.nist.gov/publications/system-level-calibration-millimeter-wave-vector-signal-analyzer-uncertainties).
+
+
+## Advanced measurement pathways
+
+For uncertainty-aware end-to-end instruments, continue with [Advanced Antenna Metrology](../advanced-antenna-metrology/), [Radiometry](../radiometry-calibration/), [Magnetic Cleanliness](../magnetic-cleanliness/), [Payload Readout Electronics](../payload-electronics/) and [Timing & Synchronization](../precision-timing-synchronization/).

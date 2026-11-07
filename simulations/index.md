@@ -168,3 +168,14 @@ A numerical field picture is not a validated simulation. For every computed obse
 **Research extension:** reconstruct scattered far fields from equivalent surface currents and compare them with a direct radiation calculation; investigate errors introduced by finite surface truncation.
 
 **Further reading:** [MIT Advanced Electromagnetism](https://ocw.mit.edu/courses/6-635-advanced-electromagnetism-spring-2003/); A. Taflove and S. C. Hagness, *Computational Electrodynamics*.
+
+---
+
+## Reproducible advanced laboratory models
+
+- [Magnetic cleanliness versus boom length](python/magnetic_boom_model.py): field from a dipole and background versus spacecraft sensor location.
+- [Coherent SDR channel timing](python/coherent_timing_demo.py): distinguish constant phase, channel delay and frequency drift.
+- [Direction finding with an antenna array](python/doa_array_demo.py): Bartlett AoA estimator and additive noise.
+- [Infrared radiometric photon budget](python/radiometry_photon_budget.py): Planck radiance, passband integration, quantum efficiency and SNR.
+
+The [Advanced Engineering Learning Map](../advanced-engineering/) connects these simulations to their governing equations and measurement methods.

@@ -199,3 +199,8 @@ In coherent multichannel SDR, synchronize the sample clocks, trigger/sample epoc
 **Advanced experiment:** inject one common coherent tone into two receiver channels, measure relative phase versus frequency and elapsed time, and separate fixed delay from time-varying drift. Repeat after independent device reconfiguration and power cycling.
 
 **Further reading:** F. M. Gardner, *Phaselock Techniques*; [GNU Radio documentation](https://wiki.gnuradio.org/index.php/Main_Page).
+
+
+## Advanced connected systems
+
+Continue with [Coherent Timing and Synchronization](../precision-timing-synchronization/), [RF Direction Finding and Geolocation](../rf-direction-finding/), [Spacecraft Scientific Data Systems](../spacecraft-data-systems/) and the [Python coherence experiment](../simulations/python/coherent_timing_demo.py).

@@ -229,3 +229,8 @@ Loss preceding the first LNA often dominates receiver noise figure; excessive ea
 **Advanced experiment:** design a two-stage receiver to meet NF, compression and stability simultaneously, then propagate VNA calibration and bias uncertainty into the predicted gain.
 
 **Further reading:** D. M. Pozar, *Microwave Engineering*; [NIST covariance-based VNA uncertainty](https://www.nist.gov/publications/covariance-based-vector-network-analyzer-uncertainty-analysis-time-and-frequency-domain).
+
+
+## Advanced RF applications
+
+For systems that turn RF theory into calibrated observables, see [RF Direction Finding](../rf-direction-finding/), [Precision Timing & Synchronization](../precision-timing-synchronization/), [Advanced Antenna Metrology](../advanced-antenna-metrology/), [Radio Science & Tracking](../radio-science-tracking/), and the [Advanced Engineering Learning Map](../advanced-engineering/).

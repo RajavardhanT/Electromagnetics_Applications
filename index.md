@@ -73,6 +73,7 @@ description: A connected, practical reference from Maxwell's equations to RF eng
 ## Reference tools
 
 <div class="card-grid category-tools">
+<a class="reference-card" data-symbol="ADV" href="advanced-engineering/"><span class="badge">Advanced</span><strong>Advanced Engineering Learning Map</strong><span>Seven disciplines, 17 new technical chapters, complete instrument case studies and reproducible numerical exercises.</span></a>
 <a class="reference-card" data-symbol="MAP" href="knowledge-map/"><span class="badge">Map</span><strong>Knowledge Map</strong><span>Connections among fields, waves, forces, circuits, antennas, sensors and quantum interactions.</span></a>
 <a class="reference-card" data-symbol="Σ" href="reference/"><span class="badge">Reference</span><strong>Quick Reference</strong><span>Equations, scales, comparisons, scaling laws, derivations, misconceptions and history.</span></a>
 <a class="reference-card" data-symbol="123" href="worked-examples/"><span class="badge">Examples</span><strong>Worked Examples</strong><span>Numerical examples spanning RF, antennas, radar, optics, magnetometry and quantum sensing.</span></a>
@@ -143,6 +144,30 @@ description: A connected, practical reference from Maxwell's equations to RF eng
 <a class="reference-card" data-symbol="Ω" href="modern-gyroscopes/"><strong>Modern Gyroscopes</strong><span>MEMS Coriolis, FOG, RLG, hemispherical resonator and atom-interferometric gyros; readout, bias, noise and calibration.</span></a>
 <a class="reference-card" data-symbol="SQUID" href="gravity-probe-b/"><strong>Gravity Probe B</strong><span>Superconducting gyroscopes, London moment, SQUID readout and end-to-end precision engineering.</span></a>
 <a class="reference-card" data-symbol="VLBI" href="earth-space/chandler-wobble-vlbi.html"><strong>VLBI, Chandler Wobble & Earth Rotation</strong><span>Interferometric radio astronomy, precision timing, baseline geometry and Earth-orientation measurement.</span></a>
+</div>
+
+## Advanced spacecraft, sensing and engineering systems
+
+These chapters expand the reference from introductory electromagnetic concepts to complete measurement systems, realistic noise and calibration budgets, spacecraft verification, and quantitative numerical modeling. [**Browse the complete Advanced Engineering Learning Map →**](advanced-engineering/)
+
+<div class="card-grid category-quantum">
+<a class="reference-card" data-symbol="AFE" href="payload-electronics/"><strong>Scientific Payload Electronics</strong><span>TIAs, charge amplifiers, readout noise, ADCs and synchronous detection.</span></a>
+<a class="reference-card" data-symbol="hν" href="radiometry-calibration/"><strong>Radiometry & Optical Calibration</strong><span>Blackbody radiation, étendue, detector sensitivity and traceable radiance.</span></a>
+<a class="reference-card" data-symbol="MAG" href="magnetic-cleanliness/"><strong>Spacecraft Magnetic Cleanliness</strong><span>Magnetic dipoles, sensor booms, spacecraft contamination and calibration.</span></a>
+<a class="reference-card" data-symbol="SEE" href="radiation-effects-electronics/"><strong>Space Radiation Effects</strong><span>TID, displacement damage, single-event effects and hardware assurance.</span></a>
+<a class="reference-card" data-symbol="φ" href="spacecraft-charging/"><strong>Spacecraft Charging</strong><span>Plasma sheaths, Debye screening, surface potentials and ESD.</span></a>
+<a class="reference-card" data-symbol="τ" href="precision-timing-synchronization/"><strong>Precision Timing & Synchronization</strong><span>Allan deviation, reference distribution, ADC jitter and coherent RF receivers.</span></a>
+<a class="reference-card" data-symbol="TES" href="cryogenic-detectors/"><strong>Cryogenic & Superconducting Detectors</strong><span>TES, MKID, SQUID readout, thermal noise and multiplexing.</span></a>
+<a class="reference-card" data-symbol="DSN" href="radio-science-tracking/"><strong>Radio Science & Spacecraft Tracking</strong><span>Carrier phase, range, Doppler, occultation and deep-space instruments.</span></a>
+<a class="reference-card" data-symbol="LAS" href="optical-space-communications/"><strong>Optical Space Communications</strong><span>Diffraction, photon counting, coherent links and pointing/acquisition/tracking.</span></a>
+<a class="reference-card" data-symbol="ADCS" href="spacecraft-attitude-determination/"><strong>Attitude & Precision Pointing</strong><span>Star trackers, gyros, quaternions, reaction wheels and jitter.</span></a>
+<a class="reference-card" data-symbol="DATA" href="spacecraft-data-systems/"><strong>Scientific Data Systems</strong><span>FPGA processing, timestamping, SpaceWire, telemetry and data integrity.</span></a>
+<a class="reference-card" data-symbol="TEST" href="spacecraft-qualification/"><strong>Spacecraft Qualification</strong><span>Thermal vacuum, vibration, radiation, EMC and evidence-based verification.</span></a>
+<a class="reference-card" data-symbol="INV" href="inverse-em-problems/"><strong>Inverse Electromagnetics</strong><span>Scattering inversion, regularization, uniqueness and field reconstruction.</span></a>
+<a class="reference-card" data-symbol="AoA" href="rf-direction-finding/"><strong>RF Direction Finding & Geolocation</strong><span>Interferometry, MUSIC, TDOA, FDOA and multipath calibration.</span></a>
+<a class="reference-card" data-symbol="NF" href="advanced-antenna-metrology/"><strong>Advanced Antenna Metrology</strong><span>Near-to-far field transforms, probe correction, OTA measurements and uncertainty.</span></a>
+<a class="reference-card" data-symbol="MP" href="multiphysics-electronics/"><strong>Multiphysics Electronics Simulation</strong><span>Coupled electromagnetic, electrical, thermal and mechanical behavior.</span></a>
+<a class="reference-card" data-symbol="SYS" href="inside-scientific-instruments/"><strong>Inside a Scientific Instrument</strong><span>Cassini MAG, Webb detectors and DSN radio tracking from physics to data.</span></a>
 </div>
 
 ## Bookmarkable references

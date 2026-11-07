@@ -294,3 +294,6 @@ Spacecraft antenna pattern prediction requires a coupled model of the radiating 
 ## Related spacecraft payloads
 
 See [Spacecraft Scientific Instruments](../spacecraft-scientific-instruments/) for infrared and ultraviolet cameras, magnetometers, electric-field probes, particle analyzers, radar, detectors, and NASA/ESA mission hardware.
+
+
+**Advanced computational directions:** [Inverse EM field reconstruction](../inverse-em-problems/), [Multiphysics Electronics](../multiphysics-electronics/), [Magnetic Cleanliness](../magnetic-cleanliness/) and the [Advanced Engineering Learning Map](../advanced-engineering/).

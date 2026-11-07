@@ -142,3 +142,8 @@ See [Scaling Laws & Dimensionless Numbers](../reference/scaling-laws.html) for a
 ---
 
 The map is intentionally recursive: a sophisticated system usually contains several simpler electromagnetic problems nested inside one another.
+
+
+## Spacecraft and RF system extension
+
+The [Advanced Engineering Learning Map](../advanced-engineering/) connects seven subject areas to detailed chapters on detector electronics, radiometry, spacecraft systems, inverse electromagnetics, coherent RF arrays and precision measurements. It includes instrument case studies and numerical experiments.

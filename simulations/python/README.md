@@ -8,6 +8,15 @@ These scripts are deliberately small, readable starting points for the equations
 - `optical_bloch_two_level.py` — driven dissipative two-level atom and steady/transient excited-state population.
 - `halbach_ideal.py` — ideal Halbach-cylinder bore-field scaling and parameter sweep.
 
+## Advanced space and RF exercises
+
+- [magnetic_boom_model.py](magnetic_boom_model.py) — 3-D magnetic dipole contamination of a spacecraft boom-mounted sensor.
+- [coherent_timing_demo.py](coherent_timing_demo.py) — relative carrier phase, frequency error and RF-channel delay.
+- [doa_array_demo.py](doa_array_demo.py) — simulated narrowband Bartlett array direction finding with calibrated steering vectors.
+- [radiometry_photon_budget.py](radiometry_photon_budget.py) — photon/electron budget for a thermal-infrared blackbody scene.
+
+Each script uses a **synthetic, idealized model**. Verify assumptions and substitute measured instrument transfer functions before interpreting real data.
+
 ## Recommended environment
 
 ```bash

@@ -157,3 +157,8 @@ Measured linewidth generally reveals the *loaded* response. Separate coupling lo
 **Advanced exercise:** numerically calculate effective index and dispersion of a slab waveguide, then estimate pulse broadening and sensitivity to waveguide dimensions.
 
 **Further reading:** B. E. A. Saleh and M. C. Teich, *Fundamentals of Photonics*; [MIT Advanced Electromagnetism](https://ocw.mit.edu/courses/6-635-advanced-electromagnetism-spring-2003/).
+
+
+## Space-optical and detector applications
+
+Continue with [Radiometry & Calibration](../radiometry-calibration/), [Optical Space Communications](../optical-space-communications/), [Cryogenic Detectors](../cryogenic-detectors/) and [Inside a Scientific Instrument](../inside-scientific-instruments/).
