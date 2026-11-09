@@ -100,9 +100,9 @@ where $P_\mathrm{peak}$ is arithmetic peak throughput, $\mathcal I$ is arithmeti
 
 ## 6. Minimal CUDA C++ example
 
-This program adds two vectors in parallel. Save as \`vector_add.cu\` and compile on a machine with an appropriate NVIDIA driver and CUDA Toolkit:
+This program adds two vectors in parallel. Save as `vector_add.cu` and compile on a machine with an appropriate NVIDIA driver and CUDA Toolkit:
 
-\`\`\`cpp
+```cpp
 #include <cuda_runtime.h>
 #include <cstdio>
 #include <vector>
@@ -138,13 +138,13 @@ int main() {
     cudaFree(da); cudaFree(db); cudaFree(dc);
     return 0;
 }
-\`\`\`
+```
 
-\`\`\`bash
+```bash
 nvcc -O2 vector_add.cu -o vector_add
 ./vector_add       # Windows: vector_add.exe
 nvidia-smi         # Check installed hardware/driver information
-\`\`\`
+```
 
 *Production code should check every allocation and transfer API return value, test numerical correctness against a CPU implementation, and benchmark only after warm-up and synchronization.*
 
