@@ -25,6 +25,7 @@ Start with the [Advanced Engineering Learning Map](advanced-engineering/) for se
 - [Simulation Library](simulations/)
 - [Theory ↔ Experiment](theory-experiment/)
 - [Computational Methods](computational-methods/)
+- [CUDA & NVIDIA GPU Hardware (November 2026)](cuda-gpus/)
 - [Literature Guide](literature/)
 - [Presentations & Lectures](presentations/)
 

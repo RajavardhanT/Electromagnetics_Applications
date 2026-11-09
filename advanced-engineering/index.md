@@ -45,6 +45,10 @@ description: Graduate-level roadmap connecting electromagnetic field theory, rec
 - [Multiphysics EM–Thermal–Structural Simulation](../multiphysics-electronics/) — coupled electrical losses, temperature and deformation.
 - [Inside a Scientific Instrument](../inside-scientific-instruments/) — three end-to-end studies: Cassini MAG, Webb infrared detectors and DSN tracking.
 
+## CUDA GPU computing and current hardware
+
+The [CUDA & NVIDIA GPU Hardware](../cuda-gpus/) page compares current desktop, workstation, and data-center GPUs, with CUDA programming fundamentals and links to official hardware specifications. Choose hardware based on memory capacity, bandwidth, FP64 capability and solver requirements rather than AI TOPS alone.
+
 ## C. Reproducible Python exercises
 
 These examples use NumPy and Matplotlib and require no proprietary electromagnetic simulation tool or RF hardware:

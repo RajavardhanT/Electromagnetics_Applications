@@ -31,6 +31,8 @@ The largest speed gains usually come from improving the algorithm first and then
 
 ---
 
+> **GPU hardware reference (updated November 2026):** [CUDA & NVIDIA GPU Hardware — GeForce RTX 50, RTX PRO Blackwell, B200/B300 and Rubin](../cuda-gpus/). Includes verified specifications and manufacturer links.
+
 # CUDA and GPU scientific computing
 
 ## 2. What CUDA is
