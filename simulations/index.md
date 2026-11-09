@@ -179,3 +179,8 @@ A numerical field picture is not a validated simulation. For every computed obse
 - [Infrared radiometric photon budget](python/radiometry_photon_budget.py): Planck radiance, passband integration, quantum efficiency and SNR.
 
 The [Advanced Engineering Learning Map](../advanced-engineering/) connects these simulations to their governing equations and measurement methods.
+
+
+### Phased-array hardware sanity check
+
+[Phase-shifter versus true-time-delay array model](python/phased_array_beam_squint.py) — reproducible steering, quantization and grating-lobe spacing demonstration. The [expert hardware chapter](../phased-array-hardware/) extends this ideal model using HFSS embedded patterns, T/R front ends, RF-chain impairments and OTA calibration.

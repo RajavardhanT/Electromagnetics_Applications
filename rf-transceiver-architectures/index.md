@@ -1746,3 +1746,8 @@ These six equations cover a surprising fraction of architecture interviews.
 # Related pages
 
 [RF & Microwave](../rf-microwave/) · [Wireless & MIMO](../wireless/) · [3GPP Standards](../3gpp-standards/) · [RF Bands](../rf-bands/) · [Modern Signal Generator](../modern-signal-generator/) · [Modern Spectrum Analyzer Signal Processing](../spectrum-analyzer-signal-processing/) · [ADC & DAC](../data-converters/) · [Analog Mixed-Signal IC Design](../analog-mixed-signal/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [AESA & Phased Arrays](../aesa/)
+
+
+## Multi-element transceiver hardware
+
+For per-element RF chains, front-end modules, beamformer ICs, LO distribution, digital/hybrid beamforming, and OTA calibration, see [Phased-Array Hardware Implementation](../phased-array-hardware/).

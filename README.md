@@ -39,6 +39,7 @@ Start with the [Advanced Engineering Learning Map](advanced-engineering/) for se
 - [Antennas & Radiation](antennas/)
 - [Wireless & MIMO](wireless/)
 - [AESA / Phased Arrays](aesa/)
+- [Phased-Array Hardware Implementation (Expert)](phased-array-hardware/)
 - [Radar & Remote Sensing](radar/)
 - [EMI / EMC](emc/)
 - [Optics & Photonics](optics-photonics/)

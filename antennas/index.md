@@ -188,3 +188,8 @@ $$P_{\mathrm{acc}}=\mathbf a^\dagger(\mathbf I-\mathbf S^\dagger\mathbf S)\mathb
 **Advanced experiment:** extract the full complex multiport \(\mathbf S\)-matrix from an EM solver, apply progressive scan-phase excitations, and plot active match, accepted power and realized gain versus scan angle. Compare isolated and embedded-element predictions.
 
 **Further reading:** R. C. Hansen, *Phased Array Antennas*; [IIT Bombay Advanced Engineering Electromagnetics](https://www.ee.iitb.ac.in/academics/courses/EE6110/).
+
+
+## Phased-array implementation
+
+For RF front-end modules, embedded-element calibration, LO/clock synchronization, true time delay, thermal design and hardware acceptance, see the [Phased-Array Hardware Implementation](../phased-array-hardware/) chapter.

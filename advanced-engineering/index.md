@@ -39,6 +39,9 @@ description: Graduate-level roadmap connecting electromagnetic field theory, rec
 
 ## B. Advanced electromagnetic methods
 
+**Expert hardware case study:** [Phased-Array Hardware Implementation](../phased-array-hardware/) connects electromagnetic embedded-element patterns with RF/IF modules, bias and clock architecture, beamformer calibration, and HFSS–SystemVue–STK system models.
+
+
 - [Inverse Electromagnetic Problems](../inverse-em-problems/) — scattering forward models, inverse problems, regularization and identifiability.
 - [RF Direction Finding & Geolocation](../rf-direction-finding/) — AoA, wrapped phase, TDOA/FDOA, subspace methods and calibration.
 - [Advanced Antenna Metrology](../advanced-antenna-metrology/) — probe-corrected near-to-far transforms, gain and uncertainty.

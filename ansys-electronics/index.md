@@ -106,3 +106,8 @@ The Ansys-origin tools emphasize **electromagnetic, thermal, physical and reliab
 - [Synopsys and Ansys integration](https://www.synopsys.com/synopsys-ansys-united.html)
 
 *This is a product and physics reference, not a statement of personal proficiency in every listed software package.*
+
+
+## Expert phased-array system workflow
+
+See [Phased-Array Hardware Implementation](../phased-array-hardware/) for HFSS finite-array coupling and embedded element patterns, SystemVue RF/mixed-signal co-simulation, and STK installed-antenna mission scenarios.

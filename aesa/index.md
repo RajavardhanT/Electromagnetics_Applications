@@ -5,6 +5,8 @@ title: Active Electronically Scanned Arrays (AESA)
 
 # Active Electronically Scanned Arrays (AESA)
 
+> **Hardware implementation companion:** [Phased-Array Hardware Implementation](../phased-array-hardware/) — RFICs/FEMs, distribution, digital conversion, calibration, thermal/OTA measurements and a complete Ansys HFSS–Keysight SystemVue–Ansys STK workflow.
+
 <figure class="topic-figure">
   <a href="https://commons.wikimedia.org/wiki/File:Phased_array_antenna_system.svg"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Phased_array_antenna_system.svg?width=1200" alt="Phased-array architecture showing individually phase-controlled antenna elements and electronic beam steering." loading="lazy"></a>
   <figcaption>Phased-array architecture showing individually phase-controlled antenna elements and electronic beam steering. <a href="https://commons.wikimedia.org/wiki/File:Phased_array_antenna_system.svg">Image source</a>.</figcaption>

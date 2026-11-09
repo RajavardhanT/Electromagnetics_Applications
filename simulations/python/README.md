@@ -10,6 +10,9 @@ These scripts are deliberately small, readable starting points for the equations
 
 ## Advanced space and RF exercises
 
+- [phased_array_beam_squint.py](phased_array_beam_squint.py) — ideal 16-element array: RF phase shifters, quantization, true time delay, beam squint, 1-D element-spacing condition. See [hardware design chapter](../../phased-array-hardware/).
+
+
 - [magnetic_boom_model.py](magnetic_boom_model.py) — 3-D magnetic dipole contamination of a spacecraft boom-mounted sensor.
 - [coherent_timing_demo.py](coherent_timing_demo.py) — relative carrier phase, frequency error and RF-channel delay.
 - [doa_array_demo.py](doa_array_demo.py) — simulated narrowband Bartlett array direction finding with calibrated steering vectors.
