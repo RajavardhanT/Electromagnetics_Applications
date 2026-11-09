@@ -1,0 +1,21 @@
+---
+layout: null
+permalink: /search-index.json
+---
+{%- assign result_separator = '' -%}
+{%- assign indexed_pages = site.pages | sort: 'url' -%}
+[
+{%- for entry in indexed_pages -%}
+  {%- assign md_extension = entry.path | slice: -3, 3 -%}
+  {%- if entry.title and md_extension == '.md' and entry.url != '/search/' -%}
+    {{- result_separator -}}
+    {
+      "title": {{ entry.title | jsonify }},
+      "url": {{ entry.url | relative_url | jsonify }},
+      "description": {{ entry.description | default: '' | jsonify }},
+      "content": {{ entry.content | markdownify | strip_html | normalize_whitespace | jsonify }}
+    }
+    {%- assign result_separator = ',' -%}
+  {%- endif -%}
+{%- endfor -%}
+]

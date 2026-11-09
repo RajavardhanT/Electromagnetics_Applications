@@ -35,6 +35,7 @@
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script defer src="{{ '/assets/js/site.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/site-search.js' | relative_url }}"></script>
 </head>
 {% assign section_theme = 'tools' %}
 {% if page.url == '/' %}
@@ -70,6 +71,7 @@
     <nav class="topnav" aria-label="Primary">
       <a class="profile-top-link" href="https://rajavardhant.github.io/">Rajavardhan Talashila · Main Profile ↗</a>
       <a class="chatgpt-badge" href="{{ '/about/' | relative_url }}">Built using ChatGPT</a>
+      <a class="nav-search" href="{{ '/search/' | relative_url }}" aria-label="Search all Electromagnetics Applications pages">⌕ Search</a>
       <a class="nav-optional" href="{{ '/knowledge-map/' | relative_url }}">Map</a>
       <a class="nav-optional" href="{{ '/reference/' | relative_url }}">Reference</a>
       <a class="nav-optional" href="{{ '/calculators/' | relative_url }}">Calculators</a>
@@ -84,12 +86,14 @@
     <aside class="sidebar" aria-label="Site navigation">
       <div class="site-search-wrap">
         <label class="sr-only" for="site-search">Search this reference</label>
-        <input id="site-search" class="site-search" type="search" placeholder="Search topics…  /" autocomplete="off">
-        <div id="search-results" class="search-results" hidden></div>
+        <input id="site-search" class="site-search" type="search" placeholder="Search all chapters… /" autocomplete="off" aria-controls="search-results" aria-label="Search all site content">
+        <div id="search-results" class="search-results" role="region" aria-label="Search suggestions" hidden></div>
+        <a class="sidebar-search-link" href="{{ '/search/' | relative_url }}">Full-text search →</a>
       </div>
 
       <div class="sidebar-title">START HERE</div>
       <a href="https://rajavardhant.github.io/"><strong>★ Rajavardhan Talashila · Main Profile ↗</strong></a>
+      <a href="{{ '/search/' | relative_url }}">Search All Chapters</a>
       <a href="{{ '/knowledge-map/' | relative_url }}">Knowledge Map</a>
       <a href="{{ '/reference/' | relative_url }}">Quick Reference Hub</a>
       <a href="{{ '/worked-examples/' | relative_url }}">Worked Examples</a>
@@ -110,6 +114,7 @@
       <a href="{{ '/3gpp-standards/' | relative_url }}">↳ 3GPP Standards</a>
       <a href="{{ '/rf-bands/' | relative_url }}">↳ RF Bands — Compact Reference</a>
       <a href="{{ '/aesa/' | relative_url }}">AESA & Phased Arrays</a>
+      <a href="{{ '/phased-array-hardware/' | relative_url }}">↳ Phased-Array Hardware Implementation</a>
       <a href="{{ '/radar/' | relative_url }}">Radar & Remote Sensing</a>
       <a href="{{ '/emc/' | relative_url }}">EMI / EMC</a>
       <a href="{{ '/signal-power-integrity/' | relative_url }}">Signal Integrity & Power Integrity</a>

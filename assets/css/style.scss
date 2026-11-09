@@ -197,3 +197,48 @@ h2:hover .heading-anchor,h3:hover .heading-anchor { opacity:.55; }
   a { color:black; text-decoration:none; }
   .hero,.reference-card,.intuition,.engineering,.measurement,.misconception,.literature,.example-box,.assumption-box { box-shadow:none; break-inside:avoid; }
 }
+
+
+/* Generated full-text reference search: sidebar, mobile navbar, and results page. */
+.topnav .nav-search { display:inline-flex; align-items:center; padding:7px 11px;
+  border:1px solid rgba(98,214,199,.55); border-radius:8px;
+  color:#dffff9; background:rgba(98,214,199,.1); font-weight:750; }
+.topnav .nav-search:hover,.topnav .nav-search:focus-visible {
+  color:white; background:rgba(98,214,199,.19); text-decoration:none; }
+.sidebar a.sidebar-search-link { margin:2px 4px 0; font-size:.72rem; color:#96e3d9; }
+.search-results .search-result-suggestion { display:block; border-bottom:1px solid #20344e; text-decoration:none; }
+.search-results .search-result-suggestion strong { display:block; font-size:.78rem; color:#eaf6ff; }
+.search-results .search-result-suggestion:hover { background:#172d43; }
+.search-results .search-view-all { display:block; margin-top:4px; border-top:1px solid #2a425e;
+  font-weight:800; font-size:.78rem; color:#87e2d7; }
+.search-results mark { background:rgba(98,214,199,.25); color:#fff; }
+.search-help,.search-error { padding:9px; font-size:.75rem; color:#9bafc5; }
+.search-error { color:#ffd6b6; }
+.site-search-page { margin:18px 0 34px; max-width:900px; }
+.search-page-form { padding:22px; border:1px solid var(--line); border-radius:12px;
+  background:var(--card); box-shadow:var(--shadow); }
+.search-page-form label { display:block; margin-bottom:10px; font-weight:800; }
+.search-page-controls { display:flex; gap:9px; }
+.search-page-controls input { min-width:0; flex:1; padding:12px 14px;
+  border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--ink); font:inherit; }
+.search-page-controls input:focus { outline:2px solid var(--teal); outline-offset:1px; }
+.search-page-controls button { padding:10px 20px; border:0; border-radius:8px;
+  background:var(--teal); color:white; font:inherit; font-weight:800; cursor:pointer; }
+.search-page-controls button:hover { filter:brightness(1.12); }
+.search-page-hint { margin:12px 0 0; color:var(--muted); font-size:.83rem; }
+.search-page-hint kbd { padding:2px 5px; border:1px solid var(--line); border-radius:4px; font-size:.85em; }
+#search-page-status { margin:20px 0 12px; color:var(--muted); font-weight:650; }
+.search-page-results { display:grid; gap:12px; }
+.search-result-card { display:block; padding:18px 20px; border:1px solid var(--line);
+  border-radius:11px; background:var(--card); color:var(--ink); box-shadow:var(--shadow); }
+.search-result-card:hover { border-color:var(--teal); text-decoration:none; transform:translateY(-1px); }
+.search-result-card strong { display:block; font-size:1.04rem; color:var(--ink); }
+.search-result-card p { margin:8px 0; font-size:.89rem; color:var(--muted); line-height:1.5; }
+.search-result-path { color:var(--teal); font-size:.73rem; overflow-wrap:anywhere; }
+.search-result-card mark { border-radius:3px; padding:0 .1em; color:inherit; background:#b1eae1; }
+@media(max-width:650px) {
+  .search-page-form { padding:16px; }
+  .search-page-controls { flex-direction:column; }
+  .search-page-controls button { width:100%; }
+}
+@media print { .site-search-page { display:none !important; } }
