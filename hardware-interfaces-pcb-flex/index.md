@@ -1195,3 +1195,8 @@ SPI and UART are implemented across many device families rather than governed by
 ## Related Ansys/Synopsys simulation software
 
 See [Ansys Electronics & Semiconductor Software](../ansys-electronics/) for HFSS, SIwave, Q3D, Icepak, HFSS-IC and chip/package workflows.
+
+
+## Arduino UNO Q — dual-processor carrier and I/O design
+
+For a practical example of mixed 1.8 V processor signals and 3.3 V MCU I/O in a compact Linux/real-time platform, see [Arduino UNO Q — Hardware and Interfaces](../arduino-uno-q/). The chapter covers JMEDIA/JMISC MIPI and audio carriers, voltage-domain translation, SPI/I²C/CAN, USB-C power and time-critical MCU acquisition. For custom carriers, keep high-speed MIPI differential signals routed with controlled impedance and documented return paths.

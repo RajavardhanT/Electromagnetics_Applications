@@ -257,32 +257,27 @@ Portenta is where the Arduino ecosystem begins overlapping heavily with professi
 
 ---
 
-# 11. UNO Q and Linux-capable Arduino boards
+# 11. Arduino UNO Q — Linux + Real-Time MCU Hardware
 
-The Arduino ecosystem now also includes boards where a Linux-capable application processor works alongside a microcontroller.
+The **Arduino UNO Q** is a dual-processor single-board computer, rather than a classic microcontroller-only UNO. Its **Qualcomm Dragonwing QRB2210** performs Linux and media/AI tasks; its **STM32U585** runs Arduino sketches on Zephyr for peripheral control and deterministic timing. The processors communicate through Arduino Bridge (RPC).
 
-This changes the architecture:
+**[Read the dedicated technical chapter: Arduino UNO Q — Hardware, Power, Software and Interfaces](../arduino-uno-q/)**
 
-$$
-\boxed{
-\text{Linux application processor}
-+
-\text{real-time MCU}
-}
-$$
+| Feature | UNO Q specification |
+|---|---|
+| Linux MPU | Quad-core 64-bit Arm Cortex-A53 at up to 2.0 GHz; Adreno 702 graphics; dual ISP |
+| Real-time MCU | STM32U585 Cortex-M33, up to 160 MHz, 2 MB flash, 786 kB SRAM |
+| Memory / storage | 2 GB LPDDR4 + 16 GB eMMC; or 4 GB LPDDR4 + 32 GB eMMC |
+| Software | Debian Linux + Arduino Core on Zephyr; App Lab combines Python/sketches/AI |
+| Connectivity | Wi-Fi 5 (2.4 and 5 GHz), Bluetooth 5.1, USB-C host/device and video support |
+| UNO-style analog | Six ADC channels (up to 14-bit read resolution); two DAC outputs (up to 12 bits) |
+| Expansion | UNO-style headers, Qwiic I²C, high-speed JMEDIA/JMISC carrier connectors |
+| Power | USB-C 5 V with recommended 3 A supply, or VIN 7–24 V |
+| Dimensions | 68.85 × 53.34 mm UNO form factor |
 
-instead of one bare-metal MCU.
+**The critical electrical difference:** UNO Q uses **3.3 V maker GPIO**, with **1.8 V processor I/O** on selected high-speed/carrier interfaces. It is **not a 5 V GPIO replacement** for UNO R3 or UNO R4. Its analog inputs are not 5 V tolerant. Always inspect the [pinout and schematics](https://docs.arduino.cc/hardware/uno-q) and [Arduino's power-domain guide](https://docs.arduino.cc/tutorials/uno-q/power-specification/) before attaching shields or measurement circuitry.
 
-This type of board is useful when a project needs
-
-- Linux networking/software;
-- computer vision;
-- AI frameworks;
-- high-level applications;
-
-while still retaining deterministic low-level I/O through an MCU.
-
-Treat these boards conceptually closer to a **single-board computer + MCU** than to a traditional Uno.
+For engineering, the important separation is **Linux orchestration/logging versus MCU real-time acquisition and timing**. Bridge RPC is valuable for exchange of configuration and data, but cannot be presumed to offer deterministic control-loop timing. The [full UNO Q chapter](../arduino-uno-q/) covers the processor architecture, GPIO/ADC/DAC mapping, power rails, MIPI/carrier interfaces, Bridge, a runnable Arduino sketch, and RF laboratory applications.
 
 ---
 
@@ -304,6 +299,7 @@ Never assume a 3.3 V input is 5 V tolerant.
 
 Examples:
 
+- UNO Q: 3.3 V maker GPIO and selected 1.8 V processor/carrier signals (not 5 V logic);
 - UNO R3: 5 V logic;
 - UNO R4: 5 V GPIO;
 - Nano 33 BLE: 3.3 V;
@@ -1234,6 +1230,8 @@ If you can do these things, you understand Arduino at an engineering level rathe
 # 53. Official references
 
 - [Arduino Hardware](https://www.arduino.cc/hardware/) — current board families.
+- [Arduino UNO Q detailed engineering chapter](../arduino-uno-q/) — architecture, pinout, power, ADC/DAC, Bridge RPC and applications.
+- [Arduino UNO Q hardware and datasheet](https://docs.arduino.cc/hardware/uno-q) — official documentation, schematics and pinout.
 - [Arduino UNO R4 WiFi documentation](https://docs.arduino.cc/hardware/uno-r4-wifi) — RA4M1, ESP32-S3, DAC, CAN, RTC and pinout resources.
 - [UNO R3 versus R4](https://support.arduino.cc/hc/en-us/articles/9350551575964-What-s-the-difference-between-UNO-R3-and-UNO-R4-boards) — processor, memory, I/O and ADC differences.
 - [Nano ESP32](https://docs.arduino.cc/hardware/nano-esp32) — ESP32-S3, Wi-Fi/Bluetooth and MicroPython.
