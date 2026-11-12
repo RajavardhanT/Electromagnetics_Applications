@@ -246,6 +246,9 @@ Advantages include reduced converter count and lower digital-processing load.
 
 ### Digital beamforming
 
+See the [MVDR / LCMV adaptive receive beamforming chapter](#advanced-adaptive-beamforming-mvdr-lcmv-gsc-and-robust-arrays) below for covariance-aware optimization, GSC, robustness and digital hardware requirements.
+
+
 Signals from multiple elements or subarrays are digitized separately and beamforming is performed numerically:
 
 $$
@@ -614,3 +617,201 @@ Digital beamforming also needs interchannel gain, phase and timing calibration. 
 **Advanced exercise:** simulate wideband beam pointing at three subbands for phase-shifter and true-time-delay arrays. Include random element group-delay error and plot worst-case sidelobe levels.
 
 **Further reading:** R. C. Hansen, *Phased Array Antennas*; [IIT Bombay advanced EM course](https://www.ee.iitb.ac.in/academics/courses/EE6110/).
+
+---
+
+## Advanced adaptive beamforming — MVDR, LCMV, GSC and robust arrays
+
+**Scope:** receive adaptive arrays. Unlike fixed delay-and-sum beamforming, the weights depend on the measured interference-and-noise statistics. Practical benefits depend on covariance quality, calibrated array manifolds, independent digital channels, analog front-end dynamic range and realizable weights.
+
+### 1. Signal and covariance model
+
+For $N$ coherent narrowband receiver channels at frequency $f$,
+
+$$
+\mathbf x[k]=\mathbf a_0s[k]+\sum_{j=1}^{J}\mathbf a_j i_j[k]+\mathbf n[k],
+\qquad y[k]=\mathbf w^H\mathbf x[k],
+$$
+
+where $\mathbf a_0$ is the desired-source steering vector, $\mathbf a_j$ represent interfering sources, $\mathbf n$ is receiver noise, and $\mathbf w$ is the **receive** weight vector. The $H$ superscript denotes Hermitian transpose.
+
+The interference-plus-noise covariance is
+
+$$
+\mathbf R_{i+n}=\mathbb E[(\mathbf x-\mathbf a_0s)
+(\mathbf x-\mathbf a_0s)^H].
+$$
+
+In practical hardware, $\mathbf a(\theta,\phi,f)$ must include the correct phase reference and the **measured or simulated embedded-element and RF-channel response**. Depending on the basis, it can include mutual coupling, sensor orientation, polarization, RF path transfer, radome and installed-platform effects. Do not double-count coupling or propagation when using HFSS embedded-element fields.
+
+### 2. Conventional beamforming versus adaptive methods
+
+A distortionless conventional beamformer under identical uncorrelated sensor noise is
+
+$$
+\boxed{\mathbf w_{\mathrm{CBF}}=
+\frac{\mathbf a_0}{\mathbf a_0^H\mathbf a_0}},\qquad
+\mathbf w_{\mathrm{CBF}}^H\mathbf a_0=1.
+$$
+
+This is a fixed spatial matched filter. It is not generally SINR-optimal in colored noise or in the presence of spatial interference. Conventional tapering lowers sidelobes, but trades main-lobe width and array gain.
+
+### 3. Minimum variance distortionless response (MVDR / Capon)
+
+MVDR minimizes residual interference-plus-noise power with unity response in the desired look direction:
+
+$$
+\min_{\mathbf w}\ \mathbf w^H\mathbf R_{i+n}\mathbf w
+\quad\mathrm{subject\ to}\quad\mathbf w^H\mathbf a_0=1.
+$$
+
+For positive-definite $\mathbf R_{i+n}$,
+
+$$
+\boxed{\mathbf w_{\mathrm{MVDR}}=
+\frac{\mathbf R_{i+n}^{-1}\mathbf a_0}
+{\mathbf a_0^H\mathbf R_{i+n}^{-1}\mathbf a_0}.}
+$$
+
+**Short derivation:** stationarity of the constrained quadratic form gives $\mathbf R\mathbf w=\lambda\mathbf a_0$; imposing $\mathbf a_0^H\mathbf w=1$ fixes the scalar $\lambda$. In code solve linear systems; do **not** explicitly calculate $\mathbf R^{-1}$.
+
+The **Capon spatial spectrum** is a different, scan-dependent quantity:
+
+$$
+P_{\mathrm{Capon}}(\theta)=
+\frac{1}{\mathbf a(\theta)^H\mathbf R_x^{-1}\mathbf a(\theta)}.
+$$
+
+This directional power estimator is not identical to the far-field gain pattern of a *fixed* MVDR weight vector, $|\mathbf w^H\mathbf a(\theta)|^2$.
+
+**MPDR distinction:** if the covariance is estimated using snapshots that also contain the desired signal, it is the total-data covariance $\mathbf R_x$, not the target-free $\mathbf R_{i+n}$. With steering mismatch, minimizing total output power can **suppress the target itself** (signal self-nulling). Prefer target-free training data or rigorously modeled target protection when possible.
+
+### 4. Linearly constrained minimum variance (LCMV)
+
+MVDR generalizes to several complex gain constraints. Let $\mathbf C\in\mathbb C^{N\times K}$ contain constraint steering vectors and $\mathbf f\in\mathbb C^K$ contain desired complex responses:
+
+$$
+\min_{\mathbf w}\ \mathbf w^H\mathbf R_{i+n}\mathbf w,
+\qquad \mathbf C^H\mathbf w=\mathbf f.
+$$
+
+The closed-form solution is
+
+$$
+\boxed{
+\mathbf w_{\mathrm{LCMV}}=
+\mathbf R_{i+n}^{-1}\mathbf C
+(\mathbf C^H\mathbf R_{i+n}^{-1}\mathbf C)^{-1}\mathbf f.
+}
+$$
+
+For a desired direction $\theta_0$ and two explicitly nulled interferers,
+
+$$
+\mathbf C=[\mathbf a(\theta_0),\mathbf a(\theta_1),\mathbf a(\theta_2)],
+\qquad \mathbf f=[1,0,0]^T.
+$$
+
+Another use is target-sector protection: impose unity response at $\theta_0$ and a nearby guard angle, rather than allowing MVDR to form a sharp depression under pointing uncertainty. A few nearby constraints do **not** guarantee flat gain at every angle between them.
+
+**Feasibility:** $K\le N$ and the columns of $\mathbf C$ must be linearly independent for this formula. Closely spaced or contradictory constraints, especially in a small array, can produce enormous weights, poor white-noise gain and numerical instability. The number of **independent digital receive channels** (not necessarily physical elements) bounds available adaptive degrees of freedom.
+
+### 5. Covariance estimation, sample support and diagonal loading
+
+With $L$ training snapshots in $\mathbf X_t\in\mathbb C^{N\times L}$,
+
+$$
+\hat{\mathbf R}=\frac{1}{L}\mathbf X_t\mathbf X_t^H.
+$$
+
+If $L<N$ the sample covariance is rank-deficient; even for $L>N$ it may be badly conditioned. Correlated snapshots reduce effective sample support. Use independent test data to evaluate gain/null performance rather than reporting only in-sample attenuation.
+
+A common robust choice is trace-scaled diagonal loading:
+
+$$
+\boxed{
+\mathbf R_\delta=
+\hat{\mathbf R}+
+\delta\,\frac{\operatorname{tr}(\hat{\mathbf R})}{N}\mathbf I,
+\quad\delta>0.
+}
+$$
+
+Replace $\mathbf R$ with $\mathbf R_\delta$ in the MVDR/LCMV equations. Loading stabilizes the linear solve and can make the beamformer less sensitive to array-model error; excess loading reduces interference adaptivity. Another approach is covariance shrinkage,
+$\mathbf R_\alpha=(1-\alpha)\hat{\mathbf R}+\alpha\tau\mathbf I$ with $\tau=\operatorname{tr}(\hat{\mathbf R})/N$, which uses a *different* parameterization.
+
+More advanced robustness techniques include bounded steering-vector uncertainty, covariance tapering, spatial smoothing, uncertainty-aware constraints, and derivative constraints. Test loading/robustness against **unseen** target-angle, phase, frequency, temperature and jammer-power conditions.
+
+### 6. GSC: generalized sidelobe canceller
+
+The GSC converts constrained optimization into an unconstrained adaptive interference-canceling branch. Choose a **quiescent** weight vector $\mathbf w_q$ satisfying $\mathbf C^H\mathbf w_q=\mathbf f$, and a **blocking matrix** $\mathbf B$ with $\mathbf C^H\mathbf B=\mathbf0$.
+
+All feasible weights can be written
+
+$$
+\mathbf w=\mathbf w_q-\mathbf B\mathbf g.
+$$
+
+The stationary optimum for the adaptive branch is
+
+$$
+\mathbf g_{\mathrm{opt}}=
+(\mathbf B^H\mathbf R\mathbf B)^{-1}
+\mathbf B^H\mathbf R\,\mathbf w_q.
+$$
+
+LMS/RLS implementations adapt $\mathbf g$ iteratively without inverting a full $N\times N$ covariance on every snapshot. **Signal leakage** through an imperfect blocking matrix can make the GSC cancel the target. Array manifold calibration is therefore essential.
+
+### 7. Other methods: Frost, subband MVDR, STAP and beamspace
+
+| Technique | Mathematical/hardware principle | Key constraint |
+|---|---|---|
+| **Frost beamformer** | Space-time FIR filtering with multiple linearly constrained tap weights | $N$ channels × $M$ taps; latency and large training sets |
+| **Subband MVDR / LCMV** | Separate $\mathbf R(f_b)$ and $\mathbf w(f_b)$ after channelization | Subband covariance accuracy, filter leakage and synchronization |
+| **STAP** | Joint pulse-Doppler and spatial filtering for clutter rejection | Large space-time covariance, range-dependent training statistics |
+| **GSC / adaptive sidelobe canceller** | Quiescent path plus blocked adaptive cancellation | Target leakage and convergence |
+| **Robust MVDR/LCMV** | Loaded or uncertainty-constrained optimization | Trades deep nulls for error tolerance |
+| **Beamspace / hybrid adaptive BF** | Adaptive weights on a smaller number of digital RF outputs | Cannot restore discarded element-level degrees of freedom |
+
+For a hybrid analog combining matrix $\mathbf F_{\mathrm{RF}}\in\mathbb C^{N\times M}$,
+
+$$
+\mathbf z=\mathbf F_{\mathrm{RF}}^H\mathbf x,\qquad
+\mathbf a_z=\mathbf F_{\mathrm{RF}}^H\mathbf a,\qquad
+\mathbf R_z=\mathbf F_{\mathrm{RF}}^H\mathbf R_x\mathbf F_{\mathrm{RF}}.
+$$
+
+Compute digital MVDR/LCMV in the **$M$-channel beamspace** using these transformed quantities. The RF network generally has constant-modulus/finite-phase-state constraints, insertion loss, phase drift and quantization. The continuous unconstrained MVDR solution may not be physically realizable on an analog BFIC.
+
+### 8. Performance metrics and common failure modes
+
+| Metric | Expression or meaning |
+|---|---|
+| Output SINR | $\displaystyle\mathrm{SINR}_{\mathrm{out}}=\frac{P_s|\mathbf w^H\mathbf a_0|^2}{\mathbf w^H\mathbf R_{i+n}\mathbf w}$ |
+| White-noise gain | $\displaystyle\mathrm{WNG}=\frac{|\mathbf w^H\mathbf a_0|^2}{\mathbf w^H\mathbf w}$ for identical uncorrelated element noise |
+| Constraint error | $\|\mathbf C^H\mathbf w-\mathbf f\|_2$; verify after quantization and calibration |
+| Model mismatch | Difference between assumed $\mathbf a$ and installed/temperature-dependent measured manifold |
+| Sample support | Independent snapshots relative to channel dimension and interference rank |
+| Wideband squint | Need frequency-dependent steering, subbands or TTD |
+| Overload / compression | Strong blocker compressing an LNA or ADC **before** digital beamforming cannot be undone by a spatial null |
+| Pattern verification | Independently measured EIRP/G/T, WNG, null steering, target loss and polarization |
+
+**Real hardware validation:** derive the steering manifold from HFSS embedded-element fields and measured phase/gain/group-delay responses; measure full covariance including RF chain correlations; sweep scan angle, frequency, thermal state and channel failure; evaluate held-out SINR and output distortion; quantize weights into available BFIC states; then verify OTA nulls and desired gain.
+
+### 9. Reproducible MVDR–LCMV comparison
+
+[Python: conventional beamforming vs loaded MVDR vs LCMV](../simulations/python/adaptive_beamforming_mvdr_lcmv.py) uses an ideal 12-element ULA with two interferers. It estimates $\hat{\mathbf R}_{i+n}$ from independent interference-only training snapshots, uses a trace-scaled diagonal load, solves the beamforming weights without explicit inversion and plots the beam responses. It reports output SINR, WNG, covariance conditioning and numerical constraint error.
+
+**Suggested advanced exercises:** vary $L/N$ and loading, contaminate the training data with the desired source, apply phase/gain mismatch and measured embedded patterns, reduce digital degrees of freedom through subarray combining, and map the ideal weights to quantized phase/amplitude states.
+
+### 10. Authoritative references
+
+- [MathWorks — Conventional and Adaptive Beamformers](https://www.mathworks.com/help/phased/ug/conventional-and-adaptive-beamformers.html): comparative CBF, MVDR and LCMV examples, steering mismatch.
+- [MathWorks — MVDR / Capon](https://www.mathworks.com/help/phased/ref/phased.mvdrbeamformer-system-object.html): equations, training covariance and diagonal loading.
+- [MathWorks — LCMV](https://www.mathworks.com/help/phased/ref/phased.lcmvbeamformer-system-object.html): linearly constrained formulation.
+- [MathWorks — GSC](https://www.mathworks.com/help/phased/ref/phased.gscbeamformer-system-object.html): blocking-matrix and adaptive-path implementation.
+- [MathWorks — Wideband Subband MVDR](https://www.mathworks.com/help/phased/ref/phased.subbandmvdrbeamformer-system-object.html).
+- [Keysight RF System Design / SystemVue](https://www.keysight.com/us/en/products/design-engineering-software/electronic-design-automation/wireless-and-rf-systems-suite/rf-system-design-systemvue.html): RF impairment, mutual-coupling and adaptive array co-simulation.
+- H. L. Van Trees, *Optimum Array Processing*, Wiley (2002); R. A. Monzingo et al., *Introduction to Adaptive Arrays*; O. L. Frost III, “An Algorithm for Linearly Constrained Adaptive Array Processing,” *Proceedings of the IEEE* **60**, 926–935 (1972).
+
+For the physical RF/digital implementation and test budgets see [Phased-Array Hardware Implementation](../phased-array-hardware/).
