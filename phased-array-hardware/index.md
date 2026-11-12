@@ -270,6 +270,28 @@ A simple inverse $c_n=1/h_n$ is only meaningful for a chosen reference and if th
 
 **References:** [ADI 2026 multichannel calibration methods](https://www.analog.com/en/resources/technical-articles/calibration-implementation.html), [ADI practical X-band beam steering and measurements](https://www.analog.com/en/resources/technical-articles/practical-beam-steering-using-modular-x-band-phased-array.html), [Keysight phased-array OTA testing](https://www.keysight.com/zz/en/use-cases/test-phase-array-antennas.html).
 
+
+### Adaptive receiver implementation — MVDR, LCMV and generalized sidelobe cancellation
+
+**Mathematical derivation:** [AESA — advanced MVDR, LCMV, GSC and robust array processing](../aesa/#advanced-adaptive-beamforming-mvdr-lcmv-gsc-and-robust-arrays). These methods minimize a **receive** interference-plus-noise quadratic form subject to gain constraints. They should be evaluated at the **actual digitized interface**, not against inaccessible element-level data.
+
+| Hardware topology | Adaptive weight space | Main limit |
+|---|---|---|
+| Fully digital, one ADC per antenna port | $N$ independent element-channel weights | JESD/ADC transport, coherence, processing and DC power |
+| Hybrid, $N$ elements into $M$ digitized beams | $M$ independent beamspace weights | RF combining discards spatial DOF; analog calibration and passband |
+| Analog BFIC-only panel | Quantized phase/gain controls on physical RF branches | Continuous complex MVDR/LCMV solutions may not be implementable |
+| Wideband receive / channelizer | Covariance and weights per frequency subband | Subband filtering, delay, sample support and memory |
+| Radar STAP receiver | Weights across channel × coherent pulse | Very large covariance dimension and training data needs |
+
+If $\mathbf z=\mathbf F_\mathrm{RF}^H\mathbf x$ is the vector of available digital streams, use $\mathbf a_z=\mathbf F_\mathrm{RF}^H\mathbf a$ and $\mathbf R_z=\mathbf F_\mathrm{RF}^H\mathbf R_x\mathbf F_\mathrm{RF}$ when calculating MVDR/LCMV weights. The final control state must be mapped to actual RF phase/gain states, including calibration LUTs and finite update latency.
+
+**Hardware verification checklist:** measure target-free or otherwise controlled covariance snapshots; run a stable loaded matrix solve; measure steering phase/gain/group-delay over frequency and temperature; compute output SINR, WNG and distortionless response on held-out data; quantize into available BFIC states; validate OTA null depth, beam pointing and EVM; detect ADC saturation, channel faults and covariance ill-conditioning. A spatial null **after the ADC** cannot undo pre-ADC PA/LNA nonlinearity or blocker-induced clipping.
+
+**Digital thread:** HFSS embedded-element fields and port/network data → SystemVue calibrated receivers/interferers/covariance and steering → algorithm and weight-state validation → STK installed array geometry and time-varying interference → OTA correlation. Track coordinate frames, array manifold normalization, polarization, RF reference planes and waveform/beam epochs.
+
+[Python exercise: conventional vs MVDR vs LCMV](../simulations/python/adaptive_beamforming_mvdr_lcmv.py).
+
+
 ## 13. OTA, RF and manufacturing verification
 
 | Test category | Metrics / diagnostic questions |

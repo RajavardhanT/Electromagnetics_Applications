@@ -184,3 +184,8 @@ The [Advanced Engineering Learning Map](../advanced-engineering/) connects these
 ### Phased-array hardware sanity check
 
 [Phase-shifter versus true-time-delay array model](python/phased_array_beam_squint.py) — reproducible steering, quantization and grating-lobe spacing demonstration. The [expert hardware chapter](../phased-array-hardware/) extends this ideal model using HFSS embedded patterns, T/R front ends, RF-chain impairments and OTA calibration.
+
+
+### Covariance-aware adaptive arrays
+
+[MVDR/LCMV Python example](python/adaptive_beamforming_mvdr_lcmv.py) — compares conventional, loaded MVDR and LCMV beamforming using independent interference-only covariance training, with output SINR, WNG and constraints. See [AESA adaptive theory](../aesa/#advanced-adaptive-beamforming-mvdr-lcmv-gsc-and-robust-arrays) and [hardware implementation](../phased-array-hardware/).

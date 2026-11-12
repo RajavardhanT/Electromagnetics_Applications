@@ -20,6 +20,8 @@ These scripts are deliberately small, readable starting points for the equations
 
 Each script uses a **synthetic, idealized model**. Verify assumptions and substitute measured instrument transfer functions before interpreting real data.
 
+- [adaptive_beamforming_mvdr_lcmv.py](adaptive_beamforming_mvdr_lcmv.py) — 12-element ULA with two interferers: conventional, diagonally loaded MVDR, LCMV, and output SINR. [Theory](../../aesa/#advanced-adaptive-beamforming-mvdr-lcmv-gsc-and-robust-arrays).
+
 ## Recommended environment
 
 ```bash
