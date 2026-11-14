@@ -162,6 +162,8 @@ For cryogenic LNAs, SIS mixers, low-noise feeds/OMTs, phase-stable LO distributi
 
 For an interview-focused comparison of superheterodyne, zero-IF, low-IF, image-reject, IF-sampling and direct-RF-sampling receivers—plus direct-conversion/direct-RF transmitters, TDD/FDD front ends, mixers, synthesizers, I/Q impairments and calibration—see [RF Transceiver Architectures — Interview Ready](../rf-transceiver-architectures/).
 
+For physical causes and bench characterization of **30 RF transceiver impairments**—including LO leakage, IQ image, phase noise, mixer spurs, IM2/IM3, PA distortion, blockers, ADC jitter and calibration—see [RF Transceiver Impairments — Physics, Measurements & Calibration](../rf-transceiver-impairments/).
+
 ## Modern RF signal generation
 
 For the internal architecture of a modern RF/vector signal generator—including reference clocks, PLLs, baseband I/Q, interpolation, DDS/NCO, DACs, I/Q modulation, direct-RF generation, ALC, phase noise and multi-channel coherence—see [Modern Signal Generator](../modern-signal-generator/).
