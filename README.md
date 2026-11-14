@@ -34,6 +34,8 @@ Start with the [Advanced Engineering Learning Map](advanced-engineering/) for se
 
 - [Foundations](foundations/)
 - [RF & Microwave Engineering](rf-microwave/)
+- [RF Transceiver Architectures](rf-transceiver-architectures/)
+- [RF Transceiver Impairments — Physics, Measurements & Calibration](rf-transceiver-impairments/)
 - [Ansys Electronics & Semiconductor Software](ansys-electronics/)
 
 - [Software-Defined Radio (SDR)](sdr/)
