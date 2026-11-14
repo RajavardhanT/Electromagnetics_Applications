@@ -6,6 +6,8 @@ description: Interview-focused guide to RF transceiver architectures: superheter
 
 # RF Transceiver Architectures — Interview Ready
 
+**Detailed companion reference:** [RF Transceiver Impairments — Physics, Measurements & Calibration](../rf-transceiver-impairments/) covers 30 failure mechanisms, LO-leakage cancellation, I/Q image and widely-linear correction, phase noise/reciprocal mixing, IM2/IM3, PA/DPD, blockers, measurement signatures, and RF lab workflows.
+
 <div class="intuition"><span class="callout-title">30-second intuition</span>An RF transceiver converts information between <strong>baseband and radio frequency</strong>. The architecture determines where frequency translation occurs, where filtering occurs, what the ADC/DAC must do, and which impairments dominate. In interviews, the important skill is not memorizing block diagrams. It is being able to explain <strong>why an architecture was chosen and what problem appears because of that choice.</strong></div>
 
 <div class="pathway"><span class="node">antenna / RF front end</span><span class="arrow">→</span><span class="node">frequency translation</span><span class="arrow">→</span><span class="node">filter / gain</span><span class="arrow">→</span><span class="node">ADC / DAC</span><span class="arrow">→</span><span class="node">digital baseband</span></div>
