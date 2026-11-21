@@ -13,6 +13,7 @@ Each illustration connects the **physical mechanism** with the **implementation 
 <div class="diagram-library-grid">
 {% assign technical_diagrams = site.static_files | where_exp: 'item', "item.path contains '/assets/topic-diagrams/'" | sort: 'path' %}
 {% for item in technical_diagrams %}
+{% if item.path contains '.svg' %}
 {% assign diagram_title = item.basename | replace: '-', ' ' | capitalize %}
   <figure class="diagram-library-card">
     <a href="{{ item.path | relative_url }}" title="Open {{ diagram_title }}">
@@ -20,6 +21,7 @@ Each illustration connects the **physical mechanism** with the **implementation 
       <figcaption>{{ diagram_title }}</figcaption>
     </a>
   </figure>
+{% endif %}
 {% endfor %}
 </div>
 
