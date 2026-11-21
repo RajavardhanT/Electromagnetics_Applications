@@ -37,6 +37,8 @@ description: Graduate-level roadmap connecting electromagnetic field theory, rec
 | [Scientific Data Acquisition & Telemetry](../spacecraft-data-systems/) | How are high-rate detector measurements time-tagged, packaged and delivered intact? |
 | [Spacecraft Qualification & Environmental Testing](../spacecraft-qualification/) | How is a scientifically accurate lab instrument shown to be flight-ready? |
 
+**Precision inertial hardware:** [IMU Internal Analog Circuits](../imu-circuits/) explains MEMS acceleration/gyro transduction, resonant drive loops, capacitive readout, demodulation, converter noise and calibration, linking circuit design to navigation and aerospace instruments.
+
 ## B. Advanced electromagnetic methods
 
 **Expert hardware case study:** [Phased-Array Hardware Implementation](../phased-array-hardware/) connects electromagnetic embedded-element patterns with RF/IF modules, bias and clock architecture, beamformer calibration, and HFSS–SystemVue–STK system models.

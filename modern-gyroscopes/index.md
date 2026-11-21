@@ -63,6 +63,8 @@ Modern systems largely replace macroscopic rotors with MEMS, optical, or resonan
 
 ---
 
+> **Detailed integrated circuit reference:** [IMU Hardware and Internal Analog Circuits](../imu-circuits/) explains gyro resonant drive, AGC/PLL, sense-mode charge amplification, coherent demodulation, quadrature cancellation, force rebalance and ADC integration.
+
 # MEMS gyroscopes
 
 ## 3. Coriolis principle

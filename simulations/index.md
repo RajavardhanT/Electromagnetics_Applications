@@ -189,3 +189,8 @@ The [Advanced Engineering Learning Map](../advanced-engineering/) connects these
 ### Covariance-aware adaptive arrays
 
 [MVDR/LCMV Python example](python/adaptive_beamforming_mvdr_lcmv.py) — compares conventional, loaded MVDR and LCMV beamforming using independent interference-only covariance training, with output SINR, WNG and constraints. See [AESA adaptive theory](../aesa/#advanced-adaptive-beamforming-mvdr-lcmv-gsc-and-robust-arrays) and [hardware implementation](../phased-array-hardware/).
+
+
+### MEMS IMU analog readout and quadrature rejection
+
+[Gyroscope drive/sense synchronous-demodulation Python model](python/imu_gyro_demodulation.py) — carrier drive, Coriolis-proportional rate signal, unwanted quadrature component, coherent I/Q readout, phase misalignment and low-pass filtering. The [IMU Internal Circuits](../imu-circuits/) page derives the physical and analog blocks and lists manufacturer references.

@@ -31,6 +31,8 @@ An IMU is therefore a sensor package; an INS is an estimation system built aroun
 
 ---
 
+**Sensor hardware companion:** [IMU Internal Circuits — MEMS accelerometers, Coriolis drive and sense loops, capacitive charge amplifiers, demodulation, ADCs and calibration](../imu-circuits/). This complements strapdown navigation by explaining how measured angular rate and specific force are produced electrically.
+
 ## 2. The six inertial measurements
 
 A basic 6-DOF IMU contains

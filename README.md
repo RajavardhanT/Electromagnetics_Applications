@@ -57,6 +57,8 @@ Start with the [Advanced Engineering Learning Map](advanced-engineering/) for se
 
 ## Atomic, quantum, space and precision systems
 
+- [IMU Internal Circuits and MEMS Sensor Readout](imu-circuits/)
+
 - [Quantum Technologies](quantum/)
 - [Rydberg Semiclassical Optics](rydberg-semiclassical-effects/)
 - [Ground-State Magnetometry](ground-state-magnetometry/)

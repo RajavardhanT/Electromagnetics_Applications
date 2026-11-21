@@ -858,3 +858,8 @@ Related: [High-Speed SerDes & IO](../high-speed-serdes/) · [Signal Integrity & 
 ## RF transceiver architecture context
 
 Mixers, VGAs, PLLs, ADC/DACs, baseband filters and calibration loops are best understood as parts of a complete radio architecture. See [RF Transceiver Architectures — Interview Ready](../rf-transceiver-architectures/) for superheterodyne, zero-IF, low-IF, direct-sampling and transmitter tradeoffs.
+
+
+## Application: integrated MEMS IMU analog readout
+
+The [IMU Internal Circuits](../imu-circuits/) chapter connects circuit fundamentals to a complete physical sensor: capacitive charge amplifiers, switched excitation, chopper/CDS offset removal, PLL and AGC loops, I/Q synchronous demodulation, electrostatic force-rebalance, sigma-delta conversion, filtering and bias/temperature calibration. The [gyro demodulation simulation](../simulations/python/imu_gyro_demodulation.py) shows quadrature leakage caused by phase-reference error.

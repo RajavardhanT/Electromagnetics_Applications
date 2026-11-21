@@ -22,6 +22,8 @@ Each script uses a **synthetic, idealized model**. Verify assumptions and substi
 
 - [adaptive_beamforming_mvdr_lcmv.py](adaptive_beamforming_mvdr_lcmv.py) — 12-element ULA with two interferers: conventional, diagonally loaded MVDR, LCMV, and output SINR. [Theory](../../aesa/#advanced-adaptive-beamforming-mvdr-lcmv-gsc-and-robust-arrays).
 
+- [imu_gyro_demodulation.py](imu_gyro_demodulation.py) — resonant gyro sensing with I/Q synchronous demodulation, quadrature feedthrough and phase-error-induced apparent rate bias. [IMU circuit reference](../../imu-circuits/).
+
 ## Recommended environment
 
 ```bash

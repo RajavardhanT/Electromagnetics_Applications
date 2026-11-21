@@ -48,3 +48,8 @@ An error-state EKF combines star-tracker attitude updates with gyro propagation;
 - [NASA SmallSat Attitude Determination & Control](https://s3vi.ndc.nasa.gov/ssri-kb/topics/28/).
 - J. R. Wertz, *Spacecraft Attitude Determination and Control*.
 - [Modern Gyroscopes](../modern-gyroscopes/) · [Inertial Navigation](../inertial-navigation/) · [Magnetic Cleanliness](../magnetic-cleanliness/).
+
+
+## IMU electronics and pointing accuracy
+
+A spacecraft IMU combines inertial MEMS or other gyro technology with analog sensing, digitization, synchronization, temperature compensation and calibration. For internal MEMS sensor and circuit-level physics see [IMU Internal Analog Circuits](../imu-circuits/); for strapdown navigation error propagation see [Modern Inertial Navigation](../inertial-navigation/). Attitude knowledge and control accuracy require care with bias drift, jitter, axis misalignment and platform vibration.
