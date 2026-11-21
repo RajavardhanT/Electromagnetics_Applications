@@ -18,6 +18,7 @@ Start with the [Advanced Engineering Learning Map](advanced-engineering/) for se
 ## Main entry points
 
 - [Knowledge Map](knowledge-map/)
+- [Technical Diagram Gallery — 96 original SVGs](diagram-gallery/)
 - [Quick Reference Hub](reference/)
 - [Worked Examples](worked-examples/)
 - [Interactive Calculators](calculators/)

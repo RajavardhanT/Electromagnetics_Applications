@@ -27,6 +27,16 @@
 
   // Full-text site search is maintained by assets/js/site-search.js.
 
+  // Place each chapter's topic-specific SVG just below its title.
+  const topicFigure = document.getElementById('auto-topic-diagram');
+  if (topicFigure) {
+    const main = document.querySelector('.content');
+    const hero = main && main.querySelector('.hero');
+    const heading = main && main.querySelector('h1');
+    if (hero) hero.insertAdjacentElement('afterend', topicFigure);
+    else if (heading) heading.insertAdjacentElement('afterend', topicFigure);
+  }
+
   const toc = document.getElementById('page-toc-list');
   if (toc) {
     const hs = [...document.querySelectorAll('.content h2, .content h3')].filter(h => !h.closest('.page-toc'));

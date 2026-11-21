@@ -74,6 +74,7 @@ description: A connected, practical reference from Maxwell's equations to RF eng
 
 <div class="card-grid category-tools">
 <a class="reference-card" data-symbol="ADV" href="advanced-engineering/"><span class="badge">Advanced</span><strong>Advanced Engineering Learning Map</strong><span>Seven disciplines, 17 new technical chapters, complete instrument case studies and reproducible numerical exercises.</span></a>
+<a class="reference-card" data-symbol="SVG" href="diagram-gallery/"><span class="badge">Visuals</span><strong>Technical Diagram Gallery</strong><span>96 original engineering SVG diagrams: physical mechanisms, hardware architectures, signal processing and measurement chains.</span></a>
 <a class="reference-card" data-symbol="MAP" href="knowledge-map/"><span class="badge">Map</span><strong>Knowledge Map</strong><span>Connections among fields, waves, forces, circuits, antennas, sensors and quantum interactions.</span></a>
 <a class="reference-card" data-symbol="Σ" href="reference/"><span class="badge">Reference</span><strong>Quick Reference</strong><span>Equations, scales, comparisons, scaling laws, derivations, misconceptions and history.</span></a>
 <a class="reference-card" data-symbol="123" href="worked-examples/"><span class="badge">Examples</span><strong>Worked Examples</strong><span>Numerical examples spanning RF, antennas, radar, optics, magnetometry and quantum sensing.</span></a>
