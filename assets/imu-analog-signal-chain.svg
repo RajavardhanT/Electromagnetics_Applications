@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 595" role="img" aria-labelledby="t d">
+<title id="t">MEMS IMU functional analog circuit signal chains</title><desc id="d">Accelerometer differential capacitive displacement bridge, excitation, charge amplifier, synchronous demodulation, low-pass and ADC; gyro resonant drive loop with phase tracking and gain control plus Coriolis sense, charge amplifier, quadrature I/Q demod and ADC.</desc>
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#071b31"/><stop offset="1" stop-color="#102f48"/></linearGradient><marker id="arr" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#58d7c3"/></marker><marker id="secondary" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#b6b8e6"/></marker></defs>
+<style>.b{fill:url(#bg)}.panel{fill:#0d2943;stroke:#365c74;stroke-width:1.5}.step{fill:#163b55;stroke:#68d7ce;stroke-width:1.4}.stepb{fill:#252f57;stroke:#c2c1ff;stroke-width:1.4}.text{fill:#e5f7ff;font:15px system-ui,Arial,sans-serif}.small{fill:#adcada;font:12px system-ui,Arial,sans-serif}.title{fill:#fff;font:700 22px system-ui,Arial,sans-serif}.section{fill:#80e8d8;font:700 16px system-ui,Arial,sans-serif}.sub{fill:#c7c8ff;font:700 14px system-ui,Arial,sans-serif}.line{stroke:#58d7c3;stroke-width:2.2;fill:none;marker-end:url(#arr)}.purple{stroke:#b6b8e6;stroke-width:2;fill:none;marker-end:url(#secondary)}.lbl{fill:#a6cad4;font:12px system-ui,Arial,sans-serif}</style>
+<rect class="b" x="0" y="0" width="1160" height="595" rx="13"/>
+<text x="30" y="37" class="title">Inside a 6-axis MEMS IMU — functional electronic signal chains</text>
+<text x="30" y="59" class="small">Simplified physical blocks; actual ASIC circuits and conversion order vary by manufacturer.</text>
+
+<rect class="panel" x="20" y="79" width="1120" height="192" rx="13"/>
+<text class="section" x="40" y="106">ACCELEROMETER · 3 AXES</text>
+<rect class="step" x="38" y="130" width="166" height="78" rx="9"/>
+<text class="text" x="121" y="152" text-anchor="middle">MEMS proof mass</text>
+<text class="small" x="121" y="173" text-anchor="middle">spring + C+ / C−</text>
+<text class="small" x="121" y="193" text-anchor="middle">ΔC ∝ displacement</text>
+<path class="line" d="M204 170 H239"/>
+<rect class="step" x="239" y="130" width="178" height="78" rx="9"/>
+<text class="text" x="328" y="152" text-anchor="middle">Charge amplifier</text>
+<text class="small" x="328" y="173" text-anchor="middle">capacitive feedback</text>
+<text class="small" x="328" y="193" text-anchor="middle">ΔV ≈ −ΔQ/Cf</text>
+<path class="line" d="M417 170 H452"/>
+<rect class="step" x="452" y="130" width="167" height="78" rx="9"/>
+<text class="text" x="535" y="152" text-anchor="middle">Synchronous</text>
+<text class="text" x="535" y="173" text-anchor="middle">demodulation</text>
+<text class="small" x="535" y="193" text-anchor="middle">excitation reference</text>
+<path class="line" d="M619 170 H654"/>
+<rect class="step" x="654" y="130" width="180" height="78" rx="9"/>
+<text class="text" x="744" y="152" text-anchor="middle">Low-pass / ADC</text>
+<text class="small" x="744" y="173" text-anchor="middle">sampling, decimation</text>
+<text class="small" x="744" y="193" text-anchor="middle">alias + noise control</text>
+<path class="line" d="M834 170 H869"/>
+<rect class="step" x="869" y="130" width="246" height="78" rx="9"/>
+<text class="text" x="992" y="152" text-anchor="middle">Digital compensation</text>
+<text class="small" x="992" y="173" text-anchor="middle">bias / scale / axes / T</text>
+<text class="small" x="992" y="193" text-anchor="middle">specific force (m/s²)</text>
+<rect class="stepb" x="251" y="224" width="270" height="34" rx="7"/>
+<text class="small" x="386" y="245" text-anchor="middle">Electrode carrier / bias excitation</text>
+<path class="purple" d="M251 241 H121 V209"/>
+<path class="purple" d="M521 241 H535 V209"/>
+
+<rect class="panel" x="20" y="289" width="1120" height="281" rx="13"/>
+<text x="40" y="317" class="section">GYROSCOPE · 3 AXES</text>
+<text x="40" y="338" class="sub">Resonant drive loop</text>
+<rect class="stepb" x="39" y="355" width="215" height="65" rx="9"/>
+<text class="text" x="146" y="378" text-anchor="middle">Drive mode resonator</text>
+<text class="small" x="146" y="400" text-anchor="middle">x(t), capacitive pickoff</text>
+<path class="purple" d="M254 387 H306"/>
+<rect class="stepb" x="306" y="355" width="212" height="65" rx="9"/>
+<text class="text" x="412" y="378" text-anchor="middle">PLL + amplitude AGC</text>
+<text class="small" x="412" y="400" text-anchor="middle">track resonance, hold X</text>
+<path class="purple" d="M412 421 V443 H146 V421"/>
+<text class="lbl" x="275" y="438">electrostatic drive feedback</text>
+
+<text x="615" y="338" class="sub">Orthogonal Coriolis sense loop</text>
+<rect class="step" x="610" y="355" width="165" height="65" rx="9"/>
+<text class="text" x="692" y="378" text-anchor="middle">Sense capacitance</text>
+<text class="small" x="692" y="400" text-anchor="middle">Ω → Coriolis motion</text>
+<path class="line" d="M775 387 H805"/>
+<rect class="step" x="805" y="355" width="128" height="65" rx="9"/>
+<text class="text" x="869" y="378" text-anchor="middle">Charge amp</text>
+<text class="small" x="869" y="400" text-anchor="middle">low-noise AFE</text>
+<path class="line" d="M933 387 H961"/>
+<rect class="step" x="961" y="355" width="153" height="65" rx="9"/>
+<text class="text" x="1037" y="378" text-anchor="middle">I/Q demod</text>
+<text class="small" x="1037" y="400" text-anchor="middle">rate + quadrature</text>
+<path class="purple" d="M518 369 H563 V333 H1037 V354"/>
+<text class="lbl" x="615" y="351">phase-coherent reference</text>
+
+<path class="line" d="M1037 420 V474 H875"/>
+<rect class="step" x="645" y="454" width="230" height="61" rx="9"/>
+<text class="text" x="760" y="479" text-anchor="middle">LPF / ADC / correction</text>
+<text class="small" x="760" y="500" text-anchor="middle">rate + bias + quadrature trim</text>
+<path class="line" d="M645 485 H583"/>
+<rect class="step" x="360" y="454" width="223" height="61" rx="9"/>
+<text class="text" x="471" y="478" text-anchor="middle">Angular rate output</text>
+<text class="small" x="471" y="499" text-anchor="middle">ωx, ωy, ωz (rad/s)</text>
+<rect class="stepb" x="38" y="474" width="270" height="50" rx="9"/>
+<text class="text" x="173" y="495" text-anchor="middle">Optional force rebalance</text>
+<text class="small" x="173" y="513" text-anchor="middle">sense electrostatic actuation</text>
+<path class="purple" d="M645 502 H616 V540 H173 V525"/>
+<path class="purple" d="M173 473 V463 H692 V421"/>
+<text class="lbl" x="630" y="555">Drive control, quadrature rejection and force feedback are distinct loops</text>
+</svg>
