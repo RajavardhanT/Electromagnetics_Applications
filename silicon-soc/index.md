@@ -1114,3 +1114,8 @@ The PHY/controller implementation on silicon must ultimately meet a package and 
 ## 60. Related pages
 
 [High-Speed SerDes & IO](../high-speed-serdes/) · [Analog Mixed-Signal IC Design](../analog-mixed-signal/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [Computational Methods](../computational-methods/) · [EMI / EMC](../emc/)
+
+
+## Example platform: Snapdragon phone SoC and external RF
+
+The [Mobile Phone RF-to-Digital Architecture](../mobile-phone-architecture/) page distinguishes the application CPU, GPU, NPU, camera ISP, cellular modem baseband and physically separate RFIC/RFFE hardware, including host-to-modem control/data interfaces. It is a practical case of mixed-signal and SoC partitioning.

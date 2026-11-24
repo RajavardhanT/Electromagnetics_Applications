@@ -1195,3 +1195,8 @@ That small map is enough to navigate most day-to-day 3GPP RF and conformance wor
 ## 59. Related pages
 
 [Wireless & MIMO](../wireless/) · [RF & Microwave](../rf-microwave/) · [Measurements & Instruments](../measurements/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [Microwave & Space Electronics Components](../microwave-space-components/)
+
+
+## Practical UE implementation — hardware to 3GPP layers
+
+For how the UE antenna/RFFE, RF transceiver, 5G NR physical-layer DSP, MAC/RLC/PDCP, Snapdragon modem and Android application processor are connected, see [Mobile Phone Architecture — RF to Digital](../mobile-phone-architecture/). The page explains which functions are defined by 3GPP versus chosen by silicon/RF vendors.

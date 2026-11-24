@@ -241,3 +241,8 @@ OFDM phase noise has at least two distinct effects: common phase error rotates s
 **Advanced exercise:** simulate a 4×4 channel with adjustable spatial correlation and imperfect CSI. Compare ZF, MMSE and singular-mode processing at fixed total transmitted power; report BER and EVM as well as rate.
 
 **Further reading:** D. Tse and P. Viswanath, [*Fundamentals of Wireless Communication*](https://web.stanford.edu/~dntse/wireless_book.html); A. Goldsmith, *Wireless Communications*.
+
+
+## Mobile-phone implementation: from antenna to modem and Android
+
+The [Mobile Phone Architecture — RF to Digital](../mobile-phone-architecture/) chapter connects MIMO and 5G NR signal processing to actual handset antennas, RF front ends, RF transceivers, ADC/DAC hardware, cellular modem decoding and the Snapdragon/Android computing environment. It includes detailed transmit and receive diagrams, NR PHY/MAC/PDCP, and 3GPP standards.

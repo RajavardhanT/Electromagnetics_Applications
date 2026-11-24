@@ -39,6 +39,8 @@ description: Graduate-level roadmap connecting electromagnetic field theory, rec
 
 **Precision inertial hardware:** [IMU Internal Analog Circuits](../imu-circuits/) explains MEMS acceleration/gyro transduction, resonant drive loops, capacitive readout, demodulation, converter noise and calibration, linking circuit design to navigation and aerospace instruments.
 
+**Complete commercial RF/digital system:** [Mobile Phone Architecture](../mobile-phone-architecture/) traces cellular signals from installed antennas and RF front ends through I/Q converters, 5G NR baseband, Snapdragon platforms and Android applications.
+
 ## B. Advanced electromagnetic methods
 
 **Expert hardware case study:** [Phased-Array Hardware Implementation](../phased-array-hardware/) connects electromagnetic embedded-element patterns with RF/IF modules, bias and clock architecture, beamformer calibration, and HFSS–SystemVue–STK system models.

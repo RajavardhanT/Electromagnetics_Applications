@@ -311,3 +311,6 @@ Quantization noise and clipping are distinct. An unclipped ideal quantizer has q
 ## Related pages
 
 [RF Transceiver Architectures](../rf-transceiver-architectures/) · [RF & Microwave](../rf-microwave/) · [Modern Signal Generator](../modern-signal-generator/) · [Spectrum Analyzer Signal Processing](../spectrum-analyzer-signal-processing/) · [Data Converters](../data-converters/) · [Software-Defined Radio](../sdr/) · [3GPP Standards](../3gpp-standards/) · [Phased-Array Hardware](../phased-array-hardware/) · [Measurements & Instruments](../measurements/)
+
+
+**Mobile handset context:** [Mobile Phone RF-to-Digital Architecture](../mobile-phone-architecture/) places LO leakage, I/Q imbalance, PA memory, blocker desense, noise figure and ADC jitter into the complete 5G NR modem and Snapdragon computing path.

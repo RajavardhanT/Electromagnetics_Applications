@@ -42,6 +42,7 @@ Start with the [Advanced Engineering Learning Map](advanced-engineering/) for se
 - [Software-Defined Radio (SDR)](sdr/)
 - [Antennas & Radiation](antennas/)
 - [Wireless & MIMO](wireless/)
+- [Mobile Phone Architecture — RF Front End to Snapdragon/Android](mobile-phone-architecture/)
 - [AESA / Phased Arrays](aesa/)
 - [Phased-Array Hardware Implementation (Expert)](phased-array-hardware/)
 - [Radar & Remote Sensing](radar/)

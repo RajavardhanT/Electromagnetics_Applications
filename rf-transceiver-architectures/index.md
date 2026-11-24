@@ -1753,3 +1753,8 @@ These six equations cover a surprising fraction of architecture interviews.
 ## Multi-element transceiver hardware
 
 For per-element RF chains, front-end modules, beamformer ICs, LO distribution, digital/hybrid beamforming, and OTA calibration, see [Phased-Array Hardware Implementation](../phased-array-hardware/).
+
+
+## Practical handset application: Snapdragon phone RF chains
+
+See [Mobile Phone Architecture](../mobile-phone-architecture/) for a physical phone design from multiband antenna and switch/duplexer through LNA/PA, synthesizer and I/Q RFIC, converters, NR modem, SoC and Android IP stack. The article separates RFIC, modem baseband and Snapdragon application-processor roles.
