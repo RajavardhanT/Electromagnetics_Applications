@@ -111,3 +111,8 @@ The Ansys-origin tools emphasize **electromagnetic, thermal, physical and reliab
 ## Expert phased-array system workflow
 
 See [Phased-Array Hardware Implementation](../phased-array-hardware/) for HFSS finite-array coupling and embedded element patterns, SystemVue RF/mixed-signal co-simulation, and STK installed-antenna mission scenarios.
+
+
+## SPICE-to-EM and semiconductor simulation
+
+For how an electrical netlist and nonlinear device models connect to HFSS/PCB electromagnetic extraction and foundry circuit verification, see [SPICE Circuit Simulation](../spice-circuit-simulation/). It compares QSPICE, LTspice, ngspice, PSpice, Spectre, HSPICE, Xyce and Keysight ADS, including the boundaries between a circuit simulator and a full-wave EM solver.

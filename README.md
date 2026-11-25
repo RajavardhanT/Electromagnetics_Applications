@@ -24,6 +24,7 @@ Start with the [Advanced Engineering Learning Map](advanced-engineering/) for se
 - [Interactive Calculators](calculators/)
 - [Measurements & Instruments](measurements/)
 - [Simulation Library](simulations/)
+- [SPICE Circuit Simulation, QSPICE and Related Software](spice-circuit-simulation/)
 - [Theory ↔ Experiment](theory-experiment/)
 - [Computational Methods](computational-methods/)
 - [Arduino UNO Q — Technical Hardware Reference](arduino-uno-q/)

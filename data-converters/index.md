@@ -1347,3 +1347,8 @@ $$
 Understanding ADCs and DACs therefore connects analog design, RF, digital signal processing, SerDes, test equipment, and embedded systems.
 
 Related: [Analog Mixed-Signal IC Design](../analog-mixed-signal/) · [High-Speed SerDes & IO](../high-speed-serdes/) · [Signal Integrity & Power Integrity](../signal-power-integrity/) · [Measurements & Instruments](../measurements/) · [Arduino Boards](../arduino/) · [Microwave & Space Electronics Components](../microwave-space-components/)
+
+
+## Simulation of ADC analog front ends
+
+[SPICE Circuit Simulation](../spice-circuit-simulation/) explains how to model sample-and-hold input impedance, reference buffers, switch charge injection, amplifier noise, anti-alias networks and analog settling. The analog SPICE model must be complemented by a digital sampling/quantization model for a complete converter.

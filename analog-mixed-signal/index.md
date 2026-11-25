@@ -863,3 +863,8 @@ Mixers, VGAs, PLLs, ADC/DACs, baseband filters and calibration loops are best un
 ## Application: integrated MEMS IMU analog readout
 
 The [IMU Internal Circuits](../imu-circuits/) chapter connects circuit fundamentals to a complete physical sensor: capacitive charge amplifiers, switched excitation, chopper/CDS offset removal, PLL and AGC loops, I/Q synchronous demodulation, electrostatic force-rebalance, sigma-delta conversion, filtering and bias/temperature calibration. The [gyro demodulation simulation](../simulations/python/imu_gyro_demodulation.py) shows quadrature leakage caused by phase-reference error.
+
+
+## SPICE device and circuit verification
+
+See [SPICE, QSPICE and Related Circuit Simulators](../spice-circuit-simulation/) for the numerical engine behind transistor, op-amp, charge-amplifier, switched-capacitor and regulator simulation. It covers sparse modified nodal analysis, Newton iteration, transient integration, PDK/vendor models, convergence, model validation, and the latest verified 2026 QSPICE developments.

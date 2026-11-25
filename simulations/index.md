@@ -194,3 +194,8 @@ The [Advanced Engineering Learning Map](../advanced-engineering/) connects these
 ### MEMS IMU analog readout and quadrature rejection
 
 [Gyroscope drive/sense synchronous-demodulation Python model](python/imu_gyro_demodulation.py) — carrier drive, Coriolis-proportional rate signal, unwanted quadrature component, coherent I/Q readout, phase misalignment and low-pass filtering. The [IMU Internal Circuits](../imu-circuits/) page derives the physical and analog blocks and lists manufacturer references.
+
+
+### SPICE analog and power-electronics fundamentals
+
+Start with the [SPICE / QSPICE technical chapter](../spice-circuit-simulation/) and the reproducible [RC low-pass netlist](spice/rc_lowpass.cir). Compare results with the independent [Python analytic RC reference](python/spice_rc_reference.py), including a 15.915 kHz pole and 10 µs time constant. The chapter also covers nonlinear device models, QSPICE recent updates and RF harmonic-balance versus time-domain SPICE.

@@ -24,6 +24,8 @@ Each script uses a **synthetic, idealized model**. Verify assumptions and substi
 
 - [imu_gyro_demodulation.py](imu_gyro_demodulation.py) — resonant gyro sensing with I/Q synchronous demodulation, quadrature feedthrough and phase-error-induced apparent rate bias. [IMU circuit reference](../../imu-circuits/).
 
+- [spice_rc_reference.py](spice_rc_reference.py) — analytic RC low-pass magnitude, phase and step response for comparison with the [SPICE RC example](../spice/rc_lowpass.cir) and [SPICE simulator chapter](../../spice-circuit-simulation/).
+
 ## Recommended environment
 
 ```bash

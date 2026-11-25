@@ -386,3 +386,8 @@ For a linear system \(\mathbf A\mathbf x=\mathbf b\), the condition number \(\ka
 **Advanced exercise:** compare dense eigensolvers, sparse shift-invert solvers and overlap-tracked eigenpairs for a parameter-dependent Hamiltonian; report eigen-residual norms, state-overlap continuity, runtime and memory use. Validate results across precision settings and hardware backends.
 
 **Further reading:** N. J. Higham, *Accuracy and Stability of Numerical Algorithms*; Y. Saad, *Iterative Methods for Sparse Linear Systems*.
+
+
+## Sparse circuit numerical methods
+
+The [SPICE and QSPICE chapter](../spice-circuit-simulation/) applies numerical linear algebra to modified nodal equations, nonlinear Newton solves, adaptive transient integration, AC perturbations and practical conditioning/convergence diagnostics. The [RC reference calculation](../simulations/python/spice_rc_reference.py) provides a reproducible analytic benchmark for an actual SPICE netlist.
