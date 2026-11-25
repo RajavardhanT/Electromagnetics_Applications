@@ -1,0 +1,7 @@
+* RC low-pass in classic SPICE netlist format
+V1 in 0 AC 1 PULSE(0 1 0 1n 1n 20u 40u)
+R1 in out 1k
+C1 out 0 10n
+.ac dec 80 100 10Meg
+.tran 0 200u 0 50n
+.end
