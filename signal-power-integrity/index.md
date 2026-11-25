@@ -420,6 +420,10 @@ Long power paths and connector inductance can produce significant transient droo
 
 ---
 
+**PMIC system-level perspective:** The regulator is only the source of the rail; the full PCB voltage at a CPU/FPGA/RFIC pin depends on the intervening PDN, sequencing, load transients and decoupling. See [PMICs on PCBs — rail sequencing, protection and layout](../hardware-interfaces-pcb-flex/#39a-pmics-on-pcbs--power-architecture-sequencing-and-physical-design) for a complete power tree, SPICE workflow and hot-loop/feedback routing criteria.
+
+---
+
 ## 20. Plane pairs and PDN resonances
 
 Power and ground planes form distributed capacitance but also support electromagnetic cavity modes.

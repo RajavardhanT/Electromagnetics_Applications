@@ -734,6 +734,114 @@ The PCB layout must therefore connect SI and PI thinking.
 
 ---
 
+## 39A. PMICs on PCBs — power architecture, sequencing and physical design
+
+A **power-management integrated circuit (PMIC)** manages the **electrical operating conditions of a board**, not just conversion from one voltage to another. It can integrate several buck/boost converters, low-dropout regulators (LDOs), load switches, supervisors, a programmable sequencer, fault handling, telemetry, and sometimes charging/power-path functions. The exact feature set depends on the device.
+
+**Why this matters:** A processor/FPGA, RF transceiver, ADC, memory and sensors commonly require *different* voltages, startup ordering, noise levels and transient current capabilities. A PMIC coordinates these requirements while reducing PCB area and component count relative to a set of independent regulators. The PCB **power-distribution network (PDN)**—traces, planes, vias, capacitors and connector paths—still determines what voltage reaches each actual silicon pin.
+
+<figure class="topic-figure">
+  <a href="{{ '/assets/pmic-pcb-power-tree.svg' | relative_url }}">
+    <img src="{{ '/assets/pmic-pcb-power-tree.svg' | relative_url }}" loading="lazy" decoding="async" alt="PCB power tree: battery or adapter through protection and filtering into a programmable multi-output PMIC with switching buck rails, low-noise LDOs, load switches, sequencing, power-good signals, I2C control and power distribution to processor, memory, RF, ADC and sensors.">
+  </a>
+  <figcaption>Conceptual multi-rail PMIC and PCB power tree. The values are illustrative, not a recommendation for a particular SoC or RFIC. <a href="{{ '/assets/pmic-pcb-power-tree.svg' | relative_url }}">Open scalable SVG</a>.</figcaption>
+</figure>
+
+### PMIC functions and circuit blocks
+
+| Function | Electrical implementation | Why the PCB designer cares |
+|---|---|---|
+| **Buck / boost / buck-boost** | High-frequency switches, controller, inductors and input/output capacitors | Efficient point-of-load conversion; switching EMI, ripple, loop stability and heat |
+| **LDO regulator** | Error amplifier, bandgap/reference, pass transistor and compensation | Low-noise analog rails with dropout/thermal limits; PSRR is frequency dependent |
+| **Sequencer + PGOOD** | Undervoltage comparators, programmable delays, enables and reset logic | Bring core, memory, I/O, PLL and RF rails up/down in a permissible order |
+| **Dynamic voltage scaling (DVS)** | Voltage programming via I²C/SPI or programmable states | Processor operating-point power savings, ramp-time/settling requirements |
+| **Load switches / power gating** | High-side MOSFET and controlled slew rate | Shut off peripherals, limit inrush, isolate faulty loads |
+| **Protection + supervisor** | UVLO, OVP, OCP, short-circuit, thermal shutdown, watchdog and reset | Prevent brownout, latch-up, uncontrolled startup and damage |
+| **Battery charger / power-path** | Charge control, input priority, source qualification | Phones and portable systems may need charge/battery/source management; not every PMIC includes it |
+| **Monitoring / telemetry** | ADC, voltage/current/temperature monitors, fault registers, interrupt lines | Bring-up, thermal derating, reliability and field failure diagnosis |
+
+### A representative multi-rail PCB
+
+| Load | Illustrative rail | Design emphasis |
+|---|---|---|
+| CPU/FPGA core | **0.9–1.1 V**, high current | Tight tolerance, low PDN impedance, fast transients, remote sense where supported |
+| DDR / memory | **1.1 / 1.2 / 1.8 V** (technology dependent) | Sequence, reference/termination requirements, supply noise |
+| I/O logic | **1.8 or 3.3 V** | Interface-domain compatibility and startup isolation |
+| RF PLL / ADC analog | **1.8 / 3.0 / 3.3 V**, as specified | Ripple, spur coupling, PSRR, regulator/LDO selection |
+| Sensors / always-on block | **1.8 or 3.3 V** | Low standby current, wake-up and retention |
+
+These values are **examples, not a universal power tree**. Use the SoC, memory, RFIC and converter power-pin tables and the corresponding PMIC reference design. A rail named "1.8 V" may serve several loads with very different noise and current requirements.
+
+### Design equations
+
+For an ideal continuous-conduction buck regulator,
+
+$
+V_\mathrm{out}\approx D V_\mathrm{in},
+\qquad
+P_\mathrm{loss}=P_\mathrm{out}\left(\frac1\eta-1\right).
+$
+
+This ignores dead time, switch/inductor loss, control modes and minimum on-time limits; it is useful for a first-pass duty-cycle and heat estimate.
+
+**Example:** a 5 V, 2 A regulator supplies 10 W. At an illustrative 92% efficiency, its conversion loss is about **0.87 W**, which must be thermally managed on the board.
+
+For the complete PDN, a first-order transient-error budget is
+
+$
+\Delta V\approx
+\Delta I\,R_\mathrm{path}
++L_\mathrm{path}\frac{dI}{dt}
++\frac{\Delta Q}{C_\mathrm{effective}}.
+$
+
+This is a **budget illustration**, not a universal simultaneous exact equation: impedance and capacitive response are frequency/time dependent. A commonly used target-impedance estimate is
+
+$
+\boxed{Z_\mathrm{target}\lesssim
+\frac{\Delta V_\mathrm{allowable}}{\Delta I_\mathrm{step}}}
+$
+
+over the relevant load-current spectrum. For a 40 mV allowable deviation and 4 A current change, the target is **10 mΩ** in the simplified impedance criterion.
+
+### Power sequencing, control and faults
+
+**Representative startup:** input source qualified → always-on/reference rails → core regulator stable → memory/I/O rails valid → PLL/analog rails settled → **PGOOD / reset release** → application processor enables RF peripherals. The actual sequence can differ substantially, especially in memories and processors with bidirectional dependencies.
+
+- Assert reset or hold downstream enables until required rails satisfy **voltage thresholds**, not only a fixed time delay.
+- Respect maximum rail-to-rail differences during partial power states. Otherwise an unpowered I/O can be **back-powered through ESD structures**.
+- Specify ramp times, inrush limits, output discharge, power-down sequencing and behavior during a brownout.
+- Define fault responses: retry, latch-off, controlled shutdown or system reset; capture the fault cause in registers where provided.
+- Account for **DVS transitions** and load-step droop when the processor moves between performance states.
+
+For the underlying design approach see [TI — PMICs for processor applications](https://www.ti.com/lit/an/slda039b/slda039b.pdf), [ADI — multirail monitoring and sequencing](https://www.analog.com/en/resources/analog-dialogue/articles/monitoring-and-sequencing-multirail-power-supply-sys.html), and [ADI — FPGA power sequencing](https://www.analog.com/en/resources/analog-dialogue/articles/power-management-for-fpgas.html).
+
+### PCB layout — the high-current switch loop and quiet feedback loop
+
+1. **Minimize hot-loop area:** place high-frequency input bypass capacitors directly across the converter input supply and power return; minimize the switching current path through MOSFETs, capacitors and package pins.
+2. **Keep the switch node (SW) compact:** it has high $dV/dt$ and capacitive coupling. Avoid routing high-impedance feedback, analog, clock or sensor traces underneath/adjacent to SW copper.
+3. **Separate switching and sensitive signal routing:** route feedback/Kelvin sense away from noisy traces, use the recommended AGND/PGND connection and return paths, and maintain continuous references rather than indiscriminately splitting ground planes.
+4. **Place inductors and input/output capacitors intentionally:** the *power loop* and the *sense path* have different current and noise requirements; check capacitor DC bias derating, ESR and ESL.
+5. **Design for heat:** provide adequate copper, thermal vias, pad geometry and airflow/heat spread; validate junction and board temperatures at duty-cycle extremes.
+6. **Control EMI:** consider spread spectrum when supported, shielded inductors, rise-time control, filtering and input-cable conducted emissions; validate both radiated and conducted behavior.
+7. **Sense at the load when appropriate:** remote sensing may compensate DC plane/trace drop, but it requires a proper routing and stability analysis; never connect a remote-sense pin contrary to the PMIC datasheet.
+
+**Sources:** [TI — how to place passives around a PMIC](https://www.ti.com/document-viewer/lit/html/ssztcc7), [TI — buck PCB layout and EMI](https://www.ti.com/document-viewer/lit/html/sszt259), [TI — remote-sense placement](https://www.ti.com/document-viewer/lit/html/SSZTAM1/GUID-1D8CF21E-B05F-42C3-9F48-094C1DC90ACE).
+
+### Simulation and validation workflow
+
+**SPICE/QSPICE:** simulate an input 12 V (or actual battery) source, regulator switch/driver/inductor, real capacitor models, load-step current, rail ramp/enable sequence, PGOOD threshold and brownout. Characterize output ripple, compensation stability, current limit and dissipation. Import vendor macro-models with their documented operating range.
+
+**PCB/SIwave or PDN analysis:** extract resistance and AC impedance of power/ground planes, vias, BGA breakouts and capacitor mounting. Use that information to estimate supply droop at the *load pads*. Combine with power-stage simulation or measured impedance; do not infer the complete board PDN from ideal SPICE capacitors.
+
+**Bench acceptance:** record all rails simultaneously during cold start, normal boot, high-load transition, RF transmission burst and fault recovery. Measure with a short-ground / coax probe method to avoid false switching spikes from probe loops. Check rail ripple spectra near RF/PLL/ADC spurs, reset timing, PGOOD, efficiency, thermals and EMI.
+
+**Concrete components to study:** [TI multi-channel PMIC portfolio](https://www.ti.com/en-us/product-category/power-management/multi-channel-ics-pmic), [ADI ADP5014 multichannel power management example](https://www.analog.com/en/products/adp5014.html), and [ADI multirail sequencing application note AN-1311](https://www.analog.com/en/resources/app-notes/an-1311.html).
+
+**Related:** [SPICE & QSPICE Simulation](../spice-circuit-simulation/) · [Signal & Power Integrity](../signal-power-integrity/) · [Mobile Phone Architecture](../mobile-phone-architecture/) · [Analog Mixed-Signal IC Design](../analog-mixed-signal/).
+
+---
+
 # Part XI — Flex and rigid-flex
 
 ## 40. Why use flex

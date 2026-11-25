@@ -252,6 +252,8 @@ A phone requires multiple coordinated clock and power domains:
 
 **RF exposure and regulatory controls** impose conducted and radiated-power constraints. Power boosting, dynamic antenna tuning and modem-controlled transmit features must operate within applicable SAR/exposure and spectrum limits.
 
+**PMIC-on-PCB implementation:** The Snapdragon application processor, cellular modem, LPDDR, RFIC, analog converter, PA and always-on domains impose different voltage, current, noise and power-up constraints. The PMIC and board PDN coordinate buck/LDO rails, dynamic voltage scaling, source/battery management, PGOOD/reset, thermal protection and fast transient supply current. For switching-loop layout, rail sequencing, SoC power-pin droop and power-integrity validation, see [Role of PMICs on PCBs](../hardware-interfaces-pcb-flex/#39a-pmics-on-pcbs--power-architecture-sequencing-and-physical-design).
+
 ## 11. Quantitative RF-to-digital sanity checks
 
 ### 11.1 Receiver thermal noise

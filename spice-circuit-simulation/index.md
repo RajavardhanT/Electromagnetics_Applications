@@ -261,6 +261,12 @@ Be careful with **gmin** and leakage: they are often numerical aids and can also
 
 **Project E — RF supply pulsing:** model pulsed PA drain bias and supply droop, assess voltage ringing and effect on real RF PA operating point; do not infer EVM from a supply transient without a PA RF sensitivity model.
 
+### PMIC and PCB power-tree simulation
+
+A **PMIC** manages multiple voltage rails, enable sequencing, power-good/fault supervision and often buck/LDO regulation. A practical QSPICE/LTspice project should couple a switching-regulator plant to **time-dependent processor load steps**, capacitor ESR/ESL and realistic PCB resistance/inductance. Model startup ramp, brownout, PGOOD timing, load-switch inrush and thermal dissipation; then correlate at the **SoC power pins**, not only the converter output.
+
+See the [dedicated PMIC-on-PCB implementation section](../hardware-interfaces-pcb-flex/#39a-pmics-on-pcbs--power-architecture-sequencing-and-physical-design) for an annotated power-tree diagram, rail definitions, sequencing/faults, hot-loop layout, PDN target impedance and TI/ADI references. SPICE alone cannot replace distributed PDN extraction and oscilloscope/impedance validation.
+
 ## 14. Practical study sequence
 
 1. **DC / AC fundamentals:** divider, RC, RL and RLC; check poles, time constants and passivity against hand calculations.
