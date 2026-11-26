@@ -661,16 +661,21 @@ This is a fixed spatial matched filter. It is not generally SINR-optimal in colo
 MVDR minimizes residual interference-plus-noise power with unity response in the desired look direction:
 
 $$
-\min_{\mathbf w}\ \mathbf w^H\mathbf R_{i+n}\mathbf w
-\quad\mathrm{subject\ to}\quad\mathbf w^H\mathbf a_0=1.
+\begin{aligned}
+\underset{\mathbf w}{\operatorname{minimize}}\quad
+&\mathbf w^H\mathbf R_{i+n}\mathbf w,\\
+\text{subject to}\quad &\mathbf w^H\mathbf a_0=1.
+\end{aligned}
 $$
 
 For positive-definite $\mathbf R_{i+n}$,
 
 $$
-\boxed{\mathbf w_{\mathrm{MVDR}}=
+\boxed{\displaystyle
+\mathbf w_{\mathrm{MVDR}}=
 \frac{\mathbf R_{i+n}^{-1}\mathbf a_0}
-{\mathbf a_0^H\mathbf R_{i+n}^{-1}\mathbf a_0}.}
+{\mathbf a_0^H\mathbf R_{i+n}^{-1}\mathbf a_0}
+}.
 $$
 
 **Short derivation:** stationarity of the constrained quadratic form gives $\mathbf R\mathbf w=\lambda\mathbf a_0$; imposing $\mathbf a_0^H\mathbf w=1$ fixes the scalar $\lambda$. In code solve linear systems; do **not** explicitly calculate $\mathbf R^{-1}$.
@@ -682,7 +687,7 @@ P_{\mathrm{Capon}}(\theta)=
 \frac{1}{\mathbf a(\theta)^H\mathbf R_x^{-1}\mathbf a(\theta)}.
 $$
 
-This directional power estimator is not identical to the far-field gain pattern of a *fixed* MVDR weight vector, $|\mathbf w^H\mathbf a(\theta)|^2$.
+This directional power estimator is not identical to the far-field gain pattern of a *fixed* MVDR weight vector, $\lvert\mathbf w^H\mathbf a(\theta)\rvert^2$.
 
 **MPDR distinction:** if the covariance is estimated using snapshots that also contain the desired signal, it is the total-data covariance $\mathbf R_x$, not the target-free $\mathbf R_{i+n}$. With steering mismatch, minimizing total output power can **suppress the target itself** (signal self-nulling). Prefer target-free training data or rigorously modeled target protection when possible.
 
@@ -691,18 +696,24 @@ This directional power estimator is not identical to the far-field gain pattern 
 MVDR generalizes to several complex gain constraints. Let $\mathbf C\in\mathbb C^{N\times K}$ contain constraint steering vectors and $\mathbf f\in\mathbb C^K$ contain desired complex responses:
 
 $$
-\min_{\mathbf w}\ \mathbf w^H\mathbf R_{i+n}\mathbf w,
-\qquad \mathbf C^H\mathbf w=\mathbf f.
+\begin{aligned}
+\underset{\mathbf w}{\operatorname{minimize}}\quad
+&\mathbf w^H\mathbf R_{i+n}\mathbf w,\\
+\text{subject to}\quad &\mathbf C^H\mathbf w=\mathbf f.
+\end{aligned}
 $$
 
 The closed-form solution is
 
 $$
 \boxed{
-\mathbf w_{\mathrm{LCMV}}=
-\mathbf R_{i+n}^{-1}\mathbf C
-(\mathbf C^H\mathbf R_{i+n}^{-1}\mathbf C)^{-1}\mathbf f.
-}
+\begin{aligned}
+\mathbf w_{\mathrm{LCMV}}
+&=\mathbf R_{i+n}^{-1}\mathbf C\\
+&\quad\cdot
+(\mathbf C^H\mathbf R_{i+n}^{-1}\mathbf C)^{-1}\mathbf f
+\end{aligned}
+}.
 $$
 
 For a desired direction $\theta_0$ and two explicitly nulled interferers,
@@ -732,9 +743,8 @@ $$
 \boxed{
 \mathbf R_\delta=
 \hat{\mathbf R}+
-\delta\,\frac{\operatorname{tr}(\hat{\mathbf R})}{N}\mathbf I,
-\quad\delta>0.
-}
+\delta\,\frac{\operatorname{tr}(\hat{\mathbf R})}{N}\mathbf I
+},\qquad\delta>0.
 $$
 
 Replace $\mathbf R$ with $\mathbf R_\delta$ in the MVDR/LCMV equations. Loading stabilizes the linear solve and can make the beamformer less sensitive to array-model error; excess loading reduces interference adaptivity. Another approach is covariance shrinkage,
@@ -786,10 +796,10 @@ Compute digital MVDR/LCMV in the **$M$-channel beamspace** using these transform
 ### 8. Performance metrics and common failure modes
 
 | Metric | Expression or meaning |
-|---|---|
-| Output SINR | $\displaystyle\mathrm{SINR}_{\mathrm{out}}=\frac{P_s|\mathbf w^H\mathbf a_0|^2}{\mathbf w^H\mathbf R_{i+n}\mathbf w}$ |
-| White-noise gain | $\displaystyle\mathrm{WNG}=\frac{|\mathbf w^H\mathbf a_0|^2}{\mathbf w^H\mathbf w}$ for identical uncorrelated element noise |
-| Constraint error | $\|\mathbf C^H\mathbf w-\mathbf f\|_2$; verify after quantization and calibration |
+|:---|:---|
+| Output SINR | $\displaystyle\mathrm{SINR}_{\mathrm{out}}=\frac{P_s\lvert\mathbf w^H\mathbf a_0\rvert^2}{\mathbf w^H\mathbf R_{i+n}\mathbf w}$ |
+| White-noise gain | $\displaystyle\mathrm{WNG}=\frac{\lvert\mathbf w^H\mathbf a_0\rvert^2}{\mathbf w^H\mathbf w}$ for identical, uncorrelated element noise |
+| Constraint error | $\lVert\mathbf C^H\mathbf w-\mathbf f\rVert_2$; verify after quantization and calibration |
 | Model mismatch | Difference between assumed $\mathbf a$ and installed/temperature-dependent measured manifold |
 | Sample support | Independent snapshots relative to channel dimension and interference rank |
 | Wideband squint | Need frequency-dependent steering, subbands or TTD |
