@@ -33,6 +33,40 @@ description: Expert physical-to-digital guide to smartphone antennas, RF front e
 
 **Do not confuse a logic block with a physical package.** For instance, a modem may be integrated into a Snapdragon SoC while its RFIC is a companion chip; other phone designs use discrete baseband chips. One receive branch can cross several physical devices.
 
+## 1A. Visual guide — real smartphone RF architectures, circuits and modem processing
+
+**Recommended way to study this page:** first understand the functional [RF-to-digital overview](../assets/topic-diagrams/mobile-phone-architecture.svg) and [detailed receive/transmit SVG](../assets/mobile-rf-digital-chain.svg). Then open the original engineering figures below in order. Each source illustrates **one level of abstraction**: a platform block diagram, a physical RF front end, an internal receiver, digital baseband, or a populated PCB. No single diagram shows every transistor, package and software module in an actual phone.
+
+### Visual reference map
+
+| Step | Figure-rich source (opens the original) | What to identify in the figure | Relationship to this chapter |
+|:---|:---|:---|:---|
+| **1. End-to-end partition** | [Qualcomm — modem-to-antenna chain, **slide 4** (PDF)](https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/slides_-_introducing_next-gen_rf_filter_technology_0.pdf#page=4) | **Modem → RF transceiver → RFFE → antenna**; which stages are separate and what elements belong to RFFE | Start here to distinguish baseband processing from RF conversion and front-end filtering/power amplification |
+| **2. Multiband antennas and routing** | [Qorvo — four-antenna mobile RFFE architecture](https://www.qorvo.com/about/news-events/blogs/easy-way-to-a-1-gbps-rf-front-end-on-smartphones) | Two main and two diversity antennas, high/mid/low bands, **switching, diplexers, carrier aggregation and 4×4 MIMO paths**; compare the *baseline* and *switched-multiplexer* illustrations | Explains why antenna count, active RF paths and supported MIMO layers are different quantities |
+| **3. Modules on the RF board** | [Qorvo — handset RFFE white paper, **pp. 3–4** (PDF)](https://www.qorvo.com/-/media/files/qorvopublic/white-papers/rf-architecture-choices-for-next-generation-handset-design.pdf#page=3) | Functional schematic of a **high-band PA/filter/switch module**, and traditional versus integrated matching networks | Shows what can be packaged into a FEM or PAMiD rather than placed as individual discrete parts |
+| **4. Analog RF-to-I/Q and converters** | [Analog Devices — mobile wireless analog front end and data converters](https://www.analog.com/en/resources/technical-articles/navigate-the-afe-and-dataconverter-maze-in-mobile-wireless-terminals.html) | **Figure 1: zero-IF RX and TX**, quadrature paths, analog gain/filtering, **separate I/Q ADCs and DACs**, and the digital baseband boundary | Follow the **physical transition from analog voltages to sample streams** |
+| **5. Look inside a realistic RFIC** | [Analog Devices — AD9361 transceiver architecture](https://wiki.analog.com/resources/eval/user-guides/ad9361) | RF LNA, quadrature mixers, analog low-pass filters, **12-bit ADC, decimation/FIR**, interpolation, DAC and TX mixer | A **documented, non-cellular modem RFIC**, useful to understand transceiver internals; it is **not** a Snapdragon schematic |
+| **6. Alternative receiver architectures** | [Analog Devices — zero-IF versus direct RF sampling](https://www.analog.com/en/resources/technical-articles/radio-architecture-matters.html) | Compare **Figure 1 (zero-IF gain/mix/filter)** with RF-sampling signal paths, filtering and blocker protection | Learn why some designs digitize at baseband while others sample RF/IF more directly |
+| **7. Digital 5G modem chain** | [MathWorks — DL-SCH and PDSCH transmit/receive processing diagram](https://www.mathworks.com/help/5g/gs/dl-sch-and-pdsch-transmit-and-receive-processing-chain.html) | Transport block, **LDPC**, rate matching, QAM/OFDM, MIMO, channel estimation/equalization, HARQ and decoding | Connects complex I/Q samples to **recovered transport blocks**, rather than directly to Android applications |
+| **8. Decoder hardware view** | [MathWorks — NR HDL receiver block diagram](https://www.mathworks.com/help/wireless-hdl/ug/nr-hdl-reference-applications-overview.html) | SSB synchronization, PDCCH control, **Polar decoding** and **LDPC decoding**, SIB1 processing | Gives a more hardware-oriented view of baseband PHY blocks; these are reference implementations, not a proprietary Qualcomm netlist |
+| **9. Snapdragon SoC integration** | [Qualcomm — Snapdragon System-in-Package **block diagram**](https://www.qualcomm.com/smartphones/products/snapdragon-system-package) | **Application CPU / platform functions versus modem and peripheral hardware**; identify which blocks are combined into a module | A useful **older LTE-era integration example**, not a block diagram for the latest Snapdragon generation |
+| **10. Real smartphone PCB placement** | [iFixit — Samsung Galaxy S25 Ultra **Chip ID**](https://www.ifixit.com/Teardown/Samsung+Galaxy+S25+Ultra+Chip+ID/181690) | Board-side photos and annotations: **RF transceiver (step 5), front-end modules and switches (step 8), PMICs (step 3)** | Compare a conceptual signal chain with **actual separate chips and physical board regions**; teardowns do not reveal every inter-chip net |
+| **11. mmWave integration** | [Qualcomm — modem, RF and mmWave antenna modules](https://www.qualcomm.com/news/onq/2019/11/5g-modems-rf-and-antennas-getting-mmwave-data-device) | Sub-6 modem-to-antenna chain versus **mmWave antenna-in-module**, RF conversion and beam steering | An **early 5G architecture illustration** showing why mmWave integration differs from sub-6 GHz |
+| **12. Modem-to-Android control** | [Android AOSP — Radio Interface Layer architecture](https://source.android.com/docs/core/connect/ril) | Framework/vendor radio interfaces, modem commands, responses and asynchronous control paths | This shows **telephony control**, **not** a block diagram of the high-rate IP user-data plane |
+
+**Historical context:** some excellent, clear diagrams above date from LTE or early 5G. Their RF circuit concepts remain useful, but supported bands, vendor packaging, antenna configurations and chip integration **must not be treated as a 2026 handset specification**.
+
+### Four drawings to recreate from memory
+
+1. **One RX branch:** antenna → switch/duplexer → band filter/LNA → mixer + LO → I/Q analog LPF → ADC → modem. Mark where *noise figure*, *blocker compression*, *LO phase noise* and *ADC overload* originate.
+2. **One TX branch:** modem symbols → DAC + reconstruction filter → I/Q modulator → PA + power tracking → output filter/switch → antenna. Mark where *EVM*, *ACLR*, *harmonics* and *TRP* are measured.
+3. **4×4 MIMO / CA phone:** draw distinct **antenna ports, band routes, filter/switch states, RF receive chains and modem spatial layers**. Explain why four antennas are necessary but not sufficient for four independent layers.
+4. **The silicon boundary:** enclose **RF transceiver**, **modem PHY/protocol stack**, and **Snapdragon application SoC / Android** in the appropriate logical boxes. Show the modem-host interface and keep **RIL/control** separate from the **user-plane IP packet path**.
+
+For a practical self-test, select an RF-chip component from the iFixit photographs and find its role on the Qualcomm/Qorvo/ADI diagrams. The board photographs establish *where components are physically placed*, while the diagrams explain *why those components are electrically necessary*.
+
+---
+
 ## 2. Receive chain: antenna to digitized I/Q
 
 ### 2.1 Antenna, tuning and band routing
